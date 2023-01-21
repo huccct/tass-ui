@@ -1,0 +1,25 @@
+{
+  "name": "echo-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm -C examples dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vue": "^3.2.45",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "@echo-ui/components": "workspace:^1.0.0",
+    "@echo-ui/theme-chalk": "workspace:^1.0.0",
+    "@echo-ui/utils": "workspace:^1.0.0"
+  }
+}
