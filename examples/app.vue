@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-22 16:06:45
+ * @LastEditTime: 2023-01-22 21:35:42
 -->
 <template>
   <EchoButtonGroup>
@@ -29,10 +29,19 @@
   <EchoButton round type="primary">椭圆</EchoButton>
   <EchoButton disabled type="primary">禁止</EchoButton>
   <EchoButton circle type="primary">圆</EchoButton>
+
+  <br />
+  <br />
+
+  <EchoIcon name="ico_med_doctor"></EchoIcon>
+  <EchoIcon name="ico_doc_chart_curve"></EchoIcon>
+  <EchoIcon name="ico_med_band-bid"></EchoIcon>
+  <EchoIcon name="ico_med_board"></EchoIcon>
+  <EchoIcon name="ico_doc_chart_trend"></EchoIcon>
 </template>
 <script setup lang="ts">
   function add() {
-    alert(1 + 1);
+    alert('This is a fun test.');
   }
 </script>
 <style></style>
