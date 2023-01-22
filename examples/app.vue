@@ -3,11 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-21 14:25:49
+ * @LastEditTime: 2023-01-22 16:06:45
 -->
 <template>
   <EchoButtonGroup>
-    <EchoButton size="small">button</EchoButton>
+    <EchoButton size="small" @click="add">button</EchoButton>
     <EchoButton size="small" type="primary">button</EchoButton>
     <EchoButton size="small" type="success">button</EchoButton>
     <EchoButton size="small" type="danger">button</EchoButton>
@@ -30,5 +30,9 @@
   <EchoButton disabled type="primary">禁止</EchoButton>
   <EchoButton circle type="primary">圆</EchoButton>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  function add() {
+    alert(1 + 1);
+  }
+</script>
 <style></style>
