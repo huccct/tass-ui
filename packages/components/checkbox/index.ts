@@ -3,11 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-01-23 20:28:30
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 20:55:30
+ * @LastEditTime: 2023-01-23 21:29:42
  */
 import checkBox from './src/checkbox.vue';
 import { withInstall } from '@echo-ui/utils/withInstall';
 
-export const EchoCheckBox = withInstall(checkBox);
+export const EchoCheckbox = withInstall(checkBox);
 
-export default EchoCheckBox;
+export default EchoCheckbox;

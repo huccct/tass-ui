@@ -3,10 +3,12 @@
  * @Author: Huccct
  * @Date: 2023-01-23 20:33:27
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 20:33:32
+ * @LastEditTime: 2023-01-23 21:36:29
 -->
 <template>
-  <div>checkboxgroup</div>
+  <div>
+    <h2>CheckboxGroup组件</h2>
+  </div>
 </template>
-<script setup lang="ts" name="EchoCheckBoxGroup"></script>
+<script setup lang="ts" name="EchoCheckboxGroup"></script>
 <style></style>

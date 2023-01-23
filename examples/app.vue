@@ -3,56 +3,56 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 19:59:09
+ * @LastEditTime: 2023-01-23 21:37:09
 -->
 <template>
-  <EchoButtonGroup>
-    <EchoButton @click="add">button</EchoButton>
-    <EchoButton type="primary">button</EchoButton>
-    <EchoButton type="success">button</EchoButton>
-    <EchoButton type="danger">button</EchoButton>
-    <EchoButton type="warning">button</EchoButton>
-    <EchoButton type="info">button</EchoButton>
-  </EchoButtonGroup>
+  <echo-button-group>
+    <echo-button @click="add">button</echo-button>
+    <echo-button type="primary">button</echo-button>
+    <echo-button type="success">button</echo-button>
+    <echo-button type="danger">button</echo-button>
+    <echo-button type="warning">button</echo-button>
+    <echo-button type="info">button</echo-button>
+  </echo-button-group>
   <br />
   <br />
 
-  <EchoButton>按钮默认尺寸</EchoButton>
-  <EchoButton size="medium">按钮中等尺寸</EchoButton>
-  <EchoButton size="small">按钮小尺寸</EchoButton>
-  <EchoButton size="mini">按钮极小尺寸</EchoButton>
-  <EchoButton size="tiny">按钮超小尺寸</EchoButton>
+  <echo-button>按钮默认尺寸</echo-button>
+  <echo-button size="medium">按钮中等尺寸</echo-button>
+  <echo-button size="small">按钮小尺寸</echo-button>
+  <echo-button size="mini">按钮极小尺寸</echo-button>
+  <echo-button size="tiny">按钮超小尺寸</echo-button>
   <br />
   <br />
 
-  <EchoButton plain type="primary">
-    <EchoIcon name="ico_med_doctor" />
+  <echo-button plain type="primary">
+    <echo-icon name="ico_med_doctor" />
     朴素按钮
-  </EchoButton>
-  <EchoButton round type="primary">椭圆</EchoButton>
-  <EchoButton disabled type="primary">禁止</EchoButton>
-  <EchoButton circle type="primary">圆</EchoButton>
+  </echo-button>
+  <echo-button round type="primary">椭圆</echo-button>
+  <echo-button disabled type="primary">禁止</echo-button>
+  <echo-button circle type="primary">圆</echo-button>
   <br />
   <br />
 
-  <EchoButton type="success" icon="ec-icon-ico_med_doctor">button</EchoButton>
-  <EchoButton type="primary" loading>button</EchoButton>
+  <echo-button type="success" icon="ec-icon-ico_med_doctor">button</echo-button>
+  <echo-button type="primary" loading>button</echo-button>
   <echo-button type="danger">button</echo-button>
   <br />
   <br />
 
-  <EchoIcon name="ico_med_doctor"></EchoIcon>
-  <EchoIcon name="ico_doc_chart_curve"></EchoIcon>
-  <EchoIcon name="ico_med_band-bid"></EchoIcon>
-  <EchoIcon name="ico_med_board"></EchoIcon>
-  <EchoIcon name="ico_doc_chart_trend"></EchoIcon>
-  <EchoIcon name="ico_doc_chart_curve"></EchoIcon>
-  <EchoIcon name="ico_med_board"></EchoIcon>
-  <EchoIcon name="ico_doc_chart_trend"></EchoIcon>
-  <EchoIcon name="ico_doc_chart_pie"></EchoIcon>
-  <EchoIcon name="ico_med_stethoscope"></EchoIcon>
-  <EchoIcon name="jia"></EchoIcon>
-  <EchoIcon name="ico_med_records5"></EchoIcon>
+  <echo-icon name="ico_med_doctor"></echo-icon>
+  <echo-icon name="ico_doc_chart_curve"></echo-icon>
+  <echo-icon name="ico_med_band-bid"></echo-icon>
+  <echo-icon name="ico_med_board"></echo-icon>
+  <echo-icon name="ico_doc_chart_trend"></echo-icon>
+  <echo-icon name="ico_doc_chart_curve"></echo-icon>
+  <echo-icon name="ico_med_board"></echo-icon>
+  <echo-icon name="ico_doc_chart_trend"></echo-icon>
+  <echo-icon name="ico_doc_chart_pie"></echo-icon>
+  <echo-icon name="ico_med_stethoscope"></echo-icon>
+  <echo-icon name="jia"></echo-icon>
+  <echo-icon name="ico_med_records5"></echo-icon>
   <br />
   <br />
 
@@ -100,6 +100,11 @@
       <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
     </echo-col>
   </echo-row>
+  <br />
+  <br />
+
+  <echo-checkbox></echo-checkbox>
+  <echo-checkbox-group></echo-checkbox-group>
 </template>
 <script setup lang="ts">
   function add() {
