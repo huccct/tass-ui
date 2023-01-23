@@ -15,6 +15,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ec-icon-loading:before {
+  content: '\e7f1';
+}
+
 .ec-icon-ico_med_doctor:before {
   content: '\e60a';
 }

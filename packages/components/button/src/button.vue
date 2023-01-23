@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:43:56
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-21 13:31:53
+ * @LastEditTime: 2023-01-23 14:12:49
 -->
 <template>
   <button
@@ -14,6 +14,8 @@
     :disabled="disabled || loading"
     @click="handlerClick"
   >
+    <i v-if="props.loading" class="ec-icon-loading"></i>
+    <i v-if="props.icon && !props.loading" :class="props.icon"></i>
     <slot />
   </button>
 </template>
