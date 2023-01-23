@@ -1,9 +1,9 @@
 /*
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
- * @Date: 2023-01-22 20:13:54
+ * @Date: 2023-01-23 20:38:53
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 16:15:23
+ * @LastEditTime: 2023-01-23 20:39:02
  */
 import icon from './src/icon.vue';
 import { withInstall } from '@echo-ui/utils/withInstall';
