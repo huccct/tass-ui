@@ -5,7 +5,7 @@
  * @LastEditors: Huccct
  * @LastEditTime: 2023-01-23 20:39:02
  */
-import icon from './src/icon.vue';
+import icon from '../tmp/src/icon.vue';
 import { withInstall } from '@echo-ui/utils/withInstall';
 
 export const EchoIcon = withInstall(icon);
