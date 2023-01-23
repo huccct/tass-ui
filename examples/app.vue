@@ -12,7 +12,7 @@
     <EchoButton size="small" type="success">button</EchoButton>
     <EchoButton size="small" type="danger">button</EchoButton>
     <EchoButton size="small" type="warning">button</EchoButton>
-    <EchoButton size="small" type="info">button</EchoButton>
+    <EchoButton size="small" type="info">button22</EchoButton>
   </EchoButtonGroup>
 
   <br />
