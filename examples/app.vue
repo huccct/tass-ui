@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 14:30:35
+ * @LastEditTime: 2023-01-23 18:59:54
 -->
 <template>
   <EchoButtonGroup>
@@ -37,6 +37,7 @@
 
   <EchoButton type="success" icon="ec-icon-ico_med_doctor">button</EchoButton>
   <EchoButton type="primary" loading>button</EchoButton>
+  <echo-button type="danger">button</echo-button>
   <br />
   <br />
 
@@ -45,11 +46,50 @@
   <EchoIcon name="ico_med_band-bid"></EchoIcon>
   <EchoIcon name="ico_med_board"></EchoIcon>
   <EchoIcon name="ico_doc_chart_trend"></EchoIcon>
-  <EchoIcon name="loading"></EchoIcon>
+  <EchoIcon name="ico_doc_chart_curve"></EchoIcon>
+  <EchoIcon name="ico_med_board"></EchoIcon>
+  <EchoIcon name="ico_doc_chart_trend"></EchoIcon>
+  <EchoIcon name="ico_doc_chart_pie"></EchoIcon>
+  <EchoIcon name="ico_med_stethoscope"></EchoIcon>
+  <EchoIcon name="jia"></EchoIcon>
+  <EchoIcon name="ico_med_records5"></EchoIcon>
+  <br />
+  <br />
+
+  <echo-row>
+    <echo-col :span="24">
+      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+  </echo-row>
+  <br />
+  <br />
+
+  <echo-row>
+    <echo-col :span="12">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+    <echo-col :span="12">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+  </echo-row>
+  <br />
+  <br />
+
+  <echo-row tag="div">
+    <echo-col tag="span" :span="12">
+      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+    <echo-col tag="span" :span="6">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+    <echo-col tag="span" :span="6">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+  </echo-row>
 </template>
 <script setup lang="ts">
   function add() {
     alert('This is a fun test.');
   }
 </script>
-<style></style>
+<style lang="scss"></style>

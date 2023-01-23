@@ -3,8 +3,10 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:53:35
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-22 20:16:51
+ * @LastEditTime: 2023-01-23 16:15:43
  */
 export { EchoButton } from './button';
 export { EchoButtonGroup } from './button-group';
-export { EchoIcon } from './Icon';
+export { EchoIcon } from './icon';
+export { EchoCol } from './col/';
+export { EchoRow } from './row';
