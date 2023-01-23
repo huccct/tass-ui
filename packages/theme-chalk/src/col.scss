@@ -6,7 +6,8 @@
 @include b(col) {
   @for $i from 0 through 24 {
     &.#{$namespace}-col-span-#{$i} {
-      flex: (math.div(1, 24) * $i * 100) * 1%;
+      max-width: (math.div(1, 24) * $i * 100) * 1%;
+      flex: 0 0 (math.div(1, 24) * $i * 100) * 1%;
     }
 
     .#{$namespace}-col-offset-#{$i} {

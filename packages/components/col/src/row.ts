@@ -3,9 +3,9 @@
  * @Author: Huccct
  * @Date: 2023-01-23 15:46:05
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 17:50:10
+ * @LastEditTime: 2023-01-23 19:50:22
  */
-import { computed, defineComponent, h } from 'vue';
+import { computed, defineComponent, h, provide } from 'vue';
 
 export default defineComponent({
   name: 'EchoRow',
@@ -24,12 +24,27 @@ export default defineComponent({
     },
   },
   setup(props, ctx) {
-    const Class = computed(() => ['ec-row']);
+    provide('EchoRow', props.gutter);
+    const Class = computed(() => [
+      'ec-row',
+      props.justify !== 'start' ? `is-justify-${props.justify}` : '',
+    ]);
+    const styles = computed(() => {
+      let res = {
+        marginLeft: '',
+        marginRight: '',
+      };
+      if (props.gutter) {
+        res.marginLeft = res.marginRight = `-${props.gutter / 2}px`;
+      }
+      return res;
+    });
     return () =>
       h(
         props.tag,
         {
           class: Class.value,
+          style: styles.value,
         },
         ctx.slots.default?.()
       );

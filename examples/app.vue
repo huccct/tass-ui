@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 18:59:54
+ * @LastEditTime: 2023-01-23 19:59:09
 -->
 <template>
   <EchoButtonGroup>
@@ -77,6 +77,20 @@
 
   <echo-row tag="div">
     <echo-col tag="span" :span="12">
+      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+    <echo-col tag="span" :span="6">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+    <echo-col tag="span" :span="6">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+  </echo-row>
+  <br />
+  <br />
+
+  <echo-row tag="div" :gutter="20" justify="end">
+    <echo-col tag="span" :span="6">
       <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
     </echo-col>
     <echo-col tag="span" :span="6">

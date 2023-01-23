@@ -3,9 +3,9 @@
  * @Author: Huccct
  * @Date: 2023-01-23 15:46:01
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 18:41:33
+ * @LastEditTime: 2023-01-23 19:33:46
  */
-import { computed, defineComponent, h } from 'vue';
+import { computed, defineComponent, h, inject } from 'vue';
 
 export default defineComponent({
   name: 'EchoCol',
@@ -24,6 +24,8 @@ export default defineComponent({
     },
   },
   setup(props, ctx) {
+    const gutter = inject('EchoRow') as number;
+
     const Class = computed(() => {
       let res: string[] = [];
       const pops = ['span', 'offset'] as const;
@@ -36,11 +38,21 @@ export default defineComponent({
       });
       return ['ec-col', ...res];
     });
+    const styles = computed(() => {
+      if (gutter !== 0) {
+        return {
+          paddingLeft: gutter / 2 + 'px',
+          paddingRight: gutter / 2 + 'px',
+        };
+      }
+      return {};
+    });
     return () =>
       h(
         props.tag,
         {
           class: Class.value,
+          style: styles.value,
         },
         ctx.slots.default?.()
       );
