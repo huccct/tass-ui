@@ -14,10 +14,13 @@
         :indeterminate="indeterminate"
         :disabled="disabled"
         :name="name"
+        :value="label"
+        :isChecked="isChecked"
         @change="handlerChange"
       />
     </span>
     <span class="ec-checkbox__label">
+      {{ label }}
       <slot />
     </span>
   </div>
@@ -27,7 +30,7 @@
   import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@echo-ui/constants';
   const props = defineProps({
     indeterminate: Boolean,
-    checked: Boolean,
+    isChecked: Boolean,
     name: {
       type: String,
       default: undefined
@@ -43,6 +46,6 @@
     }
   });
   defineEmits([UPDATE_MODEL_EVENT, CHANGE_EVENT]);
-  const { model, handlerChange } = useCheckBoxProps(props);
+  const { model, isChecked, handlerChange } = useCheckBoxProps(props);
 </script>
 <style></style>

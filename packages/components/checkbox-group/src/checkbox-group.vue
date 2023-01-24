@@ -6,9 +6,29 @@
  * @LastEditTime: 2023-01-23 21:36:29
 -->
 <template>
-  <div>
-    <h2>CheckboxGroup组件</h2>
+  <div class="ec-checkbox-group">
+    <slot />
   </div>
 </template>
-<script setup lang="ts" name="EchoCheckboxGroup"></script>
+<script setup lang="ts" name="EchoCheckboxGroup">
+  import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@echo-ui/constants';
+  import { computed, provide } from 'vue';
+  const props = defineProps({
+    modelValue: {
+      type: Array,
+      default: undefined
+    }
+  });
+  const emit = defineEmits([UPDATE_MODEL_EVENT, CHANGE_EVENT]);
+  let modelValue = computed(() => props.modelValue);
+  const handlerChange = val => {
+    emit(UPDATE_MODEL_EVENT, val);
+    emit(CHANGE_EVENT, val);
+  };
+  provide('EchoCheckboxGroup', {
+    modelValue,
+    handlerChange,
+    name: 'EchoCheckboxGroup'
+  });
+</script>
 <style></style>
