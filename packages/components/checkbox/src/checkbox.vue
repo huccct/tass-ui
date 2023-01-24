@@ -3,12 +3,46 @@
  * @Author: Huccct
  * @Date: 2023-01-23 20:29:09
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 21:36:03
+ * @LastEditTime: 2023-01-24 13:48:40
 -->
 <template>
-  <div>
-    <h2>checkbox组件</h2>
+  <div class="ec-checkbox">
+    <span class="ec-checkbox__input">
+      <input
+        v-model="model"
+        type="checkbox"
+        :indeterminate="indeterminate"
+        :disabled="disabled"
+        :name="name"
+        @change="handlerChange"
+      />
+    </span>
+    <span class="ec-checkbox__label">
+      <slot />
+    </span>
   </div>
 </template>
-<script setup lang="ts" name="EchoCheckbox"></script>
+<script setup lang="ts" name="EchoCheckbox">
+  import { useCheckBoxProps } from '../composables/';
+  import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@echo-ui/constants';
+  const props = defineProps({
+    indeterminate: Boolean,
+    checked: Boolean,
+    name: {
+      type: String,
+      default: undefined
+    },
+    disabled: Boolean,
+    label: {
+      type: [String, Number, Boolean, Object],
+      default: undefined
+    },
+    modelValue: {
+      type: [String, Number, Boolean],
+      default: undefined
+    }
+  });
+  defineEmits([UPDATE_MODEL_EVENT, CHANGE_EVENT]);
+  const { model, handlerChange } = useCheckBoxProps(props);
+</script>
 <style></style>

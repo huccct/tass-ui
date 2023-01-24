@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 21:37:09
+ * @LastEditTime: 2023-01-24 11:59:11
 -->
 <template>
   <echo-button-group>
@@ -103,12 +103,23 @@
   <br />
   <br />
 
-  <echo-checkbox></echo-checkbox>
+  <h2>{{ checkBoxVal }}</h2>
+  <echo-checkbox v-model="checked" disabled></echo-checkbox>
+  <echo-checkbox v-model="checkBoxVal" @change="handlerChange"></echo-checkbox>
   <echo-checkbox-group></echo-checkbox-group>
 </template>
+
 <script setup lang="ts">
+  import { ref } from 'vue';
+
   function add() {
     alert('This is a fun test.');
   }
+  let checked = ref(true);
+  let checkBoxVal = ref(false);
+  const handlerChange = val => {
+    alert(val);
+  };
 </script>
+
 <style lang="scss"></style>
