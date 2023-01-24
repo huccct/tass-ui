@@ -3,32 +3,123 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-21 14:25:49
+ * @LastEditTime: 2023-01-24 11:59:11
 -->
 <template>
-  <EchoButtonGroup>
-    <EchoButton size="small">button</EchoButton>
-    <EchoButton size="small" type="primary">button</EchoButton>
-    <EchoButton size="small" type="success">button</EchoButton>
-    <EchoButton size="small" type="danger">button</EchoButton>
-    <EchoButton size="small" type="warning">button</EchoButton>
-    <EchoButton size="small" type="info">button22</EchoButton>
-  </EchoButtonGroup>
-
-  <br />
-  <br />
-  <EchoButton>按钮默认尺寸</EchoButton>
-  <EchoButton size="medium">按钮中等尺寸</EchoButton>
-  <EchoButton size="small">按钮小尺寸</EchoButton>
-  <EchoButton size="mini">按钮极小尺寸</EchoButton>
-  <EchoButton size="tiny">按钮超小尺寸</EchoButton>
+  <echo-button-group>
+    <echo-button @click="add">button</echo-button>
+    <echo-button type="primary">button</echo-button>
+    <echo-button type="success">button</echo-button>
+    <echo-button type="danger">button</echo-button>
+    <echo-button type="warning">button</echo-button>
+    <echo-button type="info">button</echo-button>
+  </echo-button-group>
   <br />
   <br />
 
-  <EchoButton plain type="primary">朴素按钮</EchoButton>
-  <EchoButton round type="primary">椭圆</EchoButton>
-  <EchoButton disabled type="primary">禁止</EchoButton>
-  <EchoButton circle type="primary">圆</EchoButton>
+  <echo-button>按钮默认尺寸</echo-button>
+  <echo-button size="medium">按钮中等尺寸</echo-button>
+  <echo-button size="small">按钮小尺寸</echo-button>
+  <echo-button size="mini">按钮极小尺寸</echo-button>
+  <echo-button size="tiny">按钮超小尺寸</echo-button>
+  <br />
+  <br />
+
+  <echo-button plain type="primary">
+    <echo-icon name="ico_med_doctor" />
+    朴素按钮
+  </echo-button>
+  <echo-button round type="primary">椭圆</echo-button>
+  <echo-button disabled type="primary">禁止</echo-button>
+  <echo-button circle type="primary">圆</echo-button>
+  <br />
+  <br />
+
+  <echo-button type="success" icon="ec-icon-ico_med_doctor">button</echo-button>
+  <echo-button type="primary" loading>button</echo-button>
+  <echo-button type="danger">button</echo-button>
+  <br />
+  <br />
+
+  <echo-icon name="ico_med_doctor"></echo-icon>
+  <echo-icon name="ico_doc_chart_curve"></echo-icon>
+  <echo-icon name="ico_med_band-bid"></echo-icon>
+  <echo-icon name="ico_med_board"></echo-icon>
+  <echo-icon name="ico_doc_chart_trend"></echo-icon>
+  <echo-icon name="ico_doc_chart_curve"></echo-icon>
+  <echo-icon name="ico_med_board"></echo-icon>
+  <echo-icon name="ico_doc_chart_trend"></echo-icon>
+  <echo-icon name="ico_doc_chart_pie"></echo-icon>
+  <echo-icon name="ico_med_stethoscope"></echo-icon>
+  <echo-icon name="jia"></echo-icon>
+  <echo-icon name="ico_med_records5"></echo-icon>
+  <br />
+  <br />
+
+  <echo-row>
+    <echo-col :span="24">
+      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+  </echo-row>
+  <br />
+  <br />
+
+  <echo-row>
+    <echo-col :span="12">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+    <echo-col :span="12">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+  </echo-row>
+  <br />
+  <br />
+
+  <echo-row tag="div">
+    <echo-col tag="span" :span="12">
+      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+    <echo-col tag="span" :span="6">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+    <echo-col tag="span" :span="6">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+  </echo-row>
+  <br />
+  <br />
+
+  <echo-row tag="div" :gutter="20" justify="end">
+    <echo-col tag="span" :span="6">
+      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+    <echo-col tag="span" :span="6">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+    <echo-col tag="span" :span="6">
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+    </echo-col>
+  </echo-row>
+  <br />
+  <br />
+
+  <h2>{{ checkBoxVal }}</h2>
+  <echo-checkbox v-model="checked" disabled></echo-checkbox>
+  <echo-checkbox v-model="checkBoxVal" @change="handlerChange"></echo-checkbox>
+  <echo-checkbox-group></echo-checkbox-group>
 </template>
-<script setup lang="ts"></script>
-<style></style>
+
+<script setup lang="ts">
+  import { ref } from 'vue';
+
+  function add() {
+    alert('This is a fun test.');
+  }
+  let checked = ref(true);
+  let checkBoxVal = ref(false);
+  const handlerChange = val => {
+    alert(val);
+  };
+</script>
+
+<style lang="scss"></style>

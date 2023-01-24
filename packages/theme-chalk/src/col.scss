@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+
+@include b(col) {
+  @for $i from 0 through 24 {
+    &.#{$namespace}-col-span-#{$i} {
+      max-width: (math.div(1, 24) * $i * 100) * 1%;
+      flex: 0 0 (math.div(1, 24) * $i * 100) * 1%;
+    }
+
+    .#{$namespace}-col-offset-#{$i} {
+      margin-left: (math.div(1, 24) * $i * 100) * 1%;
+    }
+  }
+}

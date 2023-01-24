@@ -1,0 +1,108 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+@font-face {
+  font-family: 'ec-ui-icons'; /* Project id 3868664 */
+  src: url('./fonts/iconfont.woff2') format('woff2'), url('./fonts/iconfont.woff') format('woff'),
+    url('./fonts/iconfont.ttf') format('truetype');
+}
+
+[class^='#{$namespace}-icon-'] {
+  font-family: 'ec-ui-icons' !important;
+  font-size: 16px;
+  font-style: normal;
+  margin-right: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ec-icon-loading:before {
+  content: '\e7f1';
+}
+
+.ec-icon-ico_med_doctor:before {
+  content: '\e60a';
+}
+
+.ec-icon-ico_doc_chart_curve:before {
+  content: '\e60b';
+}
+
+.ec-icon-ico_med_band-bid:before {
+  content: '\e60c';
+}
+
+.ec-icon-ico_med_board:before {
+  content: '\e60d';
+}
+
+.ec-icon-ico_doc_chart_trend:before {
+  content: '\e60e';
+}
+
+.ec-icon-ico_doc_chart_pie:before {
+  content: '\e60f';
+}
+
+.ec-icon-ico_med_stethoscope:before {
+  content: '\e610';
+}
+
+.ec-icon-jia:before {
+  content: '\e611';
+}
+
+.ec-icon-ico_doc_chart_bar:before {
+  content: '\e612';
+}
+
+.ec-icon-jian:before {
+  content: '\e613';
+}
+
+.ec-icon-ico_med_records5:before {
+  content: '\e614';
+}
+
+.ec-icon-gengduo:before {
+  content: '\e615';
+}
+
+.ec-icon-zhengzeshi:before {
+  content: '\e647';
+}
+
+.ec-icon-ico_opt_edit01:before {
+  content: '\e601';
+}
+
+.ec-icon-ico_operate_delete:before {
+  content: '\e602';
+}
+
+.ec-icon-a-ico_opt_download1:before {
+  content: '\e603';
+}
+
+.ec-icon-ico_opt_circle_add:before {
+  content: '\e604';
+}
+
+.ec-icon-ico_opt_download-1:before {
+  content: '\e605';
+}
+
+.ec-icon-ico_yidong:before {
+  content: '\e606';
+}
+
+.ec-icon-ico_med_service:before {
+  content: '\e607';
+}
+
+.ec-icon-ico_med_needle:before {
+  content: '\e608';
+}
+
+.ec-icon-ico_med_yingxiang:before {
+  content: '\e609';
+}
