@@ -6,27 +6,34 @@
  * @LastEditTime: 2023-01-24 13:51:36
  */
 import type { ComponentInternalInstance } from 'vue';
+import { inject } from 'vue';
 import { computed, getCurrentInstance } from 'vue';
-import type { checkBoxProps } from '@echo-ui/components/checkbox/src/checkbox.type';
+import type { checkBoxProps, T } from '@echo-ui/components/checkbox/src/checkbox.type';
 import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@echo-ui/constants';
 function useModel(props: checkBoxProps) {
   const { emit } = getCurrentInstance() as ComponentInternalInstance;
+  const useProvide = inject<T>('EchoCheckboxGroup', {});
   const model = computed({
     get() {
-      return props?.modelValue;
+      return useProvide.modelValue ? useProvide.modelValue.value : props.modelValue;
     },
-    set(val: any) {
-      // Wait Change I don't know how to do it~
+    set(val: unknown) {
+      if (useProvide.modelValue) {
+        return useProvide.handlerChange?.(val);
+      }
       emit(UPDATE_MODEL_EVENT, val);
     }
   });
   return model;
 }
-function useCheckbox(model) {
-  const isChecked = computed(() => {
-    const val = model.value;
-
-    return val;
+function useCheckbox(props: checkBoxProps, model) {
+  const isChecked = computed<boolean>(() => {
+    const value = model.value;
+    if (Array.isArray(value)) {
+      return value.includes(props.label);
+    } else {
+      return value;
+    }
   });
   return isChecked;
 }
@@ -42,7 +49,7 @@ function useEvent() {
 }
 export const useCheckBoxProps = (props: checkBoxProps) => {
   const model = useModel(props);
-  const isChecked = useCheckbox(model);
+  const isChecked = useCheckbox(props, model);
   const handlerChange = useEvent();
   return {
     model,

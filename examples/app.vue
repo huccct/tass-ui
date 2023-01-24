@@ -103,22 +103,31 @@
   <br />
   <br />
 
-  <h2>{{ checkBoxVal }}</h2>
-  <echo-checkbox v-model="checked" disabled></echo-checkbox>
-  <echo-checkbox v-model="checkBoxVal" @change="handlerChange"></echo-checkbox>
-  <echo-checkbox-group></echo-checkbox-group>
+  <echo-checkbox disabled>Not disabled</echo-checkbox>
+  <echo-checkbox v-model="check1" @change="handlerChange">Option A</echo-checkbox>
+  <echo-checkbox v-model="check2">Option B</echo-checkbox>
+  <br />
+  <br />
+
+  <h2>{{ checkList }}</h2>
+  <echo-checkbox-group v-model="checkList">
+    <echo-checkbox v-for="(item, index) in showList" :key="index" :label="item"></echo-checkbox>
+  </echo-checkbox-group>
 </template>
 
 <script setup lang="ts">
   import { ref } from 'vue';
 
   function add() {
-    alert('This is a fun test.');
+    alert('This is a add test.');
   }
-  let checked = ref(true);
-  let checkBoxVal = ref(false);
-  const handlerChange = val => {
-    alert(val);
+  let check1 = ref(false);
+  let check2 = ref(true);
+
+  let checkList = ref(['Shanghai', 'Hangzhou']);
+  let showList = ref(['Shanghai', 'Hangzhou', 'Beijing', 'Guangzhou']);
+  const handlerChange = () => {
+    alert('This is a handleChange test.');
   };
 </script>
 

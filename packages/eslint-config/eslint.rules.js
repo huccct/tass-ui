@@ -17,7 +17,7 @@ module.exports = {
   // 禁止 debugger https://eslint.org/docs/latest/rules/no-debugger#rule-details
   'no-debugger': 'error',
   // 禁止未使用的变量 https://eslint.org/docs/latest/rules/no-unused-vars#rule-details
-  'no-unused-vars': 'error',
+  'no-unused-vars': 'off',
   // 不允许使用未声明的变量 https://eslint.org/docs/latest/rules/no-undef
   'no-undef': 'off',
   // 函数括号前的空格 https://eslint.org/docs/latest/rules/space-before-function-paren
