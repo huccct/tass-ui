@@ -119,11 +119,15 @@
   <br />
 
   <echo-transfer v-model="rightValue" :data="transferData" :props="transferProps"></echo-transfer>
+  <br />
+  <br />
+
+  <echo-button type="success" @click="ClickMessage">Click Message</echo-button>
 </template>
 
 <script setup lang="ts">
   import { ref, reactive } from 'vue';
-
+  import { EchoMessage } from '../packages/components/message';
   function add() {
     alert('This is a add test.');
   }
@@ -160,6 +164,10 @@
     label: 'label',
     disabled: 'disabled'
   });
+
+  const ClickMessage = () => {
+    EchoMessage();
+  };
 </script>
 
 <style lang="scss"></style>
