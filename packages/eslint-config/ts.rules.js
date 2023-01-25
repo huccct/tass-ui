@@ -13,7 +13,7 @@ module.exports = {
   // 自定义对象类型样式 https://typescript-eslint.io/rules/consistent-indexed-object-style
   '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
   // !禁止使用后缀运算符的非空断言 https://typescript-eslint.io/rules/no-non-null-assertion/
-  '@typescript-eslint/no-non-null-assertion': 'error',
+  '@typescript-eslint/no-non-null-assertion': 'off',
   // 强制一致地使用类型导入 https://typescript-eslint.io/rules/consistent-type-imports
   '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
   // 禁止未使用的变量 https://typescript-eslint.io/rules/no-unused-vars
