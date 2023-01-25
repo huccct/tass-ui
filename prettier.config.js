@@ -10,7 +10,7 @@ module.exports = {
   trailingComma: 'none', //在对象或数组最后一个元素后面是否加逗号（在ES5中加尾逗号）
   arrowParens: 'avoid', //箭头函数只有一个参数的时候是否使用括号 always：使用  avoid： 省略
   insertPragma: false, //是否在文件头部插入一个 @format标记表示文件已经被格式化了
-  htmlWhitespaceSensitivity: 'strict', //HTML 空白敏感性 css strict ignore
+  htmlWhitespaceSensitivity: 'css', //HTML 空白敏感性 css strict ignore
   endOfLine: 'auto', //换行符使用什么
   tslintIntegration: false //不让ts使用prettier校验
 };

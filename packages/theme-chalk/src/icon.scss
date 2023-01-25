@@ -2,7 +2,7 @@
 @use 'common/var' as *;
 @font-face {
   font-family: 'ec-ui-icons'; /* Project id 3868664 */
-  src: url('./fonts/iconfont.woff2') format('woff2'), url('./fonts/iconfont.woff') format('woff'),
+  src: url('./fonts//iconfont.woff2') format('woff2'), url('./fonts/iconfont.woff') format('woff'),
     url('./fonts/iconfont.ttf') format('truetype');
 }
 
@@ -13,6 +13,14 @@
   margin-right: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.ec-icon-right:before {
+  content: '\e7eb';
+}
+
+.ec-icon-left:before {
+  content: '\e7ec';
 }
 
 .ec-icon-loading:before {

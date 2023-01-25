@@ -11,7 +11,5 @@
     "source.fixAll.eslint": true,
     "source.fixAll": true,
     "source.fixAll.stylelint": true
-  },
-  "stylelint.customSyntax": "postcss-scss",
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"]
+  }
 }

@@ -12,3 +12,4 @@ export { EchoCol } from './col/';
 export { EchoRow } from './row';
 export { EchoCheckbox } from './checkbox';
 export { EchoCheckboxGroup } from './checkbox-group';
+export { EchoTransfer } from './transfer';

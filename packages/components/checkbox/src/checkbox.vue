@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-23 20:29:09
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-24 13:48:40
+ * @LastEditTime: 2023-01-25 20:09:14
 -->
 <template>
   <div class="ec-checkbox">
@@ -19,9 +19,9 @@
         @change="handlerChange"
       />
     </span>
-    <span class="ec-checkbox__label">
-      {{ label }}
+    <span v-if="$slots.default || label" class="ec-checkbox__label">
       <slot />
+      <template v-if="!$slots.default">{{ label }}</template>
     </span>
   </div>
 </template>

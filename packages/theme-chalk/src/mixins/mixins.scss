@@ -13,6 +13,14 @@
   }
 }
 
+@mixin e($element) {
+  @at-root {
+    #{& + $element-separator + $element} {
+      @content;
+    }
+  }
+}
+
 @mixin m($modifier) {
   $selector: &;
   $currentSelector: '';
