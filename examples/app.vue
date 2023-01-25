@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-24 11:59:11
+ * @LastEditTime: 2023-01-25 16:55:37
 -->
 <template>
   <echo-button-group>
@@ -53,6 +53,8 @@
   <echo-icon name="ico_med_stethoscope"></echo-icon>
   <echo-icon name="jia"></echo-icon>
   <echo-icon name="ico_med_records5"></echo-icon>
+  <echo-icon name="left"></echo-icon>
+  <echo-icon name="right"></echo-icon>
   <br />
   <br />
 
@@ -113,10 +115,14 @@
   <echo-checkbox-group v-model="checkList">
     <echo-checkbox v-for="(item, index) in showList" :key="index" :label="item"></echo-checkbox>
   </echo-checkbox-group>
+  <br />
+  <br />
+
+  <echo-transfer v-model="rightValue" :data="transferData" :props="transferProps"></echo-transfer>
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue';
+  import { ref, reactive } from 'vue';
 
   function add() {
     alert('This is a add test.');
@@ -129,6 +135,31 @@
   const handlerChange = () => {
     alert('This is a handleChange test.');
   };
+
+  interface T {
+    key: number;
+    label: string | number;
+    disabled: boolean;
+  }
+  const generateData = () => {
+    const data: T[] = [];
+    for (let i = 1; i <= 15; i++) {
+      data.push({
+        key: i,
+        label: i,
+        disabled: i % 4 === 0
+      });
+    }
+    return ref(data);
+  };
+  const transferData = generateData();
+
+  let rightValue = ref([1, 4]);
+  let transferProps = reactive({
+    key: 'key',
+    label: 'label',
+    disabled: 'disabled'
+  });
 </script>
 
 <style lang="scss"></style>
