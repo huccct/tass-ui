@@ -1,0 +1,24 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+
+@include b(message) {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  min-width: 300px;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #edf2fc;
+  text-align: center;
+  border-width: 1px;
+  border-color: #ebeef5;
+  border-style: solid;
+  transition: all 0.4s;
+}
+
+.ec-message-fade-enter-from,
+.ec-message-fade-leave-to {
+  transform: translate(-50%, -100%);
+}

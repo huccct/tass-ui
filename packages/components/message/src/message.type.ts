@@ -1,7 +1,7 @@
 type Itype = 'success' | 'info' | 'error' | 'warning';
 
 export interface IMessageProps {
-  ID?: string;
+  id?: string;
   message?: string;
   type?: Itype;
   duration?: number;
@@ -10,4 +10,5 @@ export interface IMessageProps {
   offset?: number;
 }
 
-export type IMessageOptions = IMessageProps | string;
+// a little bug wait you to change
+export type IMessageOptions = IMessageProps | string | any;

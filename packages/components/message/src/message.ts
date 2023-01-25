@@ -8,7 +8,7 @@ export default function Message(options: IMessageOptions) {
     };
   }
 
-  const vm = createVNode(message);
+  const vm = createVNode(message, options);
   const container = document.createElement('div');
 
   render(vm, container);

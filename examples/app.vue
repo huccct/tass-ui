@@ -166,7 +166,10 @@
   });
 
   const ClickMessage = () => {
-    EchoMessage();
+    EchoMessage({
+      message: 'hi,this is a test',
+      type: 'success'
+    });
   };
 </script>
 
