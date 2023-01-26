@@ -16,6 +16,22 @@
   border-color: #ebeef5;
   border-style: solid;
   transition: all 0.4s;
+  color: #eee;
+  @include m(success) {
+    background: $color-success;
+  }
+  @include m(error) {
+    background: $color-danger;
+  }
+  @include m(warning) {
+    background: $color-warning;
+  }
+  @include m(info) {
+    background: $color-info;
+  }
+  @include when(center) {
+    justify-content: center;
+  }
 }
 
 .ec-message-fade-enter-from,

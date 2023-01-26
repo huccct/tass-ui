@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-25 16:55:37
+ * @LastEditTime: 2023-01-26 14:23:00
 -->
 <template>
   <echo-button-group>
@@ -122,7 +122,10 @@
   <br />
   <br />
 
-  <echo-button type="success" @click="ClickMessage">Click Message</echo-button>
+  <echo-button type="success" @click="ClickMessage_1">Click Message</echo-button>
+  <echo-button type="danger" @click="ClickMessage_2">Click Message</echo-button>
+  <echo-button type="warning" @click="ClickMessage_3">Click Message</echo-button>
+  <echo-button type="info" @click="ClickMessage_4">Click Message</echo-button>
 </template>
 
 <script setup lang="ts">
@@ -165,10 +168,35 @@
     disabled: 'disabled'
   });
 
-  const ClickMessage = () => {
+  const ClickMessage_1 = () => {
     EchoMessage({
-      message: 'hi,this is a test',
-      type: 'success'
+      message: 'Success',
+      type: 'success',
+      center: true
+    });
+  };
+
+  const ClickMessage_2 = () => {
+    EchoMessage({
+      message: 'Error',
+      type: 'error',
+      center: true
+    });
+  };
+
+  const ClickMessage_3 = () => {
+    EchoMessage({
+      message: 'Warning',
+      type: 'warning',
+      center: true
+    });
+  };
+
+  const ClickMessage_4 = () => {
+    EchoMessage({
+      message: 'Info',
+      type: 'info',
+      center: true
     });
   };
 </script>
