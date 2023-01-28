@@ -126,6 +126,27 @@
   <echo-button type="danger" @click="ClickMessage_2">Click Message</echo-button>
   <echo-button type="warning" @click="ClickMessage_3">Click Message</echo-button>
   <echo-button type="info" @click="ClickMessage_4">Click Message</echo-button>
+
+  <EchoCollapse v-model="value1" @on-change="changFun">
+      <Panel name="1">
+        <span>标题1</span>
+        <p slot="content">标题1的内容</p>
+      </Panel>
+      <!-- <Panel name="2">
+        <span>标题2</span>
+        <p slot="content">标题2的内容</p>
+      </Panel>
+      <Panel name="3">
+        <span>标题3</span>
+        <p slot="content">标题3的内容</p>
+      </Panel>
+      <Panel name="4">
+        <span>标题4</span>
+        <p slot="content">标题4的内容</p>
+      </Panel> -->
+    </EchoCollapse>
+
+    
 </template>
 
 <script setup lang="ts">
