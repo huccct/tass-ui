@@ -127,25 +127,17 @@
   <echo-button type="warning" @click="ClickMessage_3">Click Message</echo-button>
   <echo-button type="info" @click="ClickMessage_4">Click Message</echo-button>
 
-  <EchoCollapse v-model="value1" @on-change="changFun">
-      <Panel name="1">
-        <span>标题1</span>
-        <p slot="content">标题1的内容</p>
-      </Panel>
-      <!-- <Panel name="2">
-        <span>标题2</span>
-        <p slot="content">标题2的内容</p>
-      </Panel>
-      <Panel name="3">
-        <span>标题3</span>
-        <p slot="content">标题3的内容</p>
-      </Panel>
-      <Panel name="4">
-        <span>标题4</span>
-        <p slot="content">标题4的内容</p>
-      </Panel> -->
-    </EchoCollapse>
-
+  <echo-collapse>
+    <template v-slot:one>
+      <div style="height:200px">标题一的内容</div>
+    </template>
+    <template v-slot:two>
+      <div style="height:200px">标题二的内容</div>
+    </template>
+    <template v-slot:three>
+      <div style="height:200px">标题三的内容</div>
+    </template>
+  </echo-collapse>
     
 </template>
 
