@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Huccct
- * @LastEditTime: 2023-01-26 14:23:00
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-01-29 16:25:46
 -->
 <template>
   <echo-button-group>
@@ -127,6 +127,7 @@
   <echo-button type="warning" @click="ClickMessage_3">Click Message</echo-button>
   <echo-button type="info" @click="ClickMessage_4">Click Message</echo-button>
 
+<<<<<<< Updated upstream
   <echo-collapse>
     <template v-slot:one>
       <div style="height:200px">标题一的内容</div>
@@ -139,6 +140,30 @@
     </template>
   </echo-collapse>
     
+=======
+  <echo-collapse v-model="value1" @on-change="changFun">
+    <panel name="1">
+      <span>标题1</span>
+      <p slot="content">标题1的内容</p>
+    </panel>
+    <!-- <Panel name="2">
+        <span>标题2</span>
+        <p slot="content">标题2的内容</p>
+      </Panel>
+      <Panel name="3">
+        <span>标题3</span>
+        <p slot="content">标题3的内容</p>
+      </Panel>
+      <Panel name="4">
+        <span>标题4</span>
+        <p slot="content">标题4的内容</p>
+      </Panel> -->
+  </echo-collapse>
+
+  <br />
+  <br />
+  <echo-carousel></echo-carousel>
+>>>>>>> Stashed changes
 </template>
 
 <script setup lang="ts">
