@@ -1,0 +1,33 @@
+@use 'sass:math';
+
+@use 'mixins/mixins' as *;
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .title {
+      height: 50px;
+      line-height: 50px;
+      padding-left: 10px;
+      border: 1px solid #c0c0c1;
+      border-radius: 10px;
+      cursor: pointer;
+       &:focus,
+
+       &:hover {
+       background-color: rgb(186, 190, 190);
+       }
+ 
+   
+    } 
+
+    
+    .content {
+        padding-left: 30px;
+        background: rgb(250, 247, 247);
+        color: rgb(56, 57, 59);
+    }
+   
+}

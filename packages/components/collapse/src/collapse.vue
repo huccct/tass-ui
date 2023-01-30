@@ -49,23 +49,3 @@
     else show.value = index;
   }
 </script>
-<style scoped lang="scss">
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    .title {
-      height: 50px;
-      line-height: 50px;
-      padding-left: 10px;
-      border: 1px solid #c0c0c1;
-      border-radius: 10px;
-      cursor: pointer;
-      .content {
-        padding-left: 30px;
-        background: rgb(250, 247, 247);
-        color: rgb(56, 57, 59);
-      }
-    }
-  }
-</style>
