@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-01-29 16:25:46
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-01-30 12:15:31
 -->
 <template>
   <echo-button-group>
@@ -126,44 +126,20 @@
   <echo-button type="danger" @click="ClickMessage_2">Click Message</echo-button>
   <echo-button type="warning" @click="ClickMessage_3">Click Message</echo-button>
   <echo-button type="info" @click="ClickMessage_4">Click Message</echo-button>
+  <br />
+  <br />
 
-<<<<<<< Updated upstream
   <echo-collapse>
     <template v-slot:one>
-      <div style="height:200px">标题一的内容</div>
+      <div style="height: 200px">标题一的内容</div>
     </template>
     <template v-slot:two>
-      <div style="height:200px">标题二的内容</div>
+      <div style="height: 200px">标题二的内容</div>
     </template>
     <template v-slot:three>
-      <div style="height:200px">标题三的内容</div>
+      <div style="height: 200px">标题三的内容</div>
     </template>
   </echo-collapse>
-    
-=======
-  <echo-collapse v-model="value1" @on-change="changFun">
-    <panel name="1">
-      <span>标题1</span>
-      <p slot="content">标题1的内容</p>
-    </panel>
-    <!-- <Panel name="2">
-        <span>标题2</span>
-        <p slot="content">标题2的内容</p>
-      </Panel>
-      <Panel name="3">
-        <span>标题3</span>
-        <p slot="content">标题3的内容</p>
-      </Panel>
-      <Panel name="4">
-        <span>标题4</span>
-        <p slot="content">标题4的内容</p>
-      </Panel> -->
-  </echo-collapse>
-
-  <br />
-  <br />
-  <echo-carousel></echo-carousel>
->>>>>>> Stashed changes
 </template>
 
 <script setup lang="ts">
