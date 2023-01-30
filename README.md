@@ -8,17 +8,3 @@
 # echo-ui
 
 A high quality UI Toolkit built on Vue.js.
-
-This is a Test Commit By HenJieShen
-
-This is a Test Commit By ChunXinLiu
-
-This is a Test Commit By ChanSinging.
-
-This is a Test Commit By YuShuXiao1.
-
-This is a Test Commit By MinXueDong.
-
-This is a Test Commit By ZhangGuanXin.
-
-This is a Test Commit By LiuJunChen.
