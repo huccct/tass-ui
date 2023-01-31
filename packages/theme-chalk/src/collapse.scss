@@ -1,33 +1,52 @@
 @use 'sass:math';
 
 @use 'mixins/mixins' as *;
+@use 'common/var' as *;
 
+@include b(collapse) {
+    min-width: 300px;
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #edf2fc;
+    text-align: center;
+    border-width: 1px;
+    border-color: #ebeef5;
+    border-style: solid;
+    transition: all 0.4s;
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    .title {
-      height: 50px;
-      line-height: 50px;
-      padding-left: 10px;
-      border: 1px solid #c0c0c1;
-      border-radius: 10px;
-      cursor: pointer;
-       &:focus,
-
-       &:hover {
-       background-color: rgb(186, 190, 190);
-       }
- 
-   
-    } 
-
-    
-    .content {
-        padding-left: 30px;
-        background: rgb(250, 247, 247);
-        color: rgb(56, 57, 59);
+    @include b(collapse-ul) {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
     }
-   
+    
 }
+
+[class^='#{$namespace}-collapse-title'] {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    border: 1px solid #c0c0c1;
+    background: rgb(250, 247, 247);
+    
+    border-radius: 10px;
+    cursor: pointer;
+     &:focus,
+     &:hover {
+        color: white;
+        background-color: mix($color-primary, white, 90%);
+        border-color: $color-primary;
+    }
+      
+  }
+
+[class^='#{$namespace}-collapse-content'] {
+    padding-left: 30px;
+    background: rgb(250, 247, 247);
+    color: $color-info;
+
+}
+
+
+  
