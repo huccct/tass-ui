@@ -5,7 +5,7 @@
  * @description：index
  * @update: 2023/1/28 17:52
  */
-import dropdown from './src/select.vue';
+import dropdown from './src/dropdwon.vue';
 
 import { withInstall } from '@echo-ui/utils/withInstall';
 
