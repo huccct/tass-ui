@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-01 18:53:16
+ * @LastEditTime: 2023-02-01 19:20:24
 -->
 <template>
   <echo-button-group>
@@ -141,11 +141,34 @@
     </template>
   </echo-collapse>
 
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <echo-button type="primary" :visible="!normalViaible" @click="changeView">dialog</echo-button>
+  <echo-dialog
+    :visible="normalViaible"
+    title="这是"
+    width="500px"
+    @cancel="handleClickCancelButton"
+    @confirm="handleConfirmButton"
+  >
+  </echo-dialog>
+
+  <br />
+  <br />
+
+  <echo-alert></echo-alert>
 </template>
 
 <script setup lang="ts">
   import { ref, reactive } from 'vue';
   import { EchoMessage } from '../packages/components/message';
+
+  let normalViaible = ref(false);
   function add() {
     alert('This is a add test.');
   }
@@ -213,6 +236,16 @@
       type: 'info',
       center: true
     });
+  };
+
+  function changeView() {
+    normalViaible.value = !normalViaible.value;
+  }
+  const handleClickCancelButton = () => {
+    normalViaible.value = !normalViaible.value;
+  };
+  const handleConfirmButton = () => {
+    normalViaible.value = !normalViaible.value;
   };
 </script>
 
