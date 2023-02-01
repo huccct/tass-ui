@@ -1,0 +1,40 @@
+// 主题颜色
+$themes: ( // 默认
+light: ( mainBackground: #FCFCFD, // 主要的背景颜色
+mainTextColor: #23262F, // 主要的文字颜色
+secondaryTextColor: #777E90, // 次要文字
+thirdTextColor: #353945, // 描述文字
+generalBorderColor: #E6E8EC, // 普通边框颜色
+primary: #3772FF, // 主题色
+primaryHover: #044eff, // 主题色焦点
+success: #39d47a, // 正确色
+successHover: #02d65a, // 正确色焦点
+warning: #fab638, // 异常色
+warningHover: #f8a203, // 异常色焦点
+danger: #ff4757, // 危险色
+dangerHover: #fc0015, // 危险色
+info: #4f3cc9, // 信息色
+infoHover: #3c2d9c, // 信息色
+inputBorderFocus: #767E90, // 输入框焦点边框色
+modalBackground: #FCFCFD, // 弹出框背景色
+hoverBackground: #F3F5F6, // 焦点背景颜色
+), // 暗夜
+dark: ( mainBackground: #141416, // 主要的背景颜色
+mainTextColor: #FCFCFD, // 主要的文字颜色
+secondaryTextColor: #777E90, // 次要文字
+thirdTextColor: #E6E8EC, // 描述文字
+generalBorderColor: #363945, // 普通边框颜色
+primary: #3772FF, // 主题色
+primaryHover: #044eff, // 主题色焦点
+success: #39d47a, // 正确色
+successHover: #02d65a, // 正确色焦点
+warning: #fab638, // 异常色
+warningHover: #f8a203, // 异常色焦点
+danger: #ff4757, // 危险色
+dangerHover: #fc0015, // 危险色
+info: #4f3cc9, // 信息色
+infoHover: #3c2d9c, // 信息色
+inputBorderFocus: #767E90, // 输入框焦点边框色
+modalBackground: #23262F, // 弹出框背景色
+hoverBackground: #141416, // 焦点背景颜色
+))

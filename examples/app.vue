@@ -140,6 +140,19 @@
       <div style="height: 200px">标题三的内容</div>
     </template>
   </echo-collapse>
+  <br />
+  <br />
+  <div class="select-dropdown">
+    <echo-dropdown v-model="dropDownValue" selected="请选择城市">
+      <template #selectDropDown>
+        <echo-dropdown-item class="select-option" value="厦门">厦门</echo-dropdown-item>
+        <echo-dropdown-item class="select-option" value="福州">福州</echo-dropdown-item>
+        <echo-dropdown-item class="select-option" value="杭州">杭州</echo-dropdown-item>
+        <echo-dropdown-item class="select-option" value="上海">上海</echo-dropdown-item>
+        <echo-dropdown-item class="select-option" value="洛阳">洛阳</echo-dropdown-item>
+      </template>
+    </echo-dropdown>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -215,4 +228,10 @@
   };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  .select-dropdown {
+    width: 256px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+</style>
