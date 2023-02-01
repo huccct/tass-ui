@@ -140,11 +140,25 @@
       <div style="height: 200px">标题三的内容</div>
     </template>
   </echo-collapse>
+  <br />
+  <br />
+
+  <echo-button type="primary" :visible="!normalViaible" @click="changeView">dialog</echo-button>
+  <echo-dialog
+    :visible="normalViaible"
+    title="这是"
+    width="500px"
+    @cancel="handleClickCancelButton"
+    @confirm="handleConfirmButton"
+  >
+  </echo-dialog>
 </template>
 
 <script setup lang="ts">
   import { ref, reactive } from 'vue';
   import { EchoMessage } from '../packages/components/message';
+
+  let normalViaible = ref(false);
   function add() {
     alert('This is a add test.');
   }
@@ -212,6 +226,16 @@
       type: 'info',
       center: true
     });
+  };
+
+  function changeView() {
+    normalViaible.value = !normalViaible.value;
+  }
+  const handleClickCancelButton = () => {
+    normalViaible.value = !normalViaible.value;
+  };
+  const handleConfirmButton = () => {
+    normalViaible.value = !normalViaible.value;
   };
 </script>
 

@@ -15,3 +15,4 @@ export { EchoCheckboxGroup } from './checkbox-group';
 export { EchoTransfer } from './transfer';
 export { EchoMessage } from './message';
 export { EchoCollapse } from './collapse';
+export { EchoDialog } from './dialog';
