@@ -1,0 +1,6 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+
+@include b(alert){
+
+}
