@@ -142,6 +142,10 @@
   </echo-collapse>
   <br />
   <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
   <echo-button type="primary" :visible="!normalViaible" @click="changeView">dialog</echo-button>
   <echo-dialog
