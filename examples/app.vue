@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-01 19:20:24
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-01 20:23:37
 -->
 <template>
   <echo-button-group>
@@ -162,6 +162,8 @@
   <br />
 
   <echo-alert></echo-alert>
+
+  <echo-button type="primary"></echo-button>
 </template>
 
 <script setup lang="ts">
