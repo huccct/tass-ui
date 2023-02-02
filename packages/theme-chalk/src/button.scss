@@ -4,7 +4,9 @@
 @use './mixins/button' as *;
 
 @include b(button) {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   font-weight: $button-font-weight;
   line-height: 1;
@@ -16,6 +18,7 @@
   border: $border-base;
   border-color: $button-default-border-color;
   outline: none;
+  vertical-align: middle;
   box-sizing: border-box;
   transition: 0.1s;
   appearance: none;

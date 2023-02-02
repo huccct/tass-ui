@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-24 21:56:36
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-25 20:08:17
+ * @LastEditTime: 2023-02-02 18:30:30
 -->
 <template>
   <div class="ec-transfer">
@@ -15,7 +15,7 @@
     <div class="ec-transfer__buttons">
       <echo-button
         type="primary"
-        icon="ec-icon-left"
+        icon="ec-icon-chevronleft"
         size="small"
         @click="leftClick"
         :disabled="rightState.length === 0"
@@ -24,7 +24,7 @@
       </echo-button>
       <echo-button
         type="primary"
-        icon="ec-icon-right"
+        icon="ec-icon-chevronright"
         size="small"
         @click="rightClick"
         :disabled="leftState.length === 0"

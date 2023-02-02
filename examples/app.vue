@@ -3,17 +3,16 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-01 20:23:37
+ * @LastEditTime: 2023-02-02 18:33:02
 -->
 <template>
-  <echo-button-group>
-    <echo-button @click="add">button</echo-button>
-    <echo-button type="primary">button</echo-button>
-    <echo-button type="success">button</echo-button>
-    <echo-button type="danger">button</echo-button>
-    <echo-button type="warning">button</echo-button>
-    <echo-button type="info">button</echo-button>
-  </echo-button-group>
+  <echo-button>Default</echo-button>
+  <echo-button type="primary">Primary</echo-button>
+  <echo-button type="success">Success</echo-button>
+  <echo-button type="info">Info</echo-button>
+  <echo-button type="warning">Warning</echo-button>
+  <echo-button type="danger">Danger</echo-button>
+
   <br />
   <br />
 
@@ -35,26 +34,12 @@
   <br />
   <br />
 
-  <echo-button type="success" icon="ec-icon-ico_med_doctor">button</echo-button>
-  <echo-button type="primary" loading>button</echo-button>
-  <echo-button type="danger">button</echo-button>
+  <echo-button type="success" icon="ec-icon-magnifier">Search</echo-button>
   <br />
   <br />
 
-  <echo-icon name="ico_med_doctor"></echo-icon>
-  <echo-icon name="ico_doc_chart_curve"></echo-icon>
-  <echo-icon name="ico_med_band-bid"></echo-icon>
-  <echo-icon name="ico_med_board"></echo-icon>
-  <echo-icon name="ico_doc_chart_trend"></echo-icon>
-  <echo-icon name="ico_doc_chart_curve"></echo-icon>
-  <echo-icon name="ico_med_board"></echo-icon>
-  <echo-icon name="ico_doc_chart_trend"></echo-icon>
-  <echo-icon name="ico_doc_chart_pie"></echo-icon>
-  <echo-icon name="ico_med_stethoscope"></echo-icon>
-  <echo-icon name="jia"></echo-icon>
-  <echo-icon name="ico_med_records5"></echo-icon>
-  <echo-icon name="left"></echo-icon>
-  <echo-icon name="right"></echo-icon>
+  <echo-icon name="pluscircle"></echo-icon>&nbsp; <echo-icon name="pushpin"></echo-icon>&nbsp;
+  <echo-icon name="textalignjustify"></echo-icon>
   <br />
   <br />
 
@@ -140,16 +125,15 @@
       <div style="height: 200px">标题三的内容</div>
     </template>
   </echo-collapse>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-
-  <br />
-  <br />
   <echo-dropdown
     class="my-dropdown-toggle"
     :options="arrayOfObjects"
