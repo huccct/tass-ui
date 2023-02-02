@@ -148,6 +148,16 @@
   <br />
   <br />
 
+  <br />
+  <br />
+  <echo-dropdown class="my-dropdown-toggle"
+            :options="arrayOfObjects"
+            :selected="selectedObject"
+            v-on:updateoption="methodToRunOnSelect"
+            :closeOnOutsideClick="boolean">{{selectedObject}}
+  </echo-dropdown>
+
+
   <echo-button type="primary" :visible="!normalViaible" @click="changeView">dialog</echo-button>
   <echo-dialog
     :visible="normalViaible"
@@ -179,6 +189,10 @@
 
   let checkList = ref(['Shanghai', 'Hangzhou']);
   let showList = ref(['Shanghai', 'Hangzhou', 'Beijing', 'Guangzhou']);
+
+  let arrayOfObjects = ref(['厦门','福州','杭州','上海']);
+  let selectedObject = ref(['1','2','3','4']);
+
   const handlerChange = () => {
     alert('This is a handleChange test.');
   };
@@ -240,6 +254,11 @@
     });
   };
 
+
+  const methodToRunOnSelect = (playload) => {
+      selectedObject = playload
+  }
+
   function changeView() {
     normalViaible.value = !normalViaible.value;
   }
@@ -251,4 +270,18 @@
   };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.my-dropdown-toggle {
+    border-radius: 5px;
+
+    ::v-deep .dropdown-toggle {
+        color: tomato;
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+    ::v-deep .dropdown-toggle-placeholder {
+        color: #c4c4c4;
+    }
+}
+</style>
