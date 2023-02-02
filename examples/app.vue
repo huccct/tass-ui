@@ -2,8 +2,10 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-02 18:33:02
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-02-02 19:33:33
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-02-02 19:16:12
 -->
 <template>
   <echo-button>Default</echo-button>
@@ -159,16 +161,36 @@
   <echo-alert></echo-alert>
 
   <echo-button type="primary"></echo-button>
+
+
+  <br />
+  <br />
+
+
+  <br />
+  <br />  
+  <br />  
+  <br />
+  <echo-carousel v-model="carouseltest">
+    <echo-carousel-item id="1">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#d3dce6;">1</div>
+    </echo-carousel-item>
+    <echo-carousel-item id="2">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:skyblue;">2</div>
+    </echo-carousel-item>
+  </echo-carousel>
 </template>
 
 <script setup lang="ts">
+
   import { ref, reactive } from 'vue';
   import { EchoMessage } from '../packages/components/message';
-
-  let normalViaible = ref(false);
   function add() {
     alert('This is a add test.');
   }
+
+  let carouseltest = ref("1")
+
   let check1 = ref(false);
   let check2 = ref(true);
 
@@ -252,6 +274,8 @@
   const handleConfirmButton = () => {
     normalViaible.value = !normalViaible.value;
   };
+
+  
 </script>
 
 <style lang="scss">
@@ -269,3 +293,19 @@
     }
   }
 </style>
+<style lang="scss" scoped>
+.el-carousel__item h3 {
+  display: flex;
+  color: #475669;
+  opacity: 0.75;
+  line-height: 300px;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}</style>
