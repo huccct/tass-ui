@@ -27,7 +27,7 @@
     </div>
 </template>
 
-<script lang="ts">
+<script setup lang="js">
 export default {
     data() {
         return {
