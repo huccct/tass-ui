@@ -1,0 +1,8 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+
+@include b(alert) {
+  width: 200px;
+  height: 100px;
+  background-color: red;
+}

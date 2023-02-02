@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-30 12:15:31
+ * @LastEditTime: 2023-02-01 20:23:37
 -->
 <template>
   <echo-button-group>
@@ -147,6 +147,7 @@
   <br />
   <br />
   <br />
+
   <br />
   <br />
   <echo-dropdown class="my-dropdown-toggle"
@@ -155,11 +156,31 @@
             v-on:updateoption="methodToRunOnSelect"
             :closeOnOutsideClick="boolean">{{selectedObject}}
   </echo-dropdown>
+
+
+  <echo-button type="primary" :visible="!normalViaible" @click="changeView">dialog</echo-button>
+  <echo-dialog
+    :visible="normalViaible"
+    title="这是"
+    width="500px"
+    @cancel="handleClickCancelButton"
+    @confirm="handleConfirmButton"
+  >
+  </echo-dialog>
+
+  <br />
+  <br />
+
+  <echo-alert></echo-alert>
+
+  <echo-button type="primary"></echo-button>
 </template>
 
 <script setup lang="ts">
   import { ref, reactive } from 'vue';
   import { EchoMessage } from '../packages/components/message';
+
+  let normalViaible = ref(false);
   function add() {
     alert('This is a add test.');
   }
@@ -233,9 +254,20 @@
     });
   };
 
+
   const methodToRunOnSelect = (playload) => {
       selectedObject = playload
   }
+
+  function changeView() {
+    normalViaible.value = !normalViaible.value;
+  }
+  const handleClickCancelButton = () => {
+    normalViaible.value = !normalViaible.value;
+  };
+  const handleConfirmButton = () => {
+    normalViaible.value = !normalViaible.value;
+  };
 </script>
 
 <style lang="scss">
