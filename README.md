@@ -8,3 +8,5 @@
 # echo-ui
 
 A high quality UI Toolkit built on Vue.js.
+
+when pull failed, do this `git config --global --unset http.proxy`

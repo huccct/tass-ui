@@ -140,19 +140,21 @@
       <div style="height: 200px">标题三的内容</div>
     </template>
   </echo-collapse>
+
   <br />
   <br />
-  <div class="select-dropdown">
-    <echo-dropdown v-model="dropDownValue" selected="请选择城市">
-      <template #selectDropDown>
-        <echo-dropdown-item class="select-option" value="厦门">厦门</echo-dropdown-item>
-        <echo-dropdown-item class="select-option" value="福州">福州</echo-dropdown-item>
-        <echo-dropdown-item class="select-option" value="杭州">杭州</echo-dropdown-item>
-        <echo-dropdown-item class="select-option" value="上海">上海</echo-dropdown-item>
-        <echo-dropdown-item class="select-option" value="洛阳">洛阳</echo-dropdown-item>
-      </template>
-    </echo-dropdown>
-  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <echo-dropdown class="my-dropdown-toggle"
+            :options="arrayOfObjects"
+            :selected="selectedObject"
+            v-on:updateoption="methodToRunOnSelect"
+            :closeOnOutsideClick="boolean">{{selectedObject}}
+  </echo-dropdown>
 </template>
 
 <script setup lang="ts">
@@ -166,6 +168,10 @@
 
   let checkList = ref(['Shanghai', 'Hangzhou']);
   let showList = ref(['Shanghai', 'Hangzhou', 'Beijing', 'Guangzhou']);
+
+  let arrayOfObjects = ref(['厦门','福州','杭州','上海']);
+  let selectedObject = ref(['1','2','3','4']);
+
   const handlerChange = () => {
     alert('This is a handleChange test.');
   };
@@ -226,12 +232,24 @@
       center: true
     });
   };
+
+  const methodToRunOnSelect = (playload) => {
+      selectedObject = playload
+  }
 </script>
 
 <style lang="scss">
-  .select-dropdown {
-    width: 256px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
+.my-dropdown-toggle {
+    border-radius: 5px;
+
+    ::v-deep .dropdown-toggle {
+        color: tomato;
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+    ::v-deep .dropdown-toggle-placeholder {
+        color: #c4c4c4;
+    }
+}
 </style>
