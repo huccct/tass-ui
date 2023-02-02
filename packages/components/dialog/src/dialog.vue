@@ -1,14 +1,14 @@
 <template>
-  <div v-show="visible" class="dx-dialog-warpper">
-    <div class="dx-dialog-inner">
-      <div class="dx-dialog-box border-radius" :style="`width:${width}`">
+  <div v-show="visible" class="dialog">
+    <div class="dialog__body">
+      <div class="dialog__box border-radius" :style="`width:${width}`">
         <div>
           <slot name="headerContent" />
-          <div v-if="showHeaderResult" class="dx-dialog-header">
-            <h3 class="dx-dialog-title">
+          <div v-if="showHeaderResult" class="dialog__header">
+            <h3 class="dialog__title">
               {{ title }}
             </h3>
-            <span v-if="showClose" class="dx-dialog-close" @click="onClickCancelButton">X</span>
+            <span v-if="showClose" class="dialog__close" @click="onClickCancelButton">X</span>
           </div>
         </div>
 
@@ -18,7 +18,7 @@
 
         <div>
           <slot name="footerContent" />
-          <div v-if="showFooterResult" class="dx-dialog-footer">
+          <div v-if="showFooterResult" class="dialog__footer">
             <button v-if="showCancelButton" mode="text" @click="onClickCancelButton">
               {{ cancelText }}
             </button>
@@ -138,7 +138,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .dx-dialog-warpper {
+  .dialog {
     position: fixed;
     left: 0;
     top: 0;
@@ -146,39 +146,35 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.3);
     user-select: none;
-
-    .dx-dialog-inner {
+    &__body {
       display: table-cell;
       width: 100vw;
       height: 100vh;
       text-align: center;
       vertical-align: middle;
-
-      .dx-dialog-box {
-        // width: 460px;
-        display: inline-block;
-        padding: 24px 24px 12px 24px;
-        background: white;
-        text-align: left;
-      }
     }
-
-    .dx-dialog-header {
+    &__box {
+      // width: 460px;
+      display: inline-block;
+      padding: 24px 24px 12px 24px;
+      background: white;
+      text-align: left;
+    }
+    &__header {
       position: relative;
       display: flex;
-      .dx-dialog-title {
-        line-height: 30px;
-        width: calc(100% - 30px);
-      }
-      .dx-dialog-close {
-        position: absolute;
-        right: 0;
-        top: 0;
-        cursor: pointer;
-      }
     }
-
-    .dx-dialog-footer {
+    &__title {
+      line-height: 30px;
+      width: calc(100% - 30px);
+    }
+    &__close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+    }
+    &__footer {
       text-align: right;
     }
   }
