@@ -7,7 +7,7 @@
  */
 import { computed } from 'vue';
 export const useComponentData = props => {
-  let propKey = computed(() => props.props.key);
+  const propKey = computed(() => props.props.key);
   const data = computed(() => {
     return props.data.reduce((memo, current) => {
       memo[current[propKey.value]] = current;

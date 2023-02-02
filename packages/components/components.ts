@@ -26,5 +26,5 @@ export { EchoDropdown } from './dropdown';
 export { EchoDialog } from './dialog';
 export { EchoAlert } from './alert';
 
-export { EchoCarousel } from './carousel'
-export { EchoCarouselItem } from './carousel-item'
+export { EchoCarousel } from './carousel';
+export { EchoCarouselItem } from './carousel-item';

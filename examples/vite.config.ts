@@ -13,6 +13,6 @@ import VueSetupExtend from 'vite-plugin-vue-setup-extend';
 export default defineConfig({
   plugins: [vue(), VueSetupExtend()],
   test: {
-    environment: 'happy-dom',
-  },
+    environment: 'happy-dom'
+  }
 });

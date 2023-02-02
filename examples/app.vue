@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-02-02 19:33:33
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-02 19:48:34
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -162,34 +162,50 @@
 
   <echo-button type="primary"></echo-button>
 
-
   <br />
   <br />
 
-
   <br />
-  <br />  
-  <br />  
+  <br />
+  <br />
   <br />
   <echo-carousel v-model="carouseltest">
     <echo-carousel-item id="1">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#d3dce6;">1</div>
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: #d3dce6;
+        "
+      >
+        1
+      </div>
     </echo-carousel-item>
     <echo-carousel-item id="2">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:skyblue;">2</div>
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: skyblue;
+        "
+      >
+        2
+      </div>
     </echo-carousel-item>
   </echo-carousel>
 </template>
 
 <script setup lang="ts">
-
   import { ref, reactive } from 'vue';
   import { EchoMessage } from '../packages/components/message';
-  function add() {
-    alert('This is a add test.');
-  }
 
-  let carouseltest = ref("1")
+  let carouseltest = ref('1');
 
   let check1 = ref(false);
   let check2 = ref(true);
@@ -199,7 +215,7 @@
 
   let arrayOfObjects = ref(['厦门', '福州', '杭州', '上海']);
   let selectedObject = ref(['1', '2', '3', '4']);
-
+  let normalViaible = ref(false);
   const handlerChange = () => {
     alert('This is a handleChange test.');
   };
@@ -274,38 +290,35 @@
   const handleConfirmButton = () => {
     normalViaible.value = !normalViaible.value;
   };
-
-  
 </script>
 
 <style lang="scss">
   .my-dropdown-toggle {
     border-radius: 5px;
-
     ::v-deep .dropdown-toggle {
       color: tomato;
       font-size: 25px;
       font-weight: 800;
     }
-
     ::v-deep .dropdown-toggle-placeholder {
       color: #c4c4c4;
     }
   }
 </style>
 <style lang="scss" scoped>
-.el-carousel__item h3 {
-  display: flex;
-  color: #475669;
-  opacity: 0.75;
-  line-height: 300px;
-  margin: 0;
-}
+  .el-carousel__item h3 {
+    display: flex;
+    color: #475669;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+  }
 
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
 
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
-}</style>
+  .el-carousel__item:nth-child(2n + 1) {
+    background-color: #d3dce6;
+  }
+</style>

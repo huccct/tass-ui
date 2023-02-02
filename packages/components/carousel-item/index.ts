@@ -4,9 +4,9 @@
  * @Description: 铁沸物
  * @FilePath: \echo-ui\packages\components\carousel\index.ts
  */
-import { withInstall } from '@echo-ui/utils/withInstall'
-import CarouselItem from "./src/carousel-item.vue";
+import { withInstall } from '@echo-ui/utils/withInstall';
+import CarouselItem from './src/carousel-item.vue';
 
 export const EchoCarouselItem = withInstall(CarouselItem);
 
-export default EchoCarouselItem
+export default EchoCarouselItem;
