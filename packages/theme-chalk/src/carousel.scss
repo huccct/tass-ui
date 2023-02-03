@@ -14,7 +14,7 @@
 
 .echo-carousel > [carousel-item]:before {
   position: absolute;
-  content: "\e63d";
+  content: '\e63d';
   left: 50%;
   top: 50%;
   width: 100px;
@@ -68,22 +68,22 @@
   cursor: pointer;
 }
 
-.echo-carousel-arrow[echo-type="add"] {
+.echo-carousel-arrow[echo-type='add'] {
   left: auto !important;
   right: 10px;
 }
 
-.echo-carousel:hover .echo-carousel-arrow[echo-type="add"],
-.echo-carousel[echo-arrow="always"] .echo-carousel-arrow[echo-type="add"] {
+.echo-carousel:hover .echo-carousel-arrow[echo-type='add'],
+.echo-carousel[echo-arrow='always'] .echo-carousel-arrow[echo-type='add'] {
   right: 20px;
 }
 
-.echo-carousel[echo-arrow="always"] .echo-carousel-arrow {
+.echo-carousel[echo-arrow='always'] .echo-carousel-arrow {
   opacity: 1;
   left: 20px;
 }
 
-.echo-carousel[echo-arrow="none"] .echo-carousel-arrow {
+.echo-carousel[echo-arrow='none'] .echo-carousel-arrow {
   display: none;
 }
 
@@ -107,19 +107,19 @@
   font-size: 0;
 }
 
-.echo-carousel[echo-indicator="outside"] {
+.echo-carousel[echo-indicator='outside'] {
   margin-bottom: 30px;
 }
 
-.echo-carousel[echo-indicator="outside"] .echo-carousel-ind {
+.echo-carousel[echo-indicator='outside'] .echo-carousel-ind {
   top: 10px;
 }
 
-.echo-carousel[echo-indicator="outside"] .echo-carousel-ind ul {
+.echo-carousel[echo-indicator='outside'] .echo-carousel-ind ul {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.echo-carousel[echo-indicator="none"] .echo-carousel-ind {
+.echo-carousel[echo-indicator='none'] .echo-carousel-ind {
   display: none;
 }
 
@@ -185,23 +185,23 @@
   left: 100%;
 }
 
-.echo-carousel[echo-anim="updown"] .echo-carousel-arrow {
+.echo-carousel[echo-anim='updown'] .echo-carousel-arrow {
   left: 50% !important;
   top: 20px;
   margin: 0 0 0 -18px;
 }
 
-.echo-carousel[echo-anim="updown"] > [carousel-item] > *,
-.echo-carousel[echo-anim="fade"] > [carousel-item] > * {
+.echo-carousel[echo-anim='updown'] > [carousel-item] > *,
+.echo-carousel[echo-anim='fade'] > [carousel-item] > * {
   left: 0 !important;
 }
 
-.echo-carousel[echo-anim="updown"] .echo-carousel-arrow[echo-type="add"] {
+.echo-carousel[echo-anim='updown'] .echo-carousel-arrow[echo-type='add'] {
   top: auto !important;
   bottom: 20px;
 }
 
-.echo-carousel[echo-anim="updown"] .echo-carousel-ind {
+.echo-carousel[echo-anim='updown'] .echo-carousel-ind {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -210,66 +210,66 @@
   transform: translateY(-50%);
 }
 
-.echo-carousel[echo-anim="updown"] .echo-carousel-ind ul {
+.echo-carousel[echo-anim='updown'] .echo-carousel-ind ul {
   padding: 3px 5px;
 }
 
-.echo-carousel[echo-anim="updown"] .echo-carousel-ind li {
+.echo-carousel[echo-anim='updown'] .echo-carousel-ind li {
   display: block;
   margin: 6px 0;
 }
 
-.echo-carousel[echo-anim="updown"] > [carousel-item] > .echo-this {
+.echo-carousel[echo-anim='updown'] > [carousel-item] > .echo-this {
   top: 0;
 }
 
-.echo-carousel[echo-anim="updown"] > [carousel-item] > .echo-carousel-prev {
+.echo-carousel[echo-anim='updown'] > [carousel-item] > .echo-carousel-prev {
   top: -100%;
 }
 
-.echo-carousel[echo-anim="updown"] > [carousel-item] > .echo-carousel-next {
+.echo-carousel[echo-anim='updown'] > [carousel-item] > .echo-carousel-next {
   top: 100%;
 }
 
-.echo-carousel[echo-anim="updown"]
+.echo-carousel[echo-anim='updown']
   > [carousel-item]
   > .echo-carousel-next.echo-carousel-left,
-.echo-carousel[echo-anim="updown"]
+.echo-carousel[echo-anim='updown']
   > [carousel-item]
   > .echo-carousel-prev.echo-carousel-right {
   top: 0;
 }
 
-.echo-carousel[echo-anim="updown"]
+.echo-carousel[echo-anim='updown']
   > [carousel-item]
   > .echo-this.echo-carousel-left {
   top: -100%;
 }
 
-.echo-carousel[echo-anim="updown"]
+.echo-carousel[echo-anim='updown']
   > [carousel-item]
   > .echo-this.echo-carousel-right {
   top: 100%;
 }
 
-.echo-carousel[echo-anim="fade"] > [carousel-item] > .echo-carousel-next,
-.echo-carousel[echo-anim="fade"] > [carousel-item] > .echo-carousel-prev {
+.echo-carousel[echo-anim='fade'] > [carousel-item] > .echo-carousel-next,
+.echo-carousel[echo-anim='fade'] > [carousel-item] > .echo-carousel-prev {
   opacity: 0;
 }
 
-.echo-carousel[echo-anim="fade"]
+.echo-carousel[echo-anim='fade']
   > [carousel-item]
   > .echo-carousel-next.echo-carousel-left,
-.echo-carousel[echo-anim="fade"]
+.echo-carousel[echo-anim='fade']
   > [carousel-item]
   > .echo-carousel-prev.echo-carousel-right {
   opacity: 1;
 }
 
-.echo-carousel[echo-anim="fade"]
+.echo-carousel[echo-anim='fade']
   > [carousel-item]
   > .echo-this.echo-carousel-left,
-.echo-carousel[echo-anim="fade"]
+.echo-carousel[echo-anim='fade']
   > [carousel-item]
   > .echo-this.echo-carousel-right {
   opacity: 0;

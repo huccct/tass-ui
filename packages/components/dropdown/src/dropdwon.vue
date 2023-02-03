@@ -7,7 +7,11 @@
 -->
 <template>
   <div class="btn-group">
-    <li @click="toggleMenu()" class="dropdown-toggle" v-if="selectedOption.name !== undefined">
+    <li
+      @click="toggleMenu()"
+      class="dropdown-toggle"
+      v-if="selectedOption.name !== undefined"
+    >
       {{ selectedOption.name }}
       <span class="caret"></span>
     </li>
@@ -113,7 +117,8 @@
     font-weight: 300;
     margin-bottom: 7px;
     border: 0;
-    background-image: linear-gradient(#009688, #009688), linear-gradient(#d2d2d2, #d2d2d2);
+    background-image: linear-gradient(#009688, #009688),
+      linear-gradient(#d2d2d2, #d2d2d2);
     background-size: 0 2px, 100% 1px;
     background-repeat: no-repeat;
     background-position: center bottom, center calc(100% - 1px);

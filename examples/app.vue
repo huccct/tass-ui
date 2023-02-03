@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-03 12:43:04
+ * @LastEditTime: 2023-02-03 15:05:54
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -177,8 +177,8 @@
     class="my-dropdown-toggle"
     :options="arrayOfObjects"
     :selected="selectedObject"
+    :close-on-outside-click="false"
     v-on:updateoption="methodToRunOnSelect"
-    :closeOnOutsideClick="false"
     >{{ selectedObject }}
   </echo-dropdown>
 
@@ -197,7 +197,19 @@
   <br />
   <br />
 
-   <echo-alert showIcon title="hello echoUI" closeable type="warning">
+  <echo-alert
+    show-icon
+    title="hello echoUI"
+    closeable
+    type="error"
+    content="bbbccc"
+  >
+  </echo-alert>
+  <echo-alert show-icon title="hello echoUI" closeable type="success">
+  </echo-alert>
+  <echo-alert show-icon title="hello echoUI" closeable type="info">
+  </echo-alert>
+  <echo-alert show-icon title="hello echoUI" closeable type="warning">
   </echo-alert>
 
   <echo-button type="primary"></echo-button>
@@ -318,7 +330,7 @@
   };
 
   const methodToRunOnSelect = playload => {
-    selectedObject = playload;
+    selectedObject.value = playload;
   };
 
   function changeView() {

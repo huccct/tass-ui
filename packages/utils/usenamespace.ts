@@ -31,15 +31,24 @@ const _bem = (
 
 export const useNamespace = (block: string) => {
   const namespace = useGlobalConfig('namespace', defaultNamespace);
-  const b = (blockSuffix = '') => _bem(namespace.value, block, blockSuffix, '', '');
-  const e = (element?: string) => (element ? _bem(namespace.value, block, '', element, '') : '');
-  const m = (modifier?: string) => (modifier ? _bem(namespace.value, block, '', '', modifier) : '');
+  const b = (blockSuffix = '') =>
+    _bem(namespace.value, block, blockSuffix, '', '');
+  const e = (element?: string) =>
+    element ? _bem(namespace.value, block, '', element, '') : '';
+  const m = (modifier?: string) =>
+    modifier ? _bem(namespace.value, block, '', '', modifier) : '';
   const be = (blockSuffix?: string, element?: string) =>
-    blockSuffix && element ? _bem(namespace.value, block, blockSuffix, element, '') : '';
+    blockSuffix && element
+      ? _bem(namespace.value, block, blockSuffix, element, '')
+      : '';
   const em = (element?: string, modifier?: string) =>
-    element && modifier ? _bem(namespace.value, block, '', element, modifier) : '';
+    element && modifier
+      ? _bem(namespace.value, block, '', element, modifier)
+      : '';
   const bm = (blockSuffix?: string, modifier?: string) =>
-    blockSuffix && modifier ? _bem(namespace.value, block, blockSuffix, '', modifier) : '';
+    blockSuffix && modifier
+      ? _bem(namespace.value, block, blockSuffix, '', modifier)
+      : '';
   const bem = (blockSuffix?: string, element?: string, modifier?: string) =>
     blockSuffix && element && modifier
       ? _bem(namespace.value, block, blockSuffix, element, modifier)
@@ -75,7 +84,8 @@ export const useNamespace = (block: string) => {
   };
 
   const cssVarName = (name: string) => `--${namespace.value}-${name}`;
-  const cssVarBlockName = (name: string) => `--${namespace.value}-${block}-${name}`;
+  const cssVarBlockName = (name: string) =>
+    `--${namespace.value}-${block}-${name}`;
 
   return {
     namespace,

@@ -12,8 +12,8 @@
   const props = defineProps({
     name: {
       type: String,
-      default: '',
-    },
+      default: ''
+    }
   });
 </script>
 <style></style>

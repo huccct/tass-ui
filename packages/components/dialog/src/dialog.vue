@@ -8,7 +8,12 @@
             <h3 class="dx-dialog-title">
               {{ title }}
             </h3>
-            <span v-if="showClose" class="dx-dialog-close" @click="onClickCancelButton">X</span>
+            <span
+              v-if="showClose"
+              class="dx-dialog-close"
+              @click="onClickCancelButton"
+              >X</span
+            >
           </div>
         </div>
 
@@ -19,7 +24,11 @@
         <div>
           <slot name="footerContent" />
           <div v-if="showFooterResult" class="dx-dialog-footer">
-            <button v-if="showCancelButton" mode="text" @click="onClickCancelButton">
+            <button
+              v-if="showCancelButton"
+              mode="text"
+              @click="onClickCancelButton"
+            >
               {{ cancelText }}
             </button>
             <button v-if="showConfirmButton" @click="onClickConfirmButton">
@@ -101,7 +110,8 @@
       }
     },
     setup(propsData) {
-      const currentInstance: ComponentInternalInstance | null = getCurrentInstance();
+      const currentInstance: ComponentInternalInstance | null =
+        getCurrentInstance();
 
       function onClickCancelButton(e: Event) {
         currentInstance?.emit('cancel', e);

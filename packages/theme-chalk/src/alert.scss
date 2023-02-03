@@ -2,7 +2,44 @@
 @use 'common/var' as *;
 
 @include b(alert) {
-  width: 200px;
-  height: 100px;
-  background-color: red;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: $alert-padding;
+  margin-bottom: 5px;
+  border-radius: $alert-border-radius;
+  @include b(alert__content) {
+    padding-left: 15px;
+  }
+  @include b(alert__title) {
+    font-size: $alert-title-font-size;
+  }
+  @include b(alert__desc) {
+    margin: 5px;
+    font-size: $alert-description-font-size;
+  }
+  @include b(alert__close-btn) {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: $alert-description-font-size;
+  }
+  @include m(warning) {
+    background-color: $alert-warning-color;
+    color: mix($color-white, $color-warning, 10%);
+  }
+  @include m(success) {
+    background-color: $alert-success-color;
+    color: mix($color-white, $color-success, 10%);
+  }
+  @include m(info) {
+    background-color: $alert-info-color;
+    color: mix($color-white, $color-info, 10%);
+  }
+  @include m(error) {
+    background-color: $alert-danger-color;
+    color: mix($color-white, $color-danger, 10%);
+  }
 }

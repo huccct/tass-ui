@@ -20,15 +20,17 @@ export const Props = {
     type: String as PropType<ButtonType>,
     default: (): ButtonType => 'default',
     validator(value: ButtonType) {
-      return (['default', 'primary', 'success', 'info', 'danger', 'warning'] as const).includes(
-        value
-      );
+      return (
+        ['default', 'primary', 'success', 'info', 'danger', 'warning'] as const
+      ).includes(value);
     }
   },
   size: {
     type: String as PropType<ButtonSizeType>,
     validator(value: ButtonSizeType) {
-      return (['default', 'medium', 'small', 'mini', 'tiny'] as const).includes(value);
+      return (['default', 'medium', 'small', 'mini', 'tiny'] as const).includes(
+        value
+      );
     }
   },
   plain: {

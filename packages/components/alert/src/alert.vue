@@ -3,7 +3,7 @@
  * @Author: YuShu Xiao
  * @Date: 2023-02-01 23:03:26
  * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-03 12:45:34
+ * @LastEditTime: 2023-02-03 14:43:55
 -->
 <template>
   <!-- 提示框组件 -->
@@ -17,9 +17,11 @@
       <h3 class="ec-alert__title ec-global-ellipsis">
         {{ title }}
       </h3>
-      <p class="ec-alert__desc" v-if="content"></p>
+      <p class="ec-alert__desc" v-if="content">
+        {{ content }}
+      </p>
       <echo-icon
-        name="textalignjustify"
+        name="cross"
         class="ec-alert__close-btn"
         v-if="closeable"
         @click="handleClose"
@@ -61,10 +63,10 @@
     return [{ [`ec-alert--${type}`]: type }];
   });
   const iconMaps = {
-    info: 'ico_med_doctor',
-    success: 'ico_doc_chart_curve',
-    error: 'ico_med_band-bid',
-    warning: 'pluscircle'
+    info: 'info',
+    success: 'success',
+    error: 'danger',
+    warning: 'warning'
   };
   const iconName = computed(() => {
     const { type } = props;

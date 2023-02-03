@@ -201,5 +201,11 @@ module.exports = {
       'speak'
     ]
   },
-  ignoreFiles: ['**./*.js,', '**./*.ts,', '**./*.tsx,', '**./*.jsx,', '**./*.vue,']
+  ignoreFiles: [
+    '**./*.js,',
+    '**./*.ts,',
+    '**./*.tsx,',
+    '**./*.jsx,',
+    '**./*.vue,'
+  ]
 };
