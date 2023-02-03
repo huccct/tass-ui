@@ -2,7 +2,8 @@
 @use 'common/var' as *;
 @font-face {
   font-family: 'ec-ui-icons'; /* Project id 3868664 */
-  src: url('./fonts//iconfont.woff2') format('woff2'), url('./fonts/iconfont.woff') format('woff'),
+  src: url('./fonts//iconfont.woff2') format('woff2'),
+    url('./fonts/iconfont.woff') format('woff'),
     url('./fonts/iconfont.ttf') format('truetype');
 }
 
@@ -14,12 +15,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ec-icon-bubble:before {
-  content: '\e616';
+.ec-icon-danger:before {
+  content: '\e8e7';
 }
 
-.ec-icon-checkmarkcircle:before {
-  content: '\e61b';
+.ec-icon-warning:before {
+  content: '\e785';
+}
+
+.ec-icon-success:before {
+  content: '\e680';
+}
+
+.ec-icon-info:before {
+  content: '\e601';
+}
+
+.ec-icon-bubble:before {
+  content: '\e616';
 }
 
 .ec-icon-chevrondown:before {

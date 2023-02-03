@@ -8,7 +8,11 @@
 <template>
   <!-- 提示框组件 -->
   <div :class="alertClassNames" class="ec-alert" v-if="isShow">
-    <echo-icon :name="iconName" class="ec-alert__icon" v-if="showIcon"></echo-icon>
+    <echo-icon
+      :name="iconName"
+      class="ec-alert__icon"
+      v-if="showIcon"
+    ></echo-icon>
     <div class="ec-alert__content">
       <h3 class="ec-alert__title ec-global-ellipsis">
         {{ title }}
@@ -32,7 +36,8 @@
     type: {
       type: String,
       default: () => 'info',
-      validator: (val: AlertType) => ['info', 'success', 'error', 'warning'].includes(val)
+      validator: (val: AlertType) =>
+        ['info', 'success', 'error', 'warning'].includes(val)
     },
     title: {
       type: String,

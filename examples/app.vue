@@ -40,14 +40,21 @@
   <br />
   <br />
 
-  <echo-icon name="pluscircle"></echo-icon>&nbsp; <echo-icon name="pushpin"></echo-icon>&nbsp;
-  <echo-icon name="textalignjustify"></echo-icon>
+  <echo-icon name="pluscircle"></echo-icon>&nbsp;
+  <echo-icon name="pushpin"></echo-icon>&nbsp;
+  <echo-icon name="textalignjustify"></echo-icon>&nbsp;
+  <echo-icon name="danger"></echo-icon>&nbsp;
+  <echo-icon name="success"></echo-icon>&nbsp;
+  <echo-icon name="info"></echo-icon>&nbsp;
+  <echo-icon name="warning"></echo-icon>
   <br />
   <br />
 
   <echo-row>
     <echo-col :span="24">
-      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+      <div
+        style="background-color: #d3dce6; height: 35px; border-radius: 8px"
+      ></div>
     </echo-col>
   </echo-row>
   <br />
@@ -55,10 +62,14 @@
 
   <echo-row>
     <echo-col :span="12">
-      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+      <div
+        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
+      ></div>
     </echo-col>
     <echo-col :span="12">
-      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+      <div
+        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
+      ></div>
     </echo-col>
   </echo-row>
   <br />
@@ -66,13 +77,19 @@
 
   <echo-row tag="div">
     <echo-col tag="span" :span="12">
-      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+      <div
+        style="background-color: #d3dce6; height: 35px; border-radius: 8px"
+      ></div>
     </echo-col>
     <echo-col tag="span" :span="6">
-      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+      <div
+        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
+      ></div>
     </echo-col>
     <echo-col tag="span" :span="6">
-      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+      <div
+        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
+      ></div>
     </echo-col>
   </echo-row>
   <br />
@@ -80,38 +97,58 @@
 
   <echo-row tag="div" :gutter="20" justify="end">
     <echo-col tag="span" :span="6">
-      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+      <div
+        style="background-color: #d3dce6; height: 35px; border-radius: 8px"
+      ></div>
     </echo-col>
     <echo-col tag="span" :span="6">
-      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+      <div
+        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
+      ></div>
     </echo-col>
     <echo-col tag="span" :span="6">
-      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+      <div
+        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
+      ></div>
     </echo-col>
   </echo-row>
   <br />
   <br />
 
   <echo-checkbox disabled>Not disabled</echo-checkbox>
-  <echo-checkbox v-model="check1" @change="handlerChange">Option A</echo-checkbox>
+  <echo-checkbox v-model="check1" @change="handlerChange"
+    >Option A</echo-checkbox
+  >
   <echo-checkbox v-model="check2">Option B</echo-checkbox>
   <br />
   <br />
 
   <h2>{{ checkList }}</h2>
   <echo-checkbox-group v-model="checkList">
-    <echo-checkbox v-for="(item, index) in showList" :key="index" :label="item"></echo-checkbox>
+    <echo-checkbox
+      v-for="(item, index) in showList"
+      :key="index"
+      :label="item"
+    ></echo-checkbox>
   </echo-checkbox-group>
   <br />
   <br />
 
-  <echo-transfer v-model="rightValue" :data="transferData" :props="transferProps"></echo-transfer>
+  <echo-transfer
+    v-model="rightValue"
+    :data="transferData"
+    :props="transferProps"
+  ></echo-transfer>
   <br />
   <br />
 
-  <echo-button type="success" @click="ClickMessage_1">Click Message</echo-button>
+  <echo-button type="success" @click="ClickMessage_1"
+    >Click Message</echo-button
+  >
   <echo-button type="danger" @click="ClickMessage_2">Click Message</echo-button>
-  <echo-button type="warning" @click="ClickMessage_3">Click Message</echo-button>
+  <echo-button type="warning" @click="ClickMessage_3"
+    >Click Message</echo-button
+  >
   <echo-button type="info" @click="ClickMessage_4">Click Message</echo-button>
   <br />
   <br />
@@ -145,7 +182,9 @@
     >{{ selectedObject }}
   </echo-dropdown>
 
-  <echo-button type="primary" :visible="!normalViaible" @click="changeView">dialog</echo-button>
+  <echo-button type="primary" :visible="!normalViaible" @click="changeView"
+    >dialog</echo-button
+  >
   <echo-dialog
     :visible="normalViaible"
     title="这是"
@@ -158,7 +197,8 @@
   <br />
   <br />
 
-   <echo-alert showIcon title="hello echoUI" closeable type="warning"> </echo-alert>
+   <echo-alert showIcon title="hello echoUI" closeable type="warning">
+  </echo-alert>
 
   <echo-button type="primary"></echo-button>
 
