@@ -35,65 +35,64 @@
   </div>
 </template>
 
-<script setup lang="js">
+<script>
   export default {
-      data() {
-          return {
-              selectedOption: {
-                  name: '',
-              },
-              showMenu: false,
-              placeholderText: '下拉菜单',
-          }
+    data() {
+      return {
+        selectedOption: {
+          name: ''
+        },
+        showMenu: false,
+        placeholderText: '下拉菜单'
+      };
+    },
+    props: {
+      options: {
+        type: [Array, Object]
       },
-      props: {
-          options: {
-              type: [Array, Object]
-          },
-          selected: {},
-          closeOnOutsideClick: {
-              type: [Boolean],
-              default: true,
-          },
-      },
-
-      mounted() {
-          this.selectedOption = this.selected;
-          if (this.placeholder)
-          {
-              this.placeholderText = this.placeholder;
-          }
-
-          if (this.closeOnOutsideClick) {
-              document.addEventListener('click', this.clickHandler);
-          }
-      },
-
-      beforeDestroy() {
-          document.removeEventListener('click', this.clickHandler);
-      },
-
-      methods: {
-          updateoption(option) {
-              this.selectedOption = option;
-              this.showMenu = false;
-              this.$emit('updateoption', this.selectedOption);
-          },
-
-          toggleMenu() {
-              this.showMenu = !this.showMenu;
-          },
-
-          clickHandler(event) {
-              const { target } = event;
-              const { $el } = this;
-
-              if (!$el.contains(target)) {
-                  this.showMenu = false;
-              }
-          },
+      selected: {},
+      closeOnOutsideClick: {
+        type: [Boolean],
+        default: true
       }
-  }
+    },
+
+    mounted() {
+      this.selectedOption = this.selected;
+      if (this.placeholder) {
+        this.placeholderText = this.placeholder;
+      }
+
+      if (this.closeOnOutsideClick) {
+        document.addEventListener('click', this.clickHandler);
+      }
+    },
+
+    beforeDestroy() {
+      document.removeEventListener('click', this.clickHandler);
+    },
+
+    methods: {
+      updateoption(option) {
+        this.selectedOption = option;
+        this.showMenu = false;
+        this.$emit('updateoption', this.selectedOption);
+      },
+
+      toggleMenu() {
+        this.showMenu = !this.showMenu;
+      },
+
+      clickHandler(event) {
+        const { target } = event;
+        const { $el } = this;
+
+        if (!$el.contains(target)) {
+          this.showMenu = false;
+        }
+      }
+    }
+  };
 </script>
 
 <style>
