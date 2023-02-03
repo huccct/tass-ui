@@ -57,12 +57,6 @@ importers:
       vitest: registry.npmmirror.com/vitest/0.27.3_rq5ttxgt66zo4jxxteupto5gje
       vue: registry.npmmirror.com/vue/3.2.45
 
-  docs:
-    specifiers:
-      vitepress: 1.0.0-alpha.45
-    devDependencies:
-      vitepress: registry.npmmirror.com/vitepress/1.0.0-alpha.45
-
   packages/components:
     specifiers:
       '@echo-ui/utils': workspace:^1.0.0
@@ -70,6 +64,9 @@ importers:
       '@echo-ui/utils': link:../utils
 
   packages/constants:
+    specifiers: {}
+
+  packages/eslint-config:
     specifiers: {}
 
   packages/theme-chalk:
@@ -3959,41 +3956,6 @@ packages:
       - terser
     dev: true
 
-  registry.npmmirror.com/vite/4.0.4:
-    resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.0.4.tgz}
-    name: vite
-    version: 4.0.4
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: registry.npmmirror.com/esbuild/0.16.17
-      postcss: registry.npmmirror.com/postcss/8.4.21
-      resolve: registry.npmmirror.com/resolve/1.22.1
-      rollup: registry.npmmirror.com/rollup/3.10.1
-    optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
-    dev: true
-
   registry.npmmirror.com/vite/4.0.4_ovmyjmuuyckt3r3gpaexj2onji:
     resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.0.4.tgz}
     id: registry.npmmirror.com/vite/4.0.4
@@ -4067,35 +4029,6 @@ packages:
       sass: registry.npmmirror.com/sass/1.57.1
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
-    dev: true
-
-  registry.npmmirror.com/vitepress/1.0.0-alpha.45:
-    resolution: {integrity: sha512-8AVWdymQqBUPmXmAbpapDDg18iDmkNJ47l5eOklBlAjj3n8P3zDAsBhOWSQ6+Nvm6+/GaZATyAvsrg47JD5Idw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-1.0.0-alpha.45.tgz}
-    name: vitepress
-    version: 1.0.0-alpha.45
-    hasBin: true
-    dependencies:
-      '@docsearch/css': registry.npmmirror.com/@docsearch/css/3.3.2
-      '@docsearch/js': registry.npmmirror.com/@docsearch/js/3.3.2
-      '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.0.4+vue@3.2.45
-      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.5.0
-      '@vueuse/core': registry.npmmirror.com/@vueuse/core/9.12.0_vue@3.2.45
-      body-scroll-lock: registry.npmmirror.com/body-scroll-lock/4.0.0-beta.0
-      shiki: registry.npmmirror.com/shiki/0.14.0
-      vite: registry.npmmirror.com/vite/4.0.4
-      vue: registry.npmmirror.com/vue/3.2.45
-    transitivePeerDependencies:
-      - '@algolia/client-search'
-      - '@types/node'
-      - '@types/react'
-      - '@vue/composition-api'
-      - less
-      - react
-      - react-dom
-      - sass
-      - stylus
-      - sugarss
-      - terser
     dev: true
 
   registry.npmmirror.com/vitepress/1.0.0-alpha.45_sass@1.57.1:
