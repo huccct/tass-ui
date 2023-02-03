@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/what-is-vitepress
+      link: /guide/install.md
     - theme: alt
       text: View on GitHub
       link: https://github.com/huccct/echo-ui
@@ -23,7 +23,7 @@ features:
   - icon:
       src: /public/typescript.png
     title: TypeScript
-    details: TypeScript是带有类型语法的JavaScript
+    details: 带有类型语法的JavaScript
   - icon:
       src: /public/vite.png
     title: Vite

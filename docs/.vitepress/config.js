@@ -6,16 +6,15 @@ export default {
     logo: '/public/images/logo.svg',
     siteTitle: false,
     nav: [
-      { text: '指南', link: '/guide' },
-      { text: '组件', link: '/configs' },
-      { text: '资源', link: 'https://github.com/...' }
+      { text: '指南', link: '/guide/install.md' },
+      { text: '组件', link: '/configs' }
     ],
     sidebar: [
       {
-        text: 'Guide',
+        text: '指南',
         items: [
-          { text: 'Introduction', link: '/introduction' },
-          { text: 'Getting Started', link: '/getting-started' }
+          { text: '安装', link: '/introduction' },
+          { text: '快速开始', link: '/getting-started' }
         ]
       }
     ],
