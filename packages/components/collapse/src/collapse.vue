@@ -10,36 +10,40 @@
   <div class="ec-collapse">
     <ul class="ec-collapse-ul">
       <li>
-        <div class="ec-collapse-title" @click="toggle(1)">标题一</div>
-        <ec-collapse-transition name="slide">
-          <div class="ec-collapse-content" v-show="show === 1">
-            <slot name="one"></slot>
+        <div v-for="item in posts" :key="item.id">
+          <div class="ec-collapse-title" @click="toggle(item.id)">
+            {{ item.title }}
+            <echo-icon name="chevronright" :class="[show == item.id?'icon-select':'icon-unselect']" style=" float:right;"></echo-icon>
           </div>
-        </ec-collapse-transition>
+          <transition  >
+            <div class="ec-collapse-content" v-show="show === item.id">
+              {{ item.body }}
+            </div>
+
+          </transition>
+        </div>
       </li>
-      <li>
-        <div class="ec-collapse-title" @click="toggle(2)">标题二</div>
-        <ec-collapse-transition name="slide">
-          <div class="ec-collapse-content" v-show="show === 2">
-            <slot name="two"></slot>
-          </div>
-        </ec-collapse-transition>
-      </li>
-      <li>
-        <div class="ec-collapse-title" @click="toggle(3)">标题三</div>
-        <ec-collapse-transition name="slide">
-          <div class="ec-collapse-content" v-show="show === 3">
-            <slot name="three"></slot>
-          </div>
-        </ec-collapse-transition>
-      </li>
+     
     </ul>
   </div>
 </template>
 
 <script lang="ts" setup name="EchoCollapse">
   import { ref } from 'vue';
+  import { computed, provide } from 'vue';
+  const props = defineProps({
+    posts: {
+      type: Array,
+      default: [],
+      required: false
+    },
+  
+   
+  });
+  
+
   let show = ref(0);
+  let state = ref(false);
 
   function toggle(index) {
     // 获取index 来判断当前点击并展示
@@ -48,4 +52,7 @@
     if (show.value === index) show.value = 0;
     else show.value = index;
   }
+
+
 </script>
+

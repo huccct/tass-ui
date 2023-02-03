@@ -153,17 +153,10 @@
   <br />
   <br />
 
-  <echo-collapse>
-    <template v-slot:one>
-      <div style="height: 200px">标题一的内容</div>
-    </template>
-    <template v-slot:two>
-      <div style="height: 200px">标题二的内容</div>
-    </template>
-    <template v-slot:three>
-      <div style="height: 200px">标题三的内容</div>
-    </template>
+  <echo-collapse :posts="list">
+    <div style="height: 200px" :content="collContent"></div>
   </echo-collapse>
+
   <br />
   <br />
   <br />
@@ -277,6 +270,14 @@
   let arrayOfObjects = ref(['厦门', '福州', '杭州', '上海']);
   let selectedObject = ref(['1', '2', '3', '4']);
   let normalViaible = ref(false);
+
+  const list=ref([
+    {title:"标题1",body:"Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that",id:1},
+    {title:"标题2",body:"Operation feedback: enable the users to clearly perceive their operations by style updates and interactive ",id:2},
+    {title:"标题3",body:"Simplify the process: keep operating process simple and intuitive;Definite and clear: enunciate your intentions clearly so that the users can quickly underst",id:3},
+    {title:"标题4",body:"Decision making: giving advices about operations is acceptable, but do not make decisions for the users;Controlled consequences: users should be granted the",id:4},
+    ])
+
   const handlerChange = () => {
     alert('This is a handleChange test.');
   };
