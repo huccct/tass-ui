@@ -12,7 +12,7 @@
  * @LastEditors: Huccct
  * @LastEditTime: 2023-01-21 12:05:02
  */
-import { ExtractPropTypes, PropType } from 'vue';
+import type { ExtractPropTypes, PropType } from 'vue';
 import type { ButtonNativeType, ButtonSizeType, ButtonType } from './interface';
 
 export const Props = {
@@ -23,53 +23,53 @@ export const Props = {
       return (['default', 'primary', 'success', 'info', 'danger', 'warning'] as const).includes(
         value
       );
-    },
+    }
   },
   size: {
     type: String as PropType<ButtonSizeType>,
     validator(value: ButtonSizeType) {
       return (['default', 'medium', 'small', 'mini', 'tiny'] as const).includes(value);
-    },
+    }
   },
   plain: {
     type: Boolean,
-    default: (): Boolean => false,
+    default: (): Boolean => false
   },
   round: {
     type: Boolean,
-    default: (): Boolean => false,
+    default: (): Boolean => false
   },
   circle: {
     type: Boolean,
-    default: (): Boolean => false,
+    default: (): Boolean => false
   },
   loading: {
     type: Boolean,
-    default: (): Boolean => false,
+    default: (): Boolean => false
   },
   disabled: {
     type: Boolean,
-    default: (): Boolean => false,
+    default: (): Boolean => false
   },
   icon: {
     type: String,
-    default: (): String => '',
+    default: (): String => ''
   },
   autoFocus: {
     type: Boolean,
-    default: (): Boolean => false,
+    default: (): Boolean => false
   },
   nativeType: {
     type: String as PropType<ButtonNativeType>,
     default: (): ButtonNativeType => 'button',
     validator(value) {
       return (['button', 'submit', 'reset'] as const).includes(value);
-    },
-  },
+    }
+  }
 };
 
 export const Emits = {
-  click: (evt: MouseEvent): MouseEvent => evt,
+  click: (evt: MouseEvent): MouseEvent => evt
 };
 
 export type ButtonProps = ExtractPropTypes<typeof Props>;

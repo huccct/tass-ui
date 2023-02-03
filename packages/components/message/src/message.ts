@@ -8,7 +8,7 @@
 import type { IMessageOptions } from './message.type';
 import message from './message.vue';
 import { createVNode, render } from 'vue';
-let instance: any[] = [];
+const instance: any[] = [];
 export default function Message(options: IMessageOptions) {
   if (typeof options === 'string') {
     options = {
@@ -19,8 +19,8 @@ export default function Message(options: IMessageOptions) {
   instance.forEach(() => {
     offset += 60;
   });
-  let userClose = options.onclose;
-  let ops = {
+  const userClose = options.onclose;
+  const ops = {
     ...options,
     offset,
     onclose: () => {

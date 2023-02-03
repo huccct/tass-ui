@@ -5,9 +5,10 @@
  * @LastEditors: Huccct
  * @LastEditTime: 2023-01-25 20:06:50
  */
-import { computed, watch, getCurrentInstance, ComponentInternalInstance } from 'vue';
+import type { ComponentInternalInstance } from 'vue';
+import { computed, watch, getCurrentInstance } from 'vue';
 export const useCheck = (props, state) => {
-  let { emit } = getCurrentInstance() as ComponentInternalInstance;
+  const { emit } = getCurrentInstance() as ComponentInternalInstance;
   const labelProps = computed(() => props.props.props.label);
   const keyProps = computed(() => props.props.props.key);
   const disabledProps = computed(() => props.props.props.disabled);
@@ -27,7 +28,7 @@ export const useCheck = (props, state) => {
   watch(
     () => state.checked,
     () => {
-      let checkkeys = checkDisabled.value.map(item => item[keyProps.value]);
+      const checkkeys = checkDisabled.value.map(item => item[keyProps.value]);
       state.allCheck = checkkeys.length > 0 && checkkeys.every(key => state.checked.includes(key));
       emit('checkChange', state.checked);
     }

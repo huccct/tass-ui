@@ -6,16 +6,16 @@
  * @LastEditTime: 2023-01-25 20:04:03
  */
 export type key = string | number;
-export type IData = {
+export interface IData {
   key: key;
   label: string;
   disabled: boolean;
-};
-export type Props = {
+}
+export interface Props {
   key: string;
   label: string;
   disabled: string;
-};
+}
 export interface ItransferProps {
   data: IData[];
   modelValue: key[];

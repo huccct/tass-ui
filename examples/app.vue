@@ -154,9 +154,9 @@
             :options="arrayOfObjects"
             :selected="selectedObject"
             v-on:updateoption="methodToRunOnSelect"
-            :closeOnOutsideClick="boolean">{{selectedObject}}
+            :closeOnOutsideClick=true>{{selectedObject}}
   </echo-dropdown>
-
+  <br />
 
   <echo-button type="primary" :visible="!normalViaible" @click="changeView">dialog</echo-button>
   <echo-dialog

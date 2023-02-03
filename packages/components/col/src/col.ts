@@ -12,22 +12,22 @@ export default defineComponent({
   props: {
     tag: {
       type: String,
-      default: 'div',
+      default: 'div'
     },
     span: {
       type: Number,
-      default: 24,
+      default: 24
     },
     offset: {
       type: Number,
-      default: 0,
-    },
+      default: 0
+    }
   },
   setup(props, ctx) {
     const gutter = inject('EchoRow') as number;
 
     const Class = computed(() => {
-      let res: string[] = [];
+      const res: string[] = [];
       const pops = ['span', 'offset'] as const;
       pops.forEach(item => {
         const size = props[item];
@@ -42,7 +42,7 @@ export default defineComponent({
       if (gutter !== 0) {
         return {
           paddingLeft: gutter / 2 + 'px',
-          paddingRight: gutter / 2 + 'px',
+          paddingRight: gutter / 2 + 'px'
         };
       }
       return {};
@@ -52,9 +52,9 @@ export default defineComponent({
         props.tag,
         {
           class: Class.value,
-          style: styles.value,
+          style: styles.value
         },
         ctx.slots.default?.()
       );
-  },
+  }
 });

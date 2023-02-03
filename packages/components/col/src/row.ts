@@ -12,27 +12,27 @@ export default defineComponent({
   props: {
     tag: {
       type: String,
-      default: 'div',
+      default: 'div'
     },
     gutter: {
       type: Number,
-      default: 0,
+      default: 0
     },
     justify: {
       type: String,
-      default: 'start',
-    },
+      default: 'start'
+    }
   },
   setup(props, ctx) {
     provide('EchoRow', props.gutter);
     const Class = computed(() => [
       'ec-row',
-      props.justify !== 'start' ? `is-justify-${props.justify}` : '',
+      props.justify !== 'start' ? `is-justify-${props.justify}` : ''
     ]);
     const styles = computed(() => {
-      let res = {
+      const res = {
         marginLeft: '',
-        marginRight: '',
+        marginRight: ''
       };
       if (props.gutter) {
         res.marginLeft = res.marginRight = `-${props.gutter / 2}px`;
@@ -44,9 +44,9 @@ export default defineComponent({
         props.tag,
         {
           class: Class.value,
-          style: styles.value,
+          style: styles.value
         },
         ctx.slots.default?.()
       );
-  },
+  }
 });
