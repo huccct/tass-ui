@@ -144,8 +144,6 @@
     :closeOnOutsideClick="false"
     >{{ selectedObject }}
   </echo-dropdown>
-  <br />
-  <br />
 
   <echo-button type="primary" :visible="!normalViaible" @click="changeView">dialog</echo-button>
   <echo-dialog
