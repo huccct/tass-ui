@@ -10,7 +10,7 @@ package-lock.json
 test/unit/coverage
 test/e2e/reports
 selenium-debug.log
-docs/.vitepress/cache
+
 
 # Editor directories and files
 .idea
