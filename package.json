@@ -12,7 +12,10 @@
     "lint:prettier": "prettier --write .",
     "lint:ls-lint": "ls-lint",
     "lint:staged": "lint-staged",
-    "postinstall": "npx husky install"
+    "postinstall": "npx husky install",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +38,7 @@
     "stylelint-scss": "^4.3.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.4",
+    "vitepress": "1.0.0-alpha.45",
     "vitest": "^0.27.3",
     "vue": "^3.2.45"
   },
