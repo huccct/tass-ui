@@ -28,3 +28,4 @@ export { EchoAlert } from './alert';
 
 export { EchoCarousel } from './carousel';
 export { EchoCarouselItem } from './carousel-item';
+export { EchoUpload } from './upload';

@@ -51,6 +51,7 @@
     "stylelint-scss": "^4.3.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.4",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
     "vitepress": "1.0.0-alpha.45",
     "vitest": "^0.27.3",
     "vue": "^3.2.45"
@@ -60,6 +61,7 @@
     "@echo-ui/constants": "workspace:^1.0.0",
     "@echo-ui/eslint-config": "workspace:^1.0.0",
     "@echo-ui/theme-chalk": "workspace:^1.0.0",
-    "@echo-ui/utils": "workspace:^1.0.0"
+    "@echo-ui/utils": "workspace:^1.0.0",
+    "@jridgewell/sourcemap-codec": "^1.4.14"
   }
 }

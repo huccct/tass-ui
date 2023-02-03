@@ -1,0 +1,19 @@
+.ec-upload{
+  width: 100%;
+  font-size: 0;
+  .file{
+    display: flex;
+    width: 100%;
+    margin-bottom: 3px;
+    align-items: center;
+    justify-content: space-between;
+    span{
+      font-size: 14px;
+      color: #666;
+    }
+  }
+  input{
+    width: 0!important;
+    height: 0!important;
+  }
+}
