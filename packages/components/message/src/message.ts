@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-25 22:01:00
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-03 19:41:08
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-03 23:12:54
  */
 import type { IMessageOptions } from './message.type';
 import message from './message.vue';
@@ -21,13 +21,8 @@ export default function Message(options: IMessageOptions) {
   instance.forEach(() => {
     offset += 60;
   });
-
-  if (count === 1) {
-    offset = 0;
-  }
-
-  const userClose = options.onclose;
-  const ops = {
+  let userClose = options.onclose;
+  let ops = {
     ...options,
     offset,
     onclose: () => {
