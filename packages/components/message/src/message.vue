@@ -3,21 +3,29 @@
  * @Author: Huccct
  * @Date: 2023-01-25 22:08:03
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-26 14:33:04
+ * @LastEditTime: 2023-02-04 21:41:44
 -->
 <template>
-  <transition
-    name="ec-message-fade"
-    @before-leave="onclose"
-    @after-leave="$emit('destroy')"
-  >
-    <div v-show="isShow" class="ec-message" :style="style" :class="defClass">
-      {{ message }}
+  <transition name="ec-message-fade" @before-leave="onclose" @after-leave="$emit('destroy')">
+    <div
+      v-show="isShow"
+      class="ec-message"
+      :style="controlTop"
+      :class="defClass"
+      @mouseenter="clearTimeFn"
+      @mouseleave="startTimerFn"
+    >
+      <echo-icon :name="iconName" class="ec-message__icon" v-if="showIcon" />
+      <slot>
+        <span class="ec-message__content">{{ message }}</span>
+      </slot>
+      <echo-icon name="cross" class="ec-message__close-btn" v-if="closeable" @click="handleClose" />
     </div>
   </transition>
 </template>
 <script setup lang="ts">
   import { computed, onMounted, onUnmounted, ref } from 'vue';
+  import { EchoIcon } from '../../icon';
   const props = defineProps({
     id: {
       type: String,
@@ -33,7 +41,7 @@
     },
     duration: {
       type: Number,
-      default: 2000
+      default: 3000
     },
     center: {
       type: Boolean,
@@ -46,25 +54,52 @@
     onclose: {
       type: Function,
       required: false
+    },
+    showIcon: {
+      type: Boolean,
+      default: false
+    },
+    closeable: {
+      type: Boolean,
+      default: false
     }
   });
-  const defClass = computed(() => [
-    'ec-message--' + props.type,
-    props.center ? 'is-center' : ''
-  ]);
+  const defClass = computed(() => ['ec-message--' + props.type, props.center ? 'is-center' : '']);
+  const iconMaps = {
+    info: 'info',
+    success: 'success',
+    error: 'danger',
+    warning: 'warning'
+  };
+  const iconName = computed(() => {
+    const { type } = props;
+    return iconMaps[type];
+  });
   let isShow = ref(false);
   let timer: null | NodeJS.Timeout = null;
+  const startTimerFn = () => {
+    if (props.duration > 0) {
+      timer = setTimeout(() => {
+        isShow.value = false;
+      }, props.duration);
+    }
+  };
+  const clearTimeFn = () => {
+    clearTimeout(Number(timer));
+  };
   onMounted(() => {
     isShow.value = true;
-    timer = setTimeout(() => {
-      isShow.value = false;
-    }, props.duration);
+    startTimerFn();
   });
-  let style = computed(() => ({
+  let controlTop = computed(() => ({
     top: `${props.offset}px`
   }));
+
   onUnmounted(() => {
-    clearTimeout(Number(timer));
+    clearTimeFn();
   });
+  const handleClose = () => {
+    isShow.value = false;
+  };
 </script>
 <style></style>

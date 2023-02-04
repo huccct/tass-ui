@@ -347,10 +347,10 @@ $message-close-icon-color: $color-text-placeholder !default;
 $message-close-size: 16px !default;
 $message-close-hover-color: $color-text-secondary !default;
 
-$message-success-font-color: $color-success !default;
-$message-info-font-color: $color-info !default;
-$message-warning-font-color: $color-warning !default;
-$message-danger-font-color: $color-danger !default;
+$message-success-font-color: $color-success-lighter !default;
+$message-info-font-color: $color-info-lighter !default;
+$message-warning-font-color: $color-warning-lighter !default;
+$message-danger-font-color: $color-danger-lighter !default;
 
 /* Notification
 -------------------------- */

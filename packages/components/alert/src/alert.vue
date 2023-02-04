@@ -2,17 +2,13 @@
  * @Descripttion: Spicy chicken
  * @Author: YuShu Xiao
  * @Date: 2023-02-01 23:03:26
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-03 14:43:55
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-04 16:51:37
 -->
 <template>
   <!-- 提示框组件 -->
   <div :class="alertClassNames" class="ec-alert" v-if="isShow">
-    <echo-icon
-      :name="iconName"
-      class="ec-alert__icon"
-      v-if="showIcon"
-    ></echo-icon>
+    <echo-icon :name="iconName" class="ec-alert__icon" v-if="showIcon" />
     <div class="ec-alert__content">
       <h3 class="ec-alert__title ec-global-ellipsis">
         {{ title }}
@@ -20,12 +16,7 @@
       <p class="ec-alert__desc" v-if="content">
         {{ content }}
       </p>
-      <echo-icon
-        name="cross"
-        class="ec-alert__close-btn"
-        v-if="closeable"
-        @click="handleClose"
-      />
+      <echo-icon name="cross" class="ec-alert__close-btn" v-if="closeable" @click="handleClose" />
     </div>
   </div>
 </template>
@@ -38,8 +29,7 @@
     type: {
       type: String,
       default: () => 'info',
-      validator: (val: AlertType) =>
-        ['info', 'success', 'error', 'warning'].includes(val)
+      validator: (val: AlertType) => ['info', 'success', 'error', 'warning'].includes(val)
     },
     title: {
       type: String,

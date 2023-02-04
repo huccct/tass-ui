@@ -2,32 +2,52 @@
 @use 'common/var' as *;
 
 @include b(message) {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translate(-50%);
-  min-width: 300px;
+  width: fit-content;
+  min-width: $message-min-width;
+  height: 42px;
+  line-height: 42px;
+  box-sizing: border-box;
   border-radius: 5px;
-  height: 40px;
-  line-height: 40px;
-  background-color: #edf2fc;
-  text-align: center;
   border-width: 1px;
-  border-color: #ebeef5;
   border-style: solid;
-  transition: all 0.4s;
-  color: #eee;
+  border-color: #ebeef5;
+  position: fixed;
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  background-color: $message-background-color;
+  transition: opacity 0.3s, transform 0.4s, top 0.4s;
+  overflow: hidden;
+  padding: $message-padding;
+  display: flex;
+  align-items: center;
+  @include b(message__close-btn) {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: $message-close-size;
+  }
+  @include b(message__content) {
+    padding-left: 10px;
+  }
   @include m(success) {
-    background: $color-success;
+    background: $message-success-font-color;
+    color: mix($color-white, $color-success, 10%);
   }
   @include m(error) {
-    background: $color-danger;
+    background: $message-danger-font-color;
+    color: mix($color-white, $color-danger, 10%);
   }
   @include m(warning) {
-    background: $color-warning;
+    background: $message-warning-font-color;
+    color: mix($color-white, $color-warning, 10%);
   }
   @include m(info) {
-    background: $color-info;
+    background: $message-info-font-color;
+    color: mix($color-white, $color-info, 10%);
   }
   @include when(center) {
     justify-content: center;
@@ -36,5 +56,6 @@
 
 .ec-message-fade-enter-from,
 .ec-message-fade-leave-to {
+  opacity: 0;
   transform: translate(-50%, -100%);
 }
