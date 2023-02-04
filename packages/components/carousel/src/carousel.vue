@@ -28,10 +28,10 @@
       </ul>
     </div>
     <button class="echo-icon echo-carousel-arrow" echo-type="sub" @click="sub">
-      {{ anim === 'updown' ? '↑' : '<' }}
+      {{ anim === 'updown' ? '上' : '<' }}
     </button>
     <button class="echo-icon echo-carousel-arrow" echo-type="add" @click="add">
-      {{ anim === 'updown' ? '↓' : '>' }}
+      {{ anim === 'updown' ? '下' : '>' }}
     </button>
   </div>
 </template>

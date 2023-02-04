@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-03 23:26:01
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-02-04 10:59:41
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -246,6 +246,39 @@
   </echo-carousel>
   <br />
   <br />
+  <echo-carousel v-model="carouseltest2" width="600px" anim="updown">
+    <echo-carousel-item id="1">
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: #d3dce6;
+        "
+      >
+        1
+      </div>
+    </echo-carousel-item>
+    <echo-carousel-item id="2">
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: skyblue;
+        "
+      >
+        2
+      </div>
+    </echo-carousel-item>
+  </echo-carousel>
+
+  <br />
+  <br />
 
   <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
     <echo-upload
@@ -260,6 +293,7 @@
   import { EchoMessage } from '../packages/components/message';
 
   let carouseltest = ref('1');
+  let carouseltest2 = ref('1');
 
   let check1 = ref(false);
   let check2 = ref(true);
