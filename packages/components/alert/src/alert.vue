@@ -3,11 +3,12 @@
  * @Author: YuShu Xiao
  * @Date: 2023-02-01 23:03:26
  * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-04 16:57:33
+ * @LastEditTime: 2023-02-04 18:13:20
 -->
 <template>
   <!-- 提示框组件 -->
-  <div :class="alertClassNames" class="ec-alert" v-if="isShow">
+  <Transition name="ec-alert-fade">
+    <div :class="alertClassNames" class="ec-alert" v-if="isShow">
     <echo-icon
       :name="iconName"
       class="ec-alert__icon"
@@ -28,6 +29,7 @@
       />
     </div>
   </div>
+  </Transition>
 </template>
 <script lang="ts" name="EchoAlert" setup>
   import { AlertType } from './interface';
