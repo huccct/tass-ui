@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-04 19:44:49
+ * @LastEditTime: 2023-02-04 21:43:51
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -147,10 +147,28 @@
   <br />
   <br />
 
-  <echo-alert show-icon title="hello echoUI" closeable type="error" content="bbbccc"> </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="success"> </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="info"> </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="warning"> </echo-alert>
+  <echo-alert
+    show-icon
+    title="hello echoUI"
+    closeable
+    type="error"
+    content="bbbccc"
+  >
+  </echo-alert>
+  <echo-alert show-icon title="hello echoUI" closeable type="success" center>
+  </echo-alert>
+  <echo-alert show-icon title="hello echoUI" closeable type="info">
+  </echo-alert>
+  <echo-alert show-icon title="hello echoUI" closeable type="warning">
+  </echo-alert>
+
+  <echo-button type="primary"></echo-button>
+
+  <br />
+  <br />
+
+  <br />
+  <br />
   <br />
   <br />
 

@@ -3,7 +3,7 @@
  * @Author: YuShu Xiao
  * @Date: 2023-02-01 23:03:26
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-04 16:51:37
+ * @LastEditTime: 2023-02-04 21:44:10
 -->
 <template>
   <!-- 提示框组件 -->
@@ -46,11 +46,15 @@
     content: {
       type: String,
       default: ''
+    },
+    center: {
+      type: Boolean,
+      default: false
     }
   });
   const alertClassNames = computed(() => {
-    const { type } = props;
-    return [{ [`ec-alert--${type}`]: type }];
+    const { type, center } = props;
+    return [{ [`ec-alert--${type}`]: type }, { 'is-center': center }];
   });
   const iconMaps = {
     info: 'info',
