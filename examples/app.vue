@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-03 23:26:01
+ * @LastEditors: YuShu Xiao
+ * @LastEditTime: 2023-02-04 17:02:36
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -198,7 +198,7 @@
     content="bbbccc"
   >
   </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="success">
+  <echo-alert show-icon title="hello echoUI" closeable type="success" center>
   </echo-alert>
   <echo-alert show-icon title="hello echoUI" closeable type="info">
   </echo-alert>
