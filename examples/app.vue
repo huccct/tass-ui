@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-02-04 10:59:41
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-04 12:05:40
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -40,21 +40,16 @@
   <br />
   <br />
 
-  <echo-icon name="pluscircle"></echo-icon>&nbsp;
-  <echo-icon name="pushpin"></echo-icon>&nbsp;
-  <echo-icon name="textalignjustify"></echo-icon>&nbsp;
-  <echo-icon name="danger"></echo-icon>&nbsp;
-  <echo-icon name="success"></echo-icon>&nbsp;
-  <echo-icon name="info"></echo-icon>&nbsp;
+  <echo-icon name="pluscircle"></echo-icon>&nbsp; <echo-icon name="pushpin"></echo-icon>&nbsp;
+  <echo-icon name="textalignjustify"></echo-icon>&nbsp; <echo-icon name="danger"></echo-icon>&nbsp;
+  <echo-icon name="success"></echo-icon>&nbsp; <echo-icon name="info"></echo-icon>&nbsp;
   <echo-icon name="warning"></echo-icon>
   <br />
   <br />
 
   <echo-row>
     <echo-col :span="24">
-      <div
-        style="background-color: #d3dce6; height: 35px; border-radius: 8px"
-      ></div>
+      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
     </echo-col>
   </echo-row>
   <br />
@@ -62,14 +57,10 @@
 
   <echo-row>
     <echo-col :span="12">
-      <div
-        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
-      ></div>
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
     </echo-col>
     <echo-col :span="12">
-      <div
-        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
-      ></div>
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
     </echo-col>
   </echo-row>
   <br />
@@ -77,19 +68,13 @@
 
   <echo-row tag="div">
     <echo-col tag="span" :span="12">
-      <div
-        style="background-color: #d3dce6; height: 35px; border-radius: 8px"
-      ></div>
+      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
     </echo-col>
     <echo-col tag="span" :span="6">
-      <div
-        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
-      ></div>
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
     </echo-col>
     <echo-col tag="span" :span="6">
-      <div
-        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
-      ></div>
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
     </echo-col>
   </echo-row>
   <br />
@@ -97,72 +82,45 @@
 
   <echo-row tag="div" :gutter="20" justify="end">
     <echo-col tag="span" :span="6">
-      <div
-        style="background-color: #d3dce6; height: 35px; border-radius: 8px"
-      ></div>
+      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
     </echo-col>
     <echo-col tag="span" :span="6">
-      <div
-        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
-      ></div>
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
     </echo-col>
     <echo-col tag="span" :span="6">
-      <div
-        style="background-color: #e5e9f2; height: 35px; border-radius: 8px"
-      ></div>
+      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
     </echo-col>
   </echo-row>
   <br />
   <br />
 
   <echo-checkbox disabled>Not disabled</echo-checkbox>
-  <echo-checkbox v-model="check1" @change="handlerChange"
-    >Option A</echo-checkbox
-  >
+  <echo-checkbox v-model="check1" @change="handlerChange">Option A</echo-checkbox>
   <echo-checkbox v-model="check2">Option B</echo-checkbox>
   <br />
   <br />
 
   <h2>{{ checkList }}</h2>
   <echo-checkbox-group v-model="checkList">
-    <echo-checkbox
-      v-for="(item, index) in showList"
-      :key="index"
-      :label="item"
-    ></echo-checkbox>
+    <echo-checkbox v-for="(item, index) in showList" :key="index" :label="item"></echo-checkbox>
   </echo-checkbox-group>
   <br />
   <br />
 
-  <echo-transfer
-    v-model="rightValue"
-    :data="transferData"
-    :props="transferProps"
-  ></echo-transfer>
+  <echo-transfer v-model="rightValue" :data="transferData" :props="transferProps"></echo-transfer>
   <br />
   <br />
 
-  <echo-button type="success" @click="ClickMessage_1"
-    >Click Message</echo-button
-  >
+  <echo-button type="success" @click="ClickMessage_1">Click Message</echo-button>
   <echo-button type="danger" @click="ClickMessage_2">Click Message</echo-button>
-  <echo-button type="warning" @click="ClickMessage_3"
-    >Click Message</echo-button
-  >
+  <echo-button type="warning" @click="ClickMessage_3">Click Message</echo-button>
   <echo-button type="info" @click="ClickMessage_4">Click Message</echo-button>
   <br />
   <br />
 
   <echo-collapse :posts="list">
-    <div style="height: 200px" :content="collContent"></div>
+    <div style="height: 200px"></div>
   </echo-collapse>
-
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
   <br />
   <br />
 
@@ -174,10 +132,10 @@
     v-on:updateoption="methodToRunOnSelect"
     >{{ selectedObject }}
   </echo-dropdown>
+  <br />
+  <br />
 
-  <echo-button type="primary" :visible="!normalViaible" @click="changeView"
-    >dialog</echo-button
-  >
+  <echo-button type="primary" :visible="!normalViaible" @click="changeView">dialog</echo-button>
   <echo-dialog
     :visible="normalViaible"
     title="这是"
@@ -186,32 +144,13 @@
     @confirm="handleConfirmButton"
   >
   </echo-dialog>
-
   <br />
   <br />
 
-  <echo-alert
-    show-icon
-    title="hello echoUI"
-    closeable
-    type="error"
-    content="bbbccc"
-  >
-  </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="success">
-  </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="info">
-  </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="warning">
-  </echo-alert>
-
-  <echo-button type="primary"></echo-button>
-
-  <br />
-  <br />
-
-  <br />
-  <br />
+  <echo-alert show-icon title="hello echoUI" closeable type="error" content="bbbccc"> </echo-alert>
+  <echo-alert show-icon title="hello echoUI" closeable type="success"> </echo-alert>
+  <echo-alert show-icon title="hello echoUI" closeable type="info"> </echo-alert>
+  <echo-alert show-icon title="hello echoUI" closeable type="warning"> </echo-alert>
   <br />
   <br />
   <echo-carousel v-model="carouseltest">
@@ -281,10 +220,7 @@
   <br />
 
   <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
-    <echo-upload
-      @changeUpload="changeUpload"
-      @deleteUpload="deleteUpload"
-    ></echo-upload>
+    <echo-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></echo-upload>
   </div>
 </template>
 

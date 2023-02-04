@@ -1,5 +1,5 @@
 module.exports = {
-  printWidth: 80, //最大单行长度
+  printWidth: 100, //最大单行长度
   tabWidth: 2, //每个缩进的空格数
   useTabs: false, //使用制表符而不是空格缩进行
   semi: true, //在语句的末尾打印分号
