@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:57:34
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-22 21:16:04
+ * @LastEditTime: 2023-02-03 23:05:52
  */
 /*
  * @Description: Stay hungry，Stay foolish
@@ -20,15 +20,17 @@ export const Props = {
     type: String as PropType<ButtonType>,
     default: (): ButtonType => 'default',
     validator(value: ButtonType) {
-      return (['default', 'primary', 'success', 'info', 'danger', 'warning'] as const).includes(
-        value
-      );
+      return (
+        ['default', 'primary', 'success', 'info', 'danger', 'warning'] as const
+      ).includes(value);
     }
   },
   size: {
     type: String as PropType<ButtonSizeType>,
     validator(value: ButtonSizeType) {
-      return (['default', 'medium', 'small', 'mini', 'tiny'] as const).includes(value);
+      return (['default', 'medium', 'small', 'mini', 'tiny'] as const).includes(
+        value
+      );
     }
   },
   plain: {

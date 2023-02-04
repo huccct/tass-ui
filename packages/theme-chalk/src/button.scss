@@ -44,7 +44,11 @@
 
   &:active {
     color: mix($color-black, $color-primary, $button-active-shade-percent);
-    border-color: mix($color-black, $color-primary, $button-active-shade-percent);
+    border-color: mix(
+      $color-black,
+      $color-primary,
+      $button-active-shade-percent
+    );
     outline: none;
   }
 
@@ -184,14 +188,22 @@
     &:active {
       color: mix($color-black, $color-primary, $button-active-shade-percent);
       background: $color-white;
-      border-color: mix($color-black, $color-primary, $button-active-shade-percent);
+      border-color: mix(
+        $color-black,
+        $color-primary,
+        $button-active-shade-percent
+      );
       outline: none;
     }
   }
 
   @include when(active) {
     color: mix($color-black, $color-primary, $button-active-shade-percent);
-    border-color: mix($color-black, $color-primary, $button-active-shade-percent);
+    border-color: mix(
+      $color-black,
+      $color-primary,
+      $button-active-shade-percent
+    );
   }
 
   @include when(disabled) {

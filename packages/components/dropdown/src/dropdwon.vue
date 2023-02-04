@@ -6,24 +6,28 @@
     * @Update: 2023/2/1 17:55
 -->
 <template>
-  <div class="btn-group">
-    <li @click="toggleMenu()" class="dropdown-toggle" v-if="selectedOption.name !== undefined">
-      {{ selectedOption.name }}
+  <div class="btn-group" ref="dropdown">
+    <li
+      @click="toggleMenu()"
+      class="dropdown-toggle"
+      v-if="state.selectedOption !== null"
+    >
+      {{ state.selectedOption }}
       <span class="caret"></span>
     </li>
 
     <li
       @click="toggleMenu()"
       class="dropdown-toggle dropdown-toggle-placeholder"
-      v-if="selectedOption.name === undefined"
+      v-if="state.selectedOption === null"
     >
-      {{ placeholderText }}
+      {{ state.placeholderText }}
       <span class="caret"></span>
     </li>
 
-    <ul class="dropdown-menu" v-if="showMenu">
-      <li v-for="(option, idx) in options" :key="idx">
-        <a href="javascript:void(0)" @click="updateoption(option)">
+    <ul class="dropdown-menu" v-if="state.showMenu">
+      <li v-for="(option, idx) in state.orgOptions" :key="idx">
+        <a @click="updateoption(option)">
           {{ option }}
         </a>
       </li>
@@ -31,65 +35,57 @@
   </div>
 </template>
 
-<script setup lang="js">
-  export default {
-      data() {
-          return {
-              selectedOption: {
-                  name: '',
-              },
-              showMenu: false,
-              placeholderText: '下拉菜单',
-          }
-      },
-      props: {
-          options: {
-              type: [Array, Object]
-          },
-          selected: {},
-          closeOnOutsideClick: {
-              type: [Boolean],
-              default: true,
-          },
-      },
+<script setup lang="ts">
+  import { reactive, onMounted, onBeforeUnmount, ref } from 'vue';
 
-      mounted() {
-          this.selectedOption = this.selected;
-          if (this.placeholder)
-          {
-              this.placeholderText = this.placeholder;
-          }
+  const props = defineProps({
+    options: {
+      type: [Array, Object]
+    },
+    selected: {},
+    closeOnOutsideClick: {
+      type: [Boolean],
+      default: true
+    }
+  });
+  const emits = defineEmits(['updateoption']);
+  let state = reactive({
+    showMenu: false,
+    placeholderText: '下拉菜单',
+    selectedOption: null,
+    orgOptions: null
+  });
+  const dropdown = ref(null);
 
-          if (this.closeOnOutsideClick) {
-              document.addEventListener('click', this.clickHandler);
-          }
-      },
+  const updateoption = option => {
+    state.selectedOption = option;
+    state.showMenu = false;
+    // vue3.x emit  传值到父类
+    emits('updateoption', state.selectedOption);
+  };
+  const toggleMenu = () => {
+    state.showMenu = !state.showMenu;
+  };
 
-      beforeDestroy() {
-          document.removeEventListener('click', this.clickHandler);
-      },
+  const clickHandler = event => {
+    const { target } = event;
+    const { value } = dropdown;
+    if (!value.contains(target)) {
+      //如果包含
+      state.showMenu = false;
+    }
+  };
 
-      methods: {
-          updateoption(option) {
-              this.selectedOption = option;
-              this.showMenu = false;
-              this.$emit('updateoption', this.selectedOption);
-          },
+  onMounted(() => {
+    state.orgOptions = props.options;
+    if (props.closeOnOutsideClick) {
+      document.addEventListener('click', clickHandler);
+    }
+  });
 
-          toggleMenu() {
-              this.showMenu = !this.showMenu;
-          },
-
-          clickHandler(event) {
-              const { target } = event;
-              const { $el } = this;
-
-              if (!$el.contains(target)) {
-                  this.showMenu = false;
-              }
-          },
-      }
-  }
+  onBeforeUnmount(() => {
+    document.removeEventListener('click', clickHandler);
+  });
 </script>
 
 <style>
@@ -113,7 +109,8 @@
     font-weight: 300;
     margin-bottom: 7px;
     border: 0;
-    background-image: linear-gradient(#009688, #009688), linear-gradient(#d2d2d2, #d2d2d2);
+    background-image: linear-gradient(#009688, #009688),
+      linear-gradient(#d2d2d2, #d2d2d2);
     background-size: 0 2px, 100% 1px;
     background-repeat: no-repeat;
     background-position: center bottom, center calc(100% - 1px);

@@ -6,7 +6,11 @@
  * @LastEditTime: 2023-01-26 14:33:04
 -->
 <template>
-  <transition name="ec-message-fade" @before-leave="onclose" @after-leave="$emit('destroy')">
+  <transition
+    name="ec-message-fade"
+    @before-leave="onclose"
+    @after-leave="$emit('destroy')"
+  >
     <div v-show="isShow" class="ec-message" :style="style" :class="defClass">
       {{ message }}
     </div>
@@ -44,7 +48,10 @@
       required: false
     }
   });
-  const defClass = computed(() => ['ec-message--' + props.type, props.center ? 'is-center' : '']);
+  const defClass = computed(() => [
+    'ec-message--' + props.type,
+    props.center ? 'is-center' : ''
+  ]);
   let isShow = ref(false);
   let timer: null | NodeJS.Timeout = null;
   onMounted(() => {

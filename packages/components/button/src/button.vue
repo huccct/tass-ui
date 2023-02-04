@@ -35,8 +35,8 @@
         ['is-loading']: loading,
         ['is-round']: round,
         ['is-plain']: plain,
-        ['is-circle']: circle,
-      },
+        ['is-circle']: circle
+      }
     ];
   });
   function handlerClick(evt: MouseEvent): void {

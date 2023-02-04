@@ -9,7 +9,8 @@
   "eslint.quiet": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
-    "source.fixAll": true,
-    "source.fixAll.stylelint": true
-  }
+    "source.fixAll": true
+  },
+  "stylelint.customSyntax": "postcss-scss",
+  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"]
 }

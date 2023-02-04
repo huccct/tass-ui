@@ -7,7 +7,9 @@
 -->
 <template>
   <div class="ec-transfer__item">
-    <echo-checkbox v-model="state.allCheck" @change="handlerChange">全选 / 半选</echo-checkbox>
+    <echo-checkbox v-model="state.allCheck" @change="handlerChange"
+      >全选 / 半选</echo-checkbox
+    >
     <div class="ec-transfer__body">
       <echo-checkbox-group v-model="state.checked">
         <echo-checkbox

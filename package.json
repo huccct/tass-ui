@@ -12,16 +12,30 @@
     "lint:prettier": "prettier --write .",
     "lint:ls-lint": "ls-lint",
     "lint:staged": "lint-staged",
-    "postinstall": "npx husky install"
+    "lint:css": "stylelint 'packages/theme-chalk/src/**/*.scss' --fix --custom-syntax postcss-scss",
+    "postinstall": "npx husky install",
+    "commit": "git-cz",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@ls-lint/ls-lint": "^1.11.2",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "c8": "^7.12.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -29,12 +43,14 @@
     "happy-dom": "^8.1.5",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "postcss-scss": "^4.0.6",
     "prettier": "^2.8.3",
     "sass": "^1.55.0",
     "stylelint": "^14.16.1",
     "stylelint-scss": "^4.3.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.4",
+    "vitepress": "1.0.0-alpha.45",
     "vitest": "^0.27.3",
     "vue": "^3.2.45"
   },
@@ -43,6 +59,7 @@
     "@echo-ui/constants": "workspace:^1.0.0",
     "@echo-ui/eslint-config": "workspace:^1.0.0",
     "@echo-ui/theme-chalk": "workspace:^1.0.0",
-    "@echo-ui/utils": "workspace:^1.0.0"
+    "@echo-ui/utils": "workspace:^1.0.0",
+    "@jridgewell/sourcemap-codec": "^1.4.14"
   }
 }

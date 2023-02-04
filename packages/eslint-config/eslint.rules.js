@@ -9,7 +9,7 @@ module.exports = {
   //
   'comma-dangle': 'off',
   // 禁止使用 var https://eslint.org/docs/latest/rules/no-var#rule-details
-  'no-var': 'error',
+  'no-var': 'off',
   // 使用单引号 https://eslint.org/docs/latest/rules/quotes#version
   quotes: ['error', 'single'],
   // 禁止分号 https://eslint.org/docs/latest/rules/semi#rule-details

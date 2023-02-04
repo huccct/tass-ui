@@ -1,0 +1,14 @@
+ls:
+  packages/components/**:
+    .dir: kebab-case
+    .vue: kebab-case
+    .js: kebab-case
+    .ts: kebab-case
+    .json: kebab-case
+    .d.ts: kebab-case
+    .tsx: kebab-case
+
+ignore:
+  - .git
+  - .vscode
+  - node_modules

@@ -39,21 +39,41 @@
   &:hover,
   &:focus {
     color: $color;
-    background: mix($color-white, $background-color, $button-hover-tint-percent);
+    background: mix(
+      $color-white,
+      $background-color,
+      $button-hover-tint-percent
+    );
     border-color: mix($color-white, $border-color, $button-hover-tint-percent);
   }
 
   &:active {
     color: $color;
-    background: mix($color-black, $background-color, $button-active-shade-percent);
-    border-color: mix($color-black, $border-color, $button-active-shade-percent);
+    background: mix(
+      $color-black,
+      $background-color,
+      $button-active-shade-percent
+    );
+    border-color: mix(
+      $color-black,
+      $border-color,
+      $button-active-shade-percent
+    );
     outline: none;
   }
 
   &.is-active {
     color: $color;
-    background: mix($color-black, $background-color, $button-active-shade-percent);
-    border-color: mix($color-black, $border-color, $button-active-shade-percent);
+    background: mix(
+      $color-black,
+      $background-color,
+      $button-active-shade-percent
+    );
+    border-color: mix(
+      $color-black,
+      $border-color,
+      $button-active-shade-percent
+    );
   }
 
   &.is-disabled {
@@ -72,7 +92,12 @@
   }
 }
 
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+@mixin button-size(
+  $padding-vertical,
+  $padding-horizontal,
+  $font-size,
+  $border-radius
+) {
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   border-radius: $border-radius;

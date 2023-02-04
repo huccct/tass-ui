@@ -2,13 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:53:35
-<<<<<<< Updated upstream
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-02-02 17:49:55
-=======
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-01 21:51:11
->>>>>>> Stashed changes
  */
 export { EchoButton } from './button';
 export { EchoButtonGroup } from './button-group';
@@ -28,3 +23,4 @@ export { EchoAlert } from './alert';
 
 export { EchoCarousel } from './carousel';
 export { EchoCarouselItem } from './carousel-item';
+export { EchoUpload } from './upload';

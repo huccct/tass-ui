@@ -3,8 +3,9 @@
  * @Author: Huccct
  * @Date: 2023-01-25 13:04:28
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-25 20:06:50
+ * @LastEditTime: 2023-02-03 23:20:47
  */
+
 import type { ComponentInternalInstance } from 'vue';
 import { computed, watch, getCurrentInstance } from 'vue';
 export const useCheck = (props, state) => {
@@ -29,7 +30,9 @@ export const useCheck = (props, state) => {
     () => state.checked,
     () => {
       const checkkeys = checkDisabled.value.map(item => item[keyProps.value]);
-      state.allCheck = checkkeys.length > 0 && checkkeys.every(key => state.checked.includes(key));
+      state.allCheck =
+        checkkeys.length > 0 &&
+        checkkeys.every(key => state.checked.includes(key));
       emit('checkChange', state.checked);
     }
   );

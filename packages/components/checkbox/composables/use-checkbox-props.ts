@@ -8,14 +8,19 @@
 import type { ComponentInternalInstance } from 'vue';
 import { inject } from 'vue';
 import { computed, getCurrentInstance } from 'vue';
-import type { checkBoxProps, T } from '@echo-ui/components/checkbox/src/checkbox.type';
+import type {
+  checkBoxProps,
+  T
+} from '@echo-ui/components/checkbox/src/checkbox.type';
 import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@echo-ui/constants';
 function useModel(props: checkBoxProps) {
   const { emit } = getCurrentInstance() as ComponentInternalInstance;
   const useProvide = inject<T>('EchoCheckboxGroup', {});
   const model = computed({
     get() {
-      return useProvide.modelValue ? useProvide.modelValue.value : props.modelValue;
+      return useProvide.modelValue
+        ? useProvide.modelValue.value
+        : props.modelValue;
     },
     set(val: unknown) {
       if (useProvide.modelValue) {

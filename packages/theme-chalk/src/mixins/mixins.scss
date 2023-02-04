@@ -25,7 +25,11 @@
   $selector: &;
   $currentSelector: '';
   @each $unit in $modifier {
-    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ','};
+    $currentSelector: #{$currentSelector +
+      & +
+      $modifier-separator +
+      $unit +
+      ','};
   }
 
   /* @at-root 表示将内容渲染到根部 而不是嵌套 */

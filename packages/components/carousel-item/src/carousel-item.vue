@@ -12,7 +12,7 @@
 
 <script lang="ts">
   export default {
-    name: "EchoCarouselItem",
+    name: 'EchoCarouselItem'
   };
 </script>
 
@@ -23,8 +23,8 @@
     computed,
     ref,
     ComputedRef,
-    WritableComputedRef,
-  } from "vue";
+    WritableComputedRef
+  } from 'vue';
 
   export interface CarouselItemProps {
     id: string;
@@ -32,11 +32,11 @@
 
   const props = defineProps<CarouselItemProps>();
 
-  const active = inject("active") as WritableComputedRef<string>;
-  const slotsChange: Ref<boolean> = inject("slotsChange") as Ref<boolean>;
+  const active = inject('active') as WritableComputedRef<string>;
+  const slotsChange: Ref<boolean> = inject('slotsChange') as Ref<boolean>;
   slotsChange.value = !slotsChange.value;
 
-  const anim = inject("anim") as ComputedRef<string>;
+  const anim = inject('anim') as ComputedRef<string>;
   const item = ref();
   const getStyle = computed<any>(() => {
     if (item.value) {
@@ -47,10 +47,10 @@
       let currentIndex = 0;
       for (let index = 0; index < allChild.length; index++) {
         const element = allChild[index];
-        if (element.getAttribute("data-id") === active.value) {
+        if (element.getAttribute('data-id') === active.value) {
           activeIndex = index;
         }
-        if (element.getAttribute("data-id") === props.id) {
+        if (element.getAttribute('data-id') === props.id) {
           currentIndex = index;
         }
       }
@@ -59,57 +59,57 @@
       let animation = anim.value;
 
       if (activeIndex === currentIndex) {
-        if (animation === "updown") {
+        if (animation === 'updown') {
           return {
-            transform: "translateY(0)",
-            visibility: "inherit",
+            transform: 'translateY(0)',
+            visibility: 'inherit'
           };
-        } else if (animation.includes("fade")) {
+        } else if (animation.includes('fade')) {
           return {
             opacity: 1,
-            visibility: "inherit",
+            visibility: 'inherit'
           };
         } else {
           return {
-            transform: "translateX(0)",
-            visibility: "inherit",
+            transform: 'translateX(0)',
+            visibility: 'inherit'
           };
         }
       }
 
       if (prevIndex === currentIndex) {
-        if (animation === "updown") {
+        if (animation === 'updown') {
           return {
-            transform: "translateY(-100%)",
+            transform: 'translateY(-100%)'
           };
-        } else if (animation.includes("fade")) {
+        } else if (animation.includes('fade')) {
           return {
-            opacity: 0,
+            opacity: 0
           };
         } else {
           return {
-            transform: "translateX(-100%)",
+            transform: 'translateX(-100%)'
           };
         }
       }
       if (nextIndex === currentIndex) {
-        if (animation === "updown") {
+        if (animation === 'updown') {
           return {
-            transform: "translateY(100%)",
+            transform: 'translateY(100%)'
           };
-        } else if (animation.includes("fade")) {
+        } else if (animation.includes('fade')) {
           return {
-            opacity: 0,
+            opacity: 0
           };
         } else {
           return {
-            transform: "translateX(100%)",
+            transform: 'translateX(100%)'
           };
         }
       }
 
       return {
-        display: "none",
+        display: 'none'
       };
     }
   });

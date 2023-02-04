@@ -4,9 +4,15 @@ module.exports = {
   'vue/this-in-template': 'error',
   /* 关闭名称校验 https://eslint.vuejs.org/rules/multi-word-component-names.html */
   'vue/multi-word-component-names': 'off',
-  'vue/max-attributes-per-line': ['error', { singleline: { max: 30 }, multiline: { max: 30 } }],
+  'vue/max-attributes-per-line': [
+    'error',
+    { singleline: { max: 30 }, multiline: { max: 30 } }
+  ],
   /*  组件标签顺序 https://eslint.vuejs.org/rules/component-tags-order.html */
-  'vue/component-tags-order': ['error', { order: ['template', 'script', 'style'] }],
+  'vue/component-tags-order': [
+    'error',
+    { order: ['template', 'script', 'style'] }
+  ],
   /* 只允许使用ts类型的script https://eslint.vuejs.org/rules/block-lang.html */
   'vue/block-lang': ['error', { script: { lang: 'ts' } }],
   /* 只允许使用 setup script类型的语法 https://eslint.vuejs.org/rules/component-api-style.html */
@@ -27,7 +33,12 @@ module.exports = {
   'vue/html-indent': [
     'error',
     2,
-    { attribute: 1, baseIndent: 1, closeBracket: 0, alignAttributesVertically: true }
+    {
+      attribute: 1,
+      baseIndent: 1,
+      closeBracket: 0,
+      alignAttributesVertically: true
+    }
   ],
   /* 模板中使用组建必须使用中划线小写形式 https://eslint.vuejs.org/rules/component-name-in-template-casing.html */
   'vue/component-name-in-template-casing': [

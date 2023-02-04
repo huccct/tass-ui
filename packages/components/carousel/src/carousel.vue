@@ -28,25 +28,34 @@
       </ul>
     </div>
     <button class="echo-icon echo-carousel-arrow" echo-type="sub" @click="sub">
-      {{ anim === "updown" ? "↑" : "<" }}
+      {{ anim === 'updown' ? '上' : '<' }}
     </button>
     <button class="echo-icon echo-carousel-arrow" echo-type="add" @click="add">
-      {{ anim === "updown" ? "↓" : ">" }}
+      {{ anim === 'updown' ? '下' : '>' }}
     </button>
   </div>
 </template>
 
-
 <script lang="ts">
   export default {
-    name: "EchoCarousel",
+    name: 'EchoCarousel'
   };
 </script>
 
 <script setup lang="ts">
-  import "@echo-ui/theme-chalk/src/carousel.scss";
-  import { withDefaults, provide, useSlots, ref, computed, VNode, Ref, Component, watch } from "vue";
-  import CarouselItem from "@echo-ui/components/carousel-item/src/carousel-item.vue";
+  import '@echo-ui/theme-chalk/src/carousel.scss';
+  import {
+    withDefaults,
+    provide,
+    useSlots,
+    ref,
+    computed,
+    VNode,
+    Ref,
+    Component,
+    watch
+  } from 'vue';
+  import CarouselItem from '@echo-ui/components/carousel-item/src/carousel-item.vue';
 
   export interface CarouselProps {
     width?: string;
@@ -56,11 +65,11 @@
     // 是否自动切换
     autoplay?: boolean;
     // 箭头默认显示状态
-    arrow?: "always" | "hover" | "none";
+    arrow?: 'always' | 'hover' | 'none';
     // 轮播切换方式
-    anim?: "default" | "updown" | "fade";
+    anim?: 'default' | 'updown' | 'fade';
     // 指示器位置
-    indicator?: "inside" | "outside" | "none";
+    indicator?: 'inside' | 'outside' | 'none';
     // 鼠标悬停时暂停切换
     pauseOnHover?: boolean;
     // 轮播间隔
@@ -68,14 +77,14 @@
   }
 
   const props = withDefaults(defineProps<CarouselProps>(), {
-    width: "100%",
-    height: "280px",
-    anim: "default",
+    width: '100%',
+    height: '280px',
+    anim: 'default',
     autoplay: true,
-    arrow: "hover",
+    arrow: 'hover',
     interval: 3000,
-    indicator: "inside",
-    pauseOnHover: true,
+    indicator: 'inside',
+    pauseOnHover: true
   });
 
   const slot = useSlots() as any;
@@ -86,16 +95,16 @@
       return props.modelValue;
     },
     set(val) {
-      emit("update:modelValue", val);
-    },
+      emit('update:modelValue', val);
+    }
   });
 
   const anim = computed(() => props.anim);
 
-  const emit = defineEmits(["update:modelValue", "change"]);
+  const emit = defineEmits(['update:modelValue', 'change']);
 
   const change = function (id: any) {
-    emit("change", id);
+    emit('change', id);
     active.value = id;
   };
 
@@ -104,9 +113,9 @@
 
   const setItemInstanceBySlot = function (nodes: VNode[]) {
     const showNodes = nodes?.filter((item: VNode) => {
-      return item.children != "v-if";
+      return item.children != 'v-if';
     });
-    showNodes?.map((item) => {
+    showNodes?.map(item => {
       let component = item.type as Component;
       if (component.name != CarouselItem.name) {
         setItemInstanceBySlot(item.children as VNode[]);
@@ -195,8 +204,7 @@
     { immediate: true }
   );
 
-  provide("active", active);
-  provide("slotsChange", slotsChange);
-  provide("anim", anim);
+  provide('active', active);
+  provide('slotsChange', slotsChange);
+  provide('anim', anim);
 </script>
-

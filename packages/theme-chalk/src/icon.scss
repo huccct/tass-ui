@@ -2,7 +2,8 @@
 @use 'common/var' as *;
 @font-face {
   font-family: 'ec-ui-icons'; /* Project id 3868664 */
-  src: url('./fonts//iconfont.woff2') format('woff2'), url('./fonts/iconfont.woff') format('woff'),
+  src: url('./fonts//iconfont.woff2') format('woff2'),
+    url('./fonts/iconfont.woff') format('woff'),
     url('./fonts/iconfont.ttf') format('truetype');
 }
 
@@ -14,12 +15,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ec-icon-bubble:before {
-  content: '\e616';
+// 箭头选中后的动画（与collapse相关）
+.icon-select:before{
+	transform: rotate(90deg);
+  display: inline-block;
+  transition: all 0.4s;
 }
 
-.ec-icon-checkmarkcircle:before {
-  content: '\e61b';
+// 箭头未选中的动画（与collapse相关）
+.icon-unselect:before{
+	transform: rotate(0deg);
+  display: inline-block;
+  transition: all 0.4s;
+}
+
+
+.ec-icon-danger:before {
+  content: '\e8e7';
+}
+
+.ec-icon-warning:before {
+  content: '\e785';
+}
+
+.ec-icon-success:before {
+  content: '\e680';
+}
+
+.ec-icon-info:before {
+  content: '\e601';
+}
+
+.ec-icon-bubble:before {
+  content: '\e616';
 }
 
 .ec-icon-chevrondown:before {
