@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-04 17:21:58
+ * @LastEditTime: 2023-02-04 17:50:12
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -155,7 +155,7 @@
     content="bbbccc"
   >
   </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="success">
+  <echo-alert show-icon title="hello echoUI" closeable type="success" center>
   </echo-alert>
   <echo-alert show-icon title="hello echoUI" closeable type="info">
   </echo-alert>
