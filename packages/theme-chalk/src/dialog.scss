@@ -1,0 +1,42 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+@include b(dialog){
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  user-select: none;
+  z-index: 999;
+  @include e(body){
+    display: table-cell;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    vertical-align: middle;
+  }
+  @include e(box){
+    display: inline-block;
+    padding: 24px 24px 12px 24px;
+    background: white;
+    text-align: left;
+  }
+  @include e(header) {
+    position: relative;
+    display: flex;
+  }
+  @include e(title) {
+    line-height: 30px;
+    width: calc(100% - 30px);
+  }
+  @include e(close) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+  @include e(footer) {
+    text-align: right;
+  }
+}
