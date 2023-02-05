@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-05 16:01:16
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 22:14:40
+ * @LastEditTime: 2023-02-05 22:41:43
  */
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
@@ -22,7 +22,7 @@ export default defineConfig({
     rollupOptions: {
       //忽略打包vue文件
       external: ['vue'],
-      input: ['./components.ts'],
+      input: ['./index.ts'],
       output: [
         {
           format: 'es',
