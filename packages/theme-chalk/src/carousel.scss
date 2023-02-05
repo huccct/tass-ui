@@ -1,3 +1,15 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+
+@include b(carousel){
+  position: relative;
+  left: 0;
+  top: 0;
+  background-color: #f8f8f8;
+
+}
+
+
 .tass-carousel {
   position: relative;
   left: 0;
