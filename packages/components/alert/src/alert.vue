@@ -2,12 +2,13 @@
  * @Descripttion: Spicy chicken
  * @Author: YuShu Xiao
  * @Date: 2023-02-01 23:03:26
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:00:50
+ * @LastEditors: YuShu Xiao
+ * @LastEditTime: 2023-02-05 20:26:15
 -->
 <template>
   <!-- 提示框组件 -->
-  <div :class="alertClassNames" class="tas-alert" v-if="isShow">
+  <Transition name="tas-alert-fade">
+    <div :class="alertClassNames" class="tas-alert" v-if="isShow">
     <tass-icon :name="iconName" class="tas-alert__icon" v-if="showIcon" />
     <div class="tas-alert__content">
       <h3 class="tas-alert__title tas-global-ellipsis">
@@ -19,6 +20,7 @@
       <tass-icon name="cross" class="tas-alert__close-btn" v-if="closeable" @click="handltaslose" />
     </div>
   </div>
+  </Transition>
 </template>
 <script lang="ts" name="TassAlert" setup>
   import { AlertType } from './interface';
