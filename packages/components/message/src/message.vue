@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-25 22:08:03
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-04 21:41:44
+ * @LastEditTime: 2023-02-05 15:47:47
 -->
 <template>
   <transition name="tas-message-fade" @before-leave="onclose" @after-leave="$emit('destroy')">
@@ -69,7 +69,7 @@
       default: false
     }
   });
-  const defClass = computed(() => ['ec-message--' + props.type, props.center ? 'is-center' : '']);
+  const defClass = computed(() => ['tas-message--' + props.type, props.center ? 'is-center' : '']);
   const iconMaps = {
     info: 'info',
     success: 'success',
