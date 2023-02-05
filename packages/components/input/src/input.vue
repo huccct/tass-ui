@@ -35,11 +35,12 @@
   const isEnter = ref(true);
   const clearValue = () => {
     inputEmits('update:modelValue', '');
+    isClearAbled.value = false;
   };
   const inputEmits = defineEmits<InputEmits>();
   const changeInputVal = (event: Event) => {
     //可清除clearable
-    (event.target as HTMLInputElement).value
+    (event.target as HTMLInputElement).value.length
       ? (isClearAbled.value = true)
       : (isClearAbled.value = false);
 
