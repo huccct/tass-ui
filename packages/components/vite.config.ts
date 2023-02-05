@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-05 16:01:16
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 22:48:35
+ * @LastEditTime: 2023-02-05 22:52:39
  */
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
@@ -21,13 +21,13 @@ export default defineConfig({
     //cssCodeSplit: true,
     rollupOptions: {
       //忽略打包vue文件
-      external: ['vue'],
+      external: ['vue', /\.scss/, '@tass-ui/utils'],
       input: ['index.ts'],
       output: [
         {
           format: 'es',
           //不用打包成.es.js,这里我们想把它打包成.js
-          entryFileNames: '[name].js',
+          entryFileNames: '[name].mjs',
           //让打包目录和我们目录对应
           preserveModules: true,
           exports: 'named',
@@ -53,7 +53,7 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      entryRoot: 'src',
+      entryRoot: 'components',
       outputDir: [
         resolve(__dirname, '../../build/es/src'),
         resolve(__dirname, '../../build/lib/src')
