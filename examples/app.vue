@@ -26,9 +26,7 @@
   <br />
   <br />
 
-  <tass-button plain type="primary">
-    朴素按钮
-  </tass-button>
+  <tass-button plain type="primary"> 朴素按钮 </tass-button>
   <tass-button round type="primary">椭圆</tass-button>
   <tass-button disabled type="primary">禁止</tass-button>
   <tass-button circle type="primary">圆</tass-button>
@@ -221,13 +219,16 @@
       </div>
     </tass-carousel-item>
   </tass-carousel>
-
   <br />
   <br />
 
   <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
     <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
   </div>
+  <br />
+  <br />
+
+  <tass-input v-model="inputVal" />&nbsp;{{ inputVal }}
 </template>
 
 <script setup lang="ts">
@@ -358,6 +359,8 @@
   const deleteUpload = (file, fileList) => {
     console.log(file, fileList);
   };
+
+  let inputVal = ref('');
 </script>
 
 <style lang="scss">

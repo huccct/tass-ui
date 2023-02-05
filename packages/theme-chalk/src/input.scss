@@ -1,0 +1,29 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+
+@include b(input) {
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  @include e(inner) {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 15px;
+    width: 100%;
+    &::placeholder {
+      color: #c2c2ca;
+    }
+  }
+  &:hover {
+    border-radius: 4px;
+    border: 1px solid #c0c4cc;
+  }
+}

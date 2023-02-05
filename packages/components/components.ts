@@ -15,12 +15,10 @@ export { TassCheckboxGroup } from './checkbox-group';
 export { TassTransfer } from './transfer';
 export { TassMessage } from './message';
 export { TassCollapse } from './collapse';
-
 export { TassDropdown } from './dropdown';
-
 export { TassDialog } from './dialog';
 export { TassAlert } from './alert';
-
 export { TassCarousel } from './carousel';
 export { TassCarouselItem } from './carousel-item';
 export { TassUpload } from './upload';
+export { TassInput } from './input';
