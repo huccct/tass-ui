@@ -1,7 +1,7 @@
 import dialog from './src/dialog.vue';
 
-import { withInstall } from '@echo-ui/utils/withInstall';
+import { withInstall } from '@tass-ui/utils/withInstall';
 
-export const EchoDialog = withInstall(dialog);
+export const TassDialog = withInstall(dialog);
 
-export default EchoDialog;
+export default TassDialog;

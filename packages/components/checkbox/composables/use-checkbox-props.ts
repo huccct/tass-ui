@@ -3,24 +3,19 @@
  * @Author: Huccct
  * @Date: 2023-01-24 13:40:26
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-24 13:51:36
+ * @LastEditTime: 2023-02-05 15:28:19
  */
 import type { ComponentInternalInstance } from 'vue';
 import { inject } from 'vue';
 import { computed, getCurrentInstance } from 'vue';
-import type {
-  checkBoxProps,
-  T
-} from '@echo-ui/components/checkbox/src/checkbox.type';
-import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@echo-ui/constants';
+import type { checkBoxProps, T } from '@tass-ui/components/checkbox/src/checkbox.type';
+import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@tass-ui/constants';
 function useModel(props: checkBoxProps) {
   const { emit } = getCurrentInstance() as ComponentInternalInstance;
   const useProvide = inject<T>('EchoCheckboxGroup', {});
   const model = computed({
     get() {
-      return useProvide.modelValue
-        ? useProvide.modelValue.value
-        : props.modelValue;
+      return useProvide.modelValue ? useProvide.modelValue.value : props.modelValue;
     },
     set(val: unknown) {
       if (useProvide.modelValue) {

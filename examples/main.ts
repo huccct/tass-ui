@@ -3,11 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:00
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-21 14:22:33
+ * @LastEditTime: 2023-02-05 15:27:50
  */
 import { createApp } from 'vue';
 import App from './app.vue';
-import '@echo-ui/theme-chalk/src/index.scss';
+import '@tass-ui/theme-chalk/src/index.scss';
 import TassUI from '@tass-ui/components';
 const app = createApp(App);
 

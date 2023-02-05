@@ -2,14 +2,14 @@
  * @Author: 申恒杰
  * @Date: 2023-02-01 21:33:37
  * @Description: 铁沸物
- * @FilePath: \echo-ui\packages\components\carousel\src\carousel.vue
+ * @FilePath: \tass-ui\packages\components\carousel\src\carousel.vue
 -->
 <template>
   <div
-    class="echo-carousel"
-    :echo-anim="anim"
-    :echo-indicator="indicator"
-    :echo-arrow="arrow"
+    class="tass-carousel"
+    :tass-anim="anim"
+    :tass-indicator="indicator"
+    :tass-arrow="arrow"
     :style="{ width: width, height: height }"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -17,20 +17,20 @@
     <div carousel-item>
       <slot></slot>
     </div>
-    <div class="echo-carousel-ind">
+    <div class="tass-carousel-ind">
       <ul>
         <li
           v-for="(ss, index) in childrens"
           :key="index"
-          :class="[ss.props?.id === active ? 'echo-this' : '']"
+          :class="[ss.props?.id === active ? 'tass-this' : '']"
           @click.stop="change(ss.props?.id)"
         ></li>
       </ul>
     </div>
-    <button class="echo-icon echo-carousel-arrow" echo-type="sub" @click="sub">
+    <button class="tass-icon tass-carousel-arrow" tass-type="sub" @click="sub">
       {{ anim === 'updown' ? '上' : '<' }}
     </button>
-    <button class="echo-icon echo-carousel-arrow" echo-type="add" @click="add">
+    <button class="tass-icon tass-carousel-arrow" tass-type="add" @click="add">
       {{ anim === 'updown' ? '下' : '>' }}
     </button>
   </div>
@@ -38,12 +38,12 @@
 
 <script lang="ts">
   export default {
-    name: 'EchoCarousel'
+    name: 'TassCarousel'
   };
 </script>
 
 <script setup lang="ts">
-  import '@echo-ui/theme-chalk/src/carousel.scss';
+  import '@tass-ui/theme-chalk/src/carousel.scss';
   import {
     withDefaults,
     provide,
@@ -55,7 +55,7 @@
     Component,
     watch
   } from 'vue';
-  import CarouselItem from '@echo-ui/components/carousel-item/src/carousel-item.vue';
+  import CarouselItem from '@tass-ui/components/carousel-item/src/carousel-item.vue';
 
   export interface CarouselProps {
     width?: string;

@@ -1,18 +1,18 @@
-.echo-carousel {
+.tass-carousel {
   position: relative;
   left: 0;
   top: 0;
   background-color: #f8f8f8;
 }
 
-.echo-carousel > [carousel-item] {
+.tass-carousel > [carousel-item] {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.echo-carousel > [carousel-item]:before {
+.tass-carousel > [carousel-item]:before {
   position: absolute;
   content: '\e63d';
   left: 50%;
@@ -22,14 +22,14 @@
   margin: -10px 0 0 -50px;
   text-align: center;
   color: var(--global-neutral-color-8);
-  font-family: echo-icon !important;
+  font-family: tass-icon !important;
   font-size: 30px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.echo-carousel > [carousel-item] > * {
+.tass-carousel > [carousel-item] > * {
   position: absolute;
   left: 0;
   top: 0;
@@ -42,12 +42,12 @@
   visibility: hidden;
 }
 
-.echo-carousel-updown > * {
+.tass-carousel-updown > * {
   -webkit-transition: 0.3s ease-in-out up;
   transition: 0.3s ease-in-out up;
 }
 
-.echo-carousel-arrow {
+.tass-carousel-arrow {
   display: none\9;
   opacity: 0;
   position: absolute;
@@ -68,37 +68,37 @@
   cursor: pointer;
 }
 
-.echo-carousel-arrow[echo-type='add'] {
+.tass-carousel-arrow[tass-type='add'] {
   left: auto !important;
   right: 10px;
 }
 
-.echo-carousel:hover .echo-carousel-arrow[echo-type='add'],
-.echo-carousel[echo-arrow='always'] .echo-carousel-arrow[echo-type='add'] {
+.tass-carousel:hover .tass-carousel-arrow[tass-type='add'],
+.tass-carousel[tass-arrow='always'] .tass-carousel-arrow[tass-type='add'] {
   right: 20px;
 }
 
-.echo-carousel[echo-arrow='always'] .echo-carousel-arrow {
+.tass-carousel[tass-arrow='always'] .tass-carousel-arrow {
   opacity: 1;
   left: 20px;
 }
 
-.echo-carousel[echo-arrow='none'] .echo-carousel-arrow {
+.tass-carousel[tass-arrow='none'] .tass-carousel-arrow {
   display: none;
 }
 
-.echo-carousel-arrow:hover,
-.echo-carousel-ind ul:hover {
+.tass-carousel-arrow:hover,
+.tass-carousel-ind ul:hover {
   background-color: rgba(0, 0, 0, 0.35);
 }
 
-.echo-carousel:hover .echo-carousel-arrow {
+.tass-carousel:hover .tass-carousel-arrow {
   display: block\9;
   opacity: 1;
   left: 20px;
 }
 
-.echo-carousel-ind {
+.tass-carousel-ind {
   position: relative;
   top: -35px;
   width: 100%;
@@ -107,23 +107,23 @@
   font-size: 0;
 }
 
-.echo-carousel[echo-indicator='outside'] {
+.tass-carousel[tass-indicator='outside'] {
   margin-bottom: 30px;
 }
 
-.echo-carousel[echo-indicator='outside'] .echo-carousel-ind {
+.tass-carousel[tass-indicator='outside'] .tass-carousel-ind {
   top: 10px;
 }
 
-.echo-carousel[echo-indicator='outside'] .echo-carousel-ind ul {
+.tass-carousel[tass-indicator='outside'] .tass-carousel-ind ul {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.echo-carousel[echo-indicator='none'] .echo-carousel-ind {
+.tass-carousel[tass-indicator='none'] .tass-carousel-ind {
   display: none;
 }
 
-.echo-carousel-ind ul {
+.tass-carousel-ind ul {
   display: inline-block;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.2);
@@ -132,7 +132,7 @@
   transition-duration: 0.3s;
 }
 
-.echo-carousel-ind li {
+.tass-carousel-ind li {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -146,62 +146,62 @@
   transition-duration: 0.3s;
 }
 
-.echo-carousel-ind li:hover {
+.tass-carousel-ind li:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.echo-carousel-ind li.echo-this {
+.tass-carousel-ind li.tass-this {
   background-color: #fff;
 }
 
-.echo-carousel > [carousel-item] > .echo-carousel-next,
-.echo-carousel > [carousel-item] > .echo-carousel-prev,
-.echo-carousel > [carousel-item] > .echo-this {
+.tass-carousel > [carousel-item] > .tass-carousel-next,
+.tass-carousel > [carousel-item] > .tass-carousel-prev,
+.tass-carousel > [carousel-item] > .tass-this {
   display: block;
 }
 
-.echo-carousel > [carousel-item] > .echo-this {
+.tass-carousel > [carousel-item] > .tass-this {
   left: 0;
 }
 
-.echo-carousel > [carousel-item] > .echo-carousel-prev {
+.tass-carousel > [carousel-item] > .tass-carousel-prev {
   left: -100%;
 }
 
-.echo-carousel > [carousel-item] > .echo-carousel-next {
+.tass-carousel > [carousel-item] > .tass-carousel-next {
   left: 100%;
 }
 
-.echo-carousel > [carousel-item] > .echo-carousel-next.echo-carousel-left,
-.echo-carousel > [carousel-item] > .echo-carousel-prev.echo-carousel-right {
+.tass-carousel > [carousel-item] > .tass-carousel-next.tass-carousel-left,
+.tass-carousel > [carousel-item] > .tass-carousel-prev.tass-carousel-right {
   left: 0;
 }
 
-.echo-carousel > [carousel-item] > .echo-this.echo-carousel-left {
+.tass-carousel > [carousel-item] > .tass-this.tass-carousel-left {
   left: -100%;
 }
 
-.echo-carousel > [carousel-item] > .echo-this.echo-carousel-right {
+.tass-carousel > [carousel-item] > .tass-this.tass-carousel-right {
   left: 100%;
 }
 
-.echo-carousel[echo-anim='updown'] .echo-carousel-arrow {
+.tass-carousel[tass-anim='updown'] .tass-carousel-arrow {
   left: 50% !important;
   top: 20px;
   margin: 0 0 0 -18px;
 }
 
-.echo-carousel[echo-anim='updown'] > [carousel-item] > *,
-.echo-carousel[echo-anim='fade'] > [carousel-item] > * {
+.tass-carousel[tass-anim='updown'] > [carousel-item] > *,
+.tass-carousel[tass-anim='fade'] > [carousel-item] > * {
   left: 0 !important;
 }
 
-.echo-carousel[echo-anim='updown'] .echo-carousel-arrow[echo-type='add'] {
+.tass-carousel[tass-anim='updown'] .tass-carousel-arrow[tass-type='add'] {
   top: auto !important;
   bottom: 20px;
 }
 
-.echo-carousel[echo-anim='updown'] .echo-carousel-ind {
+.tass-carousel[tass-anim='updown'] .tass-carousel-ind {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -210,67 +210,51 @@
   transform: translateY(-50%);
 }
 
-.echo-carousel[echo-anim='updown'] .echo-carousel-ind ul {
+.tass-carousel[tass-anim='updown'] .tass-carousel-ind ul {
   padding: 3px 5px;
 }
 
-.echo-carousel[echo-anim='updown'] .echo-carousel-ind li {
+.tass-carousel[tass-anim='updown'] .tass-carousel-ind li {
   display: block;
   margin: 6px 0;
 }
 
-.echo-carousel[echo-anim='updown'] > [carousel-item] > .echo-this {
+.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-this {
   top: 0;
 }
 
-.echo-carousel[echo-anim='updown'] > [carousel-item] > .echo-carousel-prev {
+.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-carousel-prev {
   top: -100%;
 }
 
-.echo-carousel[echo-anim='updown'] > [carousel-item] > .echo-carousel-next {
+.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-carousel-next {
   top: 100%;
 }
 
-.echo-carousel[echo-anim='updown']
-  > [carousel-item]
-  > .echo-carousel-next.echo-carousel-left,
-.echo-carousel[echo-anim='updown']
-  > [carousel-item]
-  > .echo-carousel-prev.echo-carousel-right {
+.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-carousel-next.tass-carousel-left,
+.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-carousel-prev.tass-carousel-right {
   top: 0;
 }
 
-.echo-carousel[echo-anim='updown']
-  > [carousel-item]
-  > .echo-this.echo-carousel-left {
+.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-this.tass-carousel-left {
   top: -100%;
 }
 
-.echo-carousel[echo-anim='updown']
-  > [carousel-item]
-  > .echo-this.echo-carousel-right {
+.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-this.tass-carousel-right {
   top: 100%;
 }
 
-.echo-carousel[echo-anim='fade'] > [carousel-item] > .echo-carousel-next,
-.echo-carousel[echo-anim='fade'] > [carousel-item] > .echo-carousel-prev {
+.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-carousel-next,
+.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-carousel-prev {
   opacity: 0;
 }
 
-.echo-carousel[echo-anim='fade']
-  > [carousel-item]
-  > .echo-carousel-next.echo-carousel-left,
-.echo-carousel[echo-anim='fade']
-  > [carousel-item]
-  > .echo-carousel-prev.echo-carousel-right {
+.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-carousel-next.tass-carousel-left,
+.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-carousel-prev.tass-carousel-right {
   opacity: 1;
 }
 
-.echo-carousel[echo-anim='fade']
-  > [carousel-item]
-  > .echo-this.echo-carousel-left,
-.echo-carousel[echo-anim='fade']
-  > [carousel-item]
-  > .echo-this.echo-carousel-right {
+.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-this.tass-carousel-left,
+.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-this.tass-carousel-right {
   opacity: 0;
 }

@@ -19,12 +19,12 @@
         <div>
           <slot name="footerContent" />
           <div class="dialog__footer">
-            <echo-button v-if="showCancelButton" mode="text" @click="onClickCancelButton">
+            <tass-button v-if="showCancelButton" mode="text" @click="onClickCancelButton">
               {{ cancelText }}
-            </echo-button>
-            <echo-button v-if="showConfirmButton" @click="onClickConfirmButton">
+            </tass-button>
+            <tass-button v-if="showConfirmButton" @click="onClickConfirmButton">
               {{ confirmText }}
-            </echo-button>
+            </tass-button>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<script lang="ts" setup name="EchoDialog">
+<script lang="ts" setup name="tassDialog">
   import type { ComponentInternalInstance } from 'vue';
   import { getCurrentInstance, ref } from 'vue';
   defineProps({

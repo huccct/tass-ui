@@ -7,8 +7,8 @@
  */
 import dropdown from './src/dropdwon.vue';
 
-import { withInstall } from '@echo-ui/utils/withInstall';
+import { withInstall } from '@tass-ui/utils/withInstall';
 
-export const EchoDropdown = withInstall(dropdown);
+export const TassDropdown = withInstall(dropdown);
 
-export default EchoDropdown;
+export default TassDropdown;

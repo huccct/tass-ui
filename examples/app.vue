@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 14:59:44
+ * @LastEditTime: 2023-02-05 15:27:06
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -235,7 +235,7 @@
 
 <script setup lang="ts">
   import { ref, reactive } from 'vue';
-  import { tassMessage } from '../packages/components/message';
+  import { TassMessage } from '../packages/components/message';
 
   let carouseltest = ref('1');
   let carouseltest2 = ref('1');
@@ -303,7 +303,7 @@
   });
 
   const ClickMessage_1 = () => {
-    tassMessage({
+    TassMessage({
       message: 'Success',
       type: 'success',
       center: false,
@@ -313,7 +313,7 @@
   };
 
   const ClickMessage_2 = () => {
-    tassMessage({
+    TassMessage({
       message: 'Error',
       type: 'error',
       center: false,
@@ -322,7 +322,7 @@
   };
 
   const ClickMessage_3 = () => {
-    tassMessage({
+    TassMessage({
       message: 'Warning',
       type: 'warning',
       center: true,
@@ -331,7 +331,7 @@
   };
 
   const ClickMessage_4 = () => {
-    tassMessage({
+    TassMessage({
       message: 'Info',
       type: 'info',
       center: false,

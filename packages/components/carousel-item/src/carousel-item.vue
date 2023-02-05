@@ -12,19 +12,12 @@
 
 <script lang="ts">
   export default {
-    name: 'EchoCarouselItem'
+    name: 'TassCarouselItem'
   };
 </script>
 
 <script setup lang="ts">
-  import {
-    inject,
-    Ref,
-    computed,
-    ref,
-    ComputedRef,
-    WritableComputedRef
-  } from 'vue';
+  import { inject, Ref, computed, ref, ComputedRef, WritableComputedRef } from 'vue';
 
   export interface CarouselItemProps {
     id: string;
