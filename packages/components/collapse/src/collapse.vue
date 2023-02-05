@@ -14,8 +14,8 @@
           <div class="tas-collapse-title" @click="toggle(item.id)">
             {{ item.title }}
             <tass-icon
-              name="chevronright"
-              :class="[show == item.id ? 'icon-select' : 'icon-unselect']"
+              :name="[show == item.id ? 'chevrondown' : 'chevronright']"
+             
               style="float: right"
             ></tass-icon>
           </div>
@@ -42,7 +42,6 @@
   });
 
   let show = ref(0);
-  let state = ref(false);
 
   function toggle(index) {
     // 获取index 来判断当前点击并展示
