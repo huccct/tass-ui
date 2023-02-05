@@ -1,6 +1,15 @@
+/*
+ * @Description: Stay hungry，Stay foolish
+ * @Author: Huccct
+ * @Date: 2023-02-05 16:01:16
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-05 22:14:40
+ */
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
+import { resolve } from 'path';
 export default defineConfig({
   build: {
     target: 'modules',
@@ -21,35 +30,35 @@ export default defineConfig({
           entryFileNames: '[name].js',
           //让打包目录和我们目录对应
           preserveModules: true,
+          exports: 'named',
           //配置打包根目录
-          dir: 'es',
-          preserveModulesRoot: 'src'
+          dir: resolve(__dirname, '../../build/es')
         },
         {
           format: 'cjs',
           entryFileNames: '[name].js',
           //让打包目录和我们目录对应
           preserveModules: true,
+          exports: 'named',
           //配置打包根目录
-          dir: 'lib',
-          preserveModulesRoot: 'src'
+          dir: resolve(__dirname, '../../build/lib')
         }
       ]
     },
     lib: {
       entry: './index.ts',
-      formats: ['es', 'cjs']
+      name: 'tass'
     }
   },
   plugins: [
     vue(),
     dts({
+      entryRoot: 'src',
+      outputDir: [
+        resolve(__dirname, '../../build/es/src'),
+        resolve(__dirname, '../../build/lib/src')
+      ],
       //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
-      tsConfigFilePath: '../../tsconfig.json'
-    }),
-    //因为这个插件默认打包到es下，我们想让lib目录下也生成声明文件需要再配置一个
-    dts({
-      outputDir: 'lib',
       tsConfigFilePath: '../../tsconfig.json'
     })
   ]
