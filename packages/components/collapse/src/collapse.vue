@@ -11,7 +11,7 @@
     <ul class="tas-collapse-ul">
       <li>
         <div v-for="item in posts" :key="item.id">
-          <div class="ec-collapse-title" @click="toggle(item.id)">
+          <div class="tas-collapse-title" @click="toggle(item.id)">
             {{ item.title }}
             <tass-icon
               name="chevronright"
@@ -20,7 +20,7 @@
             ></tass-icon>
           </div>
           <transition>
-            <div class="ec-collapse-content" v-show="show === item.id">
+            <div class="tas-collapse-content" v-show="show === item.id">
               {{ item.body }}
             </div>
           </transition>

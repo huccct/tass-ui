@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:27:06
+ * @LastEditTime: 2023-02-05 15:45:00
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -27,7 +27,6 @@
   <br />
 
   <tass-button plain type="primary">
-    <tass-icon name="ico_med_doctor" />
     朴素按钮
   </tass-button>
   <tass-button round type="primary">椭圆</tass-button>
@@ -36,7 +35,7 @@
   <br />
   <br />
 
-  <tass-button type="success" icon="ec-icon-magnifier">Search</tass-button>
+  <tass-button type="success" icon="tas-icon-magnifier">Search</tass-button>
   <br />
   <br />
 
@@ -151,8 +150,6 @@
   <tass-alert show-icon title="hello tassUI" closeable type="success" center> </tass-alert>
   <tass-alert show-icon title="hello tassUI" closeable type="info"> </tass-alert>
   <tass-alert show-icon title="hello tassUI" closeable type="warning"> </tass-alert>
-
-  <tass-button type="primary"></tass-button>
 
   <br />
   <br />
