@@ -10,8 +10,8 @@ package-lock.json
 test/unit/coverage
 test/e2e/reports
 selenium-debug.log
-build/es
-build/lib
+build/
+
 
 
 # Editor directories and files
