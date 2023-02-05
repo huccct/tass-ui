@@ -8,8 +8,18 @@
     "coverage": "vitest run --coverage",
     "build": "vite build"
   },
-  "keywords": [],
-  "author": "",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "tass-ui",
+    "vue3组件库",
+    "vue ui",
+    "components",
+    "beautiful"
+  ],
+  "author": "Components Team",
   "license": "MIT",
   "dependencies": {
     "@tass-ui/utils": "workspace:^1.0.0"
