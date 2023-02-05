@@ -2,11 +2,11 @@
 layout: home
 
 hero:
-  name: echo-ui
+  name: tass-ui
   tagline: 基于Vue3,简洁高效的组件库
   image:
-    src: /public/images/logo.svg
-    alt: echo-ui
+    src: /public/images/logo.png
+    alt: tass-ui
   actions:
     - theme: brand
       text: Get Started

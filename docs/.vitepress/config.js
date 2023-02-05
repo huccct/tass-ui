@@ -1,9 +1,9 @@
 export default {
   title: '一个Vue3 UI框架',
-  titleTemplate: ':title - Echo Ui',
+  titleTemplate: ':title - Tass Ui',
   description: '一个Vue3 UI框架',
   themeConfig: {
-    logo: '/public/logo.png',
+    logo: '/public/logo-horizontal.png',
     siteTitle: false,
     nav: [
       { text: '指南', link: '/guide/install.md' },
