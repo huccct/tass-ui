@@ -228,7 +228,7 @@
   <br />
   <br />
 
-  <tass-input v-model="inputVal" />&nbsp;{{ inputVal }}
+  <tass-input v-model="inputVal" clearable />&nbsp;{{ inputVal }}
 </template>
 
 <script setup lang="ts">
@@ -375,8 +375,6 @@
       color: #c4c4c4;
     }
   }
-</style>
-<style lang="scss" scoped>
   .el-carousel__item h3 {
     display: flex;
     color: #475669;

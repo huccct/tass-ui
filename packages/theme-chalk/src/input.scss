@@ -22,7 +22,16 @@
       color: #c2c2ca;
     }
   }
-
+  & .#{$namespace}-input__suffix {
+    position: absolute;
+    right: 10px;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #c0c4cc;
+  }
   @include when(disabled) {
     &,
     &:hover,
