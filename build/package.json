@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
-  "module": "es/index.js",
+  "module": "es/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huccct/tass-ui"
   },
   "files": [
     "es",
@@ -21,5 +25,6 @@
     "vue"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "typings": "lib/index.d.ts"
 }
