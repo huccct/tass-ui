@@ -1,5 +1,5 @@
 {
-  "name": "@echo-ui/components",
+  "name": "@tass-ui/components",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@echo-ui/utils": "workspace:^1.0.0"
+    "@tass-ui/utils": "workspace:^1.0.0"
   }
 }

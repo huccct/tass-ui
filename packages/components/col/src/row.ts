@@ -3,12 +3,12 @@
  * @Author: Huccct
  * @Date: 2023-01-23 15:46:05
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 19:50:22
+ * @LastEditTime: 2023-02-05 15:07:53
  */
 import { computed, defineComponent, h, provide } from 'vue';
 
 export default defineComponent({
-  name: 'EchoRow',
+  name: 'TassRow',
   props: {
     tag: {
       type: String,
@@ -24,9 +24,9 @@ export default defineComponent({
     }
   },
   setup(props, ctx) {
-    provide('EchoRow', props.gutter);
+    provide('TassRow', props.gutter);
     const Class = computed(() => [
-      'ec-row',
+      'tas-row',
       props.justify !== 'start' ? `is-justify-${props.justify}` : ''
     ]);
     const styles = computed(() => {

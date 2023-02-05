@@ -3,12 +3,12 @@
  * @Author: Huccct
  * @Date: 2023-01-23 15:46:01
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 19:33:46
+ * @LastEditTime: 2023-02-05 15:07:31
  */
 import { computed, defineComponent, h, inject } from 'vue';
 
 export default defineComponent({
-  name: 'EchoCol',
+  name: 'TassCol',
   props: {
     tag: {
       type: String,
@@ -24,7 +24,7 @@ export default defineComponent({
     }
   },
   setup(props, ctx) {
-    const gutter = inject('EchoRow') as number;
+    const gutter = inject('TassRow') as number;
 
     const Class = computed(() => {
       const res: string[] = [];
@@ -33,10 +33,10 @@ export default defineComponent({
         const size = props[item];
 
         if (typeof size === 'number' && size > 0) {
-          res.push(`ec-col-${item}-${size}`);
+          res.push(`tas-col-${item}-${size}`);
         }
       });
-      return ['ec-col', ...res];
+      return ['tas-col', ...res];
     });
     const styles = computed(() => {
       if (gutter !== 0) {

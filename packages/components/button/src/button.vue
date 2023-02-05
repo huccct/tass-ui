@@ -3,24 +3,24 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:43:56
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 14:12:49
+ * @LastEditTime: 2023-02-05 15:01:34
 -->
 <template>
   <button
-    class="ec-button"
+    class="tas-button"
     :class="classList"
     :type="nativeType"
     :autofocus="autoFocus"
     :disabled="disabled || loading"
     @click="handlerClick"
   >
-    <i v-if="props.loading" class="ec-icon-loading"></i>
+    <i v-if="props.loading" class="tas-icon-loading"></i>
     <i v-if="props.icon && !props.loading" :class="props.icon"></i>
     <slot />
   </button>
 </template>
 
-<script lang="ts" setup name="EchoButton">
+<script lang="ts" setup name="TassButton">
   import { computed } from 'vue';
   import { Props, Emits } from './button';
   const props = defineProps(Props);
@@ -29,8 +29,8 @@
     const { type, size, round, plain, circle, disabled, loading } = props;
     return [
       {
-        [`ec-button--${type}`]: type,
-        [`ec-button--${size}`]: size,
+        [`tas-button--${type}`]: type,
+        [`tas-button--${size}`]: size,
         ['is-disabled']: disabled,
         ['is-loading']: loading,
         ['is-round']: round,

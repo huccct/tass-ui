@@ -3,11 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-01-23 15:45:04
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 16:15:32
+ * @LastEditTime: 2023-02-05 15:07:17
  */
 import col from './src/col';
-import { withInstall } from '@echo-ui/utils/withInstall';
+import { withInstall } from '@tass-ui/utils/withInstall';
 
-export const EchoCol = withInstall(col);
+export const TassCol = withInstall(col);
 
-export default EchoCol;
+export default TassCol;

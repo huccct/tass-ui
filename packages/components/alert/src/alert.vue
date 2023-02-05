@@ -3,24 +3,24 @@
  * @Author: YuShu Xiao
  * @Date: 2023-02-01 23:03:26
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-04 21:44:10
+ * @LastEditTime: 2023-02-05 15:00:50
 -->
 <template>
   <!-- 提示框组件 -->
-  <div :class="alertClassNames" class="ec-alert" v-if="isShow">
-    <echo-icon :name="iconName" class="ec-alert__icon" v-if="showIcon" />
-    <div class="ec-alert__content">
-      <h3 class="ec-alert__title ec-global-ellipsis">
+  <div :class="alertClassNames" class="tas-alert" v-if="isShow">
+    <tass-icon :name="iconName" class="tas-alert__icon" v-if="showIcon" />
+    <div class="tas-alert__content">
+      <h3 class="tas-alert__title tas-global-ellipsis">
         {{ title }}
       </h3>
-      <p class="ec-alert__desc" v-if="content">
+      <p class="tas-alert__desc" v-if="content">
         {{ content }}
       </p>
-      <echo-icon name="cross" class="ec-alert__close-btn" v-if="closeable" @click="handleClose" />
+      <tass-icon name="cross" class="tas-alert__close-btn" v-if="closeable" @click="handltaslose" />
     </div>
   </div>
 </template>
-<script lang="ts" name="EchoAlert" setup>
+<script lang="ts" name="TassAlert" setup>
   import { AlertType } from './interface';
   import { computed, ref } from 'vue';
 
@@ -54,7 +54,7 @@
   });
   const alertClassNames = computed(() => {
     const { type, center } = props;
-    return [{ [`ec-alert--${type}`]: type }, { 'is-center': center }];
+    return [{ [`tas-alert--${type}`]: type }, { 'is-center': center }];
   });
   const iconMaps = {
     info: 'info',
@@ -67,7 +67,7 @@
     return iconMaps[type];
   });
   // 关闭alert
-  const handleClose = () => {
+  const handltaslose = () => {
     isShow.value = false;
   };
 </script>

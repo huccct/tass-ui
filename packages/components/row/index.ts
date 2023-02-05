@@ -1,6 +1,6 @@
 import row from '../col/src/row';
-import { withInstall } from '@echo-ui/utils/withInstall';
+import { withInstall } from '@tass-ui/utils/withInstall';
 
-export const EchoRow = withInstall(row);
+export const TassRow = withInstall(row);
 
-export default EchoRow;
+export default TassRow;

@@ -8,9 +8,9 @@
 import { createApp } from 'vue';
 import App from './app.vue';
 import '@echo-ui/theme-chalk/src/index.scss';
-import EchoUI from '@echo-ui/components';
+import TassUI from '@tass-ui/components';
 const app = createApp(App);
 
-app.use(EchoUI);
+app.use(TassUI);
 
 app.mount('#app');

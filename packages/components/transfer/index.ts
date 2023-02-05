@@ -3,11 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-01-24 21:56:23
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-25 20:06:10
+ * @LastEditTime: 2023-02-05 15:13:48
  */
 import transfer from './src/transfer.vue';
-import { withInstall } from '@echo-ui/utils/withInstall';
+import { withInstall } from '@tass-ui/utils/withInstall';
 
-export const EchoTransfer = withInstall(transfer);
+export const TassTransfer = withInstall(transfer);
 
-export default EchoTransfer;
+export default TassTransfer;

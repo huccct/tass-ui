@@ -6,26 +6,31 @@
  * @LastEditTime: 2023-02-04 21:41:44
 -->
 <template>
-  <transition name="ec-message-fade" @before-leave="onclose" @after-leave="$emit('destroy')">
+  <transition name="tas-message-fade" @before-leave="onclose" @after-leave="$emit('destroy')">
     <div
       v-show="isShow"
-      class="ec-message"
+      class="tas-message"
       :style="controlTop"
       :class="defClass"
       @mouseenter="clearTimeFn"
       @mouseleave="startTimerFn"
     >
-      <echo-icon :name="iconName" class="ec-message__icon" v-if="showIcon" />
+      <tass-icon :name="iconName" class="tas-message__icon" v-if="showIcon" />
       <slot>
-        <span class="ec-message__content">{{ message }}</span>
+        <span class="tas-message__content">{{ message }}</span>
       </slot>
-      <echo-icon name="cross" class="ec-message__close-btn" v-if="closeable" @click="handleClose" />
+      <tass-icon
+        name="cross"
+        class="tas-message__close-btn"
+        v-if="closeable"
+        @click="handleClose"
+      />
     </div>
   </transition>
 </template>
 <script setup lang="ts">
   import { computed, onMounted, onUnmounted, ref } from 'vue';
-  import { EchoIcon } from '../../icon';
+  import { TassIcon } from '../../icon';
   const props = defineProps({
     id: {
       type: String,

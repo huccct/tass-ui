@@ -3,166 +3,156 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-04 21:43:51
+ * @LastEditTime: 2023-02-05 14:59:44
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
 <template>
-  <echo-button>Default</echo-button>
-  <echo-button type="primary">Primary</echo-button>
-  <echo-button type="success">Success</echo-button>
-  <echo-button type="info">Info</echo-button>
-  <echo-button type="warning">Warning</echo-button>
-  <echo-button type="danger">Danger</echo-button>
+  <tass-button>Default</tass-button>
+  <tass-button type="primary">Primary</tass-button>
+  <tass-button type="success">Success</tass-button>
+  <tass-button type="info">Info</tass-button>
+  <tass-button type="warning">Warning</tass-button>
+  <tass-button type="danger">Danger</tass-button>
 
   <br />
   <br />
 
-  <echo-button>按钮默认尺寸</echo-button>
-  <echo-button size="medium">按钮中等尺寸</echo-button>
-  <echo-button size="small">按钮小尺寸</echo-button>
-  <echo-button size="mini">按钮极小尺寸</echo-button>
-  <echo-button size="tiny">按钮超小尺寸</echo-button>
+  <tass-button>按钮默认尺寸</tass-button>
+  <tass-button size="medium">按钮中等尺寸</tass-button>
+  <tass-button size="small">按钮小尺寸</tass-button>
+  <tass-button size="mini">按钮极小尺寸</tass-button>
+  <tass-button size="tiny">按钮超小尺寸</tass-button>
   <br />
   <br />
 
-  <echo-button plain type="primary">
-    <echo-icon name="ico_med_doctor" />
+  <tass-button plain type="primary">
+    <tass-icon name="ico_med_doctor" />
     朴素按钮
-  </echo-button>
-  <echo-button round type="primary">椭圆</echo-button>
-  <echo-button disabled type="primary">禁止</echo-button>
-  <echo-button circle type="primary">圆</echo-button>
+  </tass-button>
+  <tass-button round type="primary">椭圆</tass-button>
+  <tass-button disabled type="primary">禁止</tass-button>
+  <tass-button circle type="primary">圆</tass-button>
   <br />
   <br />
 
-  <echo-button type="success" icon="ec-icon-magnifier">Search</echo-button>
+  <tass-button type="success" icon="ec-icon-magnifier">Search</tass-button>
   <br />
   <br />
 
-  <echo-icon name="pluscircle"></echo-icon>&nbsp; <echo-icon name="pushpin"></echo-icon>&nbsp;
-  <echo-icon name="textalignjustify"></echo-icon>&nbsp; <echo-icon name="danger"></echo-icon>&nbsp;
-  <echo-icon name="success"></echo-icon>&nbsp; <echo-icon name="info"></echo-icon>&nbsp;
-  <echo-icon name="warning"></echo-icon>
+  <tass-icon name="pluscircle"></tass-icon>&nbsp; <tass-icon name="pushpin"></tass-icon>&nbsp;
+  <tass-icon name="textalignjustify"></tass-icon>&nbsp; <tass-icon name="danger"></tass-icon>&nbsp;
+  <tass-icon name="success"></tass-icon>&nbsp; <tass-icon name="info"></tass-icon>&nbsp;
+  <tass-icon name="warning"></tass-icon>
   <br />
   <br />
 
-  <echo-row>
-    <echo-col :span="24">
+  <tass-row>
+    <tass-col :span="24">
       <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
-    </echo-col>
-  </echo-row>
+    </tass-col>
+  </tass-row>
   <br />
   <br />
 
-  <echo-row>
-    <echo-col :span="12">
+  <tass-row>
+    <tass-col :span="12">
       <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
-    </echo-col>
-    <echo-col :span="12">
+    </tass-col>
+    <tass-col :span="12">
       <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
-    </echo-col>
-  </echo-row>
+    </tass-col>
+  </tass-row>
   <br />
   <br />
 
-  <echo-row tag="div">
-    <echo-col tag="span" :span="12">
+  <tass-row tag="div">
+    <tass-col tag="span" :span="12">
       <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
-    </echo-col>
-    <echo-col tag="span" :span="6">
+    </tass-col>
+    <tass-col tag="span" :span="6">
       <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
-    </echo-col>
-    <echo-col tag="span" :span="6">
+    </tass-col>
+    <tass-col tag="span" :span="6">
       <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
-    </echo-col>
-  </echo-row>
+    </tass-col>
+  </tass-row>
   <br />
   <br />
 
-  <echo-row tag="div" :gutter="20" justify="end">
-    <echo-col tag="span" :span="6">
+  <tass-row tag="div" :gutter="20" justify="end">
+    <tass-col tag="span" :span="6">
       <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
-    </echo-col>
-    <echo-col tag="span" :span="6">
+    </tass-col>
+    <tass-col tag="span" :span="6">
       <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
-    </echo-col>
-    <echo-col tag="span" :span="6">
+    </tass-col>
+    <tass-col tag="span" :span="6">
       <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
-    </echo-col>
-  </echo-row>
+    </tass-col>
+  </tass-row>
   <br />
   <br />
 
-  <echo-checkbox disabled>Not disabled</echo-checkbox>
-  <echo-checkbox v-model="check1" @change="handlerChange">Option A</echo-checkbox>
-  <echo-checkbox v-model="check2">Option B</echo-checkbox>
+  <tass-checkbox disabled>Not disabled</tass-checkbox>
+  <tass-checkbox v-model="check1" @change="handlerChange">Option A</tass-checkbox>
+  <tass-checkbox v-model="check2">Option B</tass-checkbox>
   <br />
   <br />
 
   <h2>{{ checkList }}</h2>
-  <echo-checkbox-group v-model="checkList">
-    <echo-checkbox v-for="(item, index) in showList" :key="index" :label="item"></echo-checkbox>
-  </echo-checkbox-group>
+  <tass-checkbox-group v-model="checkList">
+    <tass-checkbox v-for="(item, index) in showList" :key="index" :label="item"></tass-checkbox>
+  </tass-checkbox-group>
   <br />
   <br />
 
-  <echo-transfer v-model="rightValue" :data="transferData" :props="transferProps"></echo-transfer>
+  <tass-transfer v-model="rightValue" :data="transferData" :props="transferProps"></tass-transfer>
   <br />
   <br />
 
-  <echo-button type="success" @click="ClickMessage_1">Click Message</echo-button>
-  <echo-button type="danger" @click="ClickMessage_2">Click Message</echo-button>
-  <echo-button type="warning" @click="ClickMessage_3">Click Message</echo-button>
-  <echo-button type="info" @click="ClickMessage_4">Click Message</echo-button>
+  <tass-button type="success" @click="ClickMessage_1">Click Message</tass-button>
+  <tass-button type="danger" @click="ClickMessage_2">Click Message</tass-button>
+  <tass-button type="warning" @click="ClickMessage_3">Click Message</tass-button>
+  <tass-button type="info" @click="ClickMessage_4">Click Message</tass-button>
   <br />
   <br />
 
-  <echo-collapse :posts="list">
+  <tass-collapse :posts="list">
     <div style="height: 200px"></div>
-  </echo-collapse>
+  </tass-collapse>
   <br />
   <br />
 
-  <echo-dropdown
+  <tass-dropdown
     class="my-dropdown-toggle"
     :options="arrayOfObjects"
     :selected="selectedObject"
     :close-on-outside-click="false"
     v-on:updateoption="methodToRunOnSelect"
     >{{ selectedObject }}
-  </echo-dropdown>
+  </tass-dropdown>
   <br />
   <br />
 
-  <echo-button type="primary" :visible="!normalViaible" @click="changeView">dialog</echo-button>
-  <echo-dialog
+  <tass-button type="primary" :visible="!normalViaible" @click="changeView">dialog</tass-button>
+  <tass-dialog
     :visible="normalViaible"
     title="这是"
     width="500px"
     @cancel="handleClickCancelButton"
     @confirm="handleConfirmButton"
   >
-  </echo-dialog>
+  </tass-dialog>
   <br />
   <br />
 
-  <echo-alert
-    show-icon
-    title="hello echoUI"
-    closeable
-    type="error"
-    content="bbbccc"
-  >
-  </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="success" center>
-  </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="info">
-  </echo-alert>
-  <echo-alert show-icon title="hello echoUI" closeable type="warning">
-  </echo-alert>
+  <tass-alert show-icon title="hello tassUI" closeable type="error" content="bbbccc"> </tass-alert>
+  <tass-alert show-icon title="hello tassUI" closeable type="success" center> </tass-alert>
+  <tass-alert show-icon title="hello tassUI" closeable type="info"> </tass-alert>
+  <tass-alert show-icon title="hello tassUI" closeable type="warning"> </tass-alert>
 
-  <echo-button type="primary"></echo-button>
+  <tass-button type="primary"></tass-button>
 
   <br />
   <br />
@@ -172,8 +162,8 @@
   <br />
   <br />
 
-  <echo-carousel v-model="carouseltest">
-    <echo-carousel-item id="1">
+  <tass-carousel v-model="carouseltest">
+    <tass-carousel-item id="1">
       <div
         style="
           color: white;
@@ -186,8 +176,8 @@
       >
         1
       </div>
-    </echo-carousel-item>
-    <echo-carousel-item id="2">
+    </tass-carousel-item>
+    <tass-carousel-item id="2">
       <div
         style="
           color: white;
@@ -200,12 +190,12 @@
       >
         2
       </div>
-    </echo-carousel-item>
-  </echo-carousel>
+    </tass-carousel-item>
+  </tass-carousel>
   <br />
   <br />
-  <echo-carousel v-model="carouseltest2" width="600px" anim="updown">
-    <echo-carousel-item id="1">
+  <tass-carousel v-model="carouseltest2" width="600px" anim="updown">
+    <tass-carousel-item id="1">
       <div
         style="
           color: white;
@@ -218,8 +208,8 @@
       >
         1
       </div>
-    </echo-carousel-item>
-    <echo-carousel-item id="2">
+    </tass-carousel-item>
+    <tass-carousel-item id="2">
       <div
         style="
           color: white;
@@ -232,20 +222,20 @@
       >
         2
       </div>
-    </echo-carousel-item>
-  </echo-carousel>
+    </tass-carousel-item>
+  </tass-carousel>
 
   <br />
   <br />
 
   <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
-    <echo-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></echo-upload>
+    <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
   </div>
 </template>
 
 <script setup lang="ts">
   import { ref, reactive } from 'vue';
-  import { EchoMessage } from '../packages/components/message';
+  import { tassMessage } from '../packages/components/message';
 
   let carouseltest = ref('1');
   let carouseltest2 = ref('1');
@@ -313,7 +303,7 @@
   });
 
   const ClickMessage_1 = () => {
-    EchoMessage({
+    tassMessage({
       message: 'Success',
       type: 'success',
       center: false,
@@ -323,7 +313,7 @@
   };
 
   const ClickMessage_2 = () => {
-    EchoMessage({
+    tassMessage({
       message: 'Error',
       type: 'error',
       center: false,
@@ -332,7 +322,7 @@
   };
 
   const ClickMessage_3 = () => {
-    EchoMessage({
+    tassMessage({
       message: 'Warning',
       type: 'warning',
       center: true,
@@ -341,7 +331,7 @@
   };
 
   const ClickMessage_4 = () => {
-    EchoMessage({
+    tassMessage({
       message: 'Info',
       type: 'info',
       center: false,

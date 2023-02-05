@@ -2,25 +2,25 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:53:35
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-02-01 21:51:11
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-05 15:14:24
  */
-export { EchoButton } from './button';
-export { EchoButtonGroup } from './button-group';
-export { EchoIcon } from './icon';
-export { EchoCol } from './col/';
-export { EchoRow } from './row';
-export { EchoCheckbox } from './checkbox';
-export { EchoCheckboxGroup } from './checkbox-group';
-export { EchoTransfer } from './transfer';
-export { EchoMessage } from './message';
-export { EchoCollapse } from './collapse';
+export { TassButton } from './button';
+export { TassButtonGroup } from './button-group';
+export { TassIcon } from './icon';
+export { TassCol } from './col/';
+export { TassRow } from './row';
+export { TassCheckbox } from './checkbox';
+export { TassCheckboxGroup } from './checkbox-group';
+export { TassTransfer } from './transfer';
+export { TassMessage } from './message';
+export { TassCollapse } from './collapse';
 
-export { EchoDropdown } from './dropdown';
+export { TassDropdown } from './dropdown';
 
-export { EchoDialog } from './dialog';
-export { EchoAlert } from './alert';
+export { TassDialog } from './dialog';
+export { TassAlert } from './alert';
 
-export { EchoCarousel } from './carousel';
-export { EchoCarouselItem } from './carousel-item';
-export { EchoUpload } from './upload';
+export { TassCarousel } from './carousel';
+export { TassCarouselItem } from './carousel-item';
+export { TassUpload } from './upload';

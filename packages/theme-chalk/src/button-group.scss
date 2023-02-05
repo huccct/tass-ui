@@ -10,11 +10,11 @@
   display: inline-block;
   vertical-align: middle;
 
-  & > .ec-button {
+  & > .tas-button {
     position: relative;
     float: left;
 
-    & + .ec-button {
+    & + .tas-button {
       margin-left: 2px;
     }
 
@@ -68,8 +68,8 @@
     }
   }
 
-  & > .ec-dropdown {
-    & > .ec-button {
+  & > .tas-dropdown {
+    & > .tas-button {
       border-left-color: rgba($color-white, 0.5);
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
@@ -77,7 +77,7 @@
   }
 
   @each $type in (primary, success, warning, danger, info) {
-    .ec-button--#{type} {
+    .tas-button--#{type} {
       &:first-child {
         border-right-color: rgba($color-white, 0.5);
       }
