@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:00
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:27:50
+ * @LastEditTime: 2023-02-06 10:53:42
  */
 import { createApp } from 'vue';
 import App from './app.vue';
