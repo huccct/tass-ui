@@ -26,6 +26,7 @@ importers:
       lint-staged: ^13.1.0
       postcss-scss: ^4.0.6
       prettier: ^2.8.3
+      rimraf: ^4.1.2
       sass: ^1.55.0
       stylelint: ^14.16.1
       stylelint-scss: ^4.3.0
@@ -59,6 +60,7 @@ importers:
       lint-staged: registry.npmmirror.com/lint-staged/13.1.0
       postcss-scss: registry.npmmirror.com/postcss-scss/4.0.6
       prettier: registry.npmmirror.com/prettier/2.8.3
+      rimraf: 4.1.2
       sass: registry.npmmirror.com/sass/1.57.1
       stylelint: registry.npmmirror.com/stylelint/14.16.1
       stylelint-scss: registry.npmmirror.com/stylelint-scss/4.3.0_stylelint@14.16.1
@@ -792,6 +794,19 @@ packages:
   /reusify/1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+    dev: true
+
+  /rimraf/3.0.2:
+    resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    hasBin: true
+    dependencies:
+      glob: registry.npmmirror.com/glob/7.2.3
+    dev: true
+
+  /rimraf/4.1.2:
+    resolution: {integrity: sha512-BlIbgFryTbw3Dz6hyoWFhKk+unCcHMSkZGrTFVAx2WmttdBSonsdtRlwiuTbDqTKr+UlXIUqJVS4QT5tUzGENQ==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /run-parallel/1.2.0:
@@ -2175,7 +2190,7 @@ packages:
       istanbul-lib-coverage: registry.npmmirror.com/istanbul-lib-coverage/3.2.0
       istanbul-lib-report: registry.npmmirror.com/istanbul-lib-report/3.0.0
       istanbul-reports: registry.npmmirror.com/istanbul-reports/3.1.5
-      rimraf: registry.npmmirror.com/rimraf/3.0.2
+      rimraf: 3.0.2
       test-exclude: registry.npmmirror.com/test-exclude/6.0.0
       v8-to-istanbul: registry.npmmirror.com/v8-to-istanbul/9.0.1
       yargs: registry.npmmirror.com/yargs/16.2.0
@@ -3194,7 +3209,7 @@ packages:
     engines: {node: ^10.12.0 || >=12.0.0}
     dependencies:
       flatted: registry.npmmirror.com/flatted/3.2.7
-      rimraf: registry.npmmirror.com/rimraf/3.0.2
+      rimraf: 3.0.2
     dev: true
 
   registry.npmmirror.com/flatted/3.2.7:
@@ -4859,15 +4874,6 @@ packages:
     resolution: {integrity: sha512-V2hovdzFbOi77/WajaSMXk2OLm+xNIeQdMMuB7icj7bk6zi2F8GGAxigcnDFpJHbNyNcgyJDiP+8nOrY5cZGrA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rfdc/-/rfdc-1.3.0.tgz}
     name: rfdc
     version: 1.3.0
-    dev: true
-
-  registry.npmmirror.com/rimraf/3.0.2:
-    resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rimraf/-/rimraf-3.0.2.tgz}
-    name: rimraf
-    version: 3.0.2
-    hasBin: true
-    dependencies:
-      glob: registry.npmmirror.com/glob/7.2.3
     dev: true
 
   registry.npmmirror.com/rollup/3.10.1:
