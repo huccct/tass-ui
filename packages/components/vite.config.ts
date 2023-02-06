@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-05 16:01:16
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-06 13:28:09
+ * @LastEditTime: 2023-02-06 14:05:39
  */
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
@@ -56,8 +56,8 @@ export default defineConfig({
     dts({
       entryRoot: 'components',
       outputDir: [
-        resolve(__dirname, '../../build/es/src/dts'),
-        resolve(__dirname, '../../build/lib/src/dts')
+        resolve(__dirname, '../../build/es/src'),
+        resolve(__dirname, '../../build/lib/src')
       ],
       //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: '../../tsconfig.json'

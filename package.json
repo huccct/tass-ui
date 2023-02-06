@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "pnpm --filter components test",
+    "coverage": "pnpm --filter components coverage",
     "dev": "pnpm -C examples dev",
     "build:components": "pnpm --filter components build",
     "del-mod": "rimraf node_modules packages/components/node_modules",

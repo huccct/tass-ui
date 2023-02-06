@@ -23,5 +23,8 @@
   "license": "MIT",
   "dependencies": {
     "@tass-ui/utils": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.28.4"
   }
 }
