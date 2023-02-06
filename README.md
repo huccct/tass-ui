@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-06 13:30:25
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-06 15:58:31
+ * @LastEditTime: 2023-02-06 16:29:05
 -->
 <h1 align="center">
     <img src="http://121.36.100.147:9000/test/logo-horizontal.png">
@@ -24,7 +24,7 @@
 * 🔥 Written in TypeScript
 
 
-## Install
+## 安装
 ```
 npm i tass-ui
 ```
