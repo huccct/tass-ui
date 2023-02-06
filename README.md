@@ -1,19 +1,13 @@
 <!--
- * @Author: 申恒杰
- * @Date: 2023-01-24 17:17:49
- * @Description: 铁沸物
- * @FilePath: \echo-ui\README.md
--->
-
-<!--
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-02-06 13:30:25
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-06 15:35:51
+ * @LastEditTime: 2023-02-06 15:58:31
 -->
 <h1 align="center">
-    Tass-UI
+    Tass UI - A Vue.js 3 UI library
+    <img src="http://121.36.100.147:9000/test/logo-horizontal.png">
 </h1>
 <p align="center">
     <a href="#">
@@ -30,7 +24,6 @@
 * 💪 Vue 3 Composition API
 * 🔥 Written in TypeScript
 
-<p align="center">Tass UI - A Vue.js 3 UI library</p>
 
 ## Install
 ```
@@ -50,33 +43,34 @@ npm i tass-ui
 
 
 ## 在线文档
-
+xxx
 ## 使用仓库相关命令
 
 ### 安装 pnpm
-
+```
 npm i pnpm -g
-
+```
 ### 安装所有依赖
-
+```
 pnpm install
-
+```
 ### 启动本地测试项目
-
+```
 pnpm run dev
-
+```
 ### 打包组件库
-
+```
 pnpm run build:components
-
+```
 ### 启动文档
-
+```
 pnpm run docs:dev
-
+```
 ### 单元测试
-
+```
 pnpm run test
-
+```
 ### 查看测试覆盖率
-
+```
 pnpm run coverage
+```
