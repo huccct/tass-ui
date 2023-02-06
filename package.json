@@ -6,7 +6,8 @@
   "scripts": {
     "test": "pnpm -C components test",
     "dev": "pnpm -C examples dev",
-    "build:components": "pnpm run build --filter \"components\"",
+    "build:components": "pnpm --filter components build", 
+    "del-mod": "rimraf node_modules packages/components/node_modules",
     "build:theme": "pnpm run -C packages/theme-chalk build",
     "prepare": "husky install",
     "lint:fix": "eslint . --fix",
@@ -33,6 +34,7 @@
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
     "@ls-lint/ls-lint": "^1.11.2",
+    "@types/node": "^18.11.19",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "@vitejs/plugin-vue": "^4.0.0",

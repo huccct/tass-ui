@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-05 16:01:16
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 22:52:39
+ * @LastEditTime: 2023-02-06 13:28:09
  */
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
@@ -22,7 +22,7 @@ export default defineConfig({
     rollupOptions: {
       //忽略打包vue文件
       external: ['vue', /\.scss/, '@tass-ui/utils'],
-      input: ['index.ts'],
+      input: resolve(__dirname, 'index.ts'),
       output: [
         {
           format: 'es',
@@ -47,7 +47,8 @@ export default defineConfig({
     },
     lib: {
       entry: './index.ts',
-      name: 'tass'
+      formats: ['es', 'cjs']
+      // name: 'tass'
     }
   },
   plugins: [
@@ -55,8 +56,8 @@ export default defineConfig({
     dts({
       entryRoot: 'components',
       outputDir: [
-        resolve(__dirname, '../../build/es/src'),
-        resolve(__dirname, '../../build/lib/src')
+        resolve(__dirname, '../../build/es/src/dts'),
+        resolve(__dirname, '../../build/lib/src/dts')
       ],
       //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: '../../tsconfig.json'
