@@ -2,7 +2,8 @@
 layout: home
 
 hero:
-  name: tass-ui
+  name: Tass
+  text: 一个Vue3组件库
   tagline: 基于Vue3,简洁高效的组件库
   image:
     src: /public/images/logo.png
@@ -10,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/install.md
+      link: /guide/install
     - theme: alt
       text: View on GitHub
       link: https://github.com/huccct/echo-ui
