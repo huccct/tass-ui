@@ -11,7 +11,6 @@ test/unit/coverage
 test/e2e/reports
 selenium-debug.log
 build/
-docs/deploy.sh
 
 
 # Editor directories and files

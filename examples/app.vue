@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:45:00
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-02-06 20:56:22
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -221,6 +221,23 @@
   </tass-carousel>
   <br />
   <br />
+  <!-- switch默认开关 -->
+  <div style="width: 20px;">
+    <tass-switch v-model="switchtest"></tass-switch>
+  </div>
+  <br />
+  <!-- 禁用状态 -->
+  <div style="width: 20px;">
+    <tass-switch v-model="switchtest" :disabled="disabled"></tass-switch>
+  </div>
+  <br />
+  <!-- 等待状态 -->
+  <div style="width: 20px;">
+    <tass-switch v-model="switchtest1" :loading="loading"  :disabled="true"></tass-switch>
+    <tass-switch v-model="loading" style='margin-left:10px'></tass-switch>
+  </div>
+  <br />
+  <br />
 
   <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
     <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
@@ -237,6 +254,11 @@
 
   let carouseltest = ref('1');
   let carouseltest2 = ref('1');
+
+  let switchtest = ref(false)
+  let switchtest1 = ref(false)
+  let loading = ref(true)
+  let disabled = ref(true)
 
   let check1 = ref(false);
   let check2 = ref(true);

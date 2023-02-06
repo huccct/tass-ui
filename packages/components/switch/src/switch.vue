@@ -5,14 +5,14 @@
  * @FilePath: \tass-ui\packages\components\switch\src\switch.vue
 -->
 <template>
-  <span @click.stop="handleClick" class="echo-switch-container" :size="size">
-    <input class="echo-switch-input" :name="name" :value="modelValue" />
+  <span @click.stop="handleClick" class="tass-switch-container" :size="size">
+    <input class="tass-switch-input" :name="name" :value="modelValue" />
     <div
-      class="echo-unselect echo-form-switch"
+      class="tass-unselect tass-form-switch"
       :style="styles"
       :class="{
-        'echo-form-onswitch': isActive,
-        'echo-switch-disabled': disabled,
+        'tass-form-onswitch': isActive,
+        'tass-switch-disabled': disabled,
       }"
     >
       <em v-if="onswitchText || unswitchText">{{
@@ -22,7 +22,7 @@
         <div>
           <template v-if="loading">
             <i
-              class="echo-icon echo-anim echo-anim-rotate echo-anim-loop"
+              class="tass-icon tass-anim tass-anim-rotate tass-anim-loop"
               :class="loadingIcon"
             ></i>
           </template>
@@ -37,13 +37,13 @@
 </template>
 <script lang="ts">
 export default {
-  name: "EchoSwitch",
+  name: "tassSwitch",
 };
 </script>
 
 <script setup lang="ts">
-import { computed } from "vue";
 import "@tass-ui/theme-chalk/src/switch.scss";
+import { computed } from "vue";
 import { SwitchSize } from "./interface";
 
 export interface SwitchProps {
@@ -65,7 +65,7 @@ const props = withDefaults(defineProps<SwitchProps>(), {
   disabled: false,
   onswitchValue: true,
   unswitchValue: false,
-  loadingIcon: "echo-icon-loading-one",
+  loadingIcon: "tass-icon-loading-one",
   size: "md",
 });
 
