@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-05 16:01:16
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-06 14:05:39
+ * @LastEditTime: 2023-02-06 14:22:31
  */
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
@@ -48,7 +48,6 @@ export default defineConfig({
     lib: {
       entry: './index.ts',
       formats: ['es', 'cjs']
-      // name: 'tass'
     }
   },
   plugins: [
