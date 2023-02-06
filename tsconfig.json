@@ -103,6 +103,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["packages/**/*.ts", "packages/**/*.tsx", "typings/**/*.d.ts"],
+  "include": ["packages/**/*.ts", "packages/**/*.tsx", "typings/**/*.d.ts", "examples/**/*.ts"],
   "exclude": ["node_modules", "**/__tests__", "dist/**"]
 }
