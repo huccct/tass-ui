@@ -21,7 +21,8 @@
     "commit": "git-cz",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "docs:preview": "vitepress preview docs --port 8080"
   },
   "keywords": [],
   "author": "",

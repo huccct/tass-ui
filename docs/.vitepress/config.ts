@@ -1,10 +1,9 @@
 export default {
-  base: '/',
   title: '一个Vue3 UI框架',
   titleTemplate: ':title - Tass UI',
   description: '一个Vue3 UI框架',
   themeConfig: {
-    logo: '/public/logo-horizontal.png',
+    logo: '/logo-horizontal.png',
     siteTitle: false,
     nav: [
       { text: '指南', link: '/guide/install' },
