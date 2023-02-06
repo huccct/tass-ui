@@ -6,6 +6,7 @@
   "scripts": {
     "test": "pnpm -C components test",
     "dev": "pnpm -C examples dev",
+    "build:components": "pnpm run build --filter \"components\"",
     "build:theme": "pnpm run -C packages/theme-chalk build",
     "prepare": "husky install",
     "lint:fix": "eslint . --fix",
