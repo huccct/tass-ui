@@ -5,13 +5,12 @@
       <span>
         {{ v.name }}
       </span>
-      <echo-button type="danger" size="tiny" @click="deleteUpload(i)"
-        >删除</echo-button
-      >
+      <echo-button type="danger" size="tiny" @click="deleteUpload(i)">删除</echo-button>
     </div>
     <input type="file" ref="inputRef" @change="submitUpload" />
   </div>
 </template>
+
 <script setup lang="ts" name="EchoUpload">
   import { reactive, ref } from 'vue';
   const props = defineProps({
