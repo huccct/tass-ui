@@ -6,6 +6,7 @@
     * @Update: 2023/2/1 17:55
 -->
 <template>
+  <span>下拉菜单</span> <br/>
   <div class="btn-group" ref="dropdown">
     <li @click="toggleMenu()" class="dropdown-toggle" v-if="state.selectedOption !== null">
       {{ state.selectedOption }}
@@ -29,6 +30,31 @@
       </li>
     </ul>
   </div>
+
+  <!--hover触发-->
+    <div @mouseenter="toggleMenuHoverEnter"  @mouseleave="toggleMenuHoverOut" class="btn-group" ref="dropdown-hover">
+        <li  class="dropdown-toggle" v-if="state.selectedOptionHover !== null">
+            {{ state.selectedOptionHover }}
+            <span class="caret"></span>
+        </li>
+
+        <li
+            class="dropdown-toggle dropdown-toggle-placeholder"
+            v-if="state.selectedOptionHover === null"
+        >
+            {{ state.placeholderTextHover }}
+            <span class="caret"></span>
+        </li>
+
+        <ul class="dropdown-menu" v-if="state.showMenuHover">
+            <li v-for="(option, idx) in state.orgOptionsHover" :key="idx">
+                <a @click="updateoptionHover(option)">
+                    {{ option }}
+                </a>
+            </li>
+        </ul>
+    </div>
+
 </template>
 
 <script setup lang="ts">
@@ -47,9 +73,13 @@
   const emits = defineEmits(['updateoption']);
   let state = reactive({
     showMenu: false,
-    placeholderText: '下拉菜单',
+    showMenuHover: false,
+    placeholderText: '下拉菜单（click）',
+    placeholderTextHover: '下拉菜单（hover）',
     selectedOption: null,
-    orgOptions: null
+    selectedOptionHover: null,
+    orgOptions: null,
+    orgOptionsHover: null
   });
   const dropdown = ref(null);
 
@@ -59,9 +89,29 @@
     // vue3.x emit  传值到父类
     emits('updateoption', state.selectedOption);
   };
+  const updateoptionHover = option => {
+      state.selectedOptionHover = option;
+      state.showMenuHover = false;
+      // vue3.x emit  传值到父类
+      emits('updateoptionHover', state.selectedOptionHover);
+  };
   const toggleMenu = () => {
     state.showMenu = !state.showMenu;
   };
+  const toggleMenHover = () => {
+      state.showMenuHover = !state.showMenuHover;
+  }
+  const toggleMenuHoverEnter = () => {
+      setTimeout(toggleMenHover,1000)
+
+  };
+  const toggleMenuHoverOut = () => {
+      setTimeout(toggleMenHover,1000)
+  }
+
+  const toggleMenuHoverLeave = () => {
+      state.showMenuHover = !state.showMenuHover;
+  }
 
   const clickHandler = event => {
     const { target } = event;
@@ -74,6 +124,7 @@
 
   onMounted(() => {
     state.orgOptions = props.options;
+    state.orgOptionsHover = props.options;
     if (props.closeOnOutsideClick) {
       document.addEventListener('click', clickHandler);
     }
