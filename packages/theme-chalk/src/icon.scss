@@ -22,7 +22,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+// 箭头选中后的动画（与collapse相关）
+.icon-select:before{
+  transform: rotate(90deg);
+  display: inline-block;
+  transition: all 1s;
+}
 
+// 箭头未选中的动画（与collapse相关）
+.icon-unselect:before{
+  transform: rotate(0deg);
+  display: inline-block;
+  transition: all 1s;
+}
 
 .tas-icon-danger:before {
   content: '\e8e7';

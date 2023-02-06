@@ -7,17 +7,18 @@
     
   width: 50em;
   padding: 0.5em;
-  height: fit-content;
+  height: max-content;
   border: 1px solid rgb(175, 169, 169);
   
   background-color: white;
 
   transition: all 0.4s;
-
+  
   @include b(collapse-ul) {
       list-style-type: none;
       margin: 0;
       padding: 0;
+
   }
 
 }
@@ -31,16 +32,34 @@
     border-bottom: 0.2px solid #c0c0c1;
     background: white;
     
-    
+   
     cursor: pointer;
     
       
   }
 
 [class^='#{$namespace}-collapse-content'] {
- 
+
     background: white;
     color: $color-info;
+    line-height: 1.769230769230769;
+    width: fit-content;
+    height: fit-content;
 
 }
 
+.tas-collapse-enter-active, 	// 定义进入过渡生效时的状态
+.tas-collapse-leave-active{	//定义离开过渡生效时的状态
+  height: 100px !important;
+  width: 50em;
+  transition:all 1s ease;
+  overflow: hidden;
+}
+
+.tas-collapse-enter{
+  transform:scaleY(1);
+}
+.tas-collapse-leave-to {	//定义离开过渡的结束状态
+
+  transform:scaleY(0); // *squish*
+}

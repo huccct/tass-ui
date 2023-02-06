@@ -10,20 +10,20 @@
   <div class="tas-collapse">
     <ul class="tas-collapse-ul">
       <li>
-        <div v-for="item in posts" :key="item.id">
+        <div v-for="item in posts" :key="item.id" class="tas-collapse-panel">
           <div class="tas-collapse-title" @click="toggle(item.id)">
             {{ item.title }}
             <tass-icon
-              :name="[show == item.id ? 'chevrondown' : 'chevronright']"
-             
-              style="float: right"
+            name="chevronright"
+              :class="[show == item.id?'icon-select':'icon-unselect']"
+              style="float: right; "
             ></tass-icon>
           </div>
-          <transition>
+          <!-- <transition> -->
             <div class="tas-collapse-content" v-show="show === item.id">
               {{ item.body }}
             </div>
-          </transition>
+          <!-- </transition> -->
         </div>
       </li>
     </ul>

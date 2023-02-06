@@ -261,7 +261,7 @@
     },
     {
       title: '标题3',
-      body: 'Simplify the process: keep operating process simple and intuitive;Definite and clear: enunciate your intentions clearly so that the users can quickly underst',
+      body: 'Simplify the process: keep operating process simple and intuitive;Definite and clear: enunciate your intentions clearly so that the users can quickly',
       id: 3
     },
     {
