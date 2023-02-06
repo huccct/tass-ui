@@ -6,7 +6,6 @@
  * @LastEditTime: 2023-02-06 15:58:31
 -->
 <h1 align="center">
-    Tass UI - A Vue.js 3 UI library
     <img src="http://121.36.100.147:9000/test/logo-horizontal.png">
 </h1>
 <p align="center">
