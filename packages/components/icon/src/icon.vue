@@ -6,9 +6,9 @@
  * @LastEditTime: 2023-01-23 20:39:17
 -->
 <template>
-  <i :class="`ec-icon-${name}`"></i>
+  <i :class="`tas-icon-${name}`"></i>
 </template>
-<script setup lang="ts" name="EchoIcon">
+<script setup lang="ts" name="TassIcon">
   const props = defineProps({
     name: {
       type: String,

@@ -2,12 +2,12 @@
  * @Descripttion: Spicy chicken
  * @Author: YuShu Xiao
  * @Date: 2023-02-01 14:47:17
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-01 18:48:14
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-05 15:01:07
  */
 import Alert from './src/alert.vue';
-import { withInstall } from '@echo-ui/utils/withInstall';
+import { withInstall } from '@tass-ui/utils/withInstall';
 
-export const EchoAlert = withInstall(Alert);
+export const TassAlert = withInstall(Alert);
 
-export default EchoAlert;
+export default TassAlert;

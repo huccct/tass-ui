@@ -1,16 +1,30 @@
 {
-  "name": "@echo-ui/components",
+  "name": "@tass-ui/components",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "build": "vite build"
   },
-  "keywords": [],
-  "author": "",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "tass-ui",
+    "vue3组件库",
+    "vue ui",
+    "components",
+    "beautiful"
+  ],
+  "author": "Components Team",
   "license": "MIT",
   "dependencies": {
-    "@echo-ui/utils": "workspace:^1.0.0"
+    "@tass-ui/utils": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.28.4"
   }
 }

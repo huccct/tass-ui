@@ -44,11 +44,7 @@
 
   &:active {
     color: mix($color-black, $color-primary, $button-active-shade-percent);
-    border-color: mix(
-      $color-black,
-      $color-primary,
-      $button-active-shade-percent
-    );
+    border-color: mix($color-black, $color-primary, $button-active-shade-percent);
     outline: none;
   }
 
@@ -56,7 +52,7 @@
     border: 0;
   }
 
-  & [class*='ec-icon-'] {
+  & [class*='tas-icon-'] {
     & + span {
       margin-left: 5px;
     }
@@ -188,22 +184,14 @@
     &:active {
       color: mix($color-black, $color-primary, $button-active-shade-percent);
       background: $color-white;
-      border-color: mix(
-        $color-black,
-        $color-primary,
-        $button-active-shade-percent
-      );
+      border-color: mix($color-black, $color-primary, $button-active-shade-percent);
       outline: none;
     }
   }
 
   @include when(active) {
     color: mix($color-black, $color-primary, $button-active-shade-percent);
-    border-color: mix(
-      $color-black,
-      $color-primary,
-      $button-active-shade-percent
-    );
+    border-color: mix($color-black, $color-primary, $button-active-shade-percent);
   }
 
   @include when(disabled) {

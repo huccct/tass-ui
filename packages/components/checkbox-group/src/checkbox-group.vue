@@ -3,15 +3,15 @@
  * @Author: Huccct
  * @Date: 2023-01-23 20:33:27
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 21:36:29
+ * @LastEditTime: 2023-02-05 15:05:04
 -->
 <template>
-  <div class="ec-checkbox-group">
+  <div class="tas-checkbox-group">
     <slot />
   </div>
 </template>
-<script setup lang="ts" name="EchoCheckboxGroup">
-  import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@echo-ui/constants';
+<script setup lang="ts" name="TassCheckboxGroup">
+  import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@tass-ui/constants';
   import { computed, provide } from 'vue';
   const props = defineProps({
     modelValue: {
@@ -25,10 +25,10 @@
     emit(UPDATE_MODEL_EVENT, val);
     emit(CHANGE_EVENT, val);
   };
-  provide('EchoCheckboxGroup', {
+  provide('TassCheckboxGroup', {
     modelValue,
     handlerChange,
-    name: 'EchoCheckboxGroup'
+    name: 'TassCheckboxGroup'
   });
 </script>
 <style></style>

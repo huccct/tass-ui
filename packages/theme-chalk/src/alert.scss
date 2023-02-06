@@ -43,16 +43,19 @@
     color: mix($color-white, $color-danger, 10%);
   }
 }
-.is-center{
+.is-center {
   justify-content: center;
 }
-.ec-alert-fade-enter-from,.ec-alert-fade-leave-to{
+.tas-alert-fade-enter-from,
+.tas-alert-fade-leave-to {
   transform: translateX(100px);
   opacity: 0;
 }
-.ec-alert-fade-enter-to,.ec-alert-fade-leave-from{
+.tas-alert-fade-enter-to,
+.tas-alert-fade-leave-from {
   opacity: 1;
 }
-.ec-alert-fade-enter-active,.ec-alert-fade-leave-active{
-  transition: all .5s;
+.tas-alert-fade-enter-active,
+.tas-alert-fade-leave-active {
+  transition: all 0.5s;
 }

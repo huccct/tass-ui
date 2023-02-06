@@ -1,17 +1,24 @@
+<!--
+ * @Description: Stay hungry，Stay foolish
+ * @Author: Huccct
+ * @Date: 2023-02-05 14:53:41
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-05 15:29:12
+-->
 <template>
-  <div class="ec-upload">
-    <echo-button type="primary" @click="beginUpload">点击上传</echo-button>
+  <div class="tas-upload">
+    <tass-button type="primary" @click="beginUpload">点击上传</tass-button>
     <div class="file" v-for="(v, i) in fileList" :key="i">
       <span>
         {{ v.name }}
       </span>
-      <echo-button type="danger" size="tiny" @click="deleteUpload(i)">删除</echo-button>
+      <tass-button type="danger" size="tiny" @click="deleteUpload(i)">删除</tass-button>
     </div>
     <input type="file" ref="inputRef" @change="submitUpload" />
   </div>
 </template>
 
-<script setup lang="ts" name="EchoUpload">
+<script setup lang="ts" name="TassUpload">
   import { reactive, ref } from 'vue';
   const props = defineProps({
     props: {

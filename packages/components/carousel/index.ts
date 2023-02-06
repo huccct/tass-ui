@@ -5,8 +5,8 @@
  * @FilePath: \echo-ui\packages\components\carousel\index.ts
  */
 import Carousel from './src/carousel.vue';
-import { withInstall } from '@echo-ui/utils/withInstall';
+import { withInstall } from '@tass-ui/utils/withInstall';
 
-export const EchoCarousel = withInstall(Carousel);
+export const TassCarousel = withInstall(Carousel);
 
-export default EchoCarousel;
+export default TassCarousel;

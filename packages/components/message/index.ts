@@ -1,6 +1,6 @@
 import Message from './src/message';
-import { withInstallFunc } from '@echo-ui/utils/withInstallFunc';
+import { withInstallFunc } from '@tass-ui/utils/withInstallFunc';
 
-export const EchoMessage = withInstallFunc(Message, '$message');
+export const TassMessage = withInstallFunc(Message, '$message');
 
-export default EchoMessage;
+export default TassMessage;

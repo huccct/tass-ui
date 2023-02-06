@@ -3,11 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-01-23 20:29:09
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-25 20:09:14
+ * @LastEditTime: 2023-02-05 15:03:17
 -->
 <template>
-  <div class="ec-checkbox">
-    <span class="ec-checkbox__input">
+  <div class="tas-checkbox">
+    <span class="tas-checkbox__input">
       <input
         v-model="model"
         type="checkbox"
@@ -19,15 +19,15 @@
         @change="handlerChange"
       />
     </span>
-    <span v-if="$slots.default || label" class="ec-checkbox__label">
+    <span v-if="$slots.default || label" class="tas-checkbox__label">
       <slot />
       <template v-if="!$slots.default">{{ label }}</template>
     </span>
   </div>
 </template>
-<script setup lang="ts" name="EchoCheckbox">
+<script setup lang="ts" name="TassCheckbox">
   import { useCheckBoxProps } from '../composables/';
-  import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@echo-ui/constants';
+  import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@tass-ui/constants';
   const props = defineProps({
     indeterminate: Boolean,
     isChecked: Boolean,

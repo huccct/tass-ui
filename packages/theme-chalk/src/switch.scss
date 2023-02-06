@@ -1,0 +1,117 @@
+$switch-lg: 24px;
+$switch-md: 22px;
+$switch-sm: 20px;
+$switch-xs: 18px;
+
+$switch-lg-min-width: 42px;
+$switch-md-min-width: 37px;
+$switch-sm-min-width: 32px;
+$switch-xs-min-width: 27px;
+
+@mixin set-size($size, $min-width) {
+  & {
+    .tass-form-switch {
+      height: $size;
+      min-width: $min-width;
+      span{
+        width: calc($size - 4px);
+        height: calc($size - 4px);
+        transition:all 0.1s linear;
+      }
+      em{
+        margin-left: calc($size - 3px);
+      }
+    }
+    .tass-form-onswitch{
+      span{
+        left: calc(100% - calc($size - 1px));
+      }
+      em{
+        margin-right: calc($size - 3px);
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+.tass-switch-container{
+  &[size="lg"] {
+    @include set-size($switch-lg,$switch-lg-min-width);
+  }
+  &[size="md"] {
+    @include set-size($switch-md,$switch-md-min-width);
+  }
+  &[size="sm"] {
+    @include set-size($switch-sm,$switch-sm-min-width);
+  }
+  &[size="xs"] {
+    @include set-size($switch-xs,$switch-xs-min-width);
+  }
+}
+
+.tass-switch-container .tass-switch-input {
+  display: none;
+}
+
+.tass-form-switch {
+  position: relative;
+  height: 22px;
+  line-height: 22px;
+  min-width: 35px;
+  padding: 0 4px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #00230b33;
+  -webkit-transition:all 0.1s linear;
+  transition:all 0.1s linear;
+}
+
+.tass-form-switch span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 3px;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px #00230b33;
+  -webkit-transition:all 0.1s linear;
+  transition:all 0.1s linear;
+}
+
+.tass-form-switch em {
+  position: relative;
+  padding: 0 2px;
+  text-align: center !important;
+  color: #999 !important;
+  font-style: normal !important;
+  font-size: 12px;
+  width: 25px;
+  top: 0;
+}
+
+.tass-form-onswitch {
+  border-color: black;
+  background-color: rgb(4, 179, 4);
+}
+
+.tass-form-onswitch span {
+  background-color: #fff;
+}
+
+.tass-form-onswitch em {
+  color: #fff !important;
+}
+
+.tass-switch-disabled {
+  opacity: 0.6;
+}
+
+.tass-switch-disabled,
+.tass-switch-disabled *{
+  cursor: not-allowed !important;
+}

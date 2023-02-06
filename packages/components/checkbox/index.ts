@@ -3,11 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-01-23 20:28:30
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 21:29:42
+ * @LastEditTime: 2023-02-05 15:14:37
  */
 import checkBox from './src/checkbox.vue';
-import { withInstall } from '@echo-ui/utils/withInstall';
+import { withInstall } from '@tass-ui/utils/withInstall';
 
-export const EchoCheckbox = withInstall(checkBox);
+export const TassCheckbox = withInstall(checkBox);
 
-export default EchoCheckbox;
+export default TassCheckbox;

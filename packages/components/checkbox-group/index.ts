@@ -3,11 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-01-23 20:28:58
  * @LastEditors: Huccct
- * @LastEditTime: 2023-01-23 21:29:51
+ * @LastEditTime: 2023-02-05 15:06:53
  */
 import checkboxGroup from './src/checkbox-group.vue';
-import { withInstall } from '@echo-ui/utils/withInstall';
+import { withInstall } from '@tass-ui/utils/withInstall';
 
-export const EchoCheckboxGroup = withInstall(checkboxGroup);
+export const TassCheckboxGroup = withInstall(checkboxGroup);
 
-export default EchoCheckboxGroup;
+export default TassCheckboxGroup;

@@ -1,14 +1,21 @@
 @use 'mixins/mixins' as *;
 @use 'common/var' as *;
 @font-face {
-  font-family: 'ec-ui-icons'; /* Project id 3868664 */
-  src: url('./fonts//iconfont.woff2') format('woff2'),
-    url('./fonts/iconfont.woff') format('woff'),
+  font-family: 'tas-ui-icons'; /* Project id 3868664 */
+  src: url('./fonts//iconfont.woff2') format('woff2'), url('./fonts/iconfont.woff') format('woff'),
     url('./fonts/iconfont.ttf') format('truetype');
 }
 
 [class^='#{$namespace}-icon-'] {
-  font-family: 'ec-ui-icons' !important;
+  font-family: 'tas-ui-icons' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tas-ui-icons {
+  font-family: 'tas-ui-icons' !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -17,103 +24,102 @@
 
 // 箭头选中后的动画（与collapse相关）
 .icon-select:before{
-	transform: rotate(90deg);
+  transform: rotate(90deg);
   display: inline-block;
-  transition: all 0.4s;
+  transition: all 1s;
 }
 
 // 箭头未选中的动画（与collapse相关）
 .icon-unselect:before{
-	transform: rotate(0deg);
+  transform: rotate(0deg);
   display: inline-block;
-  transition: all 0.4s;
+  transition: all 1s;
 }
 
-
-.ec-icon-danger:before {
+.tas-icon-danger:before {
   content: '\e8e7';
 }
 
-.ec-icon-warning:before {
+.tas-icon-warning:before {
   content: '\e785';
 }
 
-.ec-icon-success:before {
+.tas-icon-success:before {
   content: '\e680';
 }
 
-.ec-icon-info:before {
+.tas-icon-info:before {
   content: '\e601';
 }
 
-.ec-icon-bubble:before {
+.tas-icon-bubble:before {
   content: '\e616';
 }
 
-.ec-icon-chevrondown:before {
+.tas-icon-chevrondown:before {
   content: '\e61c';
 }
 
-.ec-icon-chevronleft:before {
+.tas-icon-chevronleft:before {
   content: '\e61e';
 }
 
-.ec-icon-chevronright:before {
+.tas-icon-chevronright:before {
   content: '\e620';
 }
 
-.ec-icon-chevronup:before {
+.tas-icon-chevronup:before {
   content: '\e622';
 }
 
-.ec-icon-code:before {
+.tas-icon-code:before {
   content: '\e62b';
 }
 
-.ec-icon-cog:before {
+.tas-icon-cog:before {
   content: '\e62d';
 }
 
-.ec-icon-cross:before {
+.tas-icon-cross:before {
   content: '\e630';
 }
 
-.ec-icon-download:before {
+.tas-icon-download:before {
   content: '\e638';
 }
 
-.ec-icon-home:before {
+.tas-icon-home:before {
   content: '\e64f';
 }
 
-.ec-icon-lock:before {
+.tas-icon-lock:before {
   content: '\e661';
 }
 
-.ec-icon-magnifier:before {
+.tas-icon-magnifier:before {
   content: '\e663';
 }
 
-.ec-icon-pluscircle:before {
+.tas-icon-pluscircle:before {
   content: '\e677';
 }
 
-.ec-icon-pushpin:before {
+.tas-icon-pushpin:before {
   content: '\e67f';
 }
 
-.ec-icon-textalignjustify:before {
+.tas-icon-textalignjustify:before {
   content: '\e696';
 }
 
-.ec-icon-thumbsdown:before {
+.tas-icon-thumbsdown:before {
   content: '\e69c';
 }
 
-.ec-icon-thumbsup:before {
+.tas-icon-thumbsup:before {
   content: '\e69d';
 }
 
-.ec-icon-trash:before {
+.tas-icon-trash:before {
   content: '\e69f';
 }

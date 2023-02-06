@@ -3,46 +3,46 @@
  * @Author: Huccct
  * @Date: 2023-01-24 21:56:36
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-02 18:30:30
+ * @LastEditTime: 2023-02-05 15:11:45
 -->
 <template>
-  <div class="ec-transfer">
-    <echo-transfer-item
+  <div class="tas-transfer">
+    <tass-transfer-item
       :data="sourceData"
       :props="props"
       @checkChange="sourceCheckChange"
-    ></echo-transfer-item>
-    <div class="ec-transfer__buttons">
-      <echo-button
+    ></tass-transfer-item>
+    <div class="tas-transfer__buttons">
+      <tass-button
         type="primary"
-        icon="ec-icon-chevronleft"
+        icon="tas-icon-chevronleft"
         size="small"
         @click="leftClick"
         :disabled="rightState.length === 0"
       >
         To Left
-      </echo-button>
-      <echo-button
+      </tass-button>
+      <tass-button
         type="primary"
-        icon="ec-icon-chevronright"
+        icon="tas-icon-chevronright"
         size="small"
         @click="rightClick"
         :disabled="leftState.length === 0"
       >
         To Right
-      </echo-button>
+      </tass-button>
     </div>
-    <echo-transfer-item
+    <tass-transfer-item
       :data="targetData"
       :props="props"
       @checkChange="targetCheckChange"
-    ></echo-transfer-item>
+    ></tass-transfer-item>
   </div>
 </template>
-<script setup lang="ts" name="EchoTransfer">
+<script setup lang="ts" name="tassTransfer">
   import { PropType, reactive, toRefs } from 'vue';
-  import EchoTransferItem from './transferItem.vue';
-  import EchoButton from '../../button/src/button.vue';
+  import TassTransferItem from './transferItem.vue';
+  import TassButton from '../../button/src/button.vue';
   import { ItransferProps } from './transfer.type';
   import { useComponentData } from './composables';
   const emit = defineEmits(['update:modelValue']);

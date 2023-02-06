@@ -1,0 +1,48 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+
+@include b(input) {
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  @include e(inner) {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 15px;
+    width: 100%;
+    &::placeholder {
+      color: #c2c2ca;
+    }
+  }
+  & .#{$namespace}-input__suffix {
+    position: absolute;
+    right: 10px;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #c0c4cc;
+  }
+  @include when(disabled) {
+    &,
+    &:hover,
+    &:focus {
+      background-color: #f5f7fa;
+      border-color: #e4e7ed;
+      color: #c0c4cc;
+      cursor: not-allowed;
+    }
+    &::placeholder {
+      color: #c3c4cc;
+    }
+  }
+}
