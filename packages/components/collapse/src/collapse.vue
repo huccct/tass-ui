@@ -14,16 +14,16 @@
           <div class="tas-collapse-title" @click="toggle(item.id)">
             {{ item.title }}
             <tass-icon
-            name="chevronright"
+              name="chevronright"
               :class="[show == item.id?'icon-select':'icon-unselect']"
               style="float: right; "
             ></tass-icon>
           </div>
-          <!-- <transition> -->
+          <transition>
             <div class="tas-collapse-content" v-show="show === item.id">
               {{ item.body }}
             </div>
-          <!-- </transition> -->
+          </transition>
         </div>
       </li>
     </ul>
