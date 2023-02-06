@@ -10,7 +10,7 @@ $switch-xs-min-width: 27px;
 
 @mixin set-size($size, $min-width) {
   & {
-    .echo-form-switch {
+    .tass-form-switch {
       height: $size;
       min-width: $min-width;
       span{
@@ -22,7 +22,7 @@ $switch-xs-min-width: 27px;
         margin-left: calc($size - 3px);
       }
     }
-    .echo-form-onswitch{
+    .tass-form-onswitch{
       span{
         left: calc(100% - calc($size - 1px));
       }
@@ -34,7 +34,7 @@ $switch-xs-min-width: 27px;
   }
 }
 
-.echo-switch-container{
+.tass-switch-container{
   &[size="lg"] {
     @include set-size($switch-lg,$switch-lg-min-width);
   }
@@ -49,11 +49,11 @@ $switch-xs-min-width: 27px;
   }
 }
 
-.echo-switch-container .echo-switch-input {
+.tass-switch-container .tass-switch-input {
   display: none;
 }
 
-.echo-form-switch {
+.tass-form-switch {
   position: relative;
   height: 22px;
   line-height: 22px;
@@ -61,12 +61,12 @@ $switch-xs-min-width: 27px;
   padding: 0 4px;
   border-radius: 20px;
   cursor: pointer;
-  background-color: var(--global-neutral-color-6);
+  background-color: #00230b33;
   -webkit-transition:all 0.1s linear;
   transition:all 0.1s linear;
 }
 
-.echo-form-switch span {
+.tass-form-switch span {
   position: absolute;
   display: flex;
   align-items: center;
@@ -83,7 +83,7 @@ $switch-xs-min-width: 27px;
   transition:all 0.1s linear;
 }
 
-.echo-form-switch em {
+.tass-form-switch em {
   position: relative;
   padding: 0 2px;
   text-align: center !important;
@@ -94,24 +94,24 @@ $switch-xs-min-width: 27px;
   top: 0;
 }
 
-.echo-form-onswitch {
-  border-color: var(--global-checked-color);
-  background-color: var(--global-checked-color);
+.tass-form-onswitch {
+  border-color: black;
+  background-color: rgb(4, 179, 4);
 }
 
-.echo-form-onswitch span {
+.tass-form-onswitch span {
   background-color: #fff;
 }
 
-.echo-form-onswitch em {
+.tass-form-onswitch em {
   color: #fff !important;
 }
 
-.echo-switch-disabled {
+.tass-switch-disabled {
   opacity: 0.6;
 }
 
-.echo-switch-disabled,
-.echo-switch-disabled *{
+.tass-switch-disabled,
+.tass-switch-disabled *{
   cursor: not-allowed !important;
 }
