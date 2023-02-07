@@ -14,6 +14,18 @@
       cursor: pointer;
       color: #1989fa;
   }
+  .icon-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 116px;
+    height: 100px;
+  }
+  .icon-items:hover {
+    cursor: pointer;
+    background: rgb(241, 241, 241);
+  }
 </style>
 # Icon 图标
 ## 基础用法
@@ -52,5 +64,8 @@
 
 ## 所有图标
 <div class="example">
-  
+  <div class="icon-items">
+    <tass-icon name="pluscircle"></tass-icon>
+    <span>pluscircle</span>
+  </div>
 </div>
