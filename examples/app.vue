@@ -247,6 +247,7 @@
 
   <tass-input v-model="inputVal" clearable />&nbsp;{{ inputVal }}
   <tass-slider :min="0" :max="100"></tass-slider>
+  <tass-slider disabled></tass-slider>
 </template>
 
 <script setup lang="ts">
