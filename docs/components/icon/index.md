@@ -17,7 +17,7 @@
   .icon-items {
     display: flex;
     justify-content: center;
-    align-item: center;
+    align-items: center;
     flex-direction: column;
     text-align: center;
     width: 100px;
