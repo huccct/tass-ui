@@ -246,172 +246,175 @@
   <br />
 
   <tass-input v-model="inputVal" clearable />&nbsp;{{ inputVal }}
+
+  <br />
+  <br />
   <tass-slider :min="0" :max="100"></tass-slider>
   <tass-slider disabled></tass-slider>
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue';
-import { TassMessage } from '../packages/components/message';
-import { TassSlider } from '../packages/components/slider';
-let carouseltest = ref('1');
-let carouseltest2 = ref('1');
+  import { ref, reactive } from 'vue';
+  import { TassMessage } from '../packages/components/message';
+  import { TassSlider } from '../packages/components/slider';
+  let carouseltest = ref('1');
+  let carouseltest2 = ref('1');
 
-let switchtest = ref(false);
-let switchtest1 = ref(false);
-let loading = ref(true);
-let disabled = ref(true);
+  let switchtest = ref(false);
+  let switchtest1 = ref(false);
+  let loading = ref(true);
+  let disabled = ref(true);
 
-let check1 = ref(false);
-let check2 = ref(true);
+  let check1 = ref(false);
+  let check2 = ref(true);
 
-let checkList = ref(['Shanghai', 'Hangzhou']);
-let showList = ref(['Shanghai', 'Hangzhou', 'Beijing', 'Guangzhou']);
+  let checkList = ref(['Shanghai', 'Hangzhou']);
+  let showList = ref(['Shanghai', 'Hangzhou', 'Beijing', 'Guangzhou']);
 
-let arrayOfObjects = ref(['厦门', '福州', '杭州', '上海']);
-let selectedObject = ref(['1', '2', '3', '4']);
-let normalViaible = ref(false);
+  let arrayOfObjects = ref(['厦门', '福州', '杭州', '上海']);
+  let selectedObject = ref(['1', '2', '3', '4']);
+  let normalViaible = ref(false);
 
-const list = ref([
-  {
-    title: '标题1',
-    body: 'Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that',
-    id: 1
-  },
-  {
-    title: '标题2',
-    body: 'Operation feedback: enable the users to clearly perceive their operations by style updates and interactive ',
-    id: 2
-  },
-  {
-    title: '标题3',
-    body: 'Simplify the process: keep operating process simple and intuitive;Definite and clear: enunciate your intentions clearly so that the users can quickly',
-    id: 3
-  },
-  {
-    title: '标题4',
-    body: 'Decision making: giving advices about operations is acceptable, but do not make decisions for the users;Controlled consequences: users should be granted the',
-    id: 4
+  const list = ref([
+    {
+      title: '标题1',
+      body: 'Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that',
+      id: 1
+    },
+    {
+      title: '标题2',
+      body: 'Operation feedback: enable the users to clearly perceive their operations by style updates and interactive ',
+      id: 2
+    },
+    {
+      title: '标题3',
+      body: 'Simplify the process: keep operating process simple and intuitive;Definite and clear: enunciate your intentions clearly so that the users can quickly',
+      id: 3
+    },
+    {
+      title: '标题4',
+      body: 'Decision making: giving advices about operations is acceptable, but do not make decisions for the users;Controlled consequences: users should be granted the',
+      id: 4
+    }
+  ]);
+
+  const handlerChange = () => {
+    alert('This is a handleChange test.');
+  };
+
+  interface T {
+    key: number;
+    label: string | number;
+    disabled: boolean;
   }
-]);
+  const generateData = () => {
+    const data: T[] = [];
+    for (let i = 1; i <= 15; i++) {
+      data.push({
+        key: i,
+        label: i,
+        disabled: i % 4 === 0
+      });
+    }
+    return ref(data);
+  };
+  const transferData = generateData();
 
-const handlerChange = () => {
-  alert('This is a handleChange test.');
-};
+  let rightValue = ref([1, 4]);
+  let transferProps = reactive({
+    key: 'key',
+    label: 'label',
+    disabled: 'disabled'
+  });
 
-interface T {
-  key: number;
-  label: string | number;
-  disabled: boolean;
-}
-const generateData = () => {
-  const data: T[] = [];
-  for (let i = 1; i <= 15; i++) {
-    data.push({
-      key: i,
-      label: i,
-      disabled: i % 4 === 0
+  const ClickMessage_1 = () => {
+    TassMessage({
+      message: 'Success',
+      type: 'success',
+      center: false,
+      showIcon: true,
+      closeable: true
     });
+  };
+
+  const ClickMessage_2 = () => {
+    TassMessage({
+      message: 'Error',
+      type: 'error',
+      center: false,
+      showIcon: true
+    });
+  };
+
+  const ClickMessage_3 = () => {
+    TassMessage({
+      message: 'Warning',
+      type: 'warning',
+      center: true,
+      showIcon: true
+    });
+  };
+
+  const ClickMessage_4 = () => {
+    TassMessage({
+      message: 'Info',
+      type: 'info',
+      center: false,
+      showIcon: true
+    });
+  };
+
+  const methodToRunOnSelect = playload => {
+    selectedObject.value = playload;
+  };
+
+  function changeView() {
+    normalViaible.value = !normalViaible.value;
   }
-  return ref(data);
-};
-const transferData = generateData();
+  const handleClickCancelButton = () => {
+    normalViaible.value = !normalViaible.value;
+  };
+  const handleConfirmButton = () => {
+    normalViaible.value = !normalViaible.value;
+  };
 
-let rightValue = ref([1, 4]);
-let transferProps = reactive({
-  key: 'key',
-  label: 'label',
-  disabled: 'disabled'
-});
+  // 上传更新文件，第一个参数为当前上传文件，第二个参数为上传之后的文件列表
+  const changeUpload = (file: any, fileList: any) => {
+    console.log(file, fileList);
+  };
+  // 删除更新文件，第一个参数为当前删除文件，第二个参数为上传之后的文件列表
+  const deleteUpload = (file: any, fileList: any) => {
+    console.log(file, fileList);
+  };
 
-const ClickMessage_1 = () => {
-  TassMessage({
-    message: 'Success',
-    type: 'success',
-    center: false,
-    showIcon: true,
-    closeable: true
-  });
-};
-
-const ClickMessage_2 = () => {
-  TassMessage({
-    message: 'Error',
-    type: 'error',
-    center: false,
-    showIcon: true
-  });
-};
-
-const ClickMessage_3 = () => {
-  TassMessage({
-    message: 'Warning',
-    type: 'warning',
-    center: true,
-    showIcon: true
-  });
-};
-
-const ClickMessage_4 = () => {
-  TassMessage({
-    message: 'Info',
-    type: 'info',
-    center: false,
-    showIcon: true
-  });
-};
-
-const methodToRunOnSelect = playload => {
-  selectedObject.value = playload;
-};
-
-function changeView() {
-  normalViaible.value = !normalViaible.value;
-}
-const handleClickCancelButton = () => {
-  normalViaible.value = !normalViaible.value;
-};
-const handleConfirmButton = () => {
-  normalViaible.value = !normalViaible.value;
-};
-
-// 上传更新文件，第一个参数为当前上传文件，第二个参数为上传之后的文件列表
-const changeUpload = (file: any, fileList: any) => {
-  console.log(file, fileList);
-};
-// 删除更新文件，第一个参数为当前删除文件，第二个参数为上传之后的文件列表
-const deleteUpload = (file: any, fileList: any) => {
-  console.log(file, fileList);
-};
-
-let inputVal = ref('');
+  let inputVal = ref('');
 </script>
 
 <style lang="scss">
-.my-dropdown-toggle {
-  border-radius: 5px;
-  ::v-deep .dropdown-toggle {
-    color: tomato;
-    font-size: 25px;
-    font-weight: 800;
+  .my-dropdown-toggle {
+    border-radius: 5px;
+    ::v-deep .dropdown-toggle {
+      color: tomato;
+      font-size: 25px;
+      font-weight: 800;
+    }
+    ::v-deep .dropdown-toggle-placeholder {
+      color: #c4c4c4;
+    }
   }
-  ::v-deep .dropdown-toggle-placeholder {
-    color: #c4c4c4;
+  .el-carousel__item h3 {
+    display: flex;
+    color: #475669;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
   }
-}
-.el-carousel__item h3 {
-  display: flex;
-  color: #475669;
-  opacity: 0.75;
-  line-height: 300px;
-  margin: 0;
-}
 
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
 
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
-}
+  .el-carousel__item:nth-child(2n + 1) {
+    background-color: #d3dce6;
+  }
 </style>
