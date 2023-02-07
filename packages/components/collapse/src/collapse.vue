@@ -19,7 +19,7 @@
               style="float: right; "
             ></tass-icon>
           </div>
-          <transition>
+          <transition name="tas-collapse">
             <div class="tas-collapse-content" v-show="show === item.id">
               {{ item.body }}
             </div>
