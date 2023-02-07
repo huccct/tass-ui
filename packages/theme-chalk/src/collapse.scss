@@ -6,13 +6,13 @@
 @include b(collapse) {
     
   width: 50em;
-  padding: 0.5em;
+  padding: 1.5em;
   height: max-content;
-  border: 1px solid rgb(175, 169, 169);
+  border: 1px solid $color-primary-light-11;
   
   background-color: white;
 
-  transition: all 0.4s;
+  border-radius: $border-radius-base;
   
   @include b(collapse-ul) {
       list-style-type: none;
@@ -28,10 +28,11 @@
     line-height: 50px;
     margin-top: 1em;
     padding-left: 10px;
-    border-top: 0.2px solid #c0c0c1;
-    border-bottom: 0.2px solid #c0c0c1;
+    padding-right: 10px;
+    border-top: 0.2px solid $color-primary-light-11;
+    border-bottom: 0.2px solid $color-primary-light-11;
     background: white;
-    
+    color: $color-primary-light-10;
    
     cursor: pointer;
     
@@ -43,6 +44,7 @@
   transform: rotate(90deg);
   display: inline-block;
   transition: all 1s;
+
 }
 
 // 箭头未选中的动画
@@ -50,29 +52,25 @@
   transform: rotate(0deg);
   display: inline-block;
   transition: all 1s;
+
 }
 
 [class^='#{$namespace}-collapse-content'] {
 
     background: white;
-    color: $color-info;
+    color: $color-primary-light-10;
     line-height: 1.769230769230769;
     width: fit-content;
     height: fit-content;
 
 }
 
-@keyframes slideMove{
-  0%{ transform : translateY(100%); }
-  100%{ transform : translateY(0%); }
-}
 
 .tas-collapse-enter-active {	//定义进入过渡生效时的状态
   height: 1px !important;
   width: 50em;
   transition:all 1s ease;
   overflow: hidden;
-  animation: 1s slideMove;
 }
 .tas-collapse-enter-to {	//定义离开过渡的结束状态
 
@@ -81,7 +79,6 @@
   transition:all 1s ease;
   overflow: hidden;
 }
-
 
 .tas-collapse-leave-active{	//定义离开过渡生效时的状态
   height: 100px !important;

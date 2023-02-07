@@ -7,21 +7,21 @@
 -->
 <template>
   <span>下拉菜单</span> <br/>
-  <div class="btn-group" ref="dropdown">
-    <li @click="toggleMenu()" class="dropdown-toggle" v-if="state.selectedOption !== null">
+  <div class="btn-group" @mouseleave="toggleMenuOut" ref="dropdown">
+    <li @click="toggleMenu" class="dropdown-toggle" v-if="state.selectedOption !== null">
       {{ state.selectedOption }}
       <span class="caret"></span>
     </li>
 
     <li
-      @click="toggleMenu()"
+      @click="toggleMenu"
       class="dropdown-toggle dropdown-toggle-placeholder"
       v-if="state.selectedOption === null"
     >
       {{ state.placeholderText }}
       <span class="caret"></span>
     </li>
-
+    <transition name="drop-transition">
     <ul class="dropdown-menu" v-if="state.showMenu">
       <li v-for="(option, idx) in state.orgOptions" :key="idx">
         <a @click="updateoption(option)">
@@ -29,31 +29,32 @@
         </a>
       </li>
     </ul>
+    </transition>
   </div>
 
   <!--hover触发-->
-    <div @mouseenter="toggleMenuHoverEnter"  @mouseleave="toggleMenuHoverOut" class="btn-group" ref="dropdown-hover">
-        <li  class="dropdown-toggle" v-if="state.selectedOptionHover !== null">
-            {{ state.selectedOptionHover }}
-            <span class="caret"></span>
-        </li>
-
-        <li
-            class="dropdown-toggle dropdown-toggle-placeholder"
-            v-if="state.selectedOptionHover === null"
-        >
-            {{ state.placeholderTextHover }}
-            <span class="caret"></span>
-        </li>
-
-        <ul class="dropdown-menu" v-if="state.showMenuHover">
-            <li v-for="(option, idx) in state.orgOptionsHover" :key="idx">
+  <div @mouseenter="toggleMenuHoverEnter"  @mouseleave="toggleMenuHoverOut" class="btn-group" ref="dropdown-hover">
+      <li  class="dropdown-toggle" v-if="state.selectedOptionHover !== null">
+          {{ state.selectedOptionHover }}
+          <span class="caret"></span>
+      </li>
+      <li
+          class="dropdown-toggle dropdown-toggle-placeholder"
+          v-if="state.selectedOptionHover === null"
+      >
+          {{ state.placeholderTextHover }}
+          <span class="caret"></span>
+      </li>
+      <transition name="drop-transition">
+          <ul class="dropdown-menu" v-if="state.showMenuHover">
+             <li v-for="(option, idx) in state.orgOptionsHover" :key="idx">
                 <a @click="updateoptionHover(option)">
-                    {{ option }}
+                   {{ option }}
                 </a>
-            </li>
-        </ul>
-    </div>
+             </li>
+          </ul>
+      </transition>
+  </div>
 
 </template>
 
@@ -98,15 +99,21 @@
   const toggleMenu = () => {
     state.showMenu = !state.showMenu;
   };
+  const toggleMenuBase = () => {
+     state.showMenu = false;
+  }
+  const toggleMenuOut = () => {
+      setTimeout(toggleMenuBase,500)
+  }
   const toggleMenHover = () => {
       state.showMenuHover = !state.showMenuHover;
   }
   const toggleMenuHoverEnter = () => {
-      setTimeout(toggleMenHover,1000)
+      setTimeout(toggleMenHover,500)
 
   };
   const toggleMenuHoverOut = () => {
-      setTimeout(toggleMenHover,1000)
+      setTimeout(toggleMenHover,500)
   }
 
   const toggleMenuHoverLeave = () => {
@@ -135,7 +142,7 @@
   });
 </script>
 
-<style>
+<style lang="scss">
   .btn-group {
     min-width: 160px;
     height: 40px;
@@ -231,5 +238,19 @@
 
   li {
     list-style: none;
+  }
+
+  .drop-transition-leave-active, .drop-transition-enter-active {
+      -webkit-transition: opacity .3s ease, -webkit-transform .3s ease;
+      transition: opacity .3s ease, -webkit-transform .3s ease;
+      transition: transform .3s ease, opacity .3s ease;
+      transition: transform .3s ease, opacity .3s ease, -webkit-transform .3s ease;
+      -webkit-transform-origin: left top;
+      transform-origin: left top
+  }
+  .drop-transition-enter, .drop-transition-leave-active {
+      opacity: 0;
+      -webkit-transform: scaleY(.8);
+      transform: scaleY(0.8);
   }
 </style>

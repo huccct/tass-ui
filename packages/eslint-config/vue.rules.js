@@ -4,15 +4,9 @@ module.exports = {
   'vue/this-in-template': 'error',
   /* 关闭名称校验 https://eslint.vuejs.org/rules/multi-word-component-names.html */
   'vue/multi-word-component-names': 'off',
-  'vue/max-attributes-per-line': [
-    'error',
-    { singleline: { max: 30 }, multiline: { max: 30 } }
-  ],
+  'vue/max-attributes-per-line': ['error', { singleline: { max: 30 }, multiline: { max: 30 } }],
   /*  组件标签顺序 https://eslint.vuejs.org/rules/component-tags-order.html */
-  'vue/component-tags-order': [
-    'error',
-    { order: ['template', 'script', 'style'] }
-  ],
+  'vue/component-tags-order': ['error', { order: ['template', 'script', 'style'] }],
   /* 只允许使用ts类型的script https://eslint.vuejs.org/rules/block-lang.html */
   'vue/block-lang': ['error', { script: { lang: 'ts' } }],
   /* 只允许使用 setup script类型的语法 https://eslint.vuejs.org/rules/component-api-style.html */

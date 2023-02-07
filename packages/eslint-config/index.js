@@ -9,11 +9,7 @@ module.exports = {
     node: true
   },
   /* 'plugin:prettier/recommended' 可手动配置 */
-  extends: [
-    'plugin:vue/vue3-essential',
-    'prettier',
-    'plugin:@typescript-eslint/recommended'
-  ],
+  extends: ['plugin:vue/vue3-essential', 'prettier', 'plugin:@typescript-eslint/recommended'],
   overrides: [],
   parser: 'vue-eslint-parser',
   parserOptions: {

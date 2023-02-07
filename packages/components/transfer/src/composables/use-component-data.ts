@@ -16,15 +16,11 @@ export const useComponentData = props => {
   });
 
   const sourceData = computed(() => {
-    return props.data.filter(
-      item => !props.modelValue.includes(item[propKey.value])
-    );
+    return props.data.filter(item => !props.modelValue.includes(item[propKey.value]));
   });
 
   const targetData = computed(() => {
-    return props.data.filter(item =>
-      props.modelValue.includes(item[propKey.value])
-    );
+    return props.data.filter(item => props.modelValue.includes(item[propKey.value]));
   });
 
   return {
