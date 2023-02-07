@@ -101,15 +101,15 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true, /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "types": ["vite/client"]
   },
   "include": [
     "packages/**/*.ts",
     "packages/**/*.tsx",
     "typings/**/*.d.ts",
-    "examples/**/*.ts",
-    "examples/**/*.d.ts"
+    "components/**/*.ts",
+    "components/**/*.d.ts"
   ],
   "exclude": ["node_modules", "**/__tests__", "dist/**"]
 }

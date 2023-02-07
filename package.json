@@ -63,14 +63,14 @@
     "vitepress": "1.0.0-alpha.45",
     "vitepress-theme-demoblock": "^2.0.2",
     "vitest": "^0.27.3",
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "vite-plugin-vue-setup-extend": "^0.4.0"
   },
   "dependencies": {
     "@tass-ui/components": "workspace:^1.0.0",
     "@tass-ui/constants": "workspace:^1.0.0",
-    "@tass-ui/eslint-config": "workspace:^1.0.0",
-    "@tass-ui/theme-chalk": "workspace:^1.0.0",
     "@tass-ui/utils": "workspace:^1.0.0",
-    "vite-plugin-vue-setup-extend": "^0.4.0"
+    "@tass-ui/eslint-config": "workspace:^1.0.0",
+    "@tass-ui/theme-chalk": "workspace:^1.0.0"
   }
 }
