@@ -48,7 +48,27 @@
 
 }
 
-.tas-collapse-enter-active, 	// 定义进入过渡生效时的状态
+@keyframes slideMove{
+  0%{ transform : translateY(100%); }
+  100%{ transform : translateY(0%); }
+}
+
+.tas-collapse-enter-active {	//定义进入过渡生效时的状态
+  height: 1px !important;
+  width: 50em;
+  transition:all 1s ease;
+  overflow: hidden;
+  animation: 1s slideMove;
+}
+.tas-collapse-enter-to {	//定义离开过渡的结束状态
+
+  height: 100px !important;
+  width: 50em;
+  transition:all 1s ease;
+  overflow: hidden;
+}
+
+
 .tas-collapse-leave-active{	//定义离开过渡生效时的状态
   height: 100px !important;
   width: 50em;
@@ -56,10 +76,12 @@
   overflow: hidden;
 }
 
-.tas-collapse-enter{
-  transform:scaleY(1);
-}
+
+
 .tas-collapse-leave-to {	//定义离开过渡的结束状态
 
-  transform:scaleY(0); // *squish*
+  height: 0px !important;
+  width: 50em;
+  transition:all 1s ease;
+  overflow: hidden;
 }
