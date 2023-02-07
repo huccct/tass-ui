@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@echo-ui/eslint-config"]
+  "extends": ["@tass-ui/eslint-config"]
 }

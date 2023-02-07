@@ -1,1 +1,1 @@
-export type SwitchSize = "lg" | "md" | "sm" | "xs";
+export type SwitchSize = 'lg' | 'md' | 'sm' | 'xs';

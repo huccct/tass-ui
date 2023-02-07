@@ -69,6 +69,7 @@
     "@tass-ui/constants": "workspace:^1.0.0",
     "@tass-ui/eslint-config": "workspace:^1.0.0",
     "@tass-ui/theme-chalk": "workspace:^1.0.0",
-    "@tass-ui/utils": "workspace:^1.0.0"
+    "@tass-ui/utils": "workspace:^1.0.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0"
   }
 }
