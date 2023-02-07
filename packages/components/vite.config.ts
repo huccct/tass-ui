@@ -55,8 +55,8 @@ export default defineConfig({
     dts({
       entryRoot: 'components',
       outputDir: [
-        resolve(__dirname, '../../build/es/src'),
-        resolve(__dirname, '../../build/lib/src')
+        resolve(__dirname, '../../build/es/components'),
+        resolve(__dirname, '../../build/lib/components')
       ],
       //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: '../../tsconfig.json'
