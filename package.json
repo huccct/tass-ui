@@ -1,7 +1,7 @@
 {
   "name": "tass-ui",
   "version": "0.1.4",
-  "description": "",
+  "description": "A high quality UI Toolkit built on Vue.js3+.",
   "main": "index.js",
   "scripts": {
     "test": "pnpm --filter components test",

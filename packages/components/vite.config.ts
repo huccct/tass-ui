@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-05 16:01:16
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-06 14:22:31
+ * @LastEditTime: 2023-02-07 12:47:04
  */
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
@@ -62,6 +62,11 @@ export default defineConfig({
       tsConfigFilePath: '../../tsconfig.json'
     })
   ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'components')
+    }
+  },
   test: {
     environment: 'happy-dom'
   }
