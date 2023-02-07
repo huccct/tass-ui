@@ -47,7 +47,8 @@ export default defineConfig({
     },
     lib: {
       entry: './index.ts',
-      formats: ['es', 'cjs']
+      formats: ['es', 'cjs'],
+      name: 'tass-ui'
     }
   },
   plugins: [
