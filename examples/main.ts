@@ -9,10 +9,8 @@ import { createApp } from 'vue';
 import App from './app.vue';
 import router from './router';
 import '@tass-ui/theme-chalk/src/index.scss';
-import TassUI from '../build';
-import TassUI1 from '../build/es/components';
+import TassUI from '@tass-ui/components';
 
-console.log(TassUI === TassUI1);
 const app = createApp(App);
 
 app.use(TassUI as any);
