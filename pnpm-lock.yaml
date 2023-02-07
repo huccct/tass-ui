@@ -13,6 +13,7 @@ importers:
       '@tass-ui/theme-chalk': workspace:^1.0.0
       '@tass-ui/utils': workspace:^1.0.0
       '@types/node': ^18.11.19
+      '@types/sass': ^1.43.1
       '@typescript-eslint/eslint-plugin': ^5.49.0
       '@typescript-eslint/parser': ^5.49.0
       '@vitejs/plugin-vue': ^4.0.0
@@ -50,6 +51,7 @@ importers:
       '@commitlint/config-conventional': 17.4.2
       '@ls-lint/ls-lint': 1.11.2
       '@types/node': 18.11.19
+      '@types/sass': 1.43.1
       '@typescript-eslint/eslint-plugin': 5.49.0_iu322prlnwsygkcra5kbpy22si
       '@typescript-eslint/parser': 5.49.0_7uibuqfxkfaozanbtbziikiqje
       '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.45
@@ -955,6 +957,12 @@ packages:
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/@types/parse-json/-/parse-json-4.0.0.tgz}
+    dev: true
+
+  /@types/sass/1.43.1:
+    resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
+    dependencies:
+      '@types/node': 18.11.19
     dev: true
 
   /@types/semver/7.3.13:

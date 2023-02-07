@@ -37,6 +37,7 @@
     "@commitlint/config-conventional": "^17.4.2",
     "@ls-lint/ls-lint": "^1.11.2",
     "@types/node": "^18.11.19",
+    "@types/sass": "^1.43.1",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "@vitejs/plugin-vue": "^4.0.0",

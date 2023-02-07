@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-05 16:01:16
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-07 12:47:04
+ * @LastEditTime: 2023-02-07 12:54:00
  */
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
@@ -22,7 +22,7 @@ export default defineConfig({
     rollupOptions: {
       //忽略打包vue文件
       external: ['vue', /\.scss/, '@tass-ui/utils'],
-      input: resolve(__dirname, 'index.ts'),
+      input: './components.ts',
       output: [
         {
           format: 'es',
