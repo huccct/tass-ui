@@ -16,12 +16,27 @@
   }
   .icon-items {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 116px;
+    align-item: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100px;
     height: 100px;
+    position: relative;
   }
+  .icon-items::after {
+    content: '';
+    position: absolute;
+    border: 1px solid #ccc;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: left top;
+  }
+
+
   .icon-items:hover {
     cursor: pointer;
     background: rgb(241, 241, 241);
