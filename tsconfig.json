@@ -104,12 +104,6 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "types": ["vite/client"]
   },
-  "include": [
-    "packages/**/*.ts",
-    "packages/**/*.tsx",
-    "typings/**/*.d.ts",
-    "components/**/*.ts",
-    "components/**/*.d.ts"
-  ],
+  "include": ["packages/**/*.ts", "packages/**/*.tsx", "typings/**/*.d.ts"],
   "exclude": ["node_modules", "**/__tests__", "dist/**"]
 }
