@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-07 16:35:30
+ * @LastEditTime: 2023-02-07 16:40:10
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -251,6 +251,12 @@
   <br />
   <tass-slider :min="0" :max="100"></tass-slider>
   <tass-slider disabled></tass-slider>
+
+  <tass-breadcrumb>
+    <tass-breadcrumb-item>xixi</tass-breadcrumb-item>
+    <tass-breadcrumb-item to="/">哈哈</tass-breadcrumb-item>
+    <tass-breadcrumb-item>纯纯</tass-breadcrumb-item>
+  </tass-breadcrumb>
 </template>
 
 <script setup lang="ts">
