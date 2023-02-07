@@ -15,5 +15,8 @@
     "vite": "^4.0.4",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-vue-setup-extend": "^0.4.0"
+  },
+  "dependencies": {
+    "vue-router": "^4.1.6"
   }
 }
