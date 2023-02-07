@@ -17,6 +17,7 @@
     <input type="file" ref="inputRef" @change="submitUpload" />
   </div>
 </template>
+
 <script setup lang="ts" name="TassUpload">
   import { reactive, ref } from 'vue';
   const props = defineProps({

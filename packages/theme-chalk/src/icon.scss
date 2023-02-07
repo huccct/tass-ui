@@ -22,18 +22,604 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-// 箭头选中后的动画（与collapse相关）
-.icon-select:before{
-  transform: rotate(90deg);
-  display: inline-block;
-  transition: all 1s;
+.tas-icon-upload:before {
+  content: '\e6a3';
 }
 
-// 箭头未选中的动画（与collapse相关）
-.icon-unselect:before{
-  transform: rotate(0deg);
-  display: inline-block;
-  transition: all 1s;
+.tas-icon-user:before {
+  content: '\e6a4';
+}
+
+.tas-icon-users:before {
+  content: '\e6a5';
+}
+
+.tas-icon-volume:before {
+  content: '\e6a6';
+}
+
+.tas-icon-volumehigh:before {
+  content: '\e6a7';
+}
+
+.tas-icon-volumelow:before {
+  content: '\e6a8';
+}
+
+.tas-icon-volumemedium:before {
+  content: '\e6a9';
+}
+
+.tas-icon-warning1:before {
+  content: '\e6aa';
+}
+
+.tas-icon-wheelchair:before {
+  content: '\e6ab';
+}
+
+.tas-icon-alarm:before {
+  content: '\e600';
+}
+
+.tas-icon-apartment:before {
+  content: '\e602';
+}
+
+.tas-icon-arrowdown:before {
+  content: '\e603';
+}
+
+.tas-icon-arrowdowncircle:before {
+  content: '\e604';
+}
+
+.tas-icon-arrowleft:before {
+  content: '\e605';
+}
+
+.tas-icon-arrowleftcircle:before {
+  content: '\e606';
+}
+
+.tas-icon-arrowright:before {
+  content: '\e607';
+}
+
+.tas-icon-arrowrightcircle:before {
+  content: '\e608';
+}
+
+.tas-icon-arrowup:before {
+  content: '\e609';
+}
+
+.tas-icon-arrowupcircle:before {
+  content: '\e60a';
+}
+
+.tas-icon-bicycle:before {
+  content: '\e60b';
+}
+
+.tas-icon-bold:before {
+  content: '\e60c';
+}
+
+.tas-icon-book:before {
+  content: '\e60d';
+}
+
+.tas-icon-bookmark:before {
+  content: '\e60e';
+}
+
+.tas-icon-briefcase:before {
+  content: '\e60f';
+}
+
+.tas-icon-bug:before {
+  content: '\e611';
+}
+
+.tas-icon-bullhorn:before {
+  content: '\e612';
+}
+
+.tas-icon-bus:before {
+  content: '\e613';
+}
+
+.tas-icon-calendarfull:before {
+  content: '\e614';
+}
+
+.tas-icon-camera:before {
+  content: '\e615';
+}
+
+.tas-icon-cloudupload:before {
+  content: '\e617';
+}
+
+.tas-icon-cameravideo:before {
+  content: '\e618';
+}
+
+.tas-icon-car:before {
+  content: '\e619';
+}
+
+.tas-icon-cart:before {
+  content: '\e61a';
+}
+
+.tas-icon-chartbars:before {
+  content: '\e61b';
+}
+
+.tas-icon-chevrondowncircle:before {
+  content: '\e61d';
+}
+
+.tas-icon-chevronleftcircle:before {
+  content: '\e61f';
+}
+
+.tas-icon-chevronrightcircle:before {
+  content: '\e621';
+}
+
+.tas-icon-chevronupcircle:before {
+  content: '\e623';
+}
+
+.tas-icon-circleminus:before {
+  content: '\e624';
+}
+
+.tas-icon-clock:before {
+  content: '\e625';
+}
+
+.tas-icon-cloud:before {
+  content: '\e626';
+}
+
+.tas-icon-cloudcheck:before {
+  content: '\e627';
+}
+
+.tas-icon-clouddownload:before {
+  content: '\e628';
+}
+
+.tas-icon-cloudsync:before {
+  content: '\e629';
+}
+
+.tas-icon-exit:before {
+  content: '\e62a';
+}
+
+.tas-icon-coffeecup:before {
+  content: '\e62c';
+}
+
+.tas-icon-construction:before {
+  content: '\e62e';
+}
+
+.tas-icon-crop:before {
+  content: '\e62f';
+}
+
+.tas-icon-database:before {
+  content: '\e632';
+}
+
+.tas-icon-diamond:before {
+  content: '\e633';
+}
+
+.tas-icon-dice:before {
+  content: '\e634';
+}
+
+.tas-icon-dinner:before {
+  content: '\e635';
+}
+
+.tas-icon-directionltr:before {
+  content: '\e636';
+}
+
+.tas-icon-directionrtl:before {
+  content: '\e637';
+}
+
+.tas-icon-drop:before {
+  content: '\e639';
+}
+
+.tas-icon-earth:before {
+  content: '\e63a';
+}
+
+.tas-icon-enter:before {
+  content: '\e63b';
+}
+
+.tas-icon-enterdown:before {
+  content: '\e63c';
+}
+
+.tas-icon-envelope:before {
+  content: '\e63d';
+}
+
+.tas-icon-indentdecrease:before {
+  content: '\e63e';
+}
+
+.tas-icon-exitup:before {
+  content: '\e63f';
+}
+
+.tas-icon-eye:before {
+  content: '\e640';
+}
+
+.tas-icon-fileadd:before {
+  content: '\e641';
+}
+
+.tas-icon-fileempty:before {
+  content: '\e642';
+}
+
+.tas-icon-filmplay:before {
+  content: '\e643';
+}
+
+.tas-icon-flag:before {
+  content: '\e644';
+}
+
+.tas-icon-framecontract:before {
+  content: '\e645';
+}
+
+.tas-icon-frameexpand:before {
+  content: '\e646';
+}
+
+.tas-icon-funnel:before {
+  content: '\e647';
+}
+
+.tas-icon-gift:before {
+  content: '\e648';
+}
+
+.tas-icon-graduationhat:before {
+  content: '\e649';
+}
+
+.tas-icon-hand:before {
+  content: '\e64a';
+}
+
+.tas-icon-heart:before {
+  content: '\e64b';
+}
+
+.tas-icon-heartpulse:before {
+  content: '\e64c';
+}
+
+.tas-icon-highlight:before {
+  content: '\e64d';
+}
+
+.tas-icon-history:before {
+  content: '\e64e';
+}
+
+.tas-icon-hourglass:before {
+  content: '\e650';
+}
+
+.tas-icon-inbox:before {
+  content: '\e651';
+}
+
+.tas-icon-menu:before {
+  content: '\e652';
+}
+
+.tas-icon-indentincrease:before {
+  content: '\e653';
+}
+
+.tas-icon-italic:before {
+  content: '\e654';
+}
+
+.tas-icon-keyboard:before {
+  content: '\e655';
+}
+
+.tas-icon-laptop:before {
+  content: '\e656';
+}
+
+.tas-icon-laptopphone:before {
+  content: '\e657';
+}
+
+.tas-icon-layers:before {
+  content: '\e658';
+}
+
+.tas-icon-leaf:before {
+  content: '\e659';
+}
+
+.tas-icon-license:before {
+  content: '\e65a';
+}
+
+.tas-icon-lighter:before {
+  content: '\e65b';
+}
+
+.tas-icon-linearicons:before {
+  content: '\e65c';
+}
+
+.tas-icon-linespacing:before {
+  content: '\e65d';
+}
+
+.tas-icon-link:before {
+  content: '\e65e';
+}
+
+.tas-icon-list:before {
+  content: '\e65f';
+}
+
+.tas-icon-location:before {
+  content: '\e660';
+}
+
+.tas-icon-magicwand:before {
+  content: '\e662';
+}
+
+.tas-icon-map:before {
+  content: '\e664';
+}
+
+.tas-icon-mapmarker:before {
+  content: '\e665';
+}
+
+.tas-icon-pointerright:before {
+  content: '\e666';
+}
+
+.tas-icon-menucircle:before {
+  content: '\e667';
+}
+
+.tas-icon-mic:before {
+  content: '\e668';
+}
+
+.tas-icon-moon:before {
+  content: '\e669';
+}
+
+.tas-icon-move:before {
+  content: '\e66a';
+}
+
+.tas-icon-musicnote:before {
+  content: '\e66b';
+}
+
+.tas-icon-mustache:before {
+  content: '\e66c';
+}
+
+.tas-icon-neutral:before {
+  content: '\e66d';
+}
+
+.tas-icon-pagebreak:before {
+  content: '\e66e';
+}
+
+.tas-icon-paperclip:before {
+  content: '\e66f';
+}
+
+.tas-icon-paw:before {
+  content: '\e670';
+}
+
+.tas-icon-pencil:before {
+  content: '\e671';
+}
+
+.tas-icon-phone:before {
+  content: '\e672';
+}
+
+.tas-icon-phonehandset:before {
+  content: '\e673';
+}
+
+.tas-icon-picture:before {
+  content: '\e674';
+}
+
+.tas-icon-piechart:before {
+  content: '\e675';
+}
+
+.tas-icon-pilcrow:before {
+  content: '\e676';
+}
+
+.tas-icon-pointerdown:before {
+  content: '\e678';
+}
+
+.tas-icon-pointerleft:before {
+  content: '\e679';
+}
+
+.tas-icon-starhalf:before {
+  content: '\e67a';
+}
+
+.tas-icon-pointerup:before {
+  content: '\e67b';
+}
+
+.tas-icon-poop:before {
+  content: '\e67c';
+}
+
+.tas-icon-powerswitch:before {
+  content: '\e67d';
+}
+
+.tas-icon-printer:before {
+  content: '\e67e';
+}
+
+.tas-icon-questioncircle:before {
+  content: '\e681';
+}
+
+.tas-icon-redo:before {
+  content: '\e682';
+}
+
+.tas-icon-rocket:before {
+  content: '\e683';
+}
+
+.tas-icon-sad:before {
+  content: '\e684';
+}
+
+.tas-icon-screen:before {
+  content: '\e685';
+}
+
+.tas-icon-select:before {
+  content: '\e686';
+}
+
+.tas-icon-shirt:before {
+  content: '\e687';
+}
+
+.tas-icon-smartphone:before {
+  content: '\e688';
+}
+
+.tas-icon-smile:before {
+  content: '\e689';
+}
+
+.tas-icon-sortalphaasc:before {
+  content: '\e68a';
+}
+
+.tas-icon-sortamountasc:before {
+  content: '\e68b';
+}
+
+.tas-icon-spellcheck:before {
+  content: '\e68c';
+}
+
+.tas-icon-star:before {
+  content: '\e68d';
+}
+
+.tas-icon-starempty:before {
+  content: '\e68e';
+}
+
+.tas-icon-unlink:before {
+  content: '\e68f';
+}
+
+.tas-icon-store:before {
+  content: '\e690';
+}
+
+.tas-icon-strikethrough:before {
+  content: '\e691';
+}
+
+.tas-icon-sun:before {
+  content: '\e692';
+}
+
+.tas-icon-sync:before {
+  content: '\e693';
+}
+
+.tas-icon-tablet:before {
+  content: '\e694';
+}
+
+.tas-icon-tag:before {
+  content: '\e695';
+}
+
+.tas-icon-textaligncenter:before {
+  content: '\e697';
+}
+
+.tas-icon-textalignleft:before {
+  content: '\e698';
+}
+
+.tas-icon-textalignright:before {
+  content: '\e699';
+}
+
+.tas-icon-textformat:before {
+  content: '\e69a';
+}
+
+.tas-icon-textformatremove:before {
+  content: '\e69b';
+}
+
+.tas-icon-textsize:before {
+  content: '\e69e';
+}
+
+.tas-icon-train:before {
+  content: '\e6a0';
+}
+
+.tas-icon-underline:before {
+  content: '\e6a1';
+}
+
+.tas-icon-undo:before {
+  content: '\e6a2';
 }
 
 .tas-icon-danger:before {

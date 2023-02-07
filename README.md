@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-06 13:30:25
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-06 16:29:05
+ * @LastEditTime: 2023-02-06 22:46:20
 -->
 <h1 align="center">
     <img src="http://121.36.100.147:9000/test/logo-horizontal.png">
@@ -42,7 +42,7 @@ npm i tass-ui
 
 
 ## 在线文档
-xxx
+https://huccct.github.io/
 ## 使用仓库相关命令
 
 ### 安装 pnpm

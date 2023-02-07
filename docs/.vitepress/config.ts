@@ -24,8 +24,9 @@ export default {
         {
           text: '基本',
           items: [
-            { text: 'Button按钮', link: '/components/button/' },
-            { text: 'Icon', link: '/components/Icon/' }
+            { text: 'Button 按钮', link: '/components/button/' },
+            { text: 'Grid 栅格', link: '/components/grid/' },
+            { text: 'Icon 图标', link: '/components/icon/' }
           ]
         }
       ]

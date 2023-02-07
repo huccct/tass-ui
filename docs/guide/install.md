@@ -13,7 +13,7 @@ Tass UI 目前还处于快速开发迭代中。
 ### npm安装
 推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
 ```
-npm i echo-ui -S
+npm i tass-ui -S
 ```
 ### CDN方式
 ```
