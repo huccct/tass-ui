@@ -30,9 +30,7 @@ export const useCheck = (props, state) => {
     () => state.checked,
     () => {
       const checkkeys = checkDisabled.value.map(item => item[keyProps.value]);
-      state.allCheck =
-        checkkeys.length > 0 &&
-        checkkeys.every(key => state.checked.includes(key));
+      state.allCheck = checkkeys.length > 0 && checkkeys.every(key => state.checked.includes(key));
       emit('checkChange', state.checked);
     }
   );
