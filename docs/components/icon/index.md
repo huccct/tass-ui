@@ -46,12 +46,9 @@
 ## 基础用法
 
 <div class="example">
-  <tass-icon name="pluscircle"></tass-icon>&nbsp; 
-  <tass-icon name="pushpin"></tass-icon>&nbsp;
-  <tass-icon name="textalignjustify"></tass-icon>&nbsp; <tass-icon name="danger"></tass-icon>&nbsp;
-  <tass-icon name="success"></tass-icon>&nbsp; 
-  <tass-icon name="info"></tass-icon>&nbsp;
-  <tass-icon name="warning"></tass-icon>
+  <tass-icon name="magnifier"></tass-icon>&nbsp;
+  <tass-icon name="trash" style="color:red;"></tass-icon>&nbsp;
+  <tass-button type="primary" icon="tas-icon-enterdown">下载</tass-button>
   <br />
   <br />
 </div>
@@ -61,12 +58,9 @@
 
 ```vue
 <template>
-  <tass-icon name="pluscircle"></tass-icon>&nbsp; 
-  <tass-icon name="pushpin"></tass-icon>&nbsp;
-  <tass-icon name="textalignjustify"></tass-icon>&nbsp; <tass-icon name="danger"></tass-icon>&nbsp;
-  <tass-icon name="success"></tass-icon>&nbsp; 
-  <tass-icon name="info"></tass-icon>&nbsp;
-  <tass-icon name="warning"></tass-icon>
+  <tass-icon name="magnifier"></tass-icon>&nbsp;
+  <tass-icon name="trash" style="color:red;"></tass-icon>&nbsp;
+  <tass-button type="primary" icon="tas-icon-enterdown">下载</tass-button>
   <br />
   <br />
 </template>
@@ -79,8 +73,155 @@
 
 ## 所有图标
 <div class="example">
-  <div class="icon-items">
-    <tass-icon name="pluscircle"></tass-icon>
-    <span>pluscircle</span>
+  <div style="display:flex;">
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+  </div>
+
+  <div style="display:flex;">
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+  </div>
+  <div style="display:flex;">
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+  </div>
+  <div style="display:flex;">
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+  </div>
+  <div style="display:flex;">
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
+    <div class="icon-items">
+      <tass-icon name="pluscircle"></tass-icon>
+      <span>pluscircle</span>
+    </div>
   </div>
 </div>
