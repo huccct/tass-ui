@@ -3,6 +3,7 @@ export default {
   titleTemplate: ':title - Tass UI',
   description: '一个Vue3 UI框架',
   lastUpdated: true,
+  head: [['link', { rel: 'icon', href: '/images/logo_icon.png' }]],
   themeConfig: {
     logo: '/logo-horizontal.png',
     siteTitle: false,
