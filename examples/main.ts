@@ -3,12 +3,12 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:00
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-07 21:01:13
+ * @LastEditTime: 2023-02-07 23:26:04
  */
 import { createApp } from 'vue';
 import App from './app.vue';
 import router from './router';
-import '@tass-ui/theme-chalk/src/index.scss';
+// import '@tass-ui/theme-chalk/src/index.scss';
 import TassUI from '@tass-ui/components';
 
 const app = createApp(App);
