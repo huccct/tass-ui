@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-06 13:30:25
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-06 22:46:20
+ * @LastEditTime: 2023-02-08 13:41:46
 -->
 <h1 align="center">
     <img src="http://121.36.100.147:9000/test/logo-horizontal.png">
@@ -26,21 +26,26 @@
 
 ## 安装
 ```
-npm i tass-ui
+npm i tass-ui -S
 ```
 
 ## 快速开始
 
-```html
+```vue
 <template>
     <tass-button type="primary">按钮</tass-button>
 </template>
-<script lang="ts" setup>
-    import { TassButton } from 'tass-ui';
-</script>
 ```
-
-
+```ts
+// main.ts
+import { createApp } from 'vue';
+import App from './App.vue';
+import TassUI from 'tass-ui';
+import 'tass-ui/es/style.css';
+const app = createApp(App);
+app.use(TassUI);
+app.mount('#app');
+```
 ## 在线文档
 https://huccct.github.io/
 ## 使用仓库相关命令
