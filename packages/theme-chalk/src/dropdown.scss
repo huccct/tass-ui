@@ -1,18 +1,18 @@
 @use 'sass:math';
-
 @use 'common/var' as *;
 
-  .btn-group {
-    min-width: 160px;
-    height: 40px;
-    position: relative;
-    margin: 10px 1px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .btn-group a:hover {
-    text-decoration: none;
-  }
+.btn-group {
+  min-width: 160px;
+  height: 40px;
+  position: relative;
+  margin: 10px 1px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-group a:hover {
+  text-decoration: none;
+}
 
 .dropdown-toggle {
   color: #636b6f;
@@ -35,6 +35,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 .dropdown-toggle:hover {
   background: #e1e1e1;
   cursor: pointer;
@@ -69,6 +70,7 @@
   white-space: nowrap;
   text-decoration: none;
 }
+
 .dropdown-menu > li > a:hover {
   background: #efefef;
   color: #409fcb;
@@ -80,6 +82,7 @@
   position: relative;
   margin: 0;
 }
+
 .caret {
   width: 0;
   position: absolute;
@@ -88,7 +91,8 @@
   margin-left: -24px;
   vertical-align: middle;
   border-top: 4px dashed;
-  border-top: 4px solid \9;
+  border-top: 4px solid \9
+;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
   right: 10px;
@@ -106,6 +110,7 @@ li {
   -webkit-transform-origin: left top;
   transform-origin: left top
 }
+
 .drop-transition-enter, .drop-transition-leave-active {
   opacity: 0;
   -webkit-transform: scaleY(.8);

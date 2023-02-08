@@ -59,6 +59,7 @@
 </template>
 
 <script setup lang="ts">
+  import '../style/'
   import { reactive, onMounted, onBeforeUnmount, ref } from 'vue';
 
   const props = defineProps({
