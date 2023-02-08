@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-23 20:29:09
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:03:17
+ * @LastEditTime: 2023-02-08 11:25:28
 -->
 <template>
   <div class="tas-checkbox">
@@ -26,6 +26,7 @@
   </div>
 </template>
 <script setup lang="ts" name="TassCheckbox">
+  import '../style/';
   import { useCheckBoxProps } from '../composables/';
   import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@tass-ui/constants';
   const props = defineProps({

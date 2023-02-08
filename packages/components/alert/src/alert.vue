@@ -2,27 +2,33 @@
  * @Descripttion: Spicy chicken
  * @Author: YuShu Xiao
  * @Date: 2023-02-01 23:03:26
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-05 20:26:15
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-08 11:09:31
 -->
 <template>
   <!-- 提示框组件 -->
   <Transition name="tas-alert-fade">
     <div :class="alertClassNames" class="tas-alert" v-if="isShow">
-    <tass-icon :name="iconName" class="tas-alert__icon" v-if="showIcon" />
-    <div class="tas-alert__content">
-      <h3 class="tas-alert__title tas-global-ellipsis">
-        {{ title }}
-      </h3>
-      <p class="tas-alert__desc" v-if="content">
-        {{ content }}
-      </p>
-      <tass-icon name="cross" class="tas-alert__close-btn" v-if="closeable" @click="handltaslose" />
+      <tass-icon :name="iconName" class="tas-alert__icon" v-if="showIcon" />
+      <div class="tas-alert__content">
+        <h3 class="tas-alert__title tas-global-ellipsis">
+          {{ title }}
+        </h3>
+        <p class="tas-alert__desc" v-if="content">
+          {{ content }}
+        </p>
+        <tass-icon
+          name="cross"
+          class="tas-alert__close-btn"
+          v-if="closeable"
+          @click="handltaslose"
+        />
+      </div>
     </div>
-  </div>
   </Transition>
 </template>
 <script lang="ts" name="TassAlert" setup>
+  import '../style/';
   import { AlertType } from './interface';
   import { computed, ref } from 'vue';
 

@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 13:30:35
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:02:31
+ * @LastEditTime: 2023-02-08 11:23:57
 -->
 
 <template>
@@ -11,4 +11,6 @@
     <slot />
   </div>
 </template>
-<script setup lang="ts" name="TassButtonGroup"></script>
+<script setup lang="ts" name="TassButtonGroup">
+  import '../style/';
+</script>

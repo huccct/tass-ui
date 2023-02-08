@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-23 20:33:27
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:05:04
+ * @LastEditTime: 2023-02-08 11:29:22
 -->
 <template>
   <div class="tas-checkbox-group">
@@ -11,6 +11,7 @@
   </div>
 </template>
 <script setup lang="ts" name="TassCheckboxGroup">
+  import '../style';
   import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@tass-ui/constants';
   import { computed, provide } from 'vue';
   const props = defineProps({

@@ -2,8 +2,8 @@
  * @Descripttion: Spicy chicken
  * @Author: YuShu Xiao
  * @Date: 2023-02-06 11:57:03
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-07 16:19:08
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-08 11:22:23
 -->
 <template>
   <div class="tas-bread-item">
@@ -13,6 +13,7 @@
   </div>
 </template>
 <script setup lang="ts" name="TassBreadcrumbItem">
+  import '../style/';
   defineProps({
     to: {
       type: [String, Object]
