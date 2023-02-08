@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-06 13:30:25
  * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-08 22:37:45
+ * @LastEditTime: 2023-02-08 22:39:52
 -->
 <h1 align="center">
     <img src="http://121.36.100.147:9000/test/logo-horizontal.png">
@@ -29,7 +29,7 @@
 npm i tass-ui -S
 ```
 
-## 快速开始1
+## 快速开始
 
 ```vue
 <template>
