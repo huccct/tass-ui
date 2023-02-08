@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-02-06 20:56:22
+ * @LastEditors: YuShu Xiao
+ * @LastEditTime: 2023-02-07 16:40:10
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -246,11 +246,19 @@
   <br />
 
   <tass-input v-model="inputVal" clearable />&nbsp;{{ inputVal }}
-
+  <br />
   <br />
   <br />
   <tass-slider :min="0" :max="100"></tass-slider>
   <tass-slider disabled></tass-slider>
+  <br />
+  <br />
+
+  <tass-breadcrumb>
+    <tass-breadcrumb-item>xixi</tass-breadcrumb-item>
+    <tass-breadcrumb-item to="/">哈哈</tass-breadcrumb-item>
+    <tass-breadcrumb-item>纯纯</tass-breadcrumb-item>
+  </tass-breadcrumb>
 </template>
 
 <script setup lang="ts">

@@ -21,7 +21,7 @@ export default defineConfig({
     //cssCodeSplit: true,
     rollupOptions: {
       //忽略打包vue文件
-      external: ['vue', /\.scss/, '@tass-ui/utils'],
+      external: ['vue'],
       input: './index.ts',
       output: [
         {
@@ -47,7 +47,8 @@ export default defineConfig({
     },
     lib: {
       entry: './index.ts',
-      formats: ['es', 'cjs']
+      formats: ['es', 'cjs'],
+      name: 'tass-ui'
     }
   },
   plugins: [

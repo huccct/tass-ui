@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:43:56
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:01:34
+ * @LastEditTime: 2023-02-07 23:26:39
 -->
 <template>
   <button
@@ -21,6 +21,7 @@
 </template>
 
 <script lang="ts" setup name="TassButton">
+  import '../style/';
   import { computed } from 'vue';
   import { Props, Emits } from './button';
   const props = defineProps(Props);
