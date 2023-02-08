@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-05 14:53:41
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:29:12
+ * @LastEditTime: 2023-02-08 11:41:39
 -->
 <template>
   <div class="tas-upload">
@@ -19,6 +19,7 @@
 </template>
 
 <script setup lang="ts" name="TassUpload">
+  import '../style/';
   import { reactive, ref } from 'vue';
   const props = defineProps({
     props: {

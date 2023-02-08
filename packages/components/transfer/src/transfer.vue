@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-24 21:56:36
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:11:45
+ * @LastEditTime: 2023-02-08 11:40:48
 -->
 <template>
   <div class="tas-transfer">
@@ -40,6 +40,7 @@
   </div>
 </template>
 <script setup lang="ts" name="tassTransfer">
+  import '../style/';
   import { PropType, reactive, toRefs } from 'vue';
   import TassTransferItem from './transferItem.vue';
   import TassButton from '../../button/src/button.vue';

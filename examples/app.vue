@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-07 16:40:10
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-08 10:58:04
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -41,6 +41,84 @@
   <tass-icon name="textalignjustify"></tass-icon>&nbsp; <tass-icon name="danger"></tass-icon>&nbsp;
   <tass-icon name="success"></tass-icon>&nbsp; <tass-icon name="info"></tass-icon>&nbsp;
   <tass-icon name="warning"></tass-icon>
+  <tass-icon name="upload"></tass-icon>&nbsp; <tass-icon name="user"></tass-icon>&nbsp;
+  <tass-icon name="users"></tass-icon>&nbsp; <tass-icon name="volume"></tass-icon>&nbsp;
+  <tass-icon name="volumehigh"></tass-icon>&nbsp; <tass-icon name="volumelow"></tass-icon>&nbsp;
+  <tass-icon name="volumemedium"></tass-icon>&nbsp; <tass-icon name="warning1"></tass-icon>&nbsp;
+  <tass-icon name="wheelchair"></tass-icon>&nbsp; <tass-icon name="alarm"></tass-icon>&nbsp;
+  <tass-icon name="apartment"></tass-icon>&nbsp; <tass-icon name="arrowdown"></tass-icon>&nbsp;
+  <tass-icon name="arrowleft"></tass-icon>&nbsp; <tass-icon name="arrowright"></tass-icon>&nbsp;
+  <tass-icon name="bicycle"></tass-icon>&nbsp; <tass-icon name="bold"></tass-icon>&nbsp;
+  <tass-icon name="book"></tass-icon>&nbsp; <tass-icon name="bookmark"></tass-icon>&nbsp;
+  <tass-icon name="briefcase"></tass-icon>&nbsp; <tass-icon name="bullhorn"></tass-icon>&nbsp;
+  <tass-icon name="calendarfull"></tass-icon>&nbsp; <tass-icon name="camera"></tass-icon>&nbsp;
+  <tass-icon name="clock"></tass-icon>&nbsp; <tass-icon name="cameravideo"></tass-icon>&nbsp;
+  <tass-icon name="car"></tass-icon>&nbsp; <tass-icon name="cart"></tass-icon>&nbsp;
+  <tass-icon name="chartbars"></tass-icon>&nbsp; <tass-icon name="circleminus"></tass-icon>&nbsp;
+  <tass-icon name="cloud"></tass-icon>&nbsp; <tass-icon name="cloudsync"></tass-icon>&nbsp;
+  <tass-icon name="cloudcheck"></tass-icon>&nbsp; <tass-icon name="clouddownload"></tass-icon>&nbsp;
+  <tass-icon name="cloudupload"></tass-icon>&nbsp; <tass-icon name="coffeecup"></tass-icon>&nbsp;
+  <tass-icon name="construction"></tass-icon>&nbsp; <tass-icon name="crop"></tass-icon>&nbsp;
+  <tass-icon name="database"></tass-icon>&nbsp; <tass-icon name="dice"></tass-icon>&nbsp;
+  <tass-icon name="dinner"></tass-icon>&nbsp; <tass-icon name="directionltr"></tass-icon>&nbsp;
+  <tass-icon name="directionrtl"></tass-icon>&nbsp; <tass-icon name="drop"></tass-icon>&nbsp;
+  <tass-icon name="exit"></tass-icon>&nbsp; <tass-icon name="earth"></tass-icon>&nbsp;
+  <tass-icon name="enter"></tass-icon>&nbsp; <tass-icon name="enterdown"></tass-icon>&nbsp;
+  <tass-icon name="envelope"></tass-icon>&nbsp; <tass-icon name="indentdecrease"></tass-icon>&nbsp;
+  <tass-icon name="exitup"></tass-icon>&nbsp; <tass-icon name="eye"></tass-icon>&nbsp;
+  <tass-icon name="fileadd"></tass-icon>&nbsp; <tass-icon name="fileempty"></tass-icon>&nbsp;
+  <tass-icon name="filmplay"></tass-icon>&nbsp; <tass-icon name="flag"></tass-icon>&nbsp;
+  <tass-icon name="framecontract"></tass-icon>&nbsp;
+  <tass-icon name="frameexpand"></tass-icon>&nbsp; <tass-icon name="funnel"></tass-icon>&nbsp;
+  <tass-icon name="gift"></tass-icon>&nbsp; <tass-icon name="graduationhat"></tass-icon>&nbsp;
+  <tass-icon name="hand"></tass-icon>&nbsp; <tass-icon name="heart"></tass-icon>&nbsp;
+  <tass-icon name="heartpulse"></tass-icon>&nbsp; <tass-icon name="highlight"></tass-icon>&nbsp;
+  <tass-icon name="history"></tass-icon>&nbsp; <tass-icon name="inbox"></tass-icon>&nbsp;
+  <tass-icon name="menu"></tass-icon>&nbsp; <tass-icon name="indentincrease"></tass-icon>&nbsp;
+  <tass-icon name="italic"></tass-icon>&nbsp; <tass-icon name="keyboard"></tass-icon>&nbsp;
+  <tass-icon name="laptop"></tass-icon>&nbsp; <tass-icon name="laptopphone"></tass-icon>&nbsp;
+  <tass-icon name="license"></tass-icon>&nbsp; <tass-icon name="lighter"></tass-icon>&nbsp;
+  <tass-icon name="linearicons"></tass-icon>&nbsp; <tass-icon name="linespacing"></tass-icon>&nbsp;
+  <tass-icon name="link"></tass-icon>&nbsp; <tass-icon name="location"></tass-icon>&nbsp;
+  <tass-icon name="magicwand"></tass-icon>&nbsp; <tass-icon name="map"></tass-icon>&nbsp;
+  <tass-icon name="mapmarker"></tass-icon>&nbsp; <tass-icon name="pointerright"></tass-icon>&nbsp;
+  <tass-icon name="menucircle"></tass-icon>&nbsp; <tass-icon name="mic"></tass-icon>&nbsp;
+  <tass-icon name="moon"></tass-icon>&nbsp; <tass-icon name="move"></tass-icon>&nbsp;
+  <tass-icon name="musicnote"></tass-icon>&nbsp; <tass-icon name="mustache"></tass-icon>&nbsp;
+  <tass-icon name="neutral"></tass-icon>&nbsp; <tass-icon name="pagebreak"></tass-icon>&nbsp;
+  <tass-icon name="paperclip"></tass-icon>&nbsp; <tass-icon name="paw"></tass-icon>&nbsp;
+  <tass-icon name="pencil"></tass-icon>&nbsp; <tass-icon name="phone"></tass-icon>&nbsp;
+  <tass-icon name="phonehandset"></tass-icon>&nbsp; <tass-icon name="picture"></tass-icon>&nbsp;
+  <tass-icon name="piechart"></tass-icon>&nbsp; <tass-icon name="pilcrow"></tass-icon>&nbsp;
+  <tass-icon name="pointerdown"></tass-icon>&nbsp; <tass-icon name="pointerleft"></tass-icon>&nbsp;
+  <tass-icon name="starhalf"></tass-icon>&nbsp; <tass-icon name="pointerup"></tass-icon>&nbsp;
+  <tass-icon name="poop"></tass-icon>&nbsp; <tass-icon name="powerswitch"></tass-icon>&nbsp;
+  <tass-icon name="printer"></tass-icon>&nbsp; <tass-icon name="questioncircle"></tass-icon>&nbsp;
+  <tass-icon name="redo"></tass-icon>&nbsp; <tass-icon name="rocket"></tass-icon>&nbsp;
+  <tass-icon name="sad"></tass-icon>&nbsp; <tass-icon name="screen"></tass-icon>&nbsp;
+  <tass-icon name="select"></tass-icon>&nbsp; <tass-icon name="shirt"></tass-icon>&nbsp;
+  <tass-icon name="smartphone"></tass-icon>&nbsp; <tass-icon name="smile"></tass-icon>&nbsp;
+  <tass-icon name="sortalphaasc"></tass-icon>&nbsp;
+  <tass-icon name="sortamountasc"></tass-icon>&nbsp; <tass-icon name="spellcheck"></tass-icon>&nbsp;
+  <tass-icon name="star"></tass-icon>&nbsp; <tass-icon name="starempty"></tass-icon>&nbsp;
+  <tass-icon name="unlink"></tass-icon>&nbsp; <tass-icon name="store"></tass-icon>&nbsp;
+  <tass-icon name="strikethrough"></tass-icon>&nbsp; <tass-icon name="sun"></tass-icon>&nbsp;
+  <tass-icon name="sync"></tass-icon>&nbsp; <tass-icon name="tablet"></tass-icon>&nbsp;
+  <tass-icon name="tag"></tass-icon>&nbsp; <tass-icon name="textaligncenter"></tass-icon>&nbsp;
+  <tass-icon name="textalignleft"></tass-icon>&nbsp;
+  <tass-icon name="textalignright"></tass-icon>&nbsp;
+  <tass-icon name="textformat"></tass-icon>&nbsp;
+  <tass-icon name="textformatremove"></tass-icon>&nbsp;
+  <tass-icon name="textsize"></tass-icon>&nbsp; <tass-icon name="train"></tass-icon>&nbsp;
+  <tass-icon name="underline"></tass-icon>&nbsp; <tass-icon name="undo"></tass-icon>&nbsp;
+  <tass-icon name="bubble"></tass-icon>&nbsp; <tass-icon name="chevrondown"></tass-icon>&nbsp;
+  <tass-icon name="chevronleft"></tass-icon>&nbsp; <tass-icon name="chevronright"></tass-icon>&nbsp;
+  <tass-icon name="chevronup"></tass-icon>&nbsp; <tass-icon name="code"></tass-icon>&nbsp;
+  <tass-icon name="cog"></tass-icon>&nbsp; <tass-icon name="cross"></tass-icon>&nbsp;
+  <tass-icon name="download"></tass-icon>&nbsp; <tass-icon name="home"></tass-icon>&nbsp;
+  <tass-icon name="lock"></tass-icon>&nbsp; <tass-icon name="magnifier"></tass-icon>&nbsp;
+  <tass-icon name="thumbsdown"></tass-icon>&nbsp; <tass-icon name="thumbsup"></tass-icon>&nbsp;
+  <tass-icon name="trash"></tass-icon>&nbsp; <tass-icon name=""></tass-icon>&nbsp;
   <br />
   <br />
 

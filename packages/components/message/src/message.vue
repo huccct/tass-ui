@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-25 22:08:03
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:47:47
+ * @LastEditTime: 2023-02-08 11:38:53
 -->
 <template>
   <transition name="tas-message-fade" @before-leave="onclose" @after-leave="$emit('destroy')">
@@ -29,6 +29,7 @@
   </transition>
 </template>
 <script setup lang="ts">
+  import '../style/';
   import { computed, onMounted, onUnmounted, ref } from 'vue';
   import { TassIcon } from '../../icon';
   const props = defineProps({

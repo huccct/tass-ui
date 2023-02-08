@@ -18,6 +18,7 @@
   </div>
 </template>
 <script setup lang="ts" name="TassInput">
+  import '../style/';
   import { computed, ref } from 'vue';
 
   type InputProps = {

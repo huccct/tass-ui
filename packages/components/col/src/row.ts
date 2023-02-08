@@ -3,8 +3,9 @@
  * @Author: Huccct
  * @Date: 2023-01-23 15:46:05
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:07:53
+ * @LastEditTime: 2023-02-08 11:39:48
  */
+import '../style/';
 import { computed, defineComponent, h, provide } from 'vue';
 
 export default defineComponent({

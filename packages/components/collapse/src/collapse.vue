@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-30 11:59:28
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-05 15:22:42
+ * @LastEditTime: 2023-02-08 11:30:50
 -->
 <template>
   <!--手风琴组件-->
@@ -15,8 +15,8 @@
             {{ item.title }}
             <tass-icon
               name="chevronright"
-              :class="[show == item.id?'icon-select':'icon-unselect']"
-              style="float: right; "
+              :class="[show == item.id ? 'icon-select' : 'icon-unselect']"
+              style="float: right"
             ></tass-icon>
           </div>
           <transition name="tas-collapse">
@@ -31,6 +31,7 @@
 </template>
 
 <script lang="ts" setup name="TassCollapse">
+  import '../style/';
   import { ref } from 'vue';
   import { computed, provide } from 'vue';
   const props = defineProps({
