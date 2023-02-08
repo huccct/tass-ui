@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-02-06 13:30:25
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-08 13:41:46
+ * @LastEditors: YuShu Xiao
+ * @LastEditTime: 2023-02-08 22:37:45
 -->
 <h1 align="center">
     <img src="http://121.36.100.147:9000/test/logo-horizontal.png">
@@ -29,7 +29,7 @@
 npm i tass-ui -S
 ```
 
-## 快速开始
+## 快速开始1
 
 ```vue
 <template>
