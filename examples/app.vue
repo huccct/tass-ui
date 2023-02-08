@@ -272,7 +272,7 @@
   let showList = ref(['Shanghai', 'Hangzhou', 'Beijing', 'Guangzhou']);
 
   let arrayOfObjects = ref(['厦门', '福州', '杭州', '上海']);
-  let selectedObject = ref(['1', '2', '3', '4']);
+  let selectedObject = ref(['厦门', '福州', '杭州', '上海']);
   let normalViaible = ref(false);
 
   const list = ref([
