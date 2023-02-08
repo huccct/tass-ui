@@ -6,10 +6,10 @@
 -->
 <template>
   <div
-    class="tass-carousel"
-    :tass-anim="anim"
-    :tass-indicator="indicator"
-    :tass-arrow="arrow"
+    class="tas-carousel"
+    :tas-anim="anim"
+    :tas-indicator="indicator"
+    :tas-arrow="arrow"
     :style="{ width: width, height: height }"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -17,20 +17,20 @@
     <div carousel-item>
       <slot></slot>
     </div>
-    <div class="tass-carousel-ind">
+    <div class="tas-carousel-ind">
       <ul>
         <li
           v-for="(ss, index) in childrens"
           :key="index"
-          :class="[ss.props?.id === active ? 'tass-this' : '']"
+          :class="[ss.props?.id === active ? 'tas-this' : '']"
           @click.stop="change(ss.props?.id)"
         ></li>
       </ul>
     </div>
-    <button class="tass-icon tass-carousel-arrow" tass-type="sub" @click="sub">
+    <button class="tas-icon tas-carousel-arrow" tas-type="sub" @click="sub">
       {{ anim === 'updown' ? '上' : '<' }}
     </button>
-    <button class="tass-icon tass-carousel-arrow" tass-type="add" @click="add">
+    <button class="tas-icon tas-carousel-arrow" tas-type="add" @click="add">
       {{ anim === 'updown' ? '下' : '>' }}
     </button>
   </div>

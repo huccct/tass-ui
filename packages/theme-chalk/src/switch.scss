@@ -10,7 +10,7 @@ $switch-xs-min-width: 27px;
 
 @mixin set-size($size, $min-width) {
   & {
-    .tass-form-switch {
+    .tas-form-switch {
       height: $size;
       min-width: $min-width;
       span{
@@ -22,7 +22,7 @@ $switch-xs-min-width: 27px;
         margin-left: calc($size - 3px);
       }
     }
-    .tass-form-onswitch{
+    .tas-form-onswitch{
       span{
         left: calc(100% - calc($size - 1px));
       }
@@ -34,7 +34,7 @@ $switch-xs-min-width: 27px;
   }
 }
 
-.tass-switch-container{
+.tas-switch-container{
   &[size="lg"] {
     @include set-size($switch-lg,$switch-lg-min-width);
   }
@@ -49,11 +49,11 @@ $switch-xs-min-width: 27px;
   }
 }
 
-.tass-switch-container .tass-switch-input {
+.tas-switch-container .tas-switch-input {
   display: none;
 }
 
-.tass-form-switch {
+.tas-form-switch {
   position: relative;
   height: 22px;
   line-height: 22px;
@@ -66,7 +66,7 @@ $switch-xs-min-width: 27px;
   transition:all 0.1s linear;
 }
 
-.tass-form-switch span {
+.tas-form-switch span {
   position: absolute;
   display: flex;
   align-items: center;
@@ -83,7 +83,7 @@ $switch-xs-min-width: 27px;
   transition:all 0.1s linear;
 }
 
-.tass-form-switch em {
+.tas-form-switch em {
   position: relative;
   padding: 0 2px;
   text-align: center !important;
@@ -94,24 +94,24 @@ $switch-xs-min-width: 27px;
   top: 0;
 }
 
-.tass-form-onswitch {
+.tas-form-onswitch {
   border-color: black;
   background-color: rgb(4, 179, 4);
 }
 
-.tass-form-onswitch span {
+.tas-form-onswitch span {
   background-color: #fff;
 }
 
-.tass-form-onswitch em {
+.tas-form-onswitch em {
   color: #fff !important;
 }
 
-.tass-switch-disabled {
+.tas-switch-disabled {
   opacity: 0.6;
 }
 
-.tass-switch-disabled,
-.tass-switch-disabled *{
+.tas-switch-disabled,
+.tas-switch-disabled *{
   cursor: not-allowed !important;
 }
