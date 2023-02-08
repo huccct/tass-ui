@@ -22,6 +22,7 @@
   padding: $message-padding;
   display: flex;
   align-items: center;
+  z-index: 999;
   @include b(message__close-btn) {
     cursor: pointer;
     position: absolute;
