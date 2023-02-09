@@ -78,4 +78,3 @@ pnpm run test
 ```
 pnpm run coverage
 ```
-test
