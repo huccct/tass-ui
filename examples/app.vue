@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-08 14:00:39
+ * @LastEditors: YuShu Xiao
+ * @LastEditTime: 2023-02-09 18:16:20
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -222,10 +222,11 @@
   <br />
   <br />
 
-  <tass-alert show-icon title="hello tassUI" closeable type="error" content="bbbccc"> </tass-alert>
+  <tass-alert @close="alertClose" show-icon title="hello tassUI" closeable type="error" content="bbbccc" ></tass-alert>
   <tass-alert show-icon title="hello tassUI" closeable type="success" center> </tass-alert>
   <tass-alert show-icon title="hello tassUI" closeable type="info"> </tass-alert>
   <tass-alert show-icon title="hello tassUI" closeable type="warning"> </tass-alert>
+
 
   <br />
   <br />
@@ -332,17 +333,22 @@
   <br />
   <br />
 
-  <tass-breadcrumb>
+  <tass-breadcrumb separator-icon="starhalf">
     <tass-breadcrumb-item>xixi</tass-breadcrumb-item>
-    <tass-breadcrumb-item to="/">哈哈</tass-breadcrumb-item>
+    <tass-breadcrumb-item to="/sp">哈哈</tass-breadcrumb-item>
     <tass-breadcrumb-item>纯纯</tass-breadcrumb-item>
   </tass-breadcrumb>
+  <router-view></router-view>
 </template>
 
 <script setup lang="ts">
   import { ref, reactive } from 'vue';
   import { TassMessage } from '../packages/components/message';
   import { TassSlider } from '../packages/components/slider';
+  const alertClose=()=>{
+        console.log('123');
+        
+  }
   let carouseltest = ref('1');
   let carouseltest2 = ref('1');
 
