@@ -21,7 +21,7 @@ export { TassAlert } from './alert';
 export { TassCarousel } from './carousel';
 export { TassCarouselItem } from './carousel-item';
 export { TassSwitch } from './switch';
-
+export { TassSlider } from './slider'
 export { TassUpload } from './upload';
 export { TassInput } from './input';
 
