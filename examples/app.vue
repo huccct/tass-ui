@@ -323,12 +323,20 @@
   <br />
   <br />
 
+  <div style="width:540px;padding:20px 0;">
+    <tass-progress color="#e6a23c"  percent="60" ></tass-progress>
+    <tass-progress color="#67c23a"  percent="100" ></tass-progress>
+    <tass-progress  percent="30" status="warning"></tass-progress>
+  </div>
+  <br />
+  <br />
+
   <tass-input v-model="inputVal" clearable />&nbsp;{{ inputVal }}
   <br />
   <br />
   <br />
-  <tass-slider :min="0" :max="100"></tass-slider>
-  <tass-slider disabled></tass-slider>
+  <!-- <tass-slider :min="0" :max="100"></tass-slider>
+  <tass-slider disabled></tass-slider> -->
   <br />
   <br />
 
@@ -337,6 +345,7 @@
     <tass-breadcrumb-item to="/">哈哈</tass-breadcrumb-item>
     <tass-breadcrumb-item>纯纯</tass-breadcrumb-item>
   </tass-breadcrumb>
+
 </template>
 
 <script setup lang="ts">

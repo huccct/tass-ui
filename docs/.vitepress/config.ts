@@ -47,7 +47,8 @@ export default {
             { text: 'Switch 开关', link: '/components/switch/' },
             { text: 'Slider 滑块', link: '/components/slider/' },
             { text: 'Collapse 折叠面板 ', link: '/components/collapse/' },
-            { text: 'TimePicker 时间选择器', link: '/components/timepicker/' }
+            { text: 'TimePicker 时间选择器', link: '/components/timepicker/' },
+            { text: 'Upload 上传', link: '/components/upload/' }
           ]
         },
         {
