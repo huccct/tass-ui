@@ -9,18 +9,15 @@
       color: #666;
       transition: all .4s;
       &:hover {
-        color: $color-primary;
+        color: #6565bc;
       }
     }
-    i {
-      font-size: 12px;
-      margin-left: 5px;
-      margin-right: 5px;
-      line-height: 22px;
-    }
-    &:last-child i:last-child{
-      display: none;
-    }
   }
-
+    i{
+     font-size: 11px;
+     margin-left: 5px;
+     margin-right: 5px;
+     margin-top: 2px;
+     line-height: 22px;
+  }
 }
