@@ -1,0 +1,25 @@
+:root {
+  /* 标题 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #9090c0 10%, #595b83 100%);
+
+  /* 图标背景 */
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #9090c0 10%, #595b83 100%);
+  --vp-home-hero-image-filter: blur(150px);
+
+  /* brand按钮 */
+  --vp-button-brand-border: #9090c0;
+  --vp-button-brand-text: #ccc;
+  --vp-button-brand-bg: #9090c0;
+
+  --vp-button-brand-hover-border: #595b83;
+  --vp-button-brand-hover-text: #fff;
+  --vp-button-brand-hover-bg: #595b83;
+
+  --vp-button-brand-active-border: #595b83;
+  --vp-button-brand-active-text: #fff;
+  --vp-button-brand-active-bg: #595b83;
+
+  /* 主页 */
+  --vp-c-brand: #8888d0;
+}
