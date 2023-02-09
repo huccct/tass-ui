@@ -113,10 +113,6 @@
       <br />
       <br />
 </template>
-<script lang="ts" setup>
-  import { TassCol,TassRow } from "tass-ui";
-</script>
-
 ```
 </details>
 
@@ -160,8 +156,5 @@
     </tass-row>
   </div>
 </template>
-<script lang="ts" setup>
-  import { TassRow, TassCol } from "tass-ui";
-</script>
 ```
 </details>

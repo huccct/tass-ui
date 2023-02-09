@@ -43,8 +43,7 @@ import App from './App.vue';
 import TassUI from 'tass-ui';
 import 'tass-ui/es/style.css';
 const app = createApp(App);
-app.use(TassUI);
-app.mount('#app');
+app.use(TassUI).mount('#app');
 ```
 ## 在线文档
 https://huccct.github.io/
@@ -78,4 +77,3 @@ pnpm run test
 ```
 pnpm run coverage
 ```
-test

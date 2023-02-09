@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-08 14:00:39
+ * @LastEditTime: 2023-02-09 12:10:48
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -341,8 +341,7 @@
 
 <script setup lang="ts">
   import { ref, reactive } from 'vue';
-  import { TassMessage } from '../packages/components/message';
-  import { TassSlider } from '../packages/components/slider';
+  import { TassMessage } from '@tass-ui/components/message';
   let carouseltest = ref('1');
   let carouseltest2 = ref('1');
 
@@ -418,7 +417,6 @@
       message: 'Success',
       type: 'success',
       center: false,
-      showIcon: true,
       closeable: true
     });
   };
@@ -427,8 +425,7 @@
     TassMessage({
       message: 'Error',
       type: 'error',
-      center: false,
-      showIcon: true
+      center: false
     });
   };
 
@@ -436,8 +433,7 @@
     TassMessage({
       message: 'Warning',
       type: 'warning',
-      center: true,
-      showIcon: true
+      center: true
     });
   };
 
@@ -445,8 +441,7 @@
     TassMessage({
       message: 'Info',
       type: 'info',
-      center: false,
-      showIcon: true
+      center: false
     });
   };
 
