@@ -110,20 +110,46 @@
       }
     }
   }
+  &[tas-arrow='always']{
+    @include b(carousel-arrow){
+      opacity: 1;
+      left: 20px;
+    }
+  }
+  
+  &[tas-arrow='none']{
+    @include b(carousel-arrow){
+      display: none;
+    }
+  }
+
+  &[tas-indicator='outside']{
+    margin-bottom: 30px;
+  }
+
+  &[tas-indicator='outside']{
+    .tas-carousel-ind{
+      top: 10px;
+    }
+  }
+
+  &[tas-indicator='outside']{
+    @include b(carousel-ind){
+    ul {
+       background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  &[tas-indicator='none']{
+    @include b(carousel-ind){
+      display: none;
+    }
+  }
 }
 
 .tas-carousel:hover .tas-carousel-arrow[tas-type='add'],
 .tas-carousel[tas-arrow='always'] .tas-carousel-arrow[tas-type='add'] {
   right: 20px;
-}
-
-.tas-carousel[tas-arrow='always'] .tas-carousel-arrow {
-  opacity: 1;
-  left: 20px;
-}
-
-.tas-carousel[tas-arrow='none'] .tas-carousel-arrow {
-  display: none;
 }
 
 .tas-carousel-arrow:hover,
@@ -137,21 +163,7 @@
   left: 20px;
 }
 
-.tas-carousel[tas-indicator='outside'] {
-  margin-bottom: 30px;
-}
 
-.tas-carousel[tas-indicator='outside'] .tas-carousel-ind {
-  top: 10px;
-}
-
-.tas-carousel[tas-indicator='outside'] .tas-carousel-ind ul {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.tas-carousel[tas-indicator='none'] .tas-carousel-ind {
-  display: none;
-}
 
 .tas-carousel > [carousel-item] > .tas-carousel-next,
 .tas-carousel > [carousel-item] > .tas-carousel-prev,

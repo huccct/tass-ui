@@ -28,10 +28,10 @@
       </ul>
     </div>
     <button class="tas-icon tas-carousel-arrow" tas-type="sub" @click="sub">
-      {{ anim === 'updown' ? '' : '<' }}
+      {{ anim === 'updown' ? '上' : '<' }}
     </button>
     <button class="tas-icon tas-carousel-arrow" tas-type="add" @click="add">
-      {{ anim === 'updown' ? '' : '>' }}
+      {{ anim === 'updown' ? '下' : '>' }}
     </button>
   </div>
 </template>
