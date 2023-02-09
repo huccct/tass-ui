@@ -50,6 +50,12 @@ export default {
           ]
         },
         {
+          text: 'Data 数据展示',
+          items: [
+            { text: 'Collapse 折叠面板', link: '/components/collapse/' },
+          ]
+        },
+        {
           text: '视图',
           items: [
             { text: 'Swiper 轮播', link: '/components/swiper/' },
