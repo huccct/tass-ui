@@ -1,5 +1,6 @@
-@use 'mixins/mixins' as *;
-@use 'common/var' as *;
+@use './mixins/mixins' as *;
+@use './mixins/utils.scss' as *;
+@use './common/var' as *;
 
 @include b(carousel){
   position: relative;
@@ -7,214 +8,211 @@
   top: 0;
   background-color: #f8f8f8;
 
+  [carousel-item] {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      content: '\e63d';
+      left: 50%;
+      top: 50%;
+      width: 100px;
+      line-height: 20px;
+      margin: -10px 0 0 -50px;
+      text-align: center;
+      color: var(--global-neutral-color-8);
+      font-family: tas-icon !important;
+      font-size: 30px;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    > * {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f8f8f8;
+      transition-duration: 0.3s;
+      -webkit-transition-duration: 0.3s;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+
+  @include b(carousel-updown){
+    > * {
+      -webkit-transition: 0.3s ease-in-out up;
+      transition: 0.3s ease-in-out up;
+    }
+  }
+
+  @include b(carousel-arrow){
+    display: none\9;
+    opacity: 0;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -18px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 20px;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    &[tas-type='add'] {
+      left: auto !important;
+      right: 10px;
+    }
+  }
+  @include b(carousel-ind){
+    position: relative;
+    top: -35px;
+    width: 100%;
+    line-height: 0 !important;
+    text-align: center;
+    font-size: 0;
+    ul {
+      display: inline-block;
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+    }
+    li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 3px;
+      font-size: 14px;
+      background-color: var(--global-neutral-color-3);
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      &:hover{
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      .tas-this {
+        background-color: #fff;
+      }
+    }
+  }
+  &[tas-arrow='always']{
+    @include b(carousel-arrow){
+      opacity: 1;
+      left: 20px;
+    }
+  }
   
+  &[tas-arrow='none']{
+    @include b(carousel-arrow){
+      display: none;
+    }
+  }
+
+  &[tas-indicator='outside']{
+    margin-bottom: 30px;
+  }
+
+  &[tas-indicator='outside']{
+    .tas-carousel-ind{
+      top: 10px;
+    }
+  }
+
+  &[tas-indicator='outside']{
+    @include b(carousel-ind){
+    ul {
+       background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  &[tas-indicator='none']{
+    @include b(carousel-ind){
+      display: none;
+    }
+  }
 }
 
-
-.tass-carousel {
-  position: relative;
-  left: 0;
-  top: 0;
-  background-color: #f8f8f8;
-}
-
-.tass-carousel > [carousel-item] {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.tass-carousel > [carousel-item]:before {
-  position: absolute;
-  content: '\e63d';
-  left: 50%;
-  top: 50%;
-  width: 100px;
-  line-height: 20px;
-  margin: -10px 0 0 -50px;
-  text-align: center;
-  color: var(--global-neutral-color-8);
-  font-family: tass-icon !important;
-  font-size: 30px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.tass-carousel > [carousel-item] > * {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f8f8f8;
-  transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.tass-carousel-updown > * {
-  -webkit-transition: 0.3s ease-in-out up;
-  transition: 0.3s ease-in-out up;
-}
-
-.tass-carousel-arrow {
-  display: none\9;
-  opacity: 0;
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  margin-top: -18px;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
-  text-align: center;
-  font-size: 20px;
-  border: 0;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #fff;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  cursor: pointer;
-}
-
-.tass-carousel-arrow[tass-type='add'] {
-  left: auto !important;
-  right: 10px;
-}
-
-.tass-carousel:hover .tass-carousel-arrow[tass-type='add'],
-.tass-carousel[tass-arrow='always'] .tass-carousel-arrow[tass-type='add'] {
+.tas-carousel:hover .tas-carousel-arrow[tas-type='add'],
+.tas-carousel[tas-arrow='always'] .tas-carousel-arrow[tas-type='add'] {
   right: 20px;
 }
 
-.tass-carousel[tass-arrow='always'] .tass-carousel-arrow {
-  opacity: 1;
-  left: 20px;
-}
-
-.tass-carousel[tass-arrow='none'] .tass-carousel-arrow {
-  display: none;
-}
-
-.tass-carousel-arrow:hover,
-.tass-carousel-ind ul:hover {
+.tas-carousel-arrow:hover,
+.tas-carousel-ind ul:hover {
   background-color: rgba(0, 0, 0, 0.35);
 }
 
-.tass-carousel:hover .tass-carousel-arrow {
+.tas-carousel:hover .tas-carousel-arrow {
   display: block\9;
   opacity: 1;
   left: 20px;
 }
 
-.tass-carousel-ind {
-  position: relative;
-  top: -35px;
-  width: 100%;
-  line-height: 0 !important;
-  text-align: center;
-  font-size: 0;
-}
 
-.tass-carousel[tass-indicator='outside'] {
-  margin-bottom: 30px;
-}
 
-.tass-carousel[tass-indicator='outside'] .tass-carousel-ind {
-  top: 10px;
-}
-
-.tass-carousel[tass-indicator='outside'] .tass-carousel-ind ul {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.tass-carousel[tass-indicator='none'] .tass-carousel-ind {
-  display: none;
-}
-
-.tass-carousel-ind ul {
-  display: inline-block;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-
-.tass-carousel-ind li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 3px;
-  font-size: 14px;
-  background-color: var(--global-neutral-color-3);
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-
-.tass-carousel-ind li:hover {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.tass-carousel-ind li.tass-this {
-  background-color: #fff;
-}
-
-.tass-carousel > [carousel-item] > .tass-carousel-next,
-.tass-carousel > [carousel-item] > .tass-carousel-prev,
-.tass-carousel > [carousel-item] > .tass-this {
+.tas-carousel > [carousel-item] > .tas-carousel-next,
+.tas-carousel > [carousel-item] > .tas-carousel-prev,
+.tas-carousel > [carousel-item] > .tas-this {
   display: block;
 }
 
-.tass-carousel > [carousel-item] > .tass-this {
+.tas-carousel > [carousel-item] > .tas-this {
   left: 0;
 }
 
-.tass-carousel > [carousel-item] > .tass-carousel-prev {
+.tas-carousel > [carousel-item] > .tas-carousel-prev {
   left: -100%;
 }
 
-.tass-carousel > [carousel-item] > .tass-carousel-next {
+.tas-carousel > [carousel-item] > .tas-carousel-next {
   left: 100%;
 }
 
-.tass-carousel > [carousel-item] > .tass-carousel-next.tass-carousel-left,
-.tass-carousel > [carousel-item] > .tass-carousel-prev.tass-carousel-right {
+.tas-carousel > [carousel-item] > .tas-carousel-next.tas-carousel-left,
+.tas-carousel > [carousel-item] > .tas-carousel-prev.tas-carousel-right {
   left: 0;
 }
 
-.tass-carousel > [carousel-item] > .tass-this.tass-carousel-left {
+.tas-carousel > [carousel-item] > .tas-this.tas-carousel-left {
   left: -100%;
 }
 
-.tass-carousel > [carousel-item] > .tass-this.tass-carousel-right {
+.tas-carousel > [carousel-item] > .tas-this.tas-carousel-right {
   left: 100%;
 }
 
-.tass-carousel[tass-anim='updown'] .tass-carousel-arrow {
+.tas-carousel[tas-anim='updown'] .tas-carousel-arrow {
   left: 50% !important;
   top: 20px;
   margin: 0 0 0 -18px;
 }
 
-.tass-carousel[tass-anim='updown'] > [carousel-item] > *,
-.tass-carousel[tass-anim='fade'] > [carousel-item] > * {
+.tas-carousel[tas-anim='updown'] > [carousel-item] > *,
+.tas-carousel[tas-anim='fade'] > [carousel-item] > * {
   left: 0 !important;
 }
 
-.tass-carousel[tass-anim='updown'] .tass-carousel-arrow[tass-type='add'] {
+.tas-carousel[tas-anim='updown'] .tas-carousel-arrow[tas-type='add'] {
   top: auto !important;
   bottom: 20px;
 }
 
-.tass-carousel[tass-anim='updown'] .tass-carousel-ind {
+.tas-carousel[tas-anim='updown'] .tas-carousel-ind {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -223,51 +221,51 @@
   transform: translateY(-50%);
 }
 
-.tass-carousel[tass-anim='updown'] .tass-carousel-ind ul {
+.tas-carousel[tas-anim='updown'] .tas-carousel-ind ul {
   padding: 3px 5px;
 }
 
-.tass-carousel[tass-anim='updown'] .tass-carousel-ind li {
+.tas-carousel[tas-anim='updown'] .tas-carousel-ind li {
   display: block;
   margin: 6px 0;
 }
 
-.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-this {
+.tas-carousel[tas-anim='updown'] > [carousel-item] > .tas-this {
   top: 0;
 }
 
-.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-carousel-prev {
+.tas-carousel[tas-anim='updown'] > [carousel-item] > .tas-carousel-prev {
   top: -100%;
 }
 
-.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-carousel-next {
+.tas-carousel[tas-anim='updown'] > [carousel-item] > .tas-carousel-next {
   top: 100%;
 }
 
-.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-carousel-next.tass-carousel-left,
-.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-carousel-prev.tass-carousel-right {
+.tas-carousel[tas-anim='updown'] > [carousel-item] > .tas-carousel-next.tas-carousel-left,
+.tas-carousel[tas-anim='updown'] > [carousel-item] > .tas-carousel-prev.tas-carousel-right {
   top: 0;
 }
 
-.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-this.tass-carousel-left {
+.tas-carousel[tas-anim='updown'] > [carousel-item] > .tas-this.tas-carousel-left {
   top: -100%;
 }
 
-.tass-carousel[tass-anim='updown'] > [carousel-item] > .tass-this.tass-carousel-right {
+.tas-carousel[tas-anim='updown'] > [carousel-item] > .tas-this.tas-carousel-right {
   top: 100%;
 }
 
-.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-carousel-next,
-.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-carousel-prev {
+.tas-carousel[tas-anim='fade'] > [carousel-item] > .tas-carousel-next,
+.tas-carousel[tas-anim='fade'] > [carousel-item] > .tas-carousel-prev {
   opacity: 0;
 }
 
-.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-carousel-next.tass-carousel-left,
-.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-carousel-prev.tass-carousel-right {
+.tas-carousel[tas-anim='fade'] > [carousel-item] > .tas-carousel-next.tas-carousel-left,
+.tas-carousel[tas-anim='fade'] > [carousel-item] > .tas-carousel-prev.tas-carousel-right {
   opacity: 1;
 }
 
-.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-this.tass-carousel-left,
-.tass-carousel[tass-anim='fade'] > [carousel-item] > .tass-this.tass-carousel-right {
+.tas-carousel[tas-anim='fade'] > [carousel-item] > .tas-this.tas-carousel-left,
+.tas-carousel[tas-anim='fade'] > [carousel-item] > .tas-this.tas-carousel-right {
   opacity: 0;
 }

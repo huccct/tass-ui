@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:53:35
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-07 14:43:12
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-09 11:14:14
  */
 export { TassButton } from './button';
 export { TassButtonGroup } from './button-group';
@@ -23,7 +23,7 @@ export { TassAlert } from './alert';
 export { TassCarousel } from './carousel';
 export { TassCarouselItem } from './carousel-item';
 export { TassSwitch } from './switch';
-
+export { TassSlider } from './slider'
 export { TassUpload } from './upload';
 export { TassInput } from './input';
 

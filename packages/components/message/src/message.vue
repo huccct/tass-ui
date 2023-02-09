@@ -3,28 +3,24 @@
  * @Author: Huccct
  * @Date: 2023-01-25 22:08:03
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-08 11:38:53
+ * @LastEditTime: 2023-02-09 15:43:20
 -->
 <template>
-  <transition name="tas-message-fade" @before-leave="onclose" @after-leave="$emit('destroy')">
+  <transition name="tas-message-fade" @before-leave="beforeLeave" @after-leave="$emit('destroy')">
     <div
-      v-show="isShow"
+      v-show="visible"
+      :id="id"
       class="tas-message"
-      :style="controlTop"
+      :style="styles"
       :class="defClass"
       @mouseenter="clearTimeFn"
       @mouseleave="startTimerFn"
     >
-      <tass-icon :name="iconName" class="tas-message__icon" v-if="showIcon" />
+      <tass-icon :name="iconName" class="tas-message__icon" />
       <slot>
         <span class="tas-message__content">{{ message }}</span>
       </slot>
-      <tass-icon
-        name="cross"
-        class="tas-message__close-btn"
-        v-if="closeable"
-        @click="handleClose"
-      />
+      <tass-icon name="cross" class="tas-message__close-btn" v-if="closeable" @click="close" />
     </div>
   </transition>
 </template>
@@ -32,61 +28,29 @@
   import '../style/';
   import { computed, onMounted, onUnmounted, ref } from 'vue';
   import { TassIcon } from '../../icon';
-  const props = defineProps({
-    id: {
-      type: String,
-      default: ''
-    },
-    message: {
-      type: String,
-      default: ''
-    },
-    type: {
-      type: String,
-      default: 'success'
-    },
-    duration: {
-      type: Number,
-      default: 3000
-    },
-    center: {
-      type: Boolean,
-      default: true
-    },
-    offset: {
-      type: Number,
-      default: 20
-    },
-    onclose: {
-      type: Function,
-      required: false
-    },
-    showIcon: {
-      type: Boolean,
-      default: false
-    },
-    closeable: {
-      type: Boolean,
-      default: false
-    }
-  });
-  const defClass = computed(() => ['tas-message--' + props.type, props.center ? 'is-center' : '']);
-  const iconMaps = {
+  import { MessageProps } from './message';
+  const iconMaps: any = {
     info: 'info',
     success: 'success',
     error: 'danger',
     warning: 'warning'
   };
+  const emit = defineEmits(['destroy', 'close']);
+  let visible = ref(false);
+  const props = defineProps(MessageProps);
+  const close = () => (visible.value = false);
+  const beforeLeave = () => {
+    emit('close');
+  };
   const iconName = computed(() => {
     const { type } = props;
     return iconMaps[type];
   });
-  let isShow = ref(false);
   let timer: null | NodeJS.Timeout = null;
   const startTimerFn = () => {
     if (props.duration > 0) {
       timer = setTimeout(() => {
-        isShow.value = false;
+        visible.value = false;
       }, props.duration);
     }
   };
@@ -94,18 +58,16 @@
     clearTimeout(Number(timer));
   };
   onMounted(() => {
-    isShow.value = true;
+    visible.value = true;
     startTimerFn();
   });
-  let controlTop = computed(() => ({
-    top: `${props.offset}px`
+  let styles = computed(() => ({
+    top: `${props.offset}px`,
+    zIndex: props.zIndex
   }));
-
+  const defClass = computed(() => ['tas-message--' + props.type, props.center ? 'is-center' : '']);
   onUnmounted(() => {
     clearTimeFn();
   });
-  const handleClose = () => {
-    isShow.value = false;
-  };
 </script>
 <style></style>

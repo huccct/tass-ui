@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-08 10:58:04
+ * @LastEditors: YuShu Xiao
+ * @LastEditTime: 2023-02-09 22:12:58
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -239,8 +239,8 @@
   <br />
   <br />
   <br />
-
-  <tass-carousel v-model="carouseltest">
+<!-- 默认切换方式 -->
+  <tass-carousel v-model="carouseltest" anim="default">
     <tass-carousel-item id="1">
       <div
         style="
@@ -272,7 +272,73 @@
   </tass-carousel>
   <br />
   <br />
+  <!-- 上下切换 -->
   <tass-carousel v-model="carouseltest2" width="600px" anim="updown">
+    <tass-carousel-item id="1">
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: #d3dce6;
+        "
+      >
+        1
+      </div>
+    </tass-carousel-item>
+    <tass-carousel-item id="2">
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: skyblue;
+        "
+      >
+        2
+      </div>
+    </tass-carousel-item>
+  </tass-carousel>
+  <br />
+  <br />
+  <!-- 渐变切换 -->
+  <tass-carousel v-model="carouseltest2" width="600px" anim="fade">
+    <tass-carousel-item id="1">
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: #d3dce6;
+        "
+      >
+        1
+      </div>
+    </tass-carousel-item>
+    <tass-carousel-item id="2">
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: skyblue;
+        "
+      >
+        2
+      </div>
+    </tass-carousel-item>
+  </tass-carousel>
+  <br />
+  <br />
+  <tass-carousel v-model="carouseltest2" width="600px" indicator="outside">
     <tass-carousel-item id="1">
       <div
         style="
@@ -338,16 +404,16 @@
   <br />
 
   <tass-breadcrumb>
-    <tass-breadcrumb-item>xixi</tass-breadcrumb-item>
-    <tass-breadcrumb-item to="/">哈哈</tass-breadcrumb-item>
+    <tass-breadcrumb-item :to="{ path: '/' }">xixi</tass-breadcrumb-item>
+    <tass-breadcrumb-item to="/sp" replace>哈哈</tass-breadcrumb-item>
     <tass-breadcrumb-item>纯纯</tass-breadcrumb-item>
   </tass-breadcrumb>
+  <router-view></router-view>
 </template>
 
 <script setup lang="ts">
   import { ref, reactive } from 'vue';
-  import { TassMessage } from '../packages/components/message';
-  import { TassSlider } from '../packages/components/slider';
+  import { TassMessage } from '@tass-ui/components/message';
   let carouseltest = ref('1');
   let carouseltest2 = ref('1');
 
@@ -421,7 +487,6 @@
       message: 'Success',
       type: 'success',
       center: false,
-      showIcon: true,
       closeable: true
     });
   };
@@ -430,8 +495,7 @@
     TassMessage({
       message: 'Error',
       type: 'error',
-      center: false,
-      showIcon: true
+      center: false
     });
   };
 
@@ -439,8 +503,7 @@
     TassMessage({
       message: 'Warning',
       type: 'warning',
-      center: true,
-      showIcon: true
+      center: true
     });
   };
 
@@ -448,8 +511,7 @@
     TassMessage({
       message: 'Info',
       type: 'info',
-      center: false,
-      showIcon: true
+      center: false
     });
   };
 

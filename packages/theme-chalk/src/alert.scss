@@ -5,17 +5,26 @@
   display: flex;
   align-items: center;
   position: relative;
-  padding: $alert-padding;
+  padding: 15px 16px;
   margin-bottom: 5px;
   border-radius: $alert-border-radius;
+  @include b(global-ellipsis){
+    /*一行省略*/
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  }
   @include b(alert__content) {
+    overflow: auto;
     padding-left: 15px;
   }
   @include b(alert__title) {
+    margin:0;
     font-size: $alert-title-font-size;
   }
   @include b(alert__desc) {
-    margin: 5px;
+    margin: 0px;
     font-size: $alert-description-font-size;
   }
   @include b(alert__close-btn) {

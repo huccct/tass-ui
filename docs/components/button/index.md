@@ -2,7 +2,7 @@
   .example{
       border: 1px solid #f5f5f5;
       border-radius: 5px;
-      padding:20px
+      padding: 20px;
   }
   .tass-button {
       margin:10px 5px;
@@ -75,10 +75,6 @@
     <tass-button type="danger" round>危险按钮</tass-button>
   </div>
 </template>
-<script lang="ts" setup>
-  import { TassButton } from "tass-ui";
-</script>
-
 ```
 </details>
 
@@ -112,9 +108,6 @@
     <br />
   </div>
 </template>
-<script lang="ts" setup>
-  import { TassButton } from "tass-ui";
-</script>
 ```
 </details>
 
@@ -140,9 +133,6 @@
     <tass-button size="mini">超小按钮</tass-button>
   </div>
 </template>
-<script lang="ts" setup>
-  import { TassButton } from "tass-ui";
-</script>
 
 ```
 

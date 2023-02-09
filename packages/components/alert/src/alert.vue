@@ -2,8 +2,8 @@
  * @Descripttion: Spicy chicken
  * @Author: YuShu Xiao
  * @Date: 2023-02-01 23:03:26
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-08 11:09:31
+ * @LastEditors: YuShu Xiao
+ * @LastEditTime: 2023-02-09 20:27:44
 -->
 <template>
   <!-- 提示框组件 -->
@@ -60,11 +60,15 @@
       default: false
     }
   });
+  const emit=defineEmits(['close'])
   const alertClassNames = computed(() => {
     const { type, center } = props;
     return [{ [`tas-alert--${type}`]: type }, { 'is-center': center }];
   });
-  const iconMaps = {
+  interface IiconMaps{
+    [key:string]:string
+  }
+  const iconMaps:IiconMaps = {
     info: 'info',
     success: 'success',
     error: 'danger',
@@ -77,5 +81,6 @@
   // 关闭alert
   const handltaslose = () => {
     isShow.value = false;
+    emit("close")
   };
 </script>

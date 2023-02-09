@@ -5,14 +5,14 @@
  * @FilePath: \tass-ui\packages\components\switch\src\switch.vue
 -->
 <template>
-  <span @click.stop="handleClick" class="tass-switch-container" :size="size">
-    <input class="tass-switch-input" :name="name" :value="modelValue" />
+  <span @click.stop="handleClick" class="tas-switch-container" :size="size">
+    <input class="tas-switch-input" :name="name" :value="modelValue" />
     <div
-      class="tass-unselect tass-form-switch"
+      class="tas-unselect tas-form-switch"
       :style="styles"
       :class="{
-        'tass-form-onswitch': isActive,
-        'tass-switch-disabled': disabled,
+        'tas-form-onswitch': isActive,
+        'tas-switch-disabled': disabled,
       }"
     >
       <em v-if="onswitchText || unswitchText">{{
@@ -22,7 +22,7 @@
         <div>
           <template v-if="loading">
             <i
-              class="tass-icon tass-anim tass-anim-rotate tass-anim-loop"
+              class="tas-icon tas-anim tas-anim-rotate tas-anim-loop"
               :class="loadingIcon"
             ></i>
           </template>
@@ -37,7 +37,7 @@
 </template>
 <script lang="ts">
 export default {
-  name: "tassSwitch",
+  name: "tasSwitch",
 };
 </script>
 
@@ -65,8 +65,8 @@ const props = withDefaults(defineProps<SwitchProps>(), {
   disabled: false,
   onswitchValue: true,
   unswitchValue: false,
-  loadingIcon: "tass-icon-loading-one",
-  size: "md",
+  loadingIcon: "tas-icon-loading-one",
+  size: 'md',
 });
 
 const emit = defineEmits(["update:modelValue", "change"]);

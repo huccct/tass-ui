@@ -15,12 +15,12 @@
             {{ item.title }}
             <tass-icon
               name="chevronright"
-              :class="[show == item.id ? 'icon-select' : 'icon-unselect']"
+              :class="[arr.includes(item.id) === true ? 'icon-select' : 'icon-unselect']"
               style="float: right"
             ></tass-icon>
           </div>
-          <transition name="tas-collapse">
-            <div class="tas-collapse-content" v-show="show === item.id">
+          <transition name="tas-collapse" >
+            <div class="tas-collapse-content" v-show="arr.includes(item.id) === true">
               {{ item.body }}
             </div>
           </transition>
@@ -31,6 +31,7 @@
 </template>
 
 <script lang="ts" setup name="TassCollapse">
+
   import '../style/';
   import { ref } from 'vue';
   import { computed, provide } from 'vue';
@@ -39,16 +40,27 @@
       type: Array,
       default: [],
       required: false
+    },
+    types: {
+      type: Boolean,
+      default: false,
+      required: false
     }
   });
 
-  let show = ref(0);
 
+  const arr = ref([]);
   function toggle(index) {
-    // 获取index 来判断当前点击并展示
-    // console.log(show.value, index);
-
-    if (show.value === index) show.value = 0;
-    else show.value = index;
-  }
+    // arr.push(index);
+    // console.log(props.types)
+    
+  if(!arr.value.includes(index)){ //集合中是否包含
+    if(props.types == true){      //普通类型
+        arr.value.push(index);
+    }else {                       //手风琴类型
+        arr.value = [];
+        arr.value.push(index);
+    }
+  }else arr.value.pop(index);     
+}
 </script>

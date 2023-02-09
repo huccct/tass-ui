@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-02-06 13:30:25
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-08 13:41:46
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-02-09 09:22:30
 -->
 <h1 align="center">
     <img src="http://121.36.100.147:9000/test/logo-horizontal.png">
@@ -43,8 +43,7 @@ import App from './App.vue';
 import TassUI from 'tass-ui';
 import 'tass-ui/es/style.css';
 const app = createApp(App);
-app.use(TassUI);
-app.mount('#app');
+app.use(TassUI).mount('#app');
 ```
 ## 在线文档
 https://huccct.github.io/
