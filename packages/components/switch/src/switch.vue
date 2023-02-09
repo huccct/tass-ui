@@ -66,7 +66,7 @@ const props = withDefaults(defineProps<SwitchProps>(), {
   onswitchValue: true,
   unswitchValue: false,
   loadingIcon: "tas-icon-loading-one",
-  size: "md",
+  size: 'md',
 });
 
 const emit = defineEmits(["update:modelValue", "change"]);

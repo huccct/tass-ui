@@ -234,8 +234,8 @@
   <br />
   <br />
   <br />
-
-  <tass-carousel v-model="carouseltest">
+<!-- 默认切换方式 -->
+  <tass-carousel v-model="carouseltest" anim="default">
     <tass-carousel-item id="1">
       <div
         style="
@@ -267,7 +267,73 @@
   </tass-carousel>
   <br />
   <br />
+  <!-- 上下切换 -->
   <tass-carousel v-model="carouseltest2" width="600px" anim="updown">
+    <tass-carousel-item id="1">
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: #d3dce6;
+        "
+      >
+        1
+      </div>
+    </tass-carousel-item>
+    <tass-carousel-item id="2">
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: skyblue;
+        "
+      >
+        2
+      </div>
+    </tass-carousel-item>
+  </tass-carousel>
+  <br />
+  <br />
+  <!-- 渐变切换 -->
+  <tass-carousel v-model="carouseltest2" width="600px" anim="fade">
+    <tass-carousel-item id="1">
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: #d3dce6;
+        "
+      >
+        1
+      </div>
+    </tass-carousel-item>
+    <tass-carousel-item id="2">
+      <div
+        style="
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 300px;
+          line-height: 300px;
+          background-color: skyblue;
+        "
+      >
+        2
+      </div>
+    </tass-carousel-item>
+  </tass-carousel>
+  <br />
+  <br />
+  <tass-carousel v-model="carouseltest2" width="600px" indicator="outside">
     <tass-carousel-item id="1">
       <div
         style="
