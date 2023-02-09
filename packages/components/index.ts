@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:34:40
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-06 12:36:56
+ * @LastEditTime: 2023-02-09 11:33:20
  */
 import type { App } from 'vue';
 import * as components from './components';
@@ -13,8 +13,8 @@ import Message from './message';
 const install = function (app: App) {
   Object.entries(components).forEach(([key, value]) => {
     app.component(key, value);
+    app.config.globalProperties.$message = Message;
   });
-  app.config.globalProperties.$message = Message;
 };
 
 export default install;

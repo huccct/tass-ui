@@ -2,7 +2,7 @@
   .example{
       border: 1px solid #f5f5f5;
       border-radius: 5px;
-      padding:20px
+      padding: 20px;
   }
   .tass-button {
       margin:10px 5px;
