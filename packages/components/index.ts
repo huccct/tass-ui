@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:34:40
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-09 11:33:20
+ * @LastEditTime: 2023-02-09 15:20:09
  */
 import type { App } from 'vue';
 import * as components from './components';
@@ -18,5 +18,5 @@ const install = function (app: App) {
 };
 
 export default install;
-
+export * from './components';
 export { version };
