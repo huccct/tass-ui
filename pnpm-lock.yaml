@@ -75,7 +75,6 @@ importers:
       typescript: 4.9.4
       vite: 4.0.4_mqywplxzbsnxo4wjantsu2kzry
       vite-plugin-dts: 1.7.2_t3evaxkrjoz7zlzfzn34t2kgfq
-      vite-plugin-vue-setup-extend: 0.4.0_vite@4.0.4
       vitepress: 1.0.0-alpha.45_mqywplxzbsnxo4wjantsu2kzry
       vitepress-theme-demoblock: 2.0.2_mqywplxzbsnxo4wjantsu2kzry
       vitest: 0.27.3_rq5ttxgt66zo4jxxteupto5gje
