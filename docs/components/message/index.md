@@ -38,7 +38,8 @@
 <template>
   <tass-button @click="showMsg">show Message</tass-button>
 </template>
-<script setup lang="ts">
+<script setup>
+  import { TassMessage } from 'tass-ui/es/components/components.mjs';
   function showMsg() {
     TassMessage({
       message: 'this is a message',
@@ -68,6 +69,7 @@
   <tass-button @click="showMsg4">error</tass-button>
 </template>
 <script setup lang="ts">
+  import { TassMessage } from 'tass-ui/es/components/components.mjs';
   function showMsg1() {
     TassMessage({
       message: 'Congrats, this is a success message.',
@@ -121,6 +123,7 @@
   <tass-button @click="showMsg4">error</tass-button>
 </template>
 <script setup lang="ts">
+  import { TassMessage } from 'tass-ui/es/components/components.mjs';
   function showMsg1() {
     TassMessage({
       message: 'Congrats, this is a success message.',
@@ -171,6 +174,7 @@
   <tass-button @click="showMsg">Centered text</tass-button>
 </template>
 <script setup lang="ts">
+  import { TassMessage } from 'tass-ui/es/components/components.mjs';
   function showMsg() {
     TassMessage({
       message: 'this is a message',
