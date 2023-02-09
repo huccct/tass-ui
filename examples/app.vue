@@ -199,16 +199,21 @@
   <br />
   <br />
 
-  <tass-dropdown
-    class="my-dropdown-toggle"
-    :options="arrayOfObjects"
-    :selected="selectedObject"
-    :close-on-outside-click="false"
-    v-on:updateoption="methodToRunOnSelect"
-    >{{ selectedObject }}
-  </tass-dropdown>
+  <div class="tass-dropdown-toggle">
+    <tass-dropdown>
+        <tass-dropdownMenu>
+            <tass-dropdown-item>Chelsea</tass-dropdown-item>
+            <tass-dropdown-item>Liverpool</tass-dropdown-item>
+            <tass-dropdown-item>Manchester United</tass-dropdown-item>
+            <tass-dropdown-item>Manchester City</tass-dropdown-item>
+        </tass-dropdownMenu>
+    </tass-dropdown>
+  </div>
+
+
   <br />
   <br />
+
 
   <tass-button type="primary" :visible="!normalViaible" @click="changeView">dialog</tass-button>
   <tass-dialog
@@ -357,8 +362,6 @@
   let checkList = ref(['Shanghai', 'Hangzhou']);
   let showList = ref(['Shanghai', 'Hangzhou', 'Beijing', 'Guangzhou']);
 
-  let arrayOfObjects = ref(['厦门', '福州', '杭州', '上海']);
-  let selectedObject = ref(['厦门', '福州', '杭州', '上海']);
   let normalViaible = ref(false);
 
   const list = ref([
@@ -450,9 +453,6 @@
     });
   };
 
-  const methodToRunOnSelect = playload => {
-    selectedObject.value = playload;
-  };
 
   function changeView() {
     normalViaible.value = !normalViaible.value;
@@ -477,7 +477,7 @@
 </script>
 
 <style lang="scss">
-  .my-dropdown-toggle {
+  .tass-dropdown-toggle {
     border-radius: 5px;
     ::v-deep .dropdown-toggle {
       color: tomato;
