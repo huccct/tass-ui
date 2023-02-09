@@ -1,0 +1,9 @@
+@use 'mixins/mixins' as *;
+@use 'common/color' as *;
+@include b(bread-item) {
+  a{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+  }
+}
