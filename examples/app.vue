@@ -337,6 +337,12 @@
     <tass-breadcrumb-item to="/">哈哈</tass-breadcrumb-item>
     <tass-breadcrumb-item>纯纯</tass-breadcrumb-item>
   </tass-breadcrumb>
+
+  <div style="width:540px;padding:20px 0;">
+    <tass-proGress color="#e6a23c"  percent="60" ></tass-proGress>
+    <tass-proGress color="#67c23a"  percent="100" ></tass-proGress>
+    <tass-proGress  percent="30" status="jia"></tass-proGress>
+  </div>
 </template>
 
 <script setup lang="ts">
