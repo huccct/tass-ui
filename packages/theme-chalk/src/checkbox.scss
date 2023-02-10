@@ -1,0 +1,23 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+
+@include b(checkbox) {
+  color: $checkbox-font-color;
+  font-weight: $checkbox-font-weight;
+  font-size: $checkbox-font-size;
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  user-select: none;
+  margin-right: 30px;
+  height: $checkbox-input-height;
+  @include e(input) {
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    position: relative;
+  }
+}

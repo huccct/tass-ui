@@ -168,7 +168,7 @@
   </tass-row>
   <br />
   <br />
-
+  <input type="checkbox" />
   <tass-checkbox disabled>Not disabled</tass-checkbox>
   <tass-checkbox v-model="check1" @change="handlerChange">Option A</tass-checkbox>
   <tass-checkbox v-model="check2">Option B</tass-checkbox>
