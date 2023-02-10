@@ -5,17 +5,17 @@
  * @FilePath: \tass-ui\docs\components\swiper\address.vue
 -->
 <template>
-  <tass-carousel v-model="active3" indicator="outside">
+  <tass-carousel v-model="active3"  indicator="outside" width="100%" height="280px">
     <tass-carousel-item id="1">
       <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">条目一</div>
     </tass-carousel-item>
-    <tass-carousel-item id="2">
+    <tass-carousel-item style="top: -8px;" id="2">
       <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">条目二</div>
     </tass-carousel-item>
-    <tass-carousel-item id="3">
+    <tass-carousel-item style="top: -8px;" id="3">
       <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">条目三</div>
     </tass-carousel-item>
-    <tass-carousel-item id="4">
+    <tass-carousel-item style="top: -8px;" id="4">
       <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">条目四</div>
     </tass-carousel-item>
   </tass-carousel>
