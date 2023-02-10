@@ -1,7 +1,7 @@
 @use 'mixins/mixins' as *;
 @use 'common/var' as *;
 @include b(slider) {
-  width: 50vh;
+  width: 50%;
   @include b(slider__content) {
     position: relative;
     cursor: pointer;
@@ -25,7 +25,7 @@
     width: 20%;
   }
   @include b(slider__thumb) {
-    position: relative;
+    position: absolute;
     height: 14px;
     width: 14px;
     border-radius: 50%;
