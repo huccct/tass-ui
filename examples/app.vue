@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-09 22:12:58
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-10 11:44:52
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -201,19 +201,17 @@
 
   <div class="tass-dropdown-toggle">
     <tass-dropdown>
-        <tass-dropdownMenu>
-            <tass-dropdown-item>Chelsea</tass-dropdown-item>
-            <tass-dropdown-item>Liverpool</tass-dropdown-item>
-            <tass-dropdown-item>Manchester United</tass-dropdown-item>
-            <tass-dropdown-item>Manchester City</tass-dropdown-item>
-        </tass-dropdownMenu>
+      <tass-dropdownMenu>
+        <tass-dropdown-item>Chelsea</tass-dropdown-item>
+        <tass-dropdown-item>Liverpool</tass-dropdown-item>
+        <tass-dropdown-item>Manchester United</tass-dropdown-item>
+        <tass-dropdown-item>Manchester City</tass-dropdown-item>
+      </tass-dropdownMenu>
     </tass-dropdown>
   </div>
 
-
   <br />
   <br />
-
 
   <tass-button type="primary" :visible="!normalViaible" @click="changeView">dialog</tass-button>
   <tass-dialog
@@ -239,7 +237,7 @@
   <br />
   <br />
   <br />
-<!-- 默认切换方式 -->
+  <!-- 默认切换方式 -->
   <tass-carousel v-model="carouseltest" anim="default">
     <tass-carousel-item id="1">
       <div
@@ -338,6 +336,7 @@
   </tass-carousel>
   <br />
   <br />
+
   <tass-carousel v-model="carouseltest2" width="600px" indicator="outside">
     <tass-carousel-item id="1">
       <div
@@ -514,7 +513,6 @@
       center: false
     });
   };
-
 
   function changeView() {
     normalViaible.value = !normalViaible.value;
