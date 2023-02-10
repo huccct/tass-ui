@@ -4,4 +4,4 @@
 *.scss linguist-detectable=false
 *.js linguist-detectable=false
 *.vue linguist-detectable=true
-*.sh linguist-detectable=false
+.husky/* linguist-vendored
