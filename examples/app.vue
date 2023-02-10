@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-10 14:42:39
+ * @LastEditors: YuShu Xiao
+ * @LastEditTime: 2023-02-09 22:12:58
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -36,7 +36,7 @@
   <tass-button type="success" icon="tas-icon-magnifier">Search</tass-button>
   <br />
   <br />
-  <tass-icon name="eye"></tass-icon>&nbsp; <tass-icon name="EyeClosed"></tass-icon>&nbsp;
+
   <tass-icon name="pluscircle"></tass-icon>&nbsp; <tass-icon name="pushpin"></tass-icon>&nbsp;
   <tass-icon name="textalignjustify"></tass-icon>&nbsp; <tass-icon name="danger"></tass-icon>&nbsp;
   <tass-icon name="success"></tass-icon>&nbsp; <tass-icon name="info"></tass-icon>&nbsp;
@@ -168,7 +168,7 @@
   </tass-row>
   <br />
   <br />
-  <input type="checkbox" />
+
   <tass-checkbox disabled>Not disabled</tass-checkbox>
   <tass-checkbox v-model="check1" @change="handlerChange">Option A</tass-checkbox>
   <tass-checkbox v-model="check2">Option B</tass-checkbox>
@@ -199,19 +199,31 @@
   <br />
   <br />
 
-  <div class="tass-dropdown-toggle">
-    <tass-dropdown>
-      <tass-dropdownMenu>
-        <tass-dropdown-item>Chelsea</tass-dropdown-item>
-        <tass-dropdown-item>Liverpool</tass-dropdown-item>
-        <tass-dropdown-item>Manchester United</tass-dropdown-item>
-        <tass-dropdown-item>Manchester City</tass-dropdown-item>
-      </tass-dropdownMenu>
+  <div class="tass-dropdown-toggle">hover触发
+    <tass-dropdown :trigger="state.hover">
+        <tass-dropdownMenu>
+            <tass-dropdown-item>Chelsea</tass-dropdown-item>
+            <tass-dropdown-item>Liverpool</tass-dropdown-item>
+            <tass-dropdown-item>Manchester United</tass-dropdown-item>
+            <tass-dropdown-item>Manchester City</tass-dropdown-item>
+        </tass-dropdownMenu>
     </tass-dropdown>
   </div>
 
+    <div class="tass-dropdown-toggle1">click触发
+        <tass-dropdown :trigger="state.click">
+            <tass-dropdownMenu-click>
+                <tass-dropdown-item>Chelsea</tass-dropdown-item>
+                <tass-dropdown-item>Liverpool</tass-dropdown-item>
+                <tass-dropdown-item>Manchester United</tass-dropdown-item>
+                <tass-dropdown-item>Manchester City</tass-dropdown-item>
+            </tass-dropdownMenu-click>
+        </tass-dropdown>
+    </div>
+
   <br />
   <br />
+
 
   <tass-button type="primary" :visible="!normalViaible" @click="changeView">dialog</tass-button>
   <tass-dialog
@@ -237,7 +249,7 @@
   <br />
   <br />
   <br />
-  <!-- 默认切换方式 -->
+<!-- 默认切换方式 -->
   <tass-carousel v-model="carouseltest" anim="default">
     <tass-carousel-item id="1">
       <div
@@ -336,7 +348,6 @@
   </tass-carousel>
   <br />
   <br />
-
   <tass-carousel v-model="carouseltest2" width="600px" indicator="outside">
     <tass-carousel-item id="1">
       <div
@@ -394,11 +405,6 @@
   <br />
 
   <tass-input v-model="inputVal" clearable />&nbsp;{{ inputVal }}
-  <tass-input v-model="inputVal" disabled />&nbsp;
-  <tass-input v-model="inputVal" size="medium" />&nbsp;
-  <tass-input v-model="inputVal" size="mini" />&nbsp;
-  <tass-input v-model="inputVal" show-password />&nbsp;
-  <tass-input v-model="inputVal" prefix-icon="upload" />&nbsp;
   <br />
   <br />
   <br />
@@ -434,6 +440,10 @@
 
   let normalViaible = ref(false);
 
+  const state = reactive({
+      click:'click',
+      hover:'hover'
+  })
   const list = ref([
     {
       title: '标题1',
@@ -519,6 +529,7 @@
     });
   };
 
+
   function changeView() {
     normalViaible.value = !normalViaible.value;
   }
@@ -543,6 +554,7 @@
 
 <style lang="scss">
   .tass-dropdown-toggle {
+    display:inline-block;
     border-radius: 5px;
     ::v-deep .dropdown-toggle {
       color: tomato;
@@ -552,6 +564,10 @@
     ::v-deep .dropdown-toggle-placeholder {
       color: #c4c4c4;
     }
+  }
+  .tass-dropdown-toggle1 {
+      display:inline-block;
+      margin-left:20px;
   }
   .el-carousel__item h3 {
     display: flex;

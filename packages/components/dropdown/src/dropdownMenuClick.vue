@@ -2,12 +2,12 @@
     * @Name: dropdownMenu
     * @Author: cxy
     * @Date: 2023/2/8 21:13
-    * @Description：dropdownMenu  实现下拉的item是否出现
+    * @Description：dropdownMenuClick  实现下拉的item是否出现  元素里只有一个实现
     * @Update: 2023/2/8 21:13
 -->
 <template>
-    <transition name="drop-transition" >
-        <ul class="tass-dropdown-menu" v-if="state.showMenu">
+    <transition name="drop-transition" @mouseenter="mouseenter">
+        <ul class="tass-dropdown-menu tass-dropdown-menu-arrow" v-if="state.showMenuClick">
             <slot></slot>
         </ul>
     </transition>
@@ -19,18 +19,21 @@ import {onMounted, reactive} from "vue";
 import mitt from "./event";
 
 let state = reactive({
-    showMenu: false,
+    showMenuClick: false,
 })
-
+const mouseenter = () => {
+    state.showMenuClick = true
+}
 onMounted(() => {   // 初始化两个值都会传入
-    mitt.on("updateShowMenu", isOption => {  // 发生两次
+    mitt.on("updateShowMenuClick", isOption => {  // 发生两次
         if (typeof isOption === "boolean") {
-            state.showMenu = isOption
+            state.showMenuClick = isOption
         }
     })
+
     mitt.on("mouseleave", isOption => {
         if (typeof isOption === "boolean") {
-            state.showMenu = false
+            state.showMenuClick = isOption
         }
     })
 
