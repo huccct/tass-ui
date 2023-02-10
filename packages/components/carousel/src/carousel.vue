@@ -59,7 +59,7 @@
 </script>
 
 <script setup lang="ts">
-  import '@tass-ui/theme-chalk/src/carousel.scss';
+  import '../style/'
   import {
     withDefaults,
     provide,
