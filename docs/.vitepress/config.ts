@@ -67,7 +67,8 @@ export default {
         },
         {
           text: '其他',
-          items: [{ text: 'Backtop 回到顶部', link: '/components/backtop/' }]
+          items: [{ text: 'Backtop 回到顶部', link: '/components/backtop/' },
+          { text: 'Dialog 对话框', link: '/components/dialog/' }]
         }
       ]
     },
