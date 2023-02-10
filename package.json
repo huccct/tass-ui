@@ -64,7 +64,10 @@
     "vitepress": "1.0.0-alpha.45",
     "vitepress-theme-demoblock": "^2.0.2",
     "vitest": "^0.27.3",
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "mitt": "^3.0.0",
+    "vue-router": "^4.1.6",
+    "vue3-eventbus": "^2.0.0"
   },
   "dependencies": {
     "@jridgewell/sourcemap-codec": "^1.4.14",
