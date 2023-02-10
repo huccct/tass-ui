@@ -62,6 +62,7 @@ export default {
 </details>
 
 ## 自定义内容和宽度
+通过设置title 与 width , 来展示内容和宽度。
 <div class="example">
     <Dialog></Dialog>
 </div>
