@@ -29,3 +29,4 @@ export { TassInput } from './input';
 
 export { TassBreadcrumb } from './breadcrumb';
 export { TassBreadcrumbItem } from './breadcrumb-item';
+export { TassProgress } from './progress';
