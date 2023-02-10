@@ -15,7 +15,7 @@ import { ref } from 'vue'
 
 export default {
   setup() {
-    const active2 = ref(true);
+    const active2 = ref(false);
     const change =( val )=> {
         alert("当前值:" + val)
     }

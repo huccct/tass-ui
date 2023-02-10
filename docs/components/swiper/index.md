@@ -1,3 +1,9 @@
+<!--
+ * @Author: 申恒杰
+ * @Date: 2023-02-08 19:27:33
+ * @Description: 铁沸物
+ * @FilePath: \tass-ui\docs\components\swiper\index.md
+-->
 <script setup>
 import Default from './default.vue'
 import Updown from './updown.vue'
@@ -7,10 +13,7 @@ import Address from './address.vue'
   .example{
       border: 1px solid #f5f5f5;
       border-radius: 5px;
-      padding:20px
-  }
-  .tass-button {
-      margin:10px 5px;
+      margin:20px
   }
   
   details > summary:first-of-type {
@@ -22,11 +25,9 @@ import Address from './address.vue'
 </style>
 # Swiper 轮播图
 ## 基础用法
-
 <div class='example'>
   <Default></Default>
 </div>
-
 <details>
 <summary>展开查看</summary>
 
@@ -67,7 +68,7 @@ export default {
 </details>
 
 ## 不同方向与不同切换动画
-<div class=example>
+<div class='example'>
   <Updown></Updown>
 </div>
 <div class=example>
@@ -78,8 +79,8 @@ export default {
 
 ```vue
 <template>
-  <div style="display:flex;justify-content: space-around;flex-wrap:wrap">
-  <tass-carousel v-model="activeAnmi1" anim="updown" style="display:inline-block;width:32%" :autoplay="true">
+  <div style="display:flex;justify-content: space-around;flex-wrap:wrap;">
+  <tass-carousel v-model="activeAnmi1" anim="updown" style="display:inline-block;width:32%;padding-right:10px" :autoplay="true">
     <tass-carousel-item id="1">
       <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">条目一</div>
     </tass-carousel-item>

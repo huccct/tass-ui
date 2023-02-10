@@ -1,5 +1,5 @@
 <template>
-  <tass-carousel v-model="active1">
+  <tass-carousel v-model="active1" width="600px">
     <tass-carousel-item id="1">
       <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">条目一</div>
     </tass-carousel-item>
