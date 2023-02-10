@@ -26,6 +26,7 @@
   </div>
 </template>
 <script setup lang="ts" name="TassCheckbox">
+  import '../style/';
   import { useCheckBoxProps } from '../composables/';
   import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@tass-ui/constants';
   const props = defineProps({

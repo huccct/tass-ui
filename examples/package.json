@@ -17,6 +17,7 @@
     "vite-plugin-vue-setup-extend": "^0.4.0"
   },
   "dependencies": {
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "@tass-ui/theme-chalk": "workspace:^1.0.0"
   }
 }

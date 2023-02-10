@@ -1,10 +1,8 @@
 <!--
- * @Descripttion: Spicy chicken
- * @Author: YuShu Xiao
- * @Date: 2023-02-09 22:06:21
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-09 22:06:31
+ * @Description: Stay hungry，Stay foolish
+ * @Author: Huccct
+ * @Date: 2023-02-10 11:48:30
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-10 11:48:34
 -->
-<template>
-  ashjkahasjkhasjk
-</template>
+<template>ashjkahasjkhasjk</template>

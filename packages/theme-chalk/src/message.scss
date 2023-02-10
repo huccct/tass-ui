@@ -3,15 +3,16 @@
 
 @include b(message) {
   width: fit-content;
-  min-width: $message-min-width;
+  // max-width: calc(100% + 25px);
+  max-width: calc(100% - 32px);
   height: 42px;
-  line-height: 42px;
+  // line-height: 42px;
+  font-size: 14px;
   box-sizing: border-box;
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
   border-color: #ebeef5;
-  position: fixed;
   position: fixed;
   left: 50%;
   top: 20px;
@@ -23,17 +24,19 @@
   display: flex;
   align-items: center;
   z-index: 999;
-  box-shadow: 0 6px 16px 0 rgb(0 0 0 / 8%), 0 3px 6px -4px rgb(0 0 0 / 12%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+  box-shadow: 0 6px 16px 0 rgb(0 0 0 / 8%), 0 3px 6px -4px rgb(0 0 0 / 12%),
+    0 9px 28px 8px rgb(0 0 0 / 5%);
   @include b(message__close-btn) {
     cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 20px;
+    right: 12px;
     font-size: $message-close-size;
   }
   @include b(message__content) {
-    padding-left: 10px;
+    padding-left: 6px;
+    padding-right: 31px;
   }
   @include m(success) {
     background: $message-success-font-color;
