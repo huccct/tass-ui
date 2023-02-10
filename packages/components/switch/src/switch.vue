@@ -42,7 +42,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import "@tass-ui/theme-chalk/src/switch.scss";
+import "../style/";
 import { computed } from "vue";
 import { SwitchSize } from "./interface";
 
