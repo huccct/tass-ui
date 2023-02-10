@@ -3,13 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-02-10 11:26:22
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-10 13:40:34
+ * @LastEditTime: 2023-02-10 14:46:01
 -->
 <template>
   <div
     class="tas-input"
-    @mouseenter="isEnter = true"
-    @mouseleave="isEnter = false"
     :class="styleClass"
   >
     <input
@@ -31,7 +29,7 @@
       <tass-icon name="cross"></tass-icon>
     </div>
     <div class="tas-input__suffix" v-show="isShowEye">
-      <tass-Icon @click="changeType" :name="eyeIcon" />
+      <tass-icon @click="changeType" :name="eyeIcon" />
     </div>
     <div class="tas-input__prefix" v-if="isShowPrefixIcon">
       <tass-icon :name="inputProps.prefixIcon" />

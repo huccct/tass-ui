@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-10 13:53:02
+ * @LastEditTime: 2023-02-10 14:42:39
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -397,8 +397,8 @@
   <tass-input v-model="inputVal" disabled />&nbsp;
   <tass-input v-model="inputVal" size="medium" />&nbsp;
   <tass-input v-model="inputVal" size="mini" />&nbsp;
-  <tass-input v-model="inputVal" showPassword />&nbsp;
-  <tass-input v-model="inputVal" prefixIcon="upload" />&nbsp;
+  <tass-input v-model="inputVal" show-password />&nbsp;
+  <tass-input v-model="inputVal" prefix-icon="upload" />&nbsp;
   <br />
   <br />
   <br />

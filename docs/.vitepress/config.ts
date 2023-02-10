@@ -62,13 +62,13 @@ export default {
           text: '提示',
           items: [
             { text: 'Alert 警告', link: '/components/alert/' },
-            { text: 'Message 消息提示', link: '/components/message/' }
+            { text: 'Message 消息提示', link: '/components/message/' },
+            { text: 'Dialog 对话框', link: '/components/dialog/' }
           ]
         },
         {
           text: '其他',
-          items: [{ text: 'Backtop 回到顶部', link: '/components/backtop/' },
-          { text: 'Dialog 对话框', link: '/components/dialog/' }]
+          items: [{ text: 'Backtop 回到顶部', link: '/components/backtop/' }]
         }
       ]
     },
