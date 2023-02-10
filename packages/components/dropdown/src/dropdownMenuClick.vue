@@ -7,7 +7,7 @@
 -->
 <template>
     <transition name="drop-transition" @mouseenter="mouseenter">
-        <ul class="tass-dropdown-menu tass-dropdown-menu-arrow" v-if="state.showMenuClick">
+        <ul class="tass-dropdown-menu" v-if="state.showMenuClick">
             <slot></slot>
         </ul>
     </transition>

@@ -84,7 +84,7 @@
   left: 0;
   z-index: 1000;
   padding: 10px 0;
-  margin: 5px 0;
+  margin: 10px 0;
   background-color: #FFF;
   border: 1px solid #EBEEF5;
   border-radius: 4px;
@@ -112,8 +112,17 @@
   position: relative;
   margin: 0;
 }
-.tass-dropdown-menu-arrow {
-
+.tass-dropdown-menu::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 97px;
+  transform: translate(-50%,-50%) rotate(135deg);
+  width: 9px;
+  height: 9px;
+  background: #ffff;
+  border: 1px solid #EBEEF5;
+  border-style: none none solid solid
 }
 .tass-dropdown-item {
   text-align: center;
