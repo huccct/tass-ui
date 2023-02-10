@@ -18,6 +18,7 @@ export { TassCollapse } from './collapse';
 export { TassDropdown } from './dropdown';
 export {TassDropdownItem} from './dropdownItem';
 export {TassDropdownMenu} from './dropdownMenu';
+export {TassDropdownMenuClick} from './dropdownMenuClick';
 export { TassDialog } from './dialog';
 export { TassAlert } from './alert';
 export { TassCarousel } from './carousel';

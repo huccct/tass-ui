@@ -199,8 +199,8 @@
   <br />
   <br />
 
-  <div class="tass-dropdown-toggle">
-    <tass-dropdown>
+  <div class="tass-dropdown-toggle">hover触发
+    <tass-dropdown :trigger="state.hover">
         <tass-dropdownMenu>
             <tass-dropdown-item>Chelsea</tass-dropdown-item>
             <tass-dropdown-item>Liverpool</tass-dropdown-item>
@@ -210,6 +210,16 @@
     </tass-dropdown>
   </div>
 
+    <div class="tass-dropdown-toggle1">click触发
+        <tass-dropdown :trigger="state.click">
+            <tass-dropdownMenu-click>
+                <tass-dropdown-item>Chelsea</tass-dropdown-item>
+                <tass-dropdown-item>Liverpool</tass-dropdown-item>
+                <tass-dropdown-item>Manchester United</tass-dropdown-item>
+                <tass-dropdown-item>Manchester City</tass-dropdown-item>
+            </tass-dropdownMenu-click>
+        </tass-dropdown>
+    </div>
 
   <br />
   <br />
@@ -430,6 +440,10 @@
 
   let normalViaible = ref(false);
 
+  const state = reactive({
+      click:'click',
+      hover:'hover'
+  })
   const list = ref([
     {
       title: '标题1',
@@ -540,6 +554,7 @@
 
 <style lang="scss">
   .tass-dropdown-toggle {
+    display:inline-block;
     border-radius: 5px;
     ::v-deep .dropdown-toggle {
       color: tomato;
@@ -549,6 +564,10 @@
     ::v-deep .dropdown-toggle-placeholder {
       color: #c4c4c4;
     }
+  }
+  .tass-dropdown-toggle1 {
+      display:inline-block;
+      margin-left:20px;
   }
   .el-carousel__item h3 {
     display: flex;
