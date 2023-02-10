@@ -14,6 +14,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tas-icon-EyeClosed:before {
+  content: '\e6ac';
+}
+
 .tas-icon-upload:before {
   content: '\e6a3';
 }

@@ -18,11 +18,21 @@
     outline: none;
     padding: 0 15px;
     width: 100%;
+    &:hover {
+      border: 1px solid #c0c4cc;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      border-width: 1px solid;
+    }
     &::placeholder {
       color: #c2c2ca;
     }
   }
-  & .#{$namespace}-input__suffix {
+  & .#{$namespace}-input__suffix,
+  & .#{$namespace}-input__prefix {
     position: absolute;
     right: 10px;
     height: 100%;
@@ -31,18 +41,53 @@
     align-items: center;
     cursor: pointer;
     color: #c0c4cc;
+    font-size: 15px;
+  }
+  .no-cursor {
+    cursor: default;
+  }
+  .tas-input--prefix.tas-input__inner {
+    padding-left: 30px;
+  }
+  & .#{$namespace}-input__prefix {
+    position: absolute;
+    width: 20px;
+    cursor: default;
+    left: 10px;
   }
   @include when(disabled) {
-    &,
-    &:hover,
-    &:focus {
+    .#{$namespace}-input__inner {
+      cursor: not-allowed;
       background-color: #f5f7fa;
       border-color: #e4e7ed;
       color: #c0c4cc;
-      cursor: not-allowed;
+      &::placeholder {
+        color: #c3c4cc;
+      }
     }
-    &::placeholder {
-      color: #c3c4cc;
+  }
+  @include m(medium) {
+    .#{$namespace}-input__inner {
+      height: 36px;
+      &::placeholder {
+        font-size: 15px;
+      }
+    }
+  }
+  @include m(small) {
+    .#{$namespace}-input__inner {
+      height: 32px;
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+  @include m(mini) {
+    .#{$namespace}-input__inner {
+      height: 28px;
+      &::placeholder {
+        font-size: 13px;
+      }
     }
   }
 }
