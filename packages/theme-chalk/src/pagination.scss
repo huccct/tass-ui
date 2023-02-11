@@ -3,7 +3,7 @@
 
 @include b(pagination) {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 30px;
   & > a {
     display: inline-block;
