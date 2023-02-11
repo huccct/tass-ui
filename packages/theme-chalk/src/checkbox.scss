@@ -59,5 +59,22 @@
     &:focus {
       cursor: not-allowed;
     }
+    input[type='checkbox']::after {
+      cursor: not-allowed;
+      position: absolute;
+      top: 0;
+      background-color: rgb(245, 247, 250);
+      color: #fff;
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      visibility: visible;
+      padding-left: 0px;
+      text-align: center;
+      content: ' ';
+      border-radius: 2px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+    }
   }
 }
