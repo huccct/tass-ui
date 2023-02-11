@@ -1,3 +1,5 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
 $switch-lg: 24px;
 $switch-md: 22px;
 $switch-sm: 20px;
@@ -13,20 +15,20 @@ $switch-xs-min-width: 27px;
     .tas-form-switch {
       height: $size;
       min-width: $min-width;
-      span{
+      span {
         width: calc($size - 4px);
         height: calc($size - 4px);
-        transition:all 0.1s linear;
+        transition: all 0.1s linear;
       }
-      em{
+      em {
         margin-left: calc($size - 3px);
       }
     }
-    .tas-form-onswitch{
-      span{
+    .tas-form-onswitch {
+      span {
         left: calc(100% - calc($size - 1px));
       }
-      em{
+      em {
         margin-right: calc($size - 3px);
         margin-left: 0px;
       }
@@ -34,18 +36,18 @@ $switch-xs-min-width: 27px;
   }
 }
 
-.tas-switch-container{
-  &[size="lg"] {
-    @include set-size($switch-lg,$switch-lg-min-width);
+.tas-switch-container {
+  &[size='lg'] {
+    @include set-size($switch-lg, $switch-lg-min-width);
   }
-  &[size="md"] {
-    @include set-size($switch-md,$switch-md-min-width);
+  &[size='md'] {
+    @include set-size($switch-md, $switch-md-min-width);
   }
-  &[size="sm"] {
-    @include set-size($switch-sm,$switch-sm-min-width);
+  &[size='sm'] {
+    @include set-size($switch-sm, $switch-sm-min-width);
   }
-  &[size="xs"] {
-    @include set-size($switch-xs,$switch-xs-min-width);
+  &[size='xs'] {
+    @include set-size($switch-xs, $switch-xs-min-width);
   }
 }
 
@@ -62,8 +64,8 @@ $switch-xs-min-width: 27px;
   border-radius: 20px;
   cursor: pointer;
   background-color: #00230b33;
-  -webkit-transition:all 0.1s linear;
-  transition:all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
 
 .tas-form-switch span {
@@ -79,8 +81,8 @@ $switch-xs-min-width: 27px;
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px #00230b33;
-  -webkit-transition:all 0.1s linear;
-  transition:all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
 
 .tas-form-switch em {
@@ -96,7 +98,7 @@ $switch-xs-min-width: 27px;
 
 .tas-form-onswitch {
   border-color: black;
-  background-color: rgb(4, 179, 4);
+  background-color: $color-primary;
 }
 
 .tas-form-onswitch span {
@@ -112,6 +114,6 @@ $switch-xs-min-width: 27px;
 }
 
 .tas-switch-disabled,
-.tas-switch-disabled *{
+.tas-switch-disabled * {
   cursor: not-allowed !important;
 }
