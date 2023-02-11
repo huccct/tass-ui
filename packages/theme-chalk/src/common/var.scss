@@ -52,6 +52,8 @@ $color-primary-light-10: mix($color-black, $color-info, 40%) !default; /* ecf5ff
 
 $color-primary-light-11: mix($color-black, $color-white, 13%) !default; /* ecf5ff */
 
+$color-primary-light-12: mix($color-black, $color-primary, 90%) !default; /* ecf5ff */
+
 $color-success-light: mix($color-white, $color-success, 80%) !default;
 $color-warning-light: mix($color-white, $color-warning, 80%) !default;
 $color-danger-light: mix($color-white, $color-danger, 80%) !default;
