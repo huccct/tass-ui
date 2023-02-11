@@ -32,3 +32,4 @@ export { TassBreadcrumb } from './breadcrumb';
 export { TassBreadcrumbItem } from './breadcrumb-item';
 export { TassProgress } from './progress';
 export { TassPagination } from './pagination';
+export { TassBacktop } from './backtop';
