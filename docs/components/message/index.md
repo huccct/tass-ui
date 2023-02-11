@@ -160,7 +160,7 @@
 ```
 </details>
 
-# 文字居中
+##  文字居中
 使用 center 属性让文字水平居中
 <div class="example">
   <TextCenter/>

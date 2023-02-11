@@ -27,11 +27,27 @@
         ></li>
       </ul>
     </div>
-    <button class="tas-icon tas-carousel-arrow" tas-type="sub" @click="sub">
-      {{ anim === 'updown' ? '上' : '<' }}
+    <button  v-show="anim === 'updown'" class="tas-icon tas-carousel-arrow" tas-type="sub" @click="sub">
+      <!-- 上 -->
+      <tass-icon style="position:relative;top: -2px;" name="chevronup"></tass-icon>
+      <!-- <svg t="1675998673409" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1516" width="20" height="20"><path d="M65.582671 735.208665l446.417329-446.41733 446.417329 446.41733z" p-id="1517"></path></svg> -->
     </button>
-    <button class="tas-icon tas-carousel-arrow" tas-type="add" @click="add">
-      {{ anim === 'updown' ? '下' : '>' }}
+    <button  v-show="anim !== 'updown'" class="tas-icon tas-carousel-arrow" tas-type="sub" @click="sub">
+      <!-- 左 -->
+      <tass-icon style="position:relative;top: -2px;right:0px;" name="chevronleft"></tass-icon>
+      <!-- <svg style="position: relative;right: 3px;top: 2px;" t="1675998805042" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1816" width="20" height="20"><path d="M735.208665 65.582671l-446.41733 446.417329 446.41733 446.417329z" p-id="1817"></path></svg> -->
+    </button>
+    <button v-show="anim !== 'updown'" class="tas-icon tas-carousel-arrow" tas-type="add" @click="add">
+      <!-- {{ anim === 'updown' ? '下' : '>' }} -->
+      <!-- 右 -->
+      <tass-icon style="position:relative;top: -2px;" name="chevronright"></tass-icon>
+      <!-- <tass-icon style="position: relative;" name="chevronrightcircle"></tass-icon> -->
+      <!-- <svg style="position: relative;left: 3px;top: 2px;" t="1675998831694" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1966" width="20" height="20"><path d="M288.791335 65.582671l446.41733 446.417329-446.41733 446.417329z" p-id="1967"></path></svg> -->
+    </button>
+    <button v-show="anim === 'updown'" class="tas-icon tas-carousel-arrow" tas-type="add" @click="add">
+      <!-- 下 -->
+      <!-- <svg style="position: relative;top: 3px;" t="1675998695795" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1666" width="20" height="20"><path d="M65.582671 288.791335l446.417329 446.41733 446.417329-446.41733z" p-id="1667"></path></svg> -->
+      <tass-icon name="chevrondown"></tass-icon>
     </button>
   </div>
 </template>
@@ -43,7 +59,7 @@
 </script>
 
 <script setup lang="ts">
-  import '@tass-ui/theme-chalk/src/carousel.scss';
+  import '../style/'
   import {
     withDefaults,
     provide,

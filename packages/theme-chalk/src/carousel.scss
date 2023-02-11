@@ -1,13 +1,12 @@
 @use './mixins/mixins' as *;
 @use './mixins/utils.scss' as *;
 @use './common/var' as *;
-
 @include b(carousel){
   position: relative;
   left: 0;
   top: 0;
   background-color: #f8f8f8;
-
+  
   [carousel-item] {
     position: relative;
     width: 100%;
@@ -23,7 +22,7 @@
       line-height: 20px;
       margin: -10px 0 0 -50px;
       text-align: center;
-      color: var(--global-neutral-color-8);
+      color: white;
       font-family: tas-icon !important;
       font-size: 30px;
       font-style: normal;
@@ -96,7 +95,7 @@
       height: 10px;
       margin: 0 3px;
       font-size: 14px;
-      background-color: var(--global-neutral-color-3);
+      background-color: #fff;
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 50%;
       cursor: pointer;
@@ -106,7 +105,7 @@
         background-color: rgba(255, 255, 255, 0.7);
       }
       .tas-this {
-        background-color: #fff;
+        color: #ffffff;
       }
     }
   }
@@ -268,4 +267,12 @@
 .tas-carousel[tas-anim='fade'] > [carousel-item] > .tas-this.tas-carousel-left,
 .tas-carousel[tas-anim='fade'] > [carousel-item] > .tas-this.tas-carousel-right {
   opacity: 0;
+}
+
+.tas-this{
+  color: #ffffff;
+}
+
+li{
+  list-style: none;
 }

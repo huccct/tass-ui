@@ -1,0 +1,44 @@
+@use 'sass:math';
+
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+
+@include b(backtop) {
+    
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 2;
+  border: 1px solid $color-primary;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out .5s;
+  overflow: hidden;
+  &:hover {
+      color: $color-primary;
+      background-color: $color-primary-light-7;
+    
+  }
+  @include b(backtop-icon) {
+    color:$color-primary;   
+  
+    &:hover {
+     
+      color: $color-primary-light-12;
+      background-color: $color-primary-light-7;
+    }
+  
+    
+  }
+}
+
+
+
+
+
+
