@@ -8,7 +8,7 @@
   import '../style/';
   import {onMounted, ref} from "vue";
 
-  const btnShow = ref(false);
+  const btnShow = ref(true);
   onMounted(() => {
     window.addEventListener('scroll', scrollToTop);
   });
@@ -24,9 +24,10 @@
     }, 10);
   }
   function scrollToTop() {
+    //界面总高度
     let pageLookHeight = document.documentElement.clientHeight || document.body.clientHeight;
     let scroll = document.documentElement.scrollTop;
-    btnShow.value = scroll >= pageLookHeight * 0.618;
+    btnShow.value = scroll >= pageLookHeight * 0.01;
   }
 </script>
 <style scoped>
