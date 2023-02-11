@@ -16,18 +16,20 @@ export { TassTransfer } from './transfer';
 export { TassMessage } from './message';
 export { TassCollapse } from './collapse';
 export { TassDropdown } from './dropdown';
-export {TassDropdownItem} from './dropdownItem';
-export {TassDropdownMenu} from './dropdownMenu';
-export {TassDropdownMenuClick} from './dropdownMenuClick';
+export { TassDropdownItem } from './dropdownItem';
+export { TassDropdownMenu } from './dropdownMenu';
+export { TassDropdownMenuClick } from './dropdownMenuClick';
 export { TassDialog } from './dialog';
 export { TassAlert } from './alert';
 export { TassCarousel } from './carousel';
 export { TassCarouselItem } from './carousel-item';
 export { TassSwitch } from './switch';
-export { TassSlider } from './slider'
+export { TassSlider } from './slider';
 export { TassUpload } from './upload';
 export { TassInput } from './input';
 
 export { TassBreadcrumb } from './breadcrumb';
 export { TassBreadcrumbItem } from './breadcrumb-item';
 export { TassProgress } from './progress';
+export { TassPagination } from './pagination';
+export { TassBacktop } from './backtop';
