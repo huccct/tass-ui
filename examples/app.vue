@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-09 22:12:58
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-11 10:37:46
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -199,31 +199,32 @@
   <br />
   <br />
 
-  <div class="tass-dropdown-toggle">hover触发
+  <div class="tass-dropdown-toggle">
+    hover触发
     <tass-dropdown :trigger="state.hover">
-        <tass-dropdownMenu>
-            <tass-dropdown-item>Chelsea</tass-dropdown-item>
-            <tass-dropdown-item>Liverpool</tass-dropdown-item>
-            <tass-dropdown-item>Manchester United</tass-dropdown-item>
-            <tass-dropdown-item>Manchester City</tass-dropdown-item>
-        </tass-dropdownMenu>
+      <tass-dropdownMenu>
+        <tass-dropdown-item>Chelsea</tass-dropdown-item>
+        <tass-dropdown-item>Liverpool</tass-dropdown-item>
+        <tass-dropdown-item>Manchester United</tass-dropdown-item>
+        <tass-dropdown-item>Manchester City</tass-dropdown-item>
+      </tass-dropdownMenu>
     </tass-dropdown>
   </div>
 
-    <div class="tass-dropdown-toggle1">click触发
-        <tass-dropdown :trigger="state.click">
-            <tass-dropdownMenu-click>
-                <tass-dropdown-item>Chelsea</tass-dropdown-item>
-                <tass-dropdown-item>Liverpool</tass-dropdown-item>
-                <tass-dropdown-item>Manchester United</tass-dropdown-item>
-                <tass-dropdown-item>Manchester City</tass-dropdown-item>
-            </tass-dropdownMenu-click>
-        </tass-dropdown>
-    </div>
+  <div class="tass-dropdown-toggle1">
+    click触发
+    <tass-dropdown :trigger="state.click">
+      <tass-dropdownMenu-click>
+        <tass-dropdown-item>Chelsea</tass-dropdown-item>
+        <tass-dropdown-item>Liverpool</tass-dropdown-item>
+        <tass-dropdown-item>Manchester United</tass-dropdown-item>
+        <tass-dropdown-item>Manchester City</tass-dropdown-item>
+      </tass-dropdownMenu-click>
+    </tass-dropdown>
+  </div>
 
   <br />
   <br />
-
 
   <tass-button type="primary" :visible="!normalViaible" @click="changeView">dialog</tass-button>
   <tass-dialog
@@ -249,7 +250,7 @@
   <br />
   <br />
   <br />
-<!-- 默认切换方式 -->
+  <!-- 默认切换方式 -->
   <tass-carousel v-model="carouseltest" anim="default">
     <tass-carousel-item id="1">
       <div
@@ -419,6 +420,13 @@
     <tass-breadcrumb-item>纯纯</tass-breadcrumb-item>
   </tass-breadcrumb>
   <router-view></router-view>
+
+  <tass-pagination
+    @change-page="changePage"
+    :pagesize="pageSize"
+    :total="total"
+    :page="1"
+  ></tass-pagination>
 </template>
 
 <script setup lang="ts">
@@ -441,9 +449,9 @@
   let normalViaible = ref(false);
 
   const state = reactive({
-      click:'click',
-      hover:'hover'
-  })
+    click: 'click',
+    hover: 'hover'
+  });
   const list = ref([
     {
       title: '标题1',
@@ -529,7 +537,6 @@
     });
   };
 
-
   function changeView() {
     normalViaible.value = !normalViaible.value;
   }
@@ -550,11 +557,14 @@
   };
 
   let inputVal = ref('');
+  const total = ref(10);
+  const pageSize = ref(1);
+  const changePage = (page: number) => {};
 </script>
 
 <style lang="scss">
   .tass-dropdown-toggle {
-    display:inline-block;
+    display: inline-block;
     border-radius: 5px;
     ::v-deep .dropdown-toggle {
       color: tomato;
@@ -566,8 +576,8 @@
     }
   }
   .tass-dropdown-toggle1 {
-      display:inline-block;
-      margin-left:20px;
+    display: inline-block;
+    margin-left: 20px;
   }
   .el-carousel__item h3 {
     display: flex;

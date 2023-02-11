@@ -1,0 +1,35 @@
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+
+@include b(pagination) {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  & > a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    &:hover {
+      color: #9090c0;
+    }
+    &.active {
+      background: #9090c0;
+      color: #fff;
+      border-color: #9090c0;
+    }
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.4;
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+  & > span {
+    margin-right: 10px;
+  }
+}
