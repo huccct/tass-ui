@@ -63,7 +63,7 @@ $switch-xs-min-width: 27px;
   padding: 0 4px;
   border-radius: 20px;
   cursor: pointer;
-  background-color: #00230b33;
+  background-color: $color-bginfo;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
