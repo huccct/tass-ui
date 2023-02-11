@@ -1,5 +1,6 @@
-@use 'mixins/mixins' as *;
-@use 'common/var' as *;
+@use './mixins/mixins.scss' as *;
+@use './mixins/utils.scss' as *;
+@use './common/var.scss' as *;
 
 @include b(checkbox) {
   color: $checkbox-font-color;
@@ -11,13 +12,52 @@
   align-items: center;
   white-space: nowrap;
   user-select: none;
-  margin-right: 30px;
+  margin-right: 30px !important;
   height: $checkbox-input-height;
+  input[type='checkbox'] {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background-color: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+  }
+  input[type='checkbox']::after {
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    visibility: visible;
+    padding-left: 0px;
+    text-align: center;
+    content: ' ';
+    border-radius: 2px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+  }
+  input[type='checkbox']:checked::after {
+    content: '✓';
+    background-color: $color-primary;
+    border-color: $color-primary;
+    background-color: $color-primary;
+  }
   @include e(input) {
     white-space: nowrap;
     cursor: pointer;
     outline: none;
     display: inline-flex;
     position: relative;
+  }
+
+  @include when(disabled) {
+    &,
+    &:hover,
+    &:focus {
+      cursor: not-allowed;
+    }
   }
 }
