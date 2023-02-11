@@ -1,0 +1,29 @@
+{
+  "hash": "5204b739",
+  "browserHash": "83591a2c",
+  "optimized": {
+    "vue": {
+      "src": "../../../node_modules/.pnpm/vue@3.2.45/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "2b9cf976",
+      "needsInterop": false
+    },
+    "mitt": {
+      "src": "../../../node_modules/.pnpm/mitt@3.0.0/node_modules/mitt/dist/mitt.mjs",
+      "file": "mitt.js",
+      "fileHash": "7830f0fa",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../../node_modules/.pnpm/vue-router@4.1.6_vue@3.2.45/node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "b82801b6",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-FD6VQS3D": {
+      "file": "chunk-FD6VQS3D.js"
+    }
+  }
+}

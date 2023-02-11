@@ -427,6 +427,10 @@
     :total="total"
     :page="1"
   ></tass-pagination>
+
+    <tass-backtop>
+      <router-view />
+    </tass-backtop>
 </template>
 
 <script setup lang="ts">
