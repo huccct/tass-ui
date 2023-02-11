@@ -13,12 +13,13 @@
   }
 </style>
 # Backtop 回到顶部
+返回页面顶部的操作按钮。
 ## 基础用法
 点击按钮直接回到页面顶部。
 <div class="example">
-     <div v-show="btnShow" class="tas-backtop">
-    <tass-icon name="rocket"  class="tas-backtop-icon" :src="BackTop"  @click="backTop"></tass-icon>
-  </div>
+    <tass-backtop>
+      <router-view />
+    </tass-backtop>
 </div>
 
 <details>
@@ -26,10 +27,12 @@
 
 ```vue
 <template>
-  <div v-show="btnShow" class="tas-backtop">
-    <tass-icon name="rocket"  class="tas-backtop-icon" :src="BackTop"  @click="backTop"></tass-icon>
-  </div>
+Scroll down to see the bottom-right button.
+    <tass-backtop>
+      <router-view />
+    </tass-backtop>
 </template>
 
 ```
 </details>
+
