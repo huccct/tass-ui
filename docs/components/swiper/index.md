@@ -35,16 +35,16 @@ import Address from './address.vue'
 <template>
   <tass-carousel v-model="active1">
     <tass-carousel-item id="1">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">条目一</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">一</div>
     </tass-carousel-item>
     <tass-carousel-item id="2">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">条目二</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">二</div>
     </tass-carousel-item>
     <tass-carousel-item id="3">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">条目三</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">三</div>
     </tass-carousel-item>
     <tass-carousel-item id="4">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">条目四</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">四</div>
     </tass-carousel-item>
   </tass-carousel>
 </template>
@@ -82,44 +82,44 @@ export default {
   <div style="display:flex;justify-content: space-around;flex-wrap:wrap;">
   <tass-carousel v-model="activeAnmi1" anim="updown" style="display:inline-block;width:32%;padding-right:10px" :autoplay="true">
     <tass-carousel-item id="1">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">条目一</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">一</div>
     </tass-carousel-item>
     <tass-carousel-item id="2">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">条目二</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">二</div>
     </tass-carousel-item>
     <tass-carousel-item id="3">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">条目三</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">三</div>
     </tass-carousel-item>
     <tass-carousel-item id="4">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">条目四</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">四</div>
     </tass-carousel-item>
   </tass-carousel>
   <tass-carousel v-model="activeAnmi2" style="width:32%">
     <tass-carousel-item id="1">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">条目一</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">一</div>
     </tass-carousel-item>
     <tass-carousel-item id="2">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">条目二</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">二</div>
     </tass-carousel-item>
     <tass-carousel-item id="3">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">条目三</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">三</div>
     </tass-carousel-item>
     <tass-carousel-item id="4">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">条目四</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">四</div>
     </tass-carousel-item>
   </tass-carousel>
   <tass-carousel v-model="activeAnmi3" anim="fade" style="width:32%;">
     <tass-carousel-item id="1">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">条目一</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">一</div>
     </tass-carousel-item>
     <tass-carousel-item id="2">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">条目二</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">二</div>
     </tass-carousel-item>
     <tass-carousel-item id="3">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">条目三</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">三</div>
     </tass-carousel-item>
     <tass-carousel-item id="4">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">条目四</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">四</div>
     </tass-carousel-item>
   </tass-carousel>
   </div>
