@@ -3,11 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-02-12 10:55:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-12 10:57:28
+ * @LastEditTime: 2023-02-12 11:55:50
  */
-import timePicker from './src/time-picker.vue';
+import DatePicker from './src/date-picker.vue';
 import { withInstall } from '@tass-ui/utils/withInstall';
 
-export const TassTimePicker = withInstall(timePicker);
+export const TassDatePicker = withInstall(DatePicker);
 
-export default TassTimePicker;
+export default TassDatePicker;

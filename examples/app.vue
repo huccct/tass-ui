@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-11 10:37:46
+ * @LastEditTime: 2023-02-12 12:00:21
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -428,9 +428,11 @@
     :page="1"
   ></tass-pagination>
 
-    <tass-backtop>
-      <router-view />
-    </tass-backtop>
+  <tass-backtop>
+    <router-view />
+  </tass-backtop>
+
+  <tass-date-picker></tass-date-picker>
 </template>
 
 <script setup lang="ts">
