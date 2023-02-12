@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-30 11:59:28
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-08 11:30:50
+ * @LastEditors: YuShu Xiao
+ * @LastEditTime: 2023-02-12 21:15:48
 -->
 <template>
   <!--手风琴组件-->
@@ -33,34 +33,33 @@
 <script lang="ts" setup name="TassCollapse">
 
   import '../style/';
-  import { ref } from 'vue';
-  import { computed, provide } from 'vue';
-  const props = defineProps({
-    posts: {
-      type: Array,
-      default: [],
-      required: false
-    },
-    types: {
-      type: Boolean,
-      default: false,
-      required: false
-    }
-  });
+  import { reactive } from 'vue';
+type Iprops={
+  posts:Array<{
+    id:number,
+    title?:string,
+    body?:string
+  }>,
+  types:boolean
+}
+  const props = withDefaults(defineProps<Iprops>(),{
+    types:false
+  })
 
-
-  const arr = ref([]);
-  function toggle(index) {
+  const arr= reactive<number[]>([]);
+  function toggle(index:number) {
     // arr.push(index);
     // console.log(props.types)
-    
-  if(!arr.value.includes(index)){ //集合中是否包含
+  if(!arr.includes(index)){ //集合中是否包含
     if(props.types == true){      //普通类型
-        arr.value.push(index);
+        arr.push(index);
     }else {                       //手风琴类型
-        arr.value = [];
-        arr.value.push(index);
+        arr.length = 0;
+        arr.push(index);
     }
-  }else arr.value.pop(index);     
+  }else {
+    arr.splice(arr.indexOf(index),1)
+  };
+  ;
 }
 </script>
