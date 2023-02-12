@@ -1,3 +1,10 @@
+<!--
+ * @Description: Stay hungry，Stay foolish
+ * @Author: Huccct
+ * @Date: 2023-02-10 11:26:22
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-12 10:39:28
+-->
 # 快速开始
 
 本节将介绍如何在项目中使用 Tass UI.
@@ -11,8 +18,7 @@ import App from './App.vue';
 import TassUI from 'tass-ui';
 import 'tass-ui/es/style.css';
 const app = createApp(App);
-app.use(TassUI);
-app.mount('#app');
+app.use(TassUI).mount('#app');
 ```
 # 开始使用
 现在你可以启动项目了。 对于每个组件的用法，请参考单个组件对应的文档。

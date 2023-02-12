@@ -1,9 +1,10 @@
+import { TassTimePicker } from './time-picker/index';
 /*
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:53:35
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-09 11:14:14
+ * @LastEditTime: 2023-02-12 11:00:21
  */
 export { TassButton } from './button';
 export { TassButtonGroup } from './button-group';
@@ -16,9 +17,9 @@ export { TassTransfer } from './transfer';
 export { TassMessage } from './message';
 export { TassCollapse } from './collapse';
 export { TassDropdown } from './dropdown';
-export { TassDropdownItem } from './dropdownItem';
-export { TassDropdownMenu } from './dropdownMenu';
-export { TassDropdownMenuClick } from './dropdownMenuClick';
+export { TassDropdownItem } from './dropdown-item';
+export { TassDropdownMenu } from './dropdown-menu';
+export { TassDropdownMenuClick } from './dropdown-menu-click';
 export { TassDialog } from './dialog';
 export { TassAlert } from './alert';
 export { TassCarousel } from './carousel';
@@ -33,3 +34,4 @@ export { TassBreadcrumbItem } from './breadcrumb-item';
 export { TassProgress } from './progress';
 export { TassPagination } from './pagination';
 export { TassBacktop } from './backtop';
+export { TassTimePicker } from './time-picker';
