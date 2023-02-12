@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:53:35
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-09 11:14:14
+ * @LastEditTime: 2023-02-12 10:54:07
  */
 export { TassButton } from './button';
 export { TassButtonGroup } from './button-group';
@@ -16,9 +16,9 @@ export { TassTransfer } from './transfer';
 export { TassMessage } from './message';
 export { TassCollapse } from './collapse';
 export { TassDropdown } from './dropdown';
-export { TassDropdownItem } from './dropdownItem';
-export { TassDropdownMenu } from './dropdownMenu';
-export { TassDropdownMenuClick } from './dropdownMenuClick';
+export { TassDropdownItem } from './dropdown-item';
+export { TassDropdownMenu } from './dropdown-menu';
+export { TassDropdownMenuClick } from './dropdown-menu-click';
 export { TassDialog } from './dialog';
 export { TassAlert } from './alert';
 export { TassCarousel } from './carousel';
