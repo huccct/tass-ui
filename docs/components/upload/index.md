@@ -16,9 +16,7 @@
 ## 基础用法
 通过点击上传文件。
 <div class="example">
-  <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
-    <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
-  </div>
+    <tass-upload></tass-upload>
 </div>
 
 <details>
