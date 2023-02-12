@@ -106,13 +106,9 @@ const alertClose= () =>{
 ```vue
 <template>
 <div>
-  <div>
-  <tass-alert title="hello tassUI"  type="error"> </tass-alert>
-  <tass-alert title="hello tassUI"  type="success"> </tass-alert>
-  <tass-alert title="hello tassUI"  type="info"> </tass-alert>
-  <tass-alert title="hello tassUI"  type="warning"> </tass-alert>
+  <tass-alert show-icon title="tassUI"  type="info" content="一个高效简洁的vuejs库" closeable> </tass-alert>
 </div>
-</div>
+
 </template>
 ```
 </details>
