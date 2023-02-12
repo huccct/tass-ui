@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-30 11:59:28
  * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-12 21:15:48
+ * @LastEditTime: 2023-02-12 22:24:04
 -->
 <template>
   <!--手风琴组件-->
@@ -40,7 +40,7 @@ type Iprops={
     title?:string,
     body?:string
   }>,
-  types:boolean
+  types?:boolean
 }
   const props = withDefaults(defineProps<Iprops>(),{
     types:false
