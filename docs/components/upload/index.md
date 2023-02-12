@@ -12,13 +12,11 @@
       color: #1989fa;
   }
 </style>
-# Upload 上传
+# Progress 进度条
 ## 基础用法
 通过点击上传文件。
 <div class="example">
-  <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
-    <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
-  </div>
+  <tass-upload></tass-upload>
 </div>
 
 <details>
@@ -26,15 +24,13 @@
 
 ```vue
 <template>
-  <div class="example">
-    <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
-      <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
-    </div>
+  <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
+    <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
   </div>
 </template>
 
 <script>
-   // 上传更新文件，第一个参数为当前上传文件，第二个参数为上传之后的文件列表
+  // 上传更新文件，第一个参数为当前上传文件，第二个参数为上传之后的文件列表
   const changeUpload = (file: any, fileList: any) => {
     console.log(file, fileList);
   };
