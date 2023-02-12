@@ -78,9 +78,9 @@ export default {
       copyright: 'Copyright © 2023 Components Team'
     },
     algolia: {
-      appId: '...',
-      apiKey: '...',
-      indexName: '...',
+      appId: '883U6KEOAU',
+      apiKey: '49156c3943b71f4167959c3202872067',
+      indexName: 'huccctio',
       locales: {
         zh: {
           placeholder: '搜索文档',
