@@ -20,38 +20,3 @@
     height: 0 !important;
   }
 }
-
-.tas-progress {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .line {
-    width: 90%;
-    background-color: rgb(235, 238, 245);
-    border-radius: 100px;
-    height: 6px;
-
-    .colorLine {
-      height: 100%;
-      text-align: right;
-      border-radius: 100px;
-      line-height: 1;
-      white-space: nowrap;
-      transition: width .6s ease;
-    }
-  }
-
-  .percent {
-    min-width: 8%;
-    font-size: 14.4px;
-    color: rgb(96, 98, 102);
-    text-align: left;
-  }
-
-  .status {
-    width: 8%;
-    text-align: left;
-  }
-}

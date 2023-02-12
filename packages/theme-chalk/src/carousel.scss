@@ -1,12 +1,12 @@
 @use './mixins/mixins' as *;
 @use './mixins/utils.scss' as *;
 @use './common/var' as *;
-@include b(carousel){
+@include b(carousel) {
   position: relative;
   left: 0;
   top: 0;
   background-color: #f8f8f8;
-  
+
   [carousel-item] {
     position: relative;
     width: 100%;
@@ -43,14 +43,14 @@
     }
   }
 
-  @include b(carousel-updown){
+  @include b(carousel-updown) {
     > * {
       -webkit-transition: 0.3s ease-in-out up;
       transition: 0.3s ease-in-out up;
     }
   }
 
-  @include b(carousel-arrow){
+  @include b(carousel-arrow) {
     display: none\9;
     opacity: 0;
     position: absolute;
@@ -74,9 +74,9 @@
       right: 10px;
     }
   }
-  @include b(carousel-ind){
+  @include b(carousel-ind) {
     position: relative;
-    top: -35px;
+    top: -50px;
     width: 100%;
     line-height: 0 !important;
     text-align: center;
@@ -101,7 +101,7 @@
       cursor: pointer;
       -webkit-transition-duration: 0.3s;
       transition-duration: 0.3s;
-      &:hover{
+      &:hover {
         background-color: rgba(255, 255, 255, 0.7);
       }
       .tas-this {
@@ -109,38 +109,38 @@
       }
     }
   }
-  &[tas-arrow='always']{
-    @include b(carousel-arrow){
+  &[tas-arrow='always'] {
+    @include b(carousel-arrow) {
       opacity: 1;
       left: 20px;
     }
   }
-  
-  &[tas-arrow='none']{
-    @include b(carousel-arrow){
+
+  &[tas-arrow='none'] {
+    @include b(carousel-arrow) {
       display: none;
     }
   }
 
-  &[tas-indicator='outside']{
+  &[tas-indicator='outside'] {
     margin-bottom: 30px;
   }
 
-  &[tas-indicator='outside']{
-    .tas-carousel-ind{
+  &[tas-indicator='outside'] {
+    .tas-carousel-ind {
       top: 10px;
     }
   }
 
-  &[tas-indicator='outside']{
-    @include b(carousel-ind){
-    ul {
-       background-color: rgba(0, 0, 0, 0.5);
+  &[tas-indicator='outside'] {
+    @include b(carousel-ind) {
+      ul {
+        background-color: rgba(0, 0, 0, 0.5);
       }
     }
   }
-  &[tas-indicator='none']{
-    @include b(carousel-ind){
+  &[tas-indicator='none'] {
+    @include b(carousel-ind) {
       display: none;
     }
   }
@@ -161,8 +161,6 @@
   opacity: 1;
   left: 20px;
 }
-
-
 
 .tas-carousel > [carousel-item] > .tas-carousel-next,
 .tas-carousel > [carousel-item] > .tas-carousel-prev,
@@ -269,10 +267,10 @@
   opacity: 0;
 }
 
-.tas-this{
+.tas-this {
   color: #ffffff;
 }
 
-li{
+li {
   list-style: none;
 }

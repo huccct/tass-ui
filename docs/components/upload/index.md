@@ -4,7 +4,7 @@
       border-radius: 5px;
       padding:20px;
   }
-  
+
   details > summary:first-of-type {
       font-size: 10px;
       padding: 8px 0;
@@ -16,9 +16,7 @@
 ## 基础用法
 通过点击上传文件。
 <div class="example">
-    <div>
-        <tass-button type="primary" @click="beginUpload">点击上传</tass-button>
-    </div>
+    <tass-upload></tass-upload>
 </div>
 
 <details>
@@ -26,9 +24,22 @@
 
 ```vue
 <template>
-  <div>
-    <tass-button type="primary" @click="beginUpload">点击上传</tass-button>
+  <div class="example">
+    <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
+      <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
+    </div>
   </div>
 </template>
+
+<script>
+  // 上传更新文件，第一个参数为当前上传文件，第二个参数为上传之后的文件列表
+  const changeUpload = (file: any, fileList: any) => {
+    console.log(file, fileList);
+  };
+  // 删除更新文件，第一个参数为当前删除文件，第二个参数为上传之后的文件列表
+  const deleteUpload = (file: any, fileList: any) => {
+    console.log(file, fileList);
+  };
+</script>
 ```
 </details>

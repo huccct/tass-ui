@@ -6,7 +6,7 @@
     * @Update: 2023/2/8 21:13
 -->
 <template>
-    <transition name="drop-transition" @mouseenter="mouseenter">
+    <transition name="tass-drop-transition" @mouseenter="mouseenter">
         <ul class="tass-dropdown-menu" v-if="state.showMenuClick">
             <slot></slot>
         </ul>

@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-11 10:37:46
+ * @LastEditTime: 2023-02-12 17:01:22
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -405,6 +405,33 @@
   <br />
   <br />
 
+  <div style="width: 640px; padding: 20px 0">
+    <tass-progress color="#e6a23c" :percent="60" select="on"></tass-progress>
+    <tass-progress color="#FFAABB" :percent="50" select="on"></tass-progress>
+    <tass-progress color="#67c23a" :percent="100" select="on"></tass-progress>
+    <tass-progress color="#F0E68C" :percent="80" status="warning" select="on"></tass-progress>
+    <tass-progress :percent="40" status="success" select="on"></tass-progress>
+  </div>
+  <br />
+  <br />
+
+  <div style="width: 640px; padding: 20px 0">
+    <tass-progress color="#e6a23c" :percent="60" select="on" type="in"></tass-progress>
+    <tass-progress color="#67c23a" :percent="100" select="on" type="in"></tass-progress>
+    <tass-progress color="#F0E68C" :percent="80" select="on" type="in"></tass-progress>
+    <tass-progress color="#FFAABB" :percent="40" select="on" type="in"></tass-progress>
+  </div>
+  <br />
+  <br />
+
+  <div style="width: 640px; padding: 20px 0">
+    <tass-progress color="#FFAABB" :percent="50"></tass-progress>
+    <tass-progress color="#F0E68C" :percent="90" status="warning"></tass-progress>
+    <tass-progress color="#e6a23c" :percent="100" status="success"></tass-progress>
+  </div>
+  <br />
+  <br />
+
   <tass-input v-model="inputVal" clearable />&nbsp;{{ inputVal }}
   <br />
   <br />
@@ -428,9 +455,11 @@
     :page="1"
   ></tass-pagination>
 
-    <tass-backtop>
-      <router-view />
-    </tass-backtop>
+  <tass-backtop>
+    <router-view />
+  </tass-backtop>
+
+  <tass-date-picker :time="nowDate"></tass-date-picker>
 </template>
 
 <script setup lang="ts">
@@ -564,6 +593,7 @@
   const total = ref(10);
   const pageSize = ref(1);
   const changePage = (page: number) => {};
+  const nowDate = new Date();
 </script>
 
 <style lang="scss">

@@ -40,7 +40,7 @@
   cursor: pointer;
 }
 
-.dropdown-button{
+.tass-dropdown-button{
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -63,7 +63,7 @@
   padding: 12px 20px;
   border-radius: 4px;
 }
-.drop-transition-leave-active, .drop-transition-enter-active {
+.tass-drop-transition-leave-active, .tass-drop-transition-enter-active {
   -webkit-transition: opacity .3s ease, -webkit-transform .3s ease;
   transition: opacity .3s ease, -webkit-transform .3s ease;
   transition: transform .3s ease, opacity .3s ease;
@@ -72,7 +72,7 @@
   transform-origin: left top
 }
 
-.drop-transition-enter, .drop-transition-leave-active {
+.tass-drop-transition-enter, .tass-drop-transition-leave-active {
   opacity: 0;
   -webkit-transform: scaleY(.8);
   transform: scaleY(0.8);
