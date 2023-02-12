@@ -9,7 +9,7 @@
     <div class="tass-dropdown"
          @mouseenter="mouseenter"
          @mouseleave="mouseleave">
-        <button class="dropdown-button" @click="mouseclick">
+        <button class="tass-dropdown-button" @click="mouseclick">
             <span class="tass-dropdown-link" >
                 下拉菜单
                 <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
