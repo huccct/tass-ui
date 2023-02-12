@@ -2,7 +2,11 @@
 @use 'common/var' as *;
 
 @include b(datepicker) {
-  & > .tas-picker {
+  width: 250px;
+  cursor: pointer;
+  @include b(picker) {
+    position: absolute;
+    cursor: pointer;
     width: 323px;
     height: 300px;
     color: #606266;
@@ -12,5 +16,39 @@
     border-radius: 4px;
     line-height: 30px;
     margin: 5px 0;
+    @include e(header) {
+      padding: 5px;
+      display: flex;
+      justify-content: space-around;
+    }
+    @include e(weeks) {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #ddd;
+      padding: 5px;
+    }
+    @include e(content) {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 5px;
+      & > span {
+        width: 30px;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+  .tas-icon svg {
+    width: 1em;
+    height: 1em;
+  }
+  .isNotCurrentMonth {
+    color: #ccc;
+  }
+  .isToday {
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: #fff;
+    font-weight: 700;
   }
 }
