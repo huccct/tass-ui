@@ -32,11 +32,9 @@
 </template>
 
 <script>
-   // 上传更新文件，第一个参数为当前上传文件，第二个参数为上传之后的文件列表
   const changeUpload = (file: any, fileList: any) => {
     console.log(file, fileList);
   };
-  // 删除更新文件，第一个参数为当前删除文件，第二个参数为上传之后的文件列表
   const deleteUpload = (file: any, fileList: any) => {
     console.log(file, fileList);
   };
