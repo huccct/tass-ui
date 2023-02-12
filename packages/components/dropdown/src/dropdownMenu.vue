@@ -6,7 +6,7 @@
     * @Update: 2023/2/8 21:13
 -->
 <template>
-    <transition name="drop-transition" >
+    <transition name="tass-drop-transition" >
         <ul class="tass-dropdown-menu" v-if="state.showMenu">
             <slot></slot>
         </ul>
