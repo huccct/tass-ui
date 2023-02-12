@@ -1,9 +1,10 @@
+import { TassTimePicker } from './time-picker/index';
 /*
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:53:35
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-12 10:54:07
+ * @LastEditTime: 2023-02-12 11:00:21
  */
 export { TassButton } from './button';
 export { TassButtonGroup } from './button-group';
@@ -33,3 +34,4 @@ export { TassBreadcrumbItem } from './breadcrumb-item';
 export { TassProgress } from './progress';
 export { TassPagination } from './pagination';
 export { TassBacktop } from './backtop';
+export { TassTimePicker } from './time-picker';
