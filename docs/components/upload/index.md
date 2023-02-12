@@ -12,7 +12,7 @@
       color: #1989fa;
   }
 </style>
-# Progress 进度条
+# Upload 上传
 ## 基础用法
 通过点击上传文件。
 <div class="example">
