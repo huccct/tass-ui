@@ -1,10 +1,10 @@
 
 <style>
-  .example{
+  /* .example{
       border: 1px solid #f5f5f5;
       border-radius: 5px;
       padding:0px;
-  }
+  } */
   
   details > summary:first-of-type {
       font-size: 10px;
