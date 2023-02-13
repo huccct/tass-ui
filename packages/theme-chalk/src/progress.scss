@@ -33,7 +33,9 @@
   }
 }
 @include b(progress-circle) {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 100px;
   text-align: center;
@@ -49,7 +51,7 @@
   @include e(mask) {
     position: absolute;
     top: 50%;
-    left: 24%;
+    left: 50%;
     transform: translate(-50%, -50%);
   }
 }
