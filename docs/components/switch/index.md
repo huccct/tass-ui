@@ -1,3 +1,9 @@
+<!--
+ * @Author: 申恒杰
+ * @Date: 2023-02-12 19:17:38
+ * @Description: 铁沸物
+ * @FilePath: \tass-ui\docs\components\switch\index.md
+-->
 <script setup>
   import Detail from './detail.vue'
   import Change from './change.vue'
@@ -24,6 +30,7 @@
   }
 </style>
 # Switch 开关
+开关选择器, 需要表示开关状态/两种状态之间的切换时。
 ## 基础用法
 使用 tass-switch 标签, 创建开关
 
