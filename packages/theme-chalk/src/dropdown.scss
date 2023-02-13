@@ -2,13 +2,11 @@
 @use 'common/var' as *;
 
 .tass-dropdown {
-  min-width: 160px;
-  height: 40px;
   position: relative;
-  margin: 10px 1px;
   display: inline-block;
-  text-align: center;
   vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .tass-dropdown a:hover {
@@ -17,17 +15,11 @@
 
 .tass-dropdown-link {
   color: #636b6f;
-  min-width: 160px;
-  padding: 10px 20px 10px 10px;
+  width: 140px;
   text-transform: none;
   font-weight: 300;
   margin-bottom: 7px;
   border: 0;
-  background-size: 0 2px, 100% 1px;
-  background-repeat: no-repeat;
-  background-position: center bottom, center calc(100% - 1px);
-  background-color: transparent;
-  transition: background 0s ease-out;
   float: none;
   box-shadow: none;
   border-radius: 0;
@@ -44,77 +36,60 @@
 .tass-dropdown-button {
   display: inline-block;
   line-height: 1;
-  width: 140px;
   white-space: nowrap;
   cursor: pointer;
   background: #fff;
   border: 1px solid #dcdfe6;
-  -webkit-appearance: none;
   text-align: center;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: 0;
   margin: 0;
-  -webkit-transition: 0.1s;
   transition: 0.1s;
   font-weight: 500;
   font-size: 14px;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
   padding: 12px 20px;
   border-radius: 4px;
 }
 .tass-drop-transition-leave-active,
 .tass-drop-transition-enter-active {
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
-  -webkit-transform-origin: left top;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: left top;
 }
 
 .tass-drop-transition-enter,
 .tass-drop-transition-leave-active {
   opacity: 0;
-  -webkit-transform: scaleY(0.8);
   transform: scaleY(0.8);
 }
 
 .tass-dropdown-menu {
   position: absolute;
   top: 100%;
-  text-align: center;
   z-index: 1000;
   padding: 10px 0;
-  margin: 10px 0;
   background-color: #fff;
   border: 1px solid #ebeef5;
   border-radius: 4px;
-  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
-  width: 160px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  width: 200px;
+  box-sizing: border-box;
 }
 
 .tass-dropdown-menu > li {
   list-style: none;
   line-height: 36px;
-  padding: 0 20px;
   font-size: 14px;
   color: #606266;
   cursor: pointer;
   outline: 0;
-  width:200px;
-  margin-left: -40px;
-  text-align: left;
-  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
 }
 
 .tass-dropdown-menu > li > a {
   padding: 10px 30px;
-  text-align: center;
   display: block;
   clear: both;
   font-weight: normal;
@@ -124,11 +99,11 @@
   text-decoration: none;
 }
 .tass-dropdown-menu > li > a:hover {
-  cursor: pointer;
   background: $color-primary;
   color: #fff;
 }
 
+// arrow
 .tass-dropdown-menu::after {
   content: '';
   position: absolute;
