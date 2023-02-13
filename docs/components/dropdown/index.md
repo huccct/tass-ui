@@ -81,12 +81,12 @@ const state = reactive({
 <template>
     <div>
         <tass-dropdown :trigger="state.click">
-            <tass-dropdownMenu>
+            <tass-dropdownMenu-cilck>
                 <tass-dropdown-item>Chelsea</tass-dropdown-item>
                 <tass-dropdown-item>Liverpool</tass-dropdown-item>
                 <tass-dropdown-item>Manchester United</tass-dropdown-item>
                 <tass-dropdown-item>Manchester City</tass-dropdown-item>
-            </tass-dropdownMenu>
+            </tass-dropdownMenu-cilck>
         </tass-dropdown>
     </div>
 </template>

@@ -399,8 +399,8 @@
   <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
     <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
   </div>
-  <div style="width: 500px; border: 1px solid #ddd; padding: 20px;margin-top:20px;">
-    <tass-upload :drop="true"  @dropUpload="dropUpload" @deleteUpload="deleteUpload"></tass-upload>
+  <div style="width: 500px; border: 1px solid #ddd; padding: 20px; margin-top: 20px">
+    <tass-upload :drop="true" @dropUpload="dropUpload" @deleteUpload="deleteUpload"></tass-upload>
   </div>
   <br />
   <br />
@@ -437,7 +437,10 @@
   <br />
   <br />
   <tass-slider :min="0" :max="100"></tass-slider>
-  <tass-slider disabled></tass-slider>
+  <!-- <tass-slider disabled></tass-slider> -->
+  <tass-slider :value="40"></tass-slider>
+  <tass-slider :value="40" :step="20"></tass-slider>
+
   <br />
   <br />
 
@@ -479,200 +482,200 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, reactive } from 'vue';
-  import { TassMessage } from '@tass-ui/components/message';
-  let carouseltest = ref('1');
-  let carouseltest2 = ref('1');
+import { ref, reactive } from 'vue';
+import { TassMessage } from '@tass-ui/components/message';
+let carouseltest = ref('1');
+let carouseltest2 = ref('1');
 
-  const state1 = reactive({
-    options: {
-      fileds: [
-        { field: 'id', title: 'ID', align: 'center' },
-        { field: 'name', title: '姓名', align: 'center' },
-        { field: 'address', title: '地址', align: 'center' },
-        { field: 'from', title: '电话', align: 'center' }
-      ],
-      datas: [
-        { id: 1, name: 'zs', address: '11', from: '123' },
-        { id: 2, name: 'ls', address: '22', from: '123' },
-        { id: 3, name: 'ww', address: '33', from: '123' },
-        { id: 4, name: 'shj', address: '44', from: '123' }
-      ]
-    },
-    headStyle: {
-      color: '#fff',
-      borderColor: 'black',
-      backgroundColor: '#9090c0'
-    },
-    rowStyle: {
-      borderColor: 'black'
-    }
-  });
-  const { options, headStyle, rowStyle } = state1;
-
-  let switchtest = ref(false);
-  let switchtest1 = ref(false);
-  let loading = ref(true);
-  let disabled = ref(true);
-
-  let check1 = ref(false);
-  let check2 = ref(true);
-
-  let checkList = ref(['Shanghai', 'Hangzhou']);
-  let showList = ref(['Shanghai', 'Hangzhou', 'Beijing', 'Guangzhou']);
-
-  let normalViaible = ref(false);
-
-  const state = reactive({
-    click: 'click',
-    hover: 'hover'
-  });
-  const list = ref([
-    {
-      title: '标题1',
-      body: 'Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that',
-      id: 1
-    },
-    {
-      title: '标题2',
-      body: 'Operation feedback: enable the users to clearly perceive their operations by style updates and interactive ',
-      id: 2
-    },
-    {
-      title: '标题3',
-      body: 'Simplify the process: keep operating process simple and intuitive;Definite and clear: enunciate your intentions clearly so that the users can quickly',
-      id: 3
-    },
-    {
-      title: '标题4',
-      body: 'Decision making: giving advices about operations is acceptable, but do not make decisions for the users;Controlled consequences: users should be granted the',
-      id: 4
-    }
-  ]);
-
-  const handlerChange = () => {
-    alert('This is a handleChange test.');
-  };
-
-  interface T {
-    key: number;
-    label: string | number;
-    disabled: boolean;
+const state1 = reactive({
+  options: {
+    fileds: [
+      { field: 'id', title: 'ID', align: 'center' },
+      { field: 'name', title: '姓名', align: 'center' },
+      { field: 'address', title: '地址', align: 'center' },
+      { field: 'from', title: '电话', align: 'center' }
+    ],
+    datas: [
+      { id: 1, name: 'zs', address: '11', from: '123' },
+      { id: 2, name: 'ls', address: '22', from: '123' },
+      { id: 3, name: 'ww', address: '33', from: '123' },
+      { id: 4, name: 'shj', address: '44', from: '123' }
+    ]
+  },
+  headStyle: {
+    color: '#fff',
+    borderColor: 'black',
+    backgroundColor: '#9090c0'
+  },
+  rowStyle: {
+    borderColor: 'black'
   }
-  const generateData = () => {
-    const data: T[] = [];
-    for (let i = 1; i <= 15; i++) {
-      data.push({
-        key: i,
-        label: i,
-        disabled: i % 4 === 0
-      });
-    }
-    return ref(data);
-  };
-  const transferData = generateData();
+});
+const { options, headStyle, rowStyle } = state1;
 
-  let rightValue = ref([1, 4]);
-  let transferProps = reactive({
-    key: 'key',
-    label: 'label',
-    disabled: 'disabled'
-  });
+let switchtest = ref(false);
+let switchtest1 = ref(false);
+let loading = ref(true);
+let disabled = ref(true);
 
-  const ClickMessage_1 = () => {
-    TassMessage({
-      message: 'Success',
-      type: 'success',
-      center: false,
-      closeable: true
-    });
-  };
+let check1 = ref(false);
+let check2 = ref(true);
 
-  const ClickMessage_2 = () => {
-    TassMessage({
-      message: 'Error',
-      type: 'error',
-      center: false
-    });
-  };
+let checkList = ref(['Shanghai', 'Hangzhou']);
+let showList = ref(['Shanghai', 'Hangzhou', 'Beijing', 'Guangzhou']);
 
-  const ClickMessage_3 = () => {
-    TassMessage({
-      message: 'Warning',
-      type: 'warning',
-      center: true
-    });
-  };
+let normalViaible = ref(false);
 
-  const ClickMessage_4 = () => {
-    TassMessage({
-      message: 'Info',
-      type: 'info',
-      center: false
-    });
-  };
-
-  function changeView() {
-    normalViaible.value = !normalViaible.value;
+const state = reactive({
+  click: 'click',
+  hover: 'hover'
+});
+const list = ref([
+  {
+    title: '标题1',
+    body: 'Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that',
+    id: 1
+  },
+  {
+    title: '标题2',
+    body: 'Operation feedback: enable the users to clearly perceive their operations by style updates and interactive ',
+    id: 2
+  },
+  {
+    title: '标题3',
+    body: 'Simplify the process: keep operating process simple and intuitive;Definite and clear: enunciate your intentions clearly so that the users can quickly',
+    id: 3
+  },
+  {
+    title: '标题4',
+    body: 'Decision making: giving advices about operations is acceptable, but do not make decisions for the users;Controlled consequences: users should be granted the',
+    id: 4
   }
-  const handleClickCancelButton = () => {
-    normalViaible.value = !normalViaible.value;
-  };
-  const handleConfirmButton = () => {
-    normalViaible.value = !normalViaible.value;
-  };
+]);
 
-  // 上传更新文件，第一个参数为当前上传文件，第二个参数为上传之后的文件列表
-  const changeUpload = (file: any, fileList: any) => {
-    console.log(file, fileList);
-  };
-   // 拖拽文件，第一个参数为当前上传文件的列表（因为拖拽可能上传多个），第二个参数为上传之后的文件列表
-  const dropUpload = (files: any, fileList: any) => {
-    console.log(files, fileList);
-  };
-  // 删除更新文件，第一个参数为当前删除文件，第二个参数为上传之后的文件列表
-  const deleteUpload = (file: any, fileList: any) => {
-    console.log(file, fileList);
-  };
+const handlerChange = () => {
+  alert('This is a handleChange test.');
+};
 
-  let inputVal = ref('');
-  const total = ref(10);
-  const pageSize = ref(1);
-  const changePage = (page: number) => {};
-  const nowDate = ref(new Date());
-  const handleCLick = () => (nowDate.value = new Date());
+interface T {
+  key: number;
+  label: string | number;
+  disabled: boolean;
+}
+const generateData = () => {
+  const data: T[] = [];
+  for (let i = 1; i <= 15; i++) {
+    data.push({
+      key: i,
+      label: i,
+      disabled: i % 4 === 0
+    });
+  }
+  return ref(data);
+};
+const transferData = generateData();
+
+let rightValue = ref([1, 4]);
+let transferProps = reactive({
+  key: 'key',
+  label: 'label',
+  disabled: 'disabled'
+});
+
+const ClickMessage_1 = () => {
+  TassMessage({
+    message: 'Success',
+    type: 'success',
+    center: false,
+    closeable: true
+  });
+};
+
+const ClickMessage_2 = () => {
+  TassMessage({
+    message: 'Error',
+    type: 'error',
+    center: false
+  });
+};
+
+const ClickMessage_3 = () => {
+  TassMessage({
+    message: 'Warning',
+    type: 'warning',
+    center: true
+  });
+};
+
+const ClickMessage_4 = () => {
+  TassMessage({
+    message: 'Info',
+    type: 'info',
+    center: false
+  });
+};
+
+function changeView() {
+  normalViaible.value = !normalViaible.value;
+}
+const handleClickCancelButton = () => {
+  normalViaible.value = !normalViaible.value;
+};
+const handleConfirmButton = () => {
+  normalViaible.value = !normalViaible.value;
+};
+
+// 上传更新文件，第一个参数为当前上传文件，第二个参数为上传之后的文件列表
+const changeUpload = (file: any, fileList: any) => {
+  console.log(file, fileList);
+};
+// 拖拽文件，第一个参数为当前上传文件的列表（因为拖拽可能上传多个），第二个参数为上传之后的文件列表
+const dropUpload = (files: any, fileList: any) => {
+  console.log(files, fileList);
+};
+// 删除更新文件，第一个参数为当前删除文件，第二个参数为上传之后的文件列表
+const deleteUpload = (file: any, fileList: any) => {
+  console.log(file, fileList);
+};
+
+let inputVal = ref('');
+const total = ref(10);
+const pageSize = ref(1);
+const changePage = (page: number) => {};
+const nowDate = ref(new Date());
+const handleCLick = () => (nowDate.value = new Date());
 </script>
 
 <style lang="scss">
-  .tass-dropdown-toggle {
-    display: inline-block;
-    border-radius: 5px;
-    ::v-deep .dropdown-toggle {
-      color: tomato;
-      font-size: 25px;
-      font-weight: 800;
-    }
-    ::v-deep .dropdown-toggle-placeholder {
-      color: #c4c4c4;
-    }
+.tass-dropdown-toggle {
+  display: inline-block;
+  border-radius: 5px;
+  ::v-deep .dropdown-toggle {
+    color: tomato;
+    font-size: 25px;
+    font-weight: 800;
   }
-  .tass-dropdown-toggle1 {
-    display: inline-block;
-    margin-left: 20px;
+  ::v-deep .dropdown-toggle-placeholder {
+    color: #c4c4c4;
   }
-  .el-carousel__item h3 {
-    display: flex;
-    color: #475669;
-    opacity: 0.75;
-    line-height: 300px;
-    margin: 0;
-  }
+}
+.tass-dropdown-toggle1 {
+  display: inline-block;
+  margin-left: 20px;
+}
+.el-carousel__item h3 {
+  display: flex;
+  color: #475669;
+  opacity: 0.75;
+  line-height: 300px;
+  margin: 0;
+}
 
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
 
-  .el-carousel__item:nth-child(2n + 1) {
-    background-color: #d3dce6;
-  }
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
 </style>
