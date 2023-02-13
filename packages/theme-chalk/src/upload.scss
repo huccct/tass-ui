@@ -1,4 +1,6 @@
-.tas-upload {
+@use 'mixins/mixins' as *;
+@use 'common/var' as *;
+@include b(upload) {
   width: 100%;
   font-size: 0;
 
