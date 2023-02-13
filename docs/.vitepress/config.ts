@@ -55,7 +55,8 @@ export default {
           text: '视图',
           items: [
             { text: 'Swiper 轮播', link: '/components/swiper/' },
-            { text: 'Progress 进度条', link: '/components/progress/' }
+            { text: 'Progress 进度条', link: '/components/progress/' },
+            { text: 'Table 表格', link: '/components/table/' }
           ]
         },
         {

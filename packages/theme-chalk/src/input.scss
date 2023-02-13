@@ -5,6 +5,7 @@
   font-size: 14px;
   display: inline-block;
   position: relative;
+  width: 100%;
   @include e(inner) {
     background-color: #fff;
     border-radius: 4px;

@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-12 12:00:21
+ * @LastEditTime: 2023-02-12 22:02:24
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -402,29 +402,29 @@
   <br />
   <br />
 
-  <div style="width: 640px;padding: 20px 0;">
-    <tass-progress color="#e6a23c" :percent='60' select="on"></tass-progress>
-    <tass-progress color="#FFAABB" :percent='50' select="on"></tass-progress>
-    <tass-progress color="#67c23a" :percent='100' select="on"></tass-progress>
-    <tass-progress color="#F0E68C" :percent='80' status="warning" select="on"></tass-progress>
-    <tass-progress  :percent='40' status="success" select="on"></tass-progress>
+  <div style="width: 640px; padding: 20px 0">
+    <tass-progress color="#e6a23c" :percent="60" select="on"></tass-progress>
+    <tass-progress color="#FFAABB" :percent="50" select="on"></tass-progress>
+    <tass-progress color="#67c23a" :percent="100" select="on"></tass-progress>
+    <tass-progress color="#F0E68C" :percent="80" status="warning" select="on"></tass-progress>
+    <tass-progress :percent="40" status="success" select="on"></tass-progress>
   </div>
   <br />
   <br />
 
-  <div style="width: 640px;padding: 20px 0;">
-    <tass-progress color="#e6a23c" :percent='60' select="on" type="in"></tass-progress>
-    <tass-progress color="#67c23a" :percent='100' select="on" type="in"></tass-progress>
-    <tass-progress color="#F0E68C" :percent='80' select="on" type="in"></tass-progress>
-    <tass-progress color="#FFAABB" :percent='40' select="on" type="in"></tass-progress>
+  <div style="width: 640px; padding: 20px 0">
+    <tass-progress color="#e6a23c" :percent="60" select="on" type="in"></tass-progress>
+    <tass-progress color="#67c23a" :percent="100" select="on" type="in"></tass-progress>
+    <tass-progress color="#F0E68C" :percent="80" select="on" type="in"></tass-progress>
+    <tass-progress color="#FFAABB" :percent="40" select="on" type="in"></tass-progress>
   </div>
   <br />
   <br />
 
-  <div style="width: 640px;padding: 20px 0;">
-    <tass-progress color="#FFAABB" :percent='50'></tass-progress>
-    <tass-progress color="#F0E68C" :percent='90' status="warning"></tass-progress>
-    <tass-progress color="#e6a23c" :percent='100' status="success"></tass-progress>
+  <div style="width: 640px; padding: 20px 0">
+    <tass-progress color="#FFAABB" :percent="50"></tass-progress>
+    <tass-progress color="#F0E68C" :percent="90" status="warning"></tass-progress>
+    <tass-progress color="#e6a23c" :percent="100" status="success"></tass-progress>
   </div>
   <br />
   <br />
@@ -456,7 +456,23 @@
     <router-view />
   </tass-backtop>
 
-  <tass-date-picker></tass-date-picker>
+  <tass-table :options="options"></tass-table>
+  <br />
+  <br />
+  <tass-table :options="options" size="small"></tass-table>
+  <br />
+  <br />
+  <tass-table
+    :options="options"
+    size="mini"
+    :headStyle="headStyle"
+    :rowStyle="rowStyle"
+  ></tass-table>
+  <br />
+  <br />
+  <button @click="handleCLick">修改</button>
+  {{ nowDate }}
+  <tass-date-picker v-model="nowDate"></tass-date-picker>
 </template>
 
 <script setup lang="ts">
@@ -464,6 +480,32 @@
   import { TassMessage } from '@tass-ui/components/message';
   let carouseltest = ref('1');
   let carouseltest2 = ref('1');
+
+  const state1 = reactive({
+    options: {
+      fileds: [
+        { field: 'id', title: 'ID', align: 'center' },
+        { field: 'name', title: '姓名', align: 'center' },
+        { field: 'address', title: '地址', align: 'center' },
+        { field: 'from', title: '电话', align: 'center' }
+      ],
+      datas: [
+        { id: 1, name: 'zs', address: '11', from: '123' },
+        { id: 2, name: 'ls', address: '22', from: '123' },
+        { id: 3, name: 'ww', address: '33', from: '123' },
+        { id: 4, name: 'shj', address: '44', from: '123' }
+      ]
+    },
+    headStyle: {
+      color: '#fff',
+      borderColor: 'black',
+      backgroundColor: '#9090c0'
+    },
+    rowStyle: {
+      borderColor: 'black'
+    }
+  });
+  const { options, headStyle, rowStyle } = state1;
 
   let switchtest = ref(false);
   let switchtest1 = ref(false);
@@ -590,6 +632,8 @@
   const total = ref(10);
   const pageSize = ref(1);
   const changePage = (page: number) => {};
+  const nowDate = ref(new Date());
+  const handleCLick = () => (nowDate.value = new Date());
 </script>
 
 <style lang="scss">
