@@ -1,10 +1,4 @@
-<!--
- * @Descripttion: Spicy chicken
- * @Author: YuShu Xiao
- * @Date: 2023-02-12 18:07:32
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-12 18:23:25
--->
+
 <style>
   .example{
       border: 1px solid #f5f5f5;
