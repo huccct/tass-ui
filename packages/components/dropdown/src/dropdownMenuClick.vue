@@ -6,8 +6,8 @@
     * @Update: 2023/2/8 21:13
 -->
 <template>
-    <transition name="tass-drop-transition" @mouseenter="mouseenter">
-        <ul class="tass-dropdown-menu" v-if="state.showMenuClick">
+    <transition name="tas-dropdown-transition" @mouseenter="mouseenter">
+        <ul class="tas-dropdown-menu" v-if="state.showMenuClick">
             <slot></slot>
         </ul>
     </transition>
