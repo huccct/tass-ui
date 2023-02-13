@@ -1,8 +1,7 @@
-import datapicker from '../src/data-picker.vue';
+import datapicker from '../src/date-picker.vue';
 
 import { describe, expect, it, test } from 'vitest';
 import { mount } from '@vue/test-utils';
-const list = ['diapers', 'kleenex', 'trash bags', 'paper towels', 'milk'];
 
 describe('test checkbox', () => {
   it('should render slot', () => {
@@ -19,10 +18,4 @@ describe('test checkbox', () => {
       expect(wrapper.classes()).toContain('tas-datapicker');
     });
     });
-});
-
-test('the shopping list has milk on it', () => {
-  expect(list).toContain('milk');
-  expect(new Set(list)).toContain('milk');
-  
 });
