@@ -17,9 +17,8 @@
 ## 基础用法
 点击按钮直接回到页面顶部。
 <div class="example">
-    <tass-backtop>
-      <router-view />
-    </tass-backtop>
+  Scroll down to see the bottom-right button.
+    <tass-backtop/>
 </div>
 
 <details>
@@ -27,10 +26,8 @@
 
 ```vue
 <template>
-Scroll down to see the bottom-right button.
-    <tass-backtop>
-      <router-view />
-    </tass-backtop>
+      Scroll down to see the bottom-right button.
+    <tass-backtop/>
 </template>
 
 ```
