@@ -1,6 +1,5 @@
 @use 'mixins/mixins' as *;
 @use 'common/var' as *;
-
 @include b(table){
   
 }
@@ -20,12 +19,12 @@
         box-sizing: border-box;
         text-align: left;
         line-height: 20px;
-        color: #646468;
+        color: #f0f0f0;
         font-weight: 550;
         font-size:14px;
         border:1px solid #f0f0f0;
         border-right:0;
-        background-color:#fafafa ;
+        background-color: #282858 ;
       }
       th:last-child{
         border-right:1px solid #f0f0f0;
@@ -79,12 +78,12 @@
         box-sizing: border-box;
         text-align: left;
         line-height: 20px;
-        color: #646468;
+        color: #f0f0f0;
         font-weight: 550;
         font-size:14px;
         border:1px solid #f0f0f0;
         border-right:0;
-        background-color:#fafafa ;
+        background-color:#282858 ;
       }
       th:last-child{
         border-right:1px solid #f0f0f0;
@@ -137,12 +136,12 @@
         box-sizing: border-box;
         text-align: left;
         line-height: 18px;
-        color: #646468;
+        color: #f0f0f0;
         font-weight: 550;
         font-size:12px;
         border:1px solid #f0f0f0;
         border-right:0;
-        background-color:#fafafa ;
+        background-color:#282858 ;
       }
       th:last-child{
         border-right:1px solid #f0f0f0;
