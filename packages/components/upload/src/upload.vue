@@ -14,7 +14,7 @@
             <tass-icon name="upload"></tass-icon>
           </div>
           <div class="drop-upload__out">
-            <span class="drop-upload__out__word">推拽到此上传,或</span> <span class="drop-upload__out__uploadWord" @click="beginUpload">点击上传</span>
+            <span class="drop-upload__out__word">拖拽到此上传,或</span> <span class="drop-upload__out__uploadWord" @click="beginUpload">点击上传</span>
           </div>
         </div>
       </div>
