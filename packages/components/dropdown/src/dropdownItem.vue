@@ -6,7 +6,7 @@
     * @Update: 2023/2/8 21:13
 -->
 <template>
-    <li class="tass-dropdown-item" >
+    <li class="tas-dropdown-item" >
         <a>
             <slot></slot>
         </a>

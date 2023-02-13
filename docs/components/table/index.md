@@ -122,8 +122,8 @@ const { options } = state;
       <div style="color: #008dff">{{ item.scope.row.id }}</div>
     </template>
     <template #action="item">
-      <tass-button type="text" size="small" :disabled="item.scope.rowIndex % 2 == 0" >编辑</tass-button >
-      <tass-button type="text" style="color: #ec3437" size="small" >删除</tass-button >
+      <tass-button type="primary" size="small" :disabled="item.scope.rowIndex % 2 == 0" >编辑</tass-button >
+      <tass-button type="danger" size="small" >删除</tass-button >
     </template>
   </tass-table>
 </template>
