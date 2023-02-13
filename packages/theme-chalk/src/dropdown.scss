@@ -1,19 +1,22 @@
 @use 'sass:math';
+@use './mixins/mixins' as *;
+
 @use 'common/var' as *;
 
-.tass-dropdown {
+@include b(dropdown){
   position: relative;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
   box-sizing: border-box;
+  & > a {
+    &:hover{
+      text-decoration: none;
+    }
+  }
 }
 
-.tass-dropdown a:hover {
-  text-decoration: none;
-}
-
-.tass-dropdown-link {
+@include b(dropdown-link){
   color: #636b6f;
   width: 140px;
   text-transform: none;
@@ -26,6 +29,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+
 }
 
 .dropdown-toggle:hover {
@@ -33,7 +37,7 @@
   cursor: pointer;
 }
 
-.tass-dropdown-button {
+@include b(dropdown-button) {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -50,21 +54,23 @@
   padding: 12px 20px;
   border-radius: 4px;
 }
-.tass-drop-transition-leave-active,
-.tass-drop-transition-enter-active {
+
+
+.tas-dropdown-transition-leave-active,
+.tas-dropdown-transition-enter-active {
   transition: opacity 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: left top;
 }
 
-.tass-drop-transition-enter,
-.tass-drop-transition-leave-active {
+.tas-dropdown-transition-enter,
+.tas-dropdown-transition-leave-active {
   opacity: 0;
   transform: scaleY(0.8);
 }
 
-.tass-dropdown-menu {
+@include b(dropdown-menu) {
   position: absolute;
   top: 100%;
   z-index: 1000;
@@ -75,9 +81,11 @@
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   width: 200px;
   box-sizing: border-box;
-}
 
-.tass-dropdown-menu > li {
+
+
+}
+@include b(dropdown-item) {
   list-style: none;
   line-height: 36px;
   font-size: 14px;
@@ -86,33 +94,38 @@
   outline: 0;
   width: 200px;
   text-align: center;
+  & > a {
+    padding: 10px 30px;
+    display: block;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #333333;
+    white-space: nowrap;
+    text-decoration: none;
+
+    &:hover{
+      background: $color-primary;
+      color: #fff;
+    }
+  }
 }
 
-.tass-dropdown-menu > li > a {
-  padding: 10px 30px;
-  display: block;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.6;
-  color: #333333;
-  white-space: nowrap;
-  text-decoration: none;
-}
-.tass-dropdown-menu > li > a:hover {
-  background: $color-primary;
-  color: #fff;
-}
+
 
 // arrow
-.tass-dropdown-menu::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 97px;
-  transform: translate(-50%, -50%) rotate(135deg);
-  width: 9px;
-  height: 9px;
-  background: #ffff;
-  border: 1px solid #ebeef5;
-  border-style: none none solid solid;
+@include b(dropdown-menu) {
+  ::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 97px;
+    transform: translate(-50%, -50%) rotate(135deg);
+    width: 9px;
+    height: 9px;
+    background: #ffff;
+    border: 1px solid #ebeef5;
+    border-style: none none solid solid;
+
+  }
 }
