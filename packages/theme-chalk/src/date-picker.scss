@@ -1,6 +1,12 @@
 @use 'mixins/mixins' as *;
 @use 'common/var' as *;
 
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 @include b(datepicker) {
   width: 250px;
   cursor: pointer;
@@ -16,7 +22,9 @@
     border-radius: 4px;
     line-height: 30px;
     margin: 5px 0;
+    z-index: 99;
     @include e(header) {
+      cursor: pointer;
       padding: 5px;
       display: flex;
       justify-content: space-around;
@@ -36,6 +44,12 @@
         text-align: center;
         font-size: 14px;
       }
+      & > span:hover {
+        background-color: $color-primary;
+        border-radius: 50%;
+      }
+    }
+    @include e(items) {
     }
   }
   .tas-icon svg {
@@ -44,6 +58,10 @@
   }
   .isNotCurrentMonth {
     color: #ccc;
+    cursor: not-allowed;
+  }
+  .isNotCurrentMonth:hover {
+    background-color: #fff !important;
   }
   .isToday {
     border-radius: 50%;

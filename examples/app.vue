@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-02-12 19:19:58
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-12 22:02:24
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -460,15 +460,22 @@
   </tass-backtop>
 
   <tass-table :options="options"></tass-table>
-  <br>
-  <br>
+  <br />
+  <br />
   <tass-table :options="options" size="small"></tass-table>
-  <br>
-  <br>
-  <tass-table :options="options" size="mini" :headStyle="headStyle" :rowStyle="rowStyle"></tass-table>
-  <br>
-  <br>
-  <tass-date-picker :time="nowDate"></tass-date-picker>
+  <br />
+  <br />
+  <tass-table
+    :options="options"
+    size="mini"
+    :headStyle="headStyle"
+    :rowStyle="rowStyle"
+  ></tass-table>
+  <br />
+  <br />
+  <button @click="handleCLick">修改</button>
+  {{ nowDate }}
+  <tass-date-picker v-model="nowDate"></tass-date-picker>
 </template>
 
 <script setup lang="ts">
@@ -478,28 +485,28 @@
   let carouseltest2 = ref('1');
 
   const state1 = reactive({
-    options:{
-      fileds:[
-        {field:'id',title:'ID',align:'center'},
-        {field:'name',title:'姓名',align:'center'},
-        {field:'address',title:'地址',align:'center'},
-        {field:'from',title:'电话',align:'center'}
+    options: {
+      fileds: [
+        { field: 'id', title: 'ID', align: 'center' },
+        { field: 'name', title: '姓名', align: 'center' },
+        { field: 'address', title: '地址', align: 'center' },
+        { field: 'from', title: '电话', align: 'center' }
       ],
-      datas:[
-        {id:1,name:'zs',address:'11',from:"123"},
-        {id:2,name:'ls',address:'22',from:"123"},
-        {id:3,name:'ww',address:'33',from:"123"},
-        {id:4,name:'shj',address:'44',from:"123"},
+      datas: [
+        { id: 1, name: 'zs', address: '11', from: '123' },
+        { id: 2, name: 'ls', address: '22', from: '123' },
+        { id: 3, name: 'ww', address: '33', from: '123' },
+        { id: 4, name: 'shj', address: '44', from: '123' }
       ]
-      },
-      headStyle: {
-        color: "#fff",
-        borderColor: "black",
-        backgroundColor: "#9090c0",
-      },
-      rowStyle: {
-        borderColor: "black",
-      },
+    },
+    headStyle: {
+      color: '#fff',
+      borderColor: 'black',
+      backgroundColor: '#9090c0'
+    },
+    rowStyle: {
+      borderColor: 'black'
+    }
   });
   const { options, headStyle, rowStyle } = state1;
 
@@ -628,7 +635,8 @@
   const total = ref(10);
   const pageSize = ref(1);
   const changePage = (page: number) => {};
-  const nowDate = new Date();
+  const nowDate = ref(new Date());
+  const handleCLick = () => (nowDate.value = new Date());
 </script>
 
 <style lang="scss">
