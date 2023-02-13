@@ -1,11 +1,5 @@
 
 <style>
-  .example{
-      border: 1px solid #f5f5f5;
-      border-radius: 5px;
-      padding:0px;
-  }
-  
   details > summary:first-of-type {
       font-size: 10px;
       padding: 8px 0;
@@ -16,7 +10,7 @@
 # Collapse 折叠面板
 ## 基础用法
 每次能展开多个面板。
-<div class="example">
+<div>
     <div>
         <tass-collapse :posts="list" :types="true">
            <div style="height: 200px"></div>
@@ -94,7 +88,7 @@ export default {
 
 ## 手风琴效果
 每次只能展开一个面板。
-<div class="example">
+<div>
     <div>
       <tass-collapse :posts="list" :types="false">
          <div style="height: 200px"></div>

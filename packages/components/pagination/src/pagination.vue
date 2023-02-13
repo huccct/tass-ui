@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-02-11 09:35:12
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-11 11:34:27
+ * @LastEditors: YuShu Xiao
+ * @LastEditTime: 2023-02-13 14:10:47
 -->
 <template>
   <div class="tas-pagination">
@@ -41,7 +41,6 @@
   let pages = computed(() => Math.ceil(props.total / props.pagesize));
   const emit = defineEmits(['change-page']);
   const attrs = useAttrs();
-  console.log(attrs.page);
 
   const currentPage = ref(attrs.page || 1) as any;
   const list = computed(() => {

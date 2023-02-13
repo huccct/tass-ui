@@ -223,9 +223,6 @@
     </tass-dropdown>
   </div>
 
-  <br />
-  <br />
-
   <tass-button type="primary" :visible="!normalViaible" @click="changeView">dialog</tass-button>
   <tass-dialog
     :visible="normalViaible"
