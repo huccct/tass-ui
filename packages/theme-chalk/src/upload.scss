@@ -3,7 +3,32 @@
 @include b(upload) {
   width: 100%;
   font-size: 0;
-
+  .drop-upload {
+    background-color: #fff;
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 360px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .drop-upload__out {
+      display: flex;
+      justify-content: center;
+      .drop-upload__out__word {
+        color: #606266;
+        margin-top: 16px;
+        font-size: 14px;
+      }
+      .drop-upload__out__uploadWord {
+        color: #409eff;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 16px;
+      }
+    }
+  }
   .file {
     display: flex;
     width: 100%;
