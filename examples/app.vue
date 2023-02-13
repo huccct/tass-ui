@@ -223,20 +223,6 @@
     </tass-dropdown>
   </div>
 
-    <div class="tass-dropdown-toggle">
-        小尺寸hover触发
-        <tass-dropdown :size="'small'" :trigger="state.hover">
-            <tass-dropdownMenu>
-                <tass-dropdown-item>Chelsea</tass-dropdown-item>
-                <tass-dropdown-item>Liverpool</tass-dropdown-item>
-                <tass-dropdown-item>Manchester United</tass-dropdown-item>
-                <tass-dropdown-item>Manchester City</tass-dropdown-item>
-            </tass-dropdownMenu>
-        </tass-dropdown>
-    </div>
-  <br />
-  <br />
-
   <tass-button type="primary" :visible="!normalViaible" @click="changeView">dialog</tass-button>
   <tass-dialog
     :visible="normalViaible"
