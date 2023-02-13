@@ -2,8 +2,8 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-01-22 16:51:31
- * @LastEditors: Huccct
- * @LastEditTime: 2023-02-06 14:15:27
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-02-13 15:50:40
  */
 import { describe, expect, it } from 'vitest';
 
@@ -14,7 +14,7 @@ describe('test Slider', () => {
   it('should render slot', () => {
     const wrapper = mount(slider, {
       slots: {
-        default: 'Hello world'
+        default: ''
       }
     });
   });
