@@ -21,43 +21,43 @@
 <div class="example">
     <tass-row>
       <tass-col :span="24">
-        <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #9090C0; height: 35px; border-radius: 8px"></div>
       </tass-col>
     </tass-row>
     <br />
     <br />
     <tass-row>
       <tass-col :span="12">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col :span="12">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
     </tass-row>
     <br />
     <br />
     <tass-row tag="div">
       <tass-col tag="span" :span="12">
-        <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #9090C0; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
     </tass-row>
     <br />
     <br />
     <tass-row tag="div" :gutter="20" justify="end">
       <tass-col tag="span" :span="6">
-        <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #9090C0; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
     </tass-row>
     <br />
@@ -71,43 +71,43 @@
 <template>
       <tass-row>
         <tass-col :span="24">
-          <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+          <div style="background-color: #9090C0; height: 35px; border-radius: 8px"></div>
         </tass-col>
       </tass-row>
       <br />
       <br />
       <tass-row>
         <tass-col :span="12">
-          <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+          <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
         </tass-col>
         <tass-col :span="12">
-          <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+          <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
         </tass-col>
       </tass-row>
       <br />
       <br />
       <tass-row tag="div">
         <tass-col tag="span" :span="12">
-          <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+          <div style="background-color: #9090C0; height: 35px; border-radius: 8px"></div>
         </tass-col>
         <tass-col tag="span" :span="6">
-          <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+          <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
         </tass-col>
         <tass-col tag="span" :span="6">
-          <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+          <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
         </tass-col>
       </tass-row>
       <br />
       <br />
       <tass-row tag="div" :gutter="20" justify="end">
         <tass-col tag="span" :span="6">
-          <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+          <div style="background-color: #9090C0; height: 35px; border-radius: 8px"></div>
         </tass-col>
         <tass-col tag="span" :span="6">
-          <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+          <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
         </tass-col>
         <tass-col tag="span" :span="6">
-          <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+          <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
         </tass-col>
       </tass-row>
       <br />
@@ -120,16 +120,16 @@
 <div class="example">
     <tass-row tag="div" :gutter="40" justify="end">
       <tass-col tag="span" :span="6">
-        <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #9090C0; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
     </tass-row>
 </div>
@@ -142,16 +142,16 @@
   <div>
     <tass-row tag="div" :gutter="40" justify="end">
       <tass-col tag="span" :span="6">
-        <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #9090C0; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
-        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+        <div style="background-color: #595B83; height: 35px; border-radius: 8px"></div>
       </tass-col>
     </tass-row>
   </div>

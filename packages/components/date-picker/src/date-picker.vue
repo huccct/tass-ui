@@ -3,11 +3,11 @@
  * @Author: Huccct
  * @Date: 2023-02-12 10:57:19
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-12 22:49:53
+ * @LastEditTime: 2023-02-13 11:54:32
 -->
 <template>
   <div class="tas-datepicker" v-click-outside>
-    <tass-input prefix-icon="calendarfull" placeholder="请选择日期" v-model="nowTime" />
+    <tass-input :prefix-icon="prefixIcon" placeholder="Pick a day" v-model="nowTime" />
     <div class="tas-picker" v-if="isVisible">
       <div class="tas-picker__header">
         <button @click="handlerChange(-1, 'year')">
@@ -90,6 +90,10 @@
     modelValue: {
       type: Date,
       required: true
+    },
+    prefixIcon: {
+      type: String,
+      default: 'calendarfull'
     }
   });
   const time = computed({
