@@ -11,6 +11,9 @@
       cursor: pointer;
       color: #1989fa;
   }
+  .vp-doc ul, .vp-doc ol {
+    padding-left: 0px !important;
+  }
 </style>
 # Dropdown 下拉菜单
 ## 基本用法
@@ -22,8 +25,7 @@ const click = ref('click');
 const hover = ref('hover');
 </script>
 <div class="example">
-    <div class="tass-dropdown-toggle">
-      <tass-dropdown :trigger="hover">
+    <tass-dropdown :trigger="hover">
           <tass-dropdownMenu>
             <tass-dropdown-item>北京市</tass-dropdown-item>
             <tass-dropdown-item>上海市</tass-dropdown-item>
@@ -31,7 +33,6 @@ const hover = ref('hover');
             <tass-dropdown-item>厦门市</tass-dropdown-item>
           </tass-dropdownMenu>
     </tass-dropdown>
-   </div>
 </div>
 
 <details>
@@ -40,16 +41,14 @@ const hover = ref('hover');
 ```vue
 
 <template>
-    <div class="tass-dropdown-toggle">
-        <tass-dropdown :trigger="state.hover">
-            <tass-dropdownMenu>
-                <tass-dropdown-item>Chelsea</tass-dropdown-item>
-                <tass-dropdown-item>Liverpool</tass-dropdown-item>
-                <tass-dropdown-item>Manchester United</tass-dropdown-item>
-                <tass-dropdown-item>Manchester City</tass-dropdown-item>
-            </tass-dropdownMenu>
-        </tass-dropdown>
-    </div>
+    <tass-dropdown :trigger="state.hover">
+        <tass-dropdownMenu>
+            <tass-dropdown-item>Chelsea</tass-dropdown-item>
+            <tass-dropdown-item>Liverpool</tass-dropdown-item>
+            <tass-dropdown-item>Manchester United</tass-dropdown-item>
+            <tass-dropdown-item>Manchester City</tass-dropdown-item>
+        </tass-dropdownMenu>
+    </tass-dropdown>
 </template>
 
 <script setup lang="ts">
@@ -64,7 +63,7 @@ const state = reactive({
 
 ### **click** 触发
 <div class="example">
-<div class="tass-dropdown-toggle">
+    <div>
         <tass-dropdown :trigger="click">
             <tass-dropdownMenu-click>
                 <tass-dropdown-item>北京市</tass-dropdown-item>
@@ -73,14 +72,14 @@ const state = reactive({
                 <tass-dropdown-item>厦门市</tass-dropdown-item>
             </tass-dropdownMenu-click>
         </tass-dropdown>
-</div>
+    </div>
 </div>
 <details>
 <summary>展开看看</summary>
 
 ```vue
 <template>
-    <div class="tass-dropdown-toggle">
+    <div>
         <tass-dropdown :trigger="state.click">
             <tass-dropdownMenu>
                 <tass-dropdown-item>Chelsea</tass-dropdown-item>
