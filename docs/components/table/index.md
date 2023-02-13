@@ -28,6 +28,12 @@
 </style>
 # Table 表格
 用于展示多层次结构的数据，可自定义并保持高度灵活
+options:表格数据,fileds 和 datas,fileds作为整体约束,datas作为数据定义  
+size:表格尺寸大小 default / small / mini 默认default  
+showHeader:是否显示表头 默认true  
+headStyle:自定义表头样式
+rowStyle:自定义表格内容区域的样式  
+customClass:自定义表格组件整体的Class类名
 ## 基础用法
 table 表格基本使用示例,需要一个主要的 options 参数。
 
