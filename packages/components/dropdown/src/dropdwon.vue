@@ -6,13 +6,8 @@
     * @Update: 2023/2/1 17:55
 -->
 <template>
-  <div class="tas-dropdown" @mouseenter="mouseenter" @mouseleave="mouseleave">
-    <button class="tas-dropdown-button" @click="mouseclick">
-      <span class="tas-dropdown-link">
-        下拉菜单
-        <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
-      </span>
-    </button>
+  <div class="tas-dropdown" @mouseenter="mouseenter" @mouseleave="mouseleave" @click="mouseclick">
+
     <slot></slot>
   </div>
 </template>
