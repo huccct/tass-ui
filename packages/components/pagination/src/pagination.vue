@@ -2,12 +2,14 @@
  * @Description: Stay hungry，Stay foolish
  * @Author: Huccct
  * @Date: 2023-02-11 09:35:12
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-13 14:10:47
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-15 22:55:47
 -->
 <template>
   <div class="tas-pagination">
-    <a @click="changePage(false)" href="javascript:;">上一页</a>
+    <a @click="changePage(false)" href="javascript:;" :class="{ disabled: currentPage === 1 }"
+      >上一页</a
+    >
     <span v-if="currentPage > 3">...</span>
     <a
       @click="changePage(item)"
