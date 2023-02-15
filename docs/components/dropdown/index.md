@@ -26,12 +26,12 @@ const hover = ref('hover');
 </script>
 <div class="example">
     <tass-dropdown :trigger="hover">
-          <tass-dropdownMenu>
+          <tass-dropdown-menu>
             <tass-dropdown-item>北京市</tass-dropdown-item>
             <tass-dropdown-item>上海市</tass-dropdown-item>
             <tass-dropdown-item>杭州市</tass-dropdown-item>
             <tass-dropdown-item>厦门市</tass-dropdown-item>
-          </tass-dropdownMenu>
+          </tass-dropdown-menu>
     </tass-dropdown>
 </div>
 
@@ -42,12 +42,12 @@ const hover = ref('hover');
 
 <template>
     <tass-dropdown :trigger="state.hover">
-        <tass-dropdownMenu>
+        <tass-dropdown-menu>
             <tass-dropdown-item>Chelsea</tass-dropdown-item>
             <tass-dropdown-item>Liverpool</tass-dropdown-item>
             <tass-dropdown-item>Manchester United</tass-dropdown-item>
             <tass-dropdown-item>Manchester City</tass-dropdown-item>
-        </tass-dropdownMenu>
+        </tass-dropdown-menu>
     </tass-dropdown>
 </template>
 
@@ -65,12 +65,12 @@ const state = reactive({
 <div class="example">
     <div>
         <tass-dropdown :trigger="click">
-            <tass-dropdownMenu-click>
+            <tass-dropdown-menu-click>
                 <tass-dropdown-item>北京市</tass-dropdown-item>
                 <tass-dropdown-item>上海市</tass-dropdown-item>
                 <tass-dropdown-item>杭州市</tass-dropdown-item>
                 <tass-dropdown-item>厦门市</tass-dropdown-item>
-            </tass-dropdownMenu-click>
+            </tass-dropdown-menu-click>
         </tass-dropdown>
     </div>
 </div>
@@ -81,12 +81,12 @@ const state = reactive({
 <template>
     <div>
         <tass-dropdown :trigger="state.click">
-            <tass-dropdownMenu-cilck>
+            <tass-dropdown-menu-click>
                 <tass-dropdown-item>Chelsea</tass-dropdown-item>
                 <tass-dropdown-item>Liverpool</tass-dropdown-item>
                 <tass-dropdown-item>Manchester United</tass-dropdown-item>
                 <tass-dropdown-item>Manchester City</tass-dropdown-item>
-            </tass-dropdownMenu-cilck>
+            </tass-dropdown-menu-click>
         </tass-dropdown>
     </div>
 </template>

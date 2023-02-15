@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-14 16:59:07
+ * @LastEditTime: 2023-02-14 17:11:55
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -155,10 +155,13 @@
   <br />
   <br />
 
-  <div style="width: 400px;box-sizing: border-box;">
+  <div style="box-sizing: border-box">
     <tass-row :gutter="10">
       <tass-col tag="span" :span="6">
         <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+      </tass-col>
+      <tass-col tag="span" :span="6">
+        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
       </tass-col>
       <tass-col tag="span" :span="6">
         <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
