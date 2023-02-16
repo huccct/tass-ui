@@ -26,6 +26,12 @@ const hover = ref('hover');
 </script>
 <div class="example">
     <tass-dropdown :trigger="hover">
+        <button class="tas-dropdown-button">
+          <span class="tas-dropdown-link">
+                下拉菜单
+                <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
+          </span>
+        </button> 
           <tass-dropdownMenu>
             <tass-dropdown-item>北京市</tass-dropdown-item>
             <tass-dropdown-item>上海市</tass-dropdown-item>
@@ -42,11 +48,17 @@ const hover = ref('hover');
 
 <template>
     <tass-dropdown :trigger="state.hover">
+        <button class="tas-dropdown-button">
+          <span class="tas-dropdown-link">
+                下拉菜单
+                <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
+          </span>
+        </button>
         <tass-dropdownMenu>
-            <tass-dropdown-item>Chelsea</tass-dropdown-item>
-            <tass-dropdown-item>Liverpool</tass-dropdown-item>
-            <tass-dropdown-item>Manchester United</tass-dropdown-item>
-            <tass-dropdown-item>Manchester City</tass-dropdown-item>
+            <tass-dropdown-item>北京市</tass-dropdown-item>
+            <tass-dropdown-item>上海市</tass-dropdown-item>
+            <tass-dropdown-item>杭州市</tass-dropdown-item>
+            <tass-dropdown-item>厦门市</tass-dropdown-item>
         </tass-dropdownMenu>
     </tass-dropdown>
 </template>
@@ -65,6 +77,12 @@ const state = reactive({
 <div class="example">
     <div>
         <tass-dropdown :trigger="click">
+          <button class="tas-dropdown-button">
+              <span class="tas-dropdown-link">
+                    下拉菜单
+                    <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
+              </span>
+          </button>
             <tass-dropdownMenu-click>
                 <tass-dropdown-item>北京市</tass-dropdown-item>
                 <tass-dropdown-item>上海市</tass-dropdown-item>
@@ -81,11 +99,17 @@ const state = reactive({
 <template>
     <div>
         <tass-dropdown :trigger="state.click">
+            <button class="tas-dropdown-button">
+              <span class="tas-dropdown-link">
+                    下拉菜单
+                    <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
+              </span>
+            </button>
             <tass-dropdownMenu-cilck>
-                <tass-dropdown-item>Chelsea</tass-dropdown-item>
-                <tass-dropdown-item>Liverpool</tass-dropdown-item>
-                <tass-dropdown-item>Manchester United</tass-dropdown-item>
-                <tass-dropdown-item>Manchester City</tass-dropdown-item>
+                <tass-dropdown-item>北京市</tass-dropdown-item>
+                <tass-dropdown-item>上海市</tass-dropdown-item>
+                <tass-dropdown-item>杭州市</tass-dropdown-item>
+                <tass-dropdown-item>厦门市</tass-dropdown-item>
             </tass-dropdownMenu-cilck>
         </tass-dropdown>
     </div>
@@ -100,5 +124,6 @@ const state = reactive({
 });
 </script>
 ```
+
 
 </details>
