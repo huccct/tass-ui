@@ -207,6 +207,12 @@
   <div class="tass-dropdown-toggle">
     hover触发
     <tass-dropdown :trigger="state.hover">
+        <button class="tas-dropdown-button">
+          <span class="tas-dropdown-link">
+            下拉菜单
+            <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
+          </span>
+        </button>
       <tass-dropdownMenu>
         <tass-dropdown-item>Chelsea</tass-dropdown-item>
         <tass-dropdown-item>Liverpool</tass-dropdown-item>
@@ -219,6 +225,13 @@
   <div class="tass-dropdown-toggle1">
     click触发
     <tass-dropdown :trigger="state.click">
+        <button class="tas-dropdown-button">
+          <span class="tas-dropdown-link">
+            下拉菜单
+            <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
+          </span>
+        </button>
+
       <tass-dropdownMenu-click>
         <tass-dropdown-item>Chelsea</tass-dropdown-item>
         <tass-dropdown-item>Liverpool</tass-dropdown-item>
