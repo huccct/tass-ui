@@ -24,6 +24,12 @@ import Address from './address.vue'
   }
 </style>
 # Swiper 轮播图
+在有限空间内，循环播放同一类型的图片、文字等内容。  
+v-model：绑定激活组件,从哪一页开始(number)  
+arrow：切换按钮状态，hover:不稳定,鼠标引动上按钮显示 always:一直显示 none:不显示  
+autoplay:自动播放 默认true  
+interval：轮播间隔,默认3000ms  
+pauseOnHover：鼠标悬停时暂停切换,默认true  
 ## 基础用法
 <div class='example'>
   <Default></Default>
@@ -33,18 +39,18 @@ import Address from './address.vue'
 
 ```vue
 <template>
-  <tass-carousel v-model="active1">
+  <tass-carousel v-model="active1" width="100%" height="280px">
     <tass-carousel-item id="1">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">一</div>
+      <div style="color: white;text-align: center;width:100%;height:280px;line-height:280px;background-color:#9090C0;">一</div>
     </tass-carousel-item>
-    <tass-carousel-item id="2">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">二</div>
+    <tass-carousel-item style="top: -8px;" id="2">
+      <div style="color: white;text-align: center;width:100%;height:280px;line-height:280px;background-color:#282858;">二</div>
     </tass-carousel-item>
-    <tass-carousel-item id="3">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">三</div>
+    <tass-carousel-item style="top: -8px;" id="3">
+      <div style="color: white;text-align: center;width:100%;height:280px;line-height:280px;background-color:#000840;">三</div>
     </tass-carousel-item>
-    <tass-carousel-item id="4">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">四</div>
+    <tass-carousel-item style="top: -8px;" id="4">
+      <div style="color: white;text-align: center;width:100%;height:280px;line-height:280px;background-color:#8888D0;">四</div>
     </tass-carousel-item>
   </tass-carousel>
 </template>
@@ -68,58 +74,56 @@ export default {
 </details>
 
 ## 不同方向与不同切换动画
+通过 anim 属性来控制切换的放向与动画，支持 default左右切换(默认)、updown上线切换、fade渐隐渐显切换
 <div class='example'>
   <Updown style="width: 100%;"></Updown>
-</div>
-<div class=example>
-通过 anim 属性来控制切换的放向与动画，支持 default左右切换(默认)、updown上线切换、fade渐隐渐显切换
 </div>
 <details>
 <summary>展开查看</summary>
 
 ```vue
 <template>
-  <div style="display:flex;justify-content: space-around;flex-wrap:wrap;">
-  <tass-carousel v-model="activeAnmi1" anim="updown" style="display:inline-block;width:32%;padding-right:10px" :autoplay="true">
+  <div style="display:flex;flex-wrap:wrap; margin:20px">
+  <tass-carousel v-model="activeAnmi1" anim="updown" style="display:inline-block;width:30%" :autoplay="true">
     <tass-carousel-item id="1">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">一</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:260px;background-color:#9090C0;">一</div>
     </tass-carousel-item>
-    <tass-carousel-item id="2">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">二</div>
+    <tass-carousel-item style="top: -8px;" id="2">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:260px;background-color:#282858;">二</div>
     </tass-carousel-item>
-    <tass-carousel-item id="3">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">三</div>
+    <tass-carousel-item style="top: -8px;" id="3">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:260px;background-color:#000840;">三</div>
     </tass-carousel-item>
-    <tass-carousel-item id="4">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">四</div>
+    <tass-carousel-item style="top: -8px;" id="4">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:260px;background-color:#8888D0;">四</div>
     </tass-carousel-item>
   </tass-carousel>
-  <tass-carousel v-model="activeAnmi2" style="width:32%">
+  <tass-carousel v-model="activeAnmi2" style="width:32%" interval="5000">
     <tass-carousel-item id="1">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">一</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#9090C0;">一</div>
     </tass-carousel-item>
-    <tass-carousel-item id="2">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">二</div>
+    <tass-carousel-item style="top: -8px;" id="2">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#282858;">二</div>
     </tass-carousel-item>
-    <tass-carousel-item id="3">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">三</div>
+    <tass-carousel-item style="top: -8px;" id="3">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#000840;">三</div>
     </tass-carousel-item>
-    <tass-carousel-item id="4">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">四</div>
+    <tass-carousel-item style="top: -8px;" id="4">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#8888D0;">四</div>
     </tass-carousel-item>
   </tass-carousel>
   <tass-carousel v-model="activeAnmi3" anim="fade" style="width:32%;">
     <tass-carousel-item id="1">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">一</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#9090C0;">一</div>
     </tass-carousel-item>
-    <tass-carousel-item id="2">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">二</div>
+    <tass-carousel-item style="top: -8px;" id="2">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#282858;">二</div>
     </tass-carousel-item>
-    <tass-carousel-item id="3">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">三</div>
+    <tass-carousel-item style="top: -8px;" id="3">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#000840;">三</div>
     </tass-carousel-item>
-    <tass-carousel-item id="4">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">四</div>
+    <tass-carousel-item style="top: -8px;" id="4">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#8888D0;">四</div>
     </tass-carousel-item>
   </tass-carousel>
   </div>
@@ -134,7 +138,7 @@ export default {
     const activeAnmi2 = ref("1")
     const activeAnmi3 = ref("1")
     return {
-      activeAnmi1,activeAnmi2,activeAnmi3,activeAnmi4
+      activeAnmi1,activeAnmi2,activeAnmi3
     }
   }
 }
@@ -143,6 +147,7 @@ export default {
 </details>
 
 ## 控制器位置
+通过indicator属性决定控制器位置，inside:内部(默认) outside:外部 none:不显示
 <div class="example">
     <Address></Address>
 </div>
@@ -152,18 +157,18 @@ export default {
 
 ```vue
 <template>
-  <tass-carousel v-model="active3" indicator="outside">
+  <tass-carousel v-model="active3"  indicator="outside" width="100%" height="280px">
     <tass-carousel-item id="1">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#009688;">条目一</div>
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#9090C0;">一</div>
     </tass-carousel-item>
-    <tass-carousel-item id="2">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#5FB878;">条目二</div>
+    <tass-carousel-item style="top: -8px;" id="2">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#282858;">二</div>
     </tass-carousel-item>
-    <tass-carousel-item id="3">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FFB800;">条目三</div>
+    <tass-carousel-item style="top: -8px;" id="3">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#000840;">三</div>
     </tass-carousel-item>
-    <tass-carousel-item id="4">
-      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#FF5722;">条目四</div>
+    <tass-carousel-item style="top: -8px;" id="4">
+      <div style="color: white;text-align: center;width:100%;height:300px;line-height:300px;background-color:#8888D0;">四</div>
     </tass-carousel-item>
   </tass-carousel>
 </template>

@@ -6,10 +6,7 @@
  * @LastEditTime: 2023-02-10 14:46:01
 -->
 <template>
-  <div
-    class="tas-input"
-    :class="styleClass"
-  >
+  <div class="tas-input" :class="styleClass">
     <input
       ref="ipt"
       class="tas-input__inner"
@@ -61,11 +58,15 @@
   });
   const isEnter = ref(true);
   const ipt = ref();
-  Promise.resolve().then(() => {
-    if (inputProps.showPassword) {
-      ipt.value.type = 'password';
-    }
-  });
+  Promise.resolve()
+    .then(() => {
+      if (inputProps.showPassword) {
+        ipt.value.type = 'password';
+      }
+    })
+    .catch(e => {
+      console.log(e);
+    });
   const eyeIcon = ref('EyeClosed');
   const isShowEye = computed(() => {
     return inputProps.showPassword && inputProps.modelValue && !inputProps.clearable;

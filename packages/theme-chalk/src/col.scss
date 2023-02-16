@@ -10,7 +10,7 @@
       flex: 0 0 (math.div(1, 24) * $i * 100) * 1%;
     }
 
-    .#{$namespace}-col-offset-#{$i} {
+    &.#{$namespace}-col-offset-#{$i} {
       margin-left: (math.div(1, 24) * $i * 100) * 1%;
     }
   }

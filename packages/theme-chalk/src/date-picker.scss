@@ -58,7 +58,7 @@ button {
   }
   .isNotCurrentMonth {
     color: #ccc;
-    cursor: not-allowed;
+    pointer-events: none;
   }
   .isNotCurrentMonth:hover {
     background-color: #fff !important;

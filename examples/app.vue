@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:16:52
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-12 22:02:24
+ * @LastEditTime: 2023-02-14 17:11:55
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-02-02 19:16:12
 -->
@@ -155,17 +155,22 @@
   <br />
   <br />
 
-  <tass-row tag="div" :gutter="20" justify="end">
-    <tass-col tag="span" :span="6">
-      <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
-    </tass-col>
-    <tass-col tag="span" :span="6">
-      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
-    </tass-col>
-    <tass-col tag="span" :span="6">
-      <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
-    </tass-col>
-  </tass-row>
+  <div style="box-sizing: border-box">
+    <tass-row :gutter="10">
+      <tass-col tag="span" :span="6">
+        <div style="background-color: #d3dce6; height: 35px; border-radius: 8px"></div>
+      </tass-col>
+      <tass-col tag="span" :span="6">
+        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+      </tass-col>
+      <tass-col tag="span" :span="6">
+        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+      </tass-col>
+      <tass-col tag="span" :span="6">
+        <div style="background-color: #e5e9f2; height: 35px; border-radius: 8px"></div>
+      </tass-col>
+    </tass-row>
+  </div>
   <br />
   <br />
 
@@ -412,6 +417,9 @@
   <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
     <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
   </div>
+  <div style="width: 500px; border: 1px solid #ddd; padding: 20px; margin-top: 20px">
+    <tass-upload :drop="true" @dropUpload="dropUpload" @deleteUpload="deleteUpload"></tass-upload>
+  </div>
   <br />
   <br />
 
@@ -447,7 +455,10 @@
   <br />
   <br />
   <tass-slider :min="0" :max="100"></tass-slider>
-  <tass-slider disabled></tass-slider>
+  <!-- <tass-slider disabled></tass-slider> -->
+  <tass-slider :value="40"></tass-slider>
+  <tass-slider :value="40" :step="20"></tass-slider>
+
   <br />
   <br />
 
@@ -635,6 +646,10 @@
   // 上传更新文件，第一个参数为当前上传文件，第二个参数为上传之后的文件列表
   const changeUpload = (file: any, fileList: any) => {
     console.log(file, fileList);
+  };
+  // 拖拽文件，第一个参数为当前上传文件的列表（因为拖拽可能上传多个），第二个参数为上传之后的文件列表
+  const dropUpload = (files: any, fileList: any) => {
+    console.log(files, fileList);
   };
   // 删除更新文件，第一个参数为当前删除文件，第二个参数为上传之后的文件列表
   const deleteUpload = (file: any, fileList: any) => {

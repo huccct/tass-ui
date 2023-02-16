@@ -1,3 +1,10 @@
+<!--
+ * @Description: Stay hungry，Stay foolish
+ * @Author: Huccct
+ * @Date: 2023-02-12 12:41:30
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-15 20:16:38
+-->
 <style>
   .example{
       border: 1px solid #f5f5f5;
@@ -24,14 +31,12 @@
 
 ```vue
 <template>
-  <div class="example">
-    <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
-      <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
-    </div>
+  <div style="width: 500px; border: 1px solid #ddd; padding: 20px">
+    <tass-upload @changeUpload="changeUpload" @deleteUpload="deleteUpload"></tass-upload>
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
   // 上传更新文件，第一个参数为当前上传文件，第二个参数为上传之后的文件列表
   const changeUpload = (file: any, fileList: any) => {
     console.log(file, fileList);
@@ -39,6 +44,31 @@
   // 删除更新文件，第一个参数为当前删除文件，第二个参数为上传之后的文件列表
   const deleteUpload = (file: any, fileList: any) => {
     console.log(file, fileList);
+  };
+</script>
+```
+</details>
+
+## 拖拽上传
+通过点击或者拖拽文件实现上传。
+<div class="example">
+  <tass-upload :drop="true"></tass-upload>
+</div>
+
+<details>
+<summary>展开查看</summary>
+
+```vue
+<template>
+  <div style="width: 500px; border: 1px solid #ddd; padding: 20px;margin-top:20px;">
+    <tass-upload :drop="true"  @dropUpload="dropUpload" @deleteUpload="deleteUpload"></tass-upload>
+  </div>
+</template>
+
+<script setup lang="ts">
+  // 拖拽文件，第一个参数为当前上传文件的列表（因为拖拽可能上传多个），第二个参数为上传之后的文件列表
+  const dropUpload = (files: any, fileList: any) => {
+    console.log(files, fileList);
   };
 </script>
 ```

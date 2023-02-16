@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-10 11:26:22
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-11 21:23:11
+ * @LastEditTime: 2023-02-16 09:58:58
 -->
 <script setup lang="ts">
   import Base from './base.vue';
@@ -90,14 +90,15 @@
 
 ```vue
 <template>
-  <tass-checkbox v-model="checked1" @change="handlerChange">Option 1</tass-checkbox>
+  {{ checkList }}<br /><br />
+  <tass-checkbox-group v-model="checkList">
+    <tass-checkbox v-for="(item, index) in showList" :key="index" :label="item"></tass-checkbox>
+  </tass-checkbox-group>
 </template>
 <script setup lang="ts">
   import { ref } from 'vue';
-  const checked1 = ref(true);
-  const handlerChange = () => {
-    alert('This is a handleChange test.');
-  };
+  let checkList = ref(['OptionA', 'OptionB']);
+  let showList = ref(['OptionA', 'OptionB', 'OptionC', 'OptionD']);
 </script>
 ```
 </details>

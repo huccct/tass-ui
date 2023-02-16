@@ -2,8 +2,8 @@
  * @Descripttion: Spicy chicken
  * @Author: YuShu Xiao
  * @Date: 2023-02-12 18:07:32
- * @LastEditors: YuShu Xiao
- * @LastEditTime: 2023-02-12 18:23:25
+ * @LastEditors: Huccct
+ * @LastEditTime: 2023-02-13 15:18:12
 -->
 <style>
   .example{
@@ -11,12 +11,6 @@
       border-radius: 5px;
       padding:20px;
   }
-  .mask {
-  position: absolute;
-  top: 50%;
-  left: 24%;
-  transform: translate(-50%, -50%);
-}
   details > summary:first-of-type {
       font-size: 10px;
       padding: 8px 0;
