@@ -8,7 +8,7 @@
             <h3 class="tas-dialog__title">
               {{ title }}
             </h3>
-            <span class="dialog__close" @click="onClickCancelButton">X</span>
+            <span class="tas-dialog__close" @click="onClickCancelButton">X</span>
           </div>
         </div>
 
@@ -50,14 +50,12 @@ defineProps({
   }
 });
 const currentInstance: ComponentInternalInstance | null = getCurrentInstance();
-
 function onClickCancelButton(e: Event) {
   currentInstance?.emit('cancel', e);
 }
-
 function onClickConfirmButton(e: Event) {
   currentInstance?.emit('confirm', e);
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style></style>

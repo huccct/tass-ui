@@ -8,35 +8,37 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.3);
   user-select: none;
-  z-index: 999;
+  z-index: 999999;
   @include b(dialog__body){
     display: table-cell;
     width: 100vw;
     height: 100vh;
     text-align: center;
     vertical-align: middle;
+    @include b(dialog__box){
+      display: inline-block;
+      padding: 24px 24px 12px 24px;
+      background: white;
+      text-align: left;
+    }
+    @include b(dialog__header) {
+      display: flex;
+      justify-content: space-between;
+      z-index: 2147483647;
+    }
+    @include b(dialog__title) {
+      margin: 0;
+      color:black !important;
+      line-height: 30px;
+      width: calc(100% - 30px);
+    }
+    @include b(dialog__close) {
+      color:black;
+      cursor: pointer;
+    }
+    @include b(dialog__footer) {
+      text-align: right;
+    }
   }
-  @include b(dialog__box){
-    display: inline-block;
-    padding: 24px 24px 12px 24px;
-    background: white;
-    text-align: left;
-  }
-  @include b(dialog__header) {
-    position: relative;
-    display: flex;
-  }
-  @include b(dialog__title) {
-    line-height: 30px;
-    width: calc(100% - 30px);
-  }
-  @include b(dialog__close) {
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-  }
-  @include b(dialog__footer) {
-    text-align: right;
-  }
+  
 }
