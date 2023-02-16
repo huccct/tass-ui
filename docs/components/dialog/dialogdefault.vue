@@ -2,7 +2,6 @@
   <tass-button type="primary" :visible="!normalVisible" @click="changeView">dialog</tass-button>
   <tass-dialog
     :visible="normalVisible"
-    title="dialog"
     width="500px"
     @cancel="handleClickCancelButton"
     @confirm="handleConfirmButton"

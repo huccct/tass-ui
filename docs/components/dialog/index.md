@@ -24,8 +24,6 @@
   <tass-button type="primary" :visible="!normalVisible" @click="changeView">dialog</tass-button>
   <tass-dialog
     :visible="normalVisible"
-    width="500px"
-    title="dialog"
     @cancel="handleClickCancelButton"
     @confirm="handleConfirmButton"
   >
@@ -61,8 +59,8 @@ export default {
 ```
 </details>
 
-## 自定义内容和宽度
-通过设置title 与 width , 来展示内容和宽度。
+## 自定义内容
+通过设置title,来展示自定义内容。
 <div class="example">
     <Dialog></Dialog>
 </div>
@@ -73,11 +71,10 @@ export default {
 ```vue
 <template>
   <template>
-  <tass-button type="primary" :visible="!normalVisible" @click="changeView">自定义内容和宽度</tass-button>
+  <tass-button type="primary" :visible="!normalVisible" @click="changeView">自定义内容</tass-button>
   <tass-dialog
     :visible="normalVisible"
     title="自定义内容"
-    width="400px"
     @cancel="handleClickCancelButton"
     @confirm="handleConfirmButton"
   >

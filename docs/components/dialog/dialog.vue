@@ -1,7 +1,5 @@
 <template>
-  <tass-button type="primary" :visible="!normalVisible" @click="changeView"
-    >自定义内容和宽度</tass-button
-  >
+  <tass-button type="primary" :visible="!normalVisible" @click="changeView">自定义内容</tass-button>
   <tass-dialog
     :visible="normalVisible"
     title="自定义内容"
