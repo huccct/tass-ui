@@ -32,7 +32,7 @@
     text-align: left;
   }
 }
-@include b(progress-circle) {
+@include b(circleprogress) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@
     stroke-linecap: round;
     transition: all 0.3s linear;
   }
-  @include e(mask) {
+  .mask {
     position: absolute;
     top: 50%;
     left: 50%;
