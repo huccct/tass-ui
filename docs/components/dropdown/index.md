@@ -32,12 +32,12 @@ const hover = ref('hover');
                 <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
           </span>
         </button> 
-          <tass-dropdownMenu>
+          <tass-dropdown-menu>
             <tass-dropdown-item>北京市</tass-dropdown-item>
             <tass-dropdown-item>上海市</tass-dropdown-item>
             <tass-dropdown-item>杭州市</tass-dropdown-item>
             <tass-dropdown-item>厦门市</tass-dropdown-item>
-          </tass-dropdownMenu>
+          </tass-dropdown-menu>
     </tass-dropdown>
 </div>
 
@@ -54,12 +54,12 @@ const hover = ref('hover');
                 <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
           </span>
         </button>
-        <tass-dropdownMenu>
+        <tass-dropdown-menu>
             <tass-dropdown-item>北京市</tass-dropdown-item>
             <tass-dropdown-item>上海市</tass-dropdown-item>
             <tass-dropdown-item>杭州市</tass-dropdown-item>
             <tass-dropdown-item>厦门市</tass-dropdown-item>
-        </tass-dropdownMenu>
+        </tass-dropdown-menu>
     </tass-dropdown>
 </template>
 
@@ -105,12 +105,12 @@ const state = reactive({
                     <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
               </span>
             </button>
-            <tass-dropdownMenu-cilck>
+            <tass-dropdown-menu-click>
                 <tass-dropdown-item>北京市</tass-dropdown-item>
                 <tass-dropdown-item>上海市</tass-dropdown-item>
                 <tass-dropdown-item>杭州市</tass-dropdown-item>
                 <tass-dropdown-item>厦门市</tass-dropdown-item>
-            </tass-dropdownMenu-cilck>
+            </tass-dropdown-menu-click>
         </tass-dropdown>
     </div>
 </template>
