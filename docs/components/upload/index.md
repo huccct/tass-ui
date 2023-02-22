@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-12 12:41:30
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-15 20:16:38
+ * @LastEditTime: 2023-02-22 22:23:50
 -->
 <style>
   .example{
@@ -20,6 +20,7 @@
   }
 </style>
 # Upload 上传
+通过点击或者拖拽上传文件。
 ## 基础用法
 通过点击上传文件。
 <div class="example">

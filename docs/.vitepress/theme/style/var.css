@@ -23,5 +23,8 @@
   /* 主页 */
   --vp-c-brand: #8888d0;
   --vp-c-brand-dark: #8888d0;
-}
 
+  --vp-custom-block-tip-border: #9090c0;
+  --vp-custom-block-tip-text: #fff;
+  --vp-custom-block-tip-bg: #9090c0;
+}

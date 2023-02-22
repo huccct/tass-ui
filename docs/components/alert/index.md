@@ -17,10 +17,10 @@ Alert 组件不属于浮层元素，不会自动消失或关闭。
 Alert 组件提供四种类型，由 type 属性指定，默认值为 info。
 <div class="example">
 <div>
-  <tass-alert title="hello tassUI"  type="error"> </tass-alert>
-  <tass-alert title="hello tassUI"  type="success"> </tass-alert>
-  <tass-alert title="hello tassUI"  type="info"> </tass-alert>
-  <tass-alert title="hello tassUI"  type="warning"> </tass-alert>
+  <tass-alert title="Hello Tass"  type="error"> </tass-alert>
+  <tass-alert title="Hello Tass"  type="success"> </tass-alert>
+  <tass-alert title="Hello Tass"  type="info"> </tass-alert>
+  <tass-alert title="Hello Tass"  type="warning"> </tass-alert>
 </div>
 </div>
 
@@ -29,12 +29,12 @@ Alert 组件提供四种类型，由 type 属性指定，默认值为 info。
 
 ```vue
 <template>
-<div>
-  <tass-alert title="hello tassUI"  type="error"> </tass-alert>
-  <tass-alert title="hello tassUI"  type="success"> </tass-alert>
-  <tass-alert title="hello tassUI"  type="info"> </tass-alert>
-  <tass-alert title="hello tassUI"  type="warning"> </tass-alert>
-</div>
+  <div>
+    <tass-alert title="Hello Tass"  type="error"> </tass-alert>
+    <tass-alert title="Hello Tass"  type="success"> </tass-alert>
+    <tass-alert title="Hello Tass"  type="info"> </tass-alert>
+    <tass-alert title="Hello Tass"  type="warning"> </tass-alert>
+  </div>
 </template>
 ```
 </details>
@@ -51,13 +51,13 @@ Alert 组件提供四种类型，由 type 属性指定，默认值为 info。
 
 ```vue
 <template>
-  <tass-alert show-icon title="hello tassUI"  type="error" closeable> </tass-alert>
-  <tass-alert show-icon title="hello tassUI"  type="success" closeable @close="alertClose">alert with callback</tass-alert>
+  <tass-alert show-icon title="Hello Tass"  type="error" closeable> </tass-alert>
+  <tass-alert show-icon title="Hello Tass"  type="success" closeable @close="alertClose">alert with callback</tass-alert>
 </template>
 <script setup lang="ts">
-const alertClose= () =>{
-  alert('hello tassUI')
-}
+  const alertClose= () =>{
+    alert('Hello Tass')
+  }
 </script>
 ```
 </details>
@@ -69,10 +69,10 @@ const alertClose= () =>{
 
 <div class="example">
 <div>
-  <tass-alert show-icon title="hello tassUI"  type="error" > </tass-alert>
-  <tass-alert show-icon title="hello tassUI"  type="success" > </tass-alert>
-  <tass-alert show-icon title="hello tassUI"  type="info" > </tass-alert>
-  <tass-alert show-icon title="hello tassUI"  type="warning" > </tass-alert>
+  <tass-alert show-icon title="Hello Tass"  type="error" > </tass-alert>
+  <tass-alert show-icon title="Hello Tass"  type="success" > </tass-alert>
+  <tass-alert show-icon title="Hello Tass"  type="info" > </tass-alert>
+  <tass-alert show-icon title="Hello Tass"  type="warning" > </tass-alert>
 </div>
 </div>
 
@@ -82,11 +82,11 @@ const alertClose= () =>{
 ```vue
 <template>
   <div>
-  <tass-alert show-icon title="hello tassUI"  type="error" > </tass-alert>
-  <tass-alert show-icon title="hello tassUI"  type="success" > </tass-alert>
-  <tass-alert show-icon title="hello tassUI"  type="info" > </tass-alert>
-  <tass-alert show-icon title="hello tassUI"  type="warning" > </tass-alert>
-</div>
+    <tass-alert show-icon title="Hello Tass"  type="error" > </tass-alert>
+    <tass-alert show-icon title="Hello Tass"  type="success" > </tass-alert>
+    <tass-alert show-icon title="Hello Tass"  type="info" > </tass-alert>
+    <tass-alert show-icon title="Hello Tass"  type="warning" > </tass-alert>
+  </div>
 </template>
 ```
 </details>
@@ -97,7 +97,7 @@ const alertClose= () =>{
 除了必填的 title 属性外，你可以设置 content 属性来帮助你更好地介绍，我们称之为辅助性文字。 辅助性文字只能存放文本内容，当内容超出长度限制时会自动换行。
 
 <div class="example">
-<tass-alert show-icon title="tassUI"  type="info" content="一个高效简洁的vuejs库" closeable> </tass-alert>
+  <tass-alert show-icon title="TassUI"  type="info" content="一个高效简洁的vuejs库" closeable> </tass-alert>
 </div>
 
 <details>
@@ -105,10 +105,9 @@ const alertClose= () =>{
 
 ```vue
 <template>
-<div>
-  <tass-alert show-icon title="tassUI"  type="info" content="一个高效简洁的vuejs库" closeable> </tass-alert>
-</div>
-
+  <div>
+    <tass-alert show-icon title="TassUI  type="info" content="一个高效简洁的vuejs库" closeable> </tass-alert>
+  </div>
 </template>
 ```
 </details>

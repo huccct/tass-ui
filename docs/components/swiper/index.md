@@ -24,12 +24,7 @@ import Address from './address.vue'
   }
 </style>
 # Swiper 轮播图
-在有限空间内，循环播放同一类型的图片、文字等内容。  
-v-model：绑定激活组件,从哪一页开始(number)  
-arrow：切换按钮状态，hover:不稳定,鼠标引动上按钮显示 always:一直显示 none:不显示  
-autoplay:自动播放 默认true  
-interval：轮播间隔,默认3000ms  
-pauseOnHover：鼠标悬停时暂停切换,默认true  
+在有限空间内，循环播放同一类型的图片、文字等内容
 ## 基础用法
 <div class='example'>
   <Default></Default>
@@ -55,19 +50,10 @@ pauseOnHover：鼠标悬停时暂停切换,默认true
   </tass-carousel>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts" setup>
+  import { ref } from 'vue'
 
-export default {
-  setup() {
-
-    const active1 = ref("1")
-
-    return {
-      active1
-    }
-  }
-}
+  const active1 = ref("1");
 </script>
 
 ```
@@ -129,19 +115,13 @@ export default {
   </div>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts" setup>
+  import { ref } from 'vue'
 
-export default {
-  setup() {
-    const activeAnmi1 = ref("1")
-    const activeAnmi2 = ref("1")
-    const activeAnmi3 = ref("1")
-    return {
-      activeAnmi1,activeAnmi2,activeAnmi3
-    }
-  }
-}
+  const activeAnmi1 = ref("1");
+  const activeAnmi2 = ref("1");
+  const activeAnmi3 = ref("1");
+   
 </script>
 ```
 </details>
@@ -173,19 +153,10 @@ export default {
   </tass-carousel>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts" setup>
+  import { ref } from 'vue'
 
-export default {
-  setup() {
-
-    const active3 = ref("1")
-
-    return {
-      active3
-    }
-  }
-}
+  const active3 = ref("1")
 </script>
 
 ```

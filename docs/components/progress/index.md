@@ -3,7 +3,7 @@
  * @Author: YuShu Xiao
  * @Date: 2023-02-12 18:07:32
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-13 15:18:12
+ * @LastEditTime: 2023-02-22 22:25:02
 -->
 <style>
   .example{
@@ -19,6 +19,7 @@
   }
 </style>
 # Progress 进度条
+在有限空间内，循环播放同一类型的图片、文字等内容。
 ## 基础用法
 用于展示操作进度，告知用户当前状态和预期。
 <div class="example">

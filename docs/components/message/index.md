@@ -38,7 +38,7 @@
 <template>
   <tass-button @click="showMsg">show Message</tass-button>
 </template>
-<script setup>
+<script setup lang="ts">
   import { TassMessage } from 'tass-ui';
   function showMsg() {
     TassMessage({

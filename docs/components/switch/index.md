@@ -48,16 +48,9 @@
   </div>
 </template>
 
-<script>
-import { ref } from 'vue'
-export default {
-  setup() {
-    const active1 = ref(false);
-    return {
-        active1
-    }
-  }
-}
+<script lang="ts" setup>
+  import { ref } from 'vue'
+  const active1 = ref(false);
 </script>
 ```
 </details>
@@ -78,21 +71,13 @@ export default {
   </div>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts" setup>
+  import { ref } from 'vue'
 
-export default {
-  setup() {
-    const active2 = ref(true);
-    const change = ( val )=> {
-        alert("当前值:" + val)
-    }
-    return {
-        active2,
-        change
-    }
+  const active2 = ref(true);
+  const change = ( val )=> {
+      alert("当前值:" + val)
   }
-}
 </script>
 ```
 </details>
@@ -112,20 +97,11 @@ export default {
   </div>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts" setup>
+  import { ref } from 'vue'
 
-export default {
-  setup() {
-
-    const active3 = ref(false);
-    const disabled = ref(true)
-
-    return {
-        active3,disabled
-    }
-  }
-}
+  const active3 = ref(false);
+  const disabled = ref(true);
 </script>
 
 ```
@@ -148,16 +124,9 @@ export default {
   </div>
 </template>
 
-<script>
-import { ref } from 'vue'
-export default {
-  setup() {
-    const active4 = ref(true)
-    return {
-        active4
-    }
-  }
-}
+<script lang="ts" setup>
+  import { ref } from 'vue'
+  const active4 = ref(true);
 </script>
 ```
 </details>
@@ -181,19 +150,10 @@ export default {
   </div>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts" setup>
+  import { ref } from 'vue'
 
-export default {
-  setup() {
-
-    const active5 = ref(true)
-
-    return {
-        active5
-    }
-  }
-}
+  const active5 = ref(true);
 </script>
 ```
 </details>
@@ -214,17 +174,10 @@ export default {
   </div>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts" setup>
+  import { ref } from 'vue'
 
-export default {
-  setup() {
-    const active6 = ref('dark')
-    return {
-        active6
-    }
-  }
-}
+  const active6 = ref('dark');
 </script>
 ```
 </details>
@@ -248,19 +201,10 @@ export default {
   </div>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts" setup>
+  import { ref } from 'vue'
 
-export default {
-  setup() {
-
-    const active7 = ref(true)
-
-    return {
-        active7
-    }
-  }
-}
+  const active7 = ref(true);
 </script>
 ```
 </details>

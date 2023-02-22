@@ -8,6 +8,12 @@
       border-radius: 5px;
       padding:20px
   }
+  details > summary:first-of-type {
+      font-size: 10px;
+      padding: 8px 0;
+      cursor: pointer;
+      color: #1989fa;
+  }
 </style>
 # Dialog 对话框
 ## 基础用法
@@ -30,28 +36,19 @@
   </tass-dialog>
 </template>
 
-<script>
-import { ref } from 'vue'
-export default {
-  setup () {
-    let normalVisible = ref(false)
-    function changeView () {
-      normalVisible.value = !normalVisible.value
-    }
-    function handleClickCancelButton () {
-      normalVisible.value = !normalVisible.value
-    }
-    function handleConfirmButton () {
-      normalVisible.value = !normalVisible.value
-    }
-    return {
-      normalVisible,
-      changeView,
-      handleClickCancelButton,
-      handleConfirmButton
-    }
+<script lang="ts" setup>
+  import { ref } from 'vue'
+
+  let normalVisible = ref(false)
+  changeView = ()=> {
+    normalVisible.value = !normalVisible.value
   }
-}
+  handleClickCancelButton = ()=> {
+    normalVisible.value = !normalVisible.value
+  }
+  handleConfirmButton = ()=> {
+    normalVisible.value = !normalVisible.value
+  }
 </script>
 
 <style>
@@ -81,28 +78,19 @@ export default {
   </tass-dialog>
 </template>
 
-<script>
-import { ref } from 'vue'
-export default {
-  setup () {
-    let normalVisible = ref(false)
-    function changeView () {
-      normalVisible.value = !normalVisible.value
-    }
-    function handleClickCancelButton () {
-      normalVisible.value = !normalVisible.value
-    }
-    function handleConfirmButton () {
-      normalVisible.value = !normalVisible.value
-    }
-    return {
-      normalVisible,
-      changeView,
-      handleClickCancelButton,
-      handleConfirmButton
-    }
+<script lang="ts" setup>
+  import { ref } from 'vue'
+
+  let normalVisible = ref(false)
+  changeView = ()=> {
+    normalVisible.value = !normalVisible.value
   }
-}
+  handleClickCancelButton = ()=> {
+    normalVisible.value = !normalVisible.value
+  }
+  handleConfirmButton = ()=> {
+    normalVisible.value = !normalVisible.value
+  }
 </script>
 
 </template>

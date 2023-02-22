@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-10 11:26:22
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-10 15:01:39
+ * @LastEditTime: 2023-02-22 22:38:11
 -->
 <script setup lang="ts">
   import Basic from './basic.vue';
@@ -31,7 +31,7 @@
   }
 </style>
 # Input 输入框
-通过鼠标或键盘输入字符
+通过鼠标或键盘输入字符。
 ::: warning
 Input 为受控组件，它 总会显示 Vue 绑定值。
 
@@ -57,8 +57,6 @@ Input 为受控组件，它 总会显示 Vue 绑定值。
   import { ref } from 'vue';
   let inputVal = ref('');
 </script>
-<style></style>
-
 ```
 </details>
 
@@ -80,8 +78,6 @@ Input 为受控组件，它 总会显示 Vue 绑定值。
   import { ref } from 'vue';
   let inputVal = ref('');
 </script>
-<style></style>
-
 ```
 </details>
 
@@ -104,8 +100,6 @@ Input 为受控组件，它 总会显示 Vue 绑定值。
   import { ref } from 'vue';
   let inputVal = ref('');
 </script>
-<style></style>
-
 ```
 </details>
 
@@ -128,8 +122,6 @@ Input 为受控组件，它 总会显示 Vue 绑定值。
   import { ref } from 'vue';
   let inputVal = ref('');
 </script>
-<style></style>
-
 ```
 </details>
 
@@ -154,8 +146,6 @@ Input 为受控组件，它 总会显示 Vue 绑定值。
   import { ref } from 'vue';
   let inputVal = ref('');
 </script>
-<style></style>
-
 ```
 </details>
 
@@ -179,7 +169,5 @@ Input 为受控组件，它 总会显示 Vue 绑定值。
   import { ref } from 'vue';
   let inputVal = ref('');
 </script>
-<style></style>
-
 ```
 </details>

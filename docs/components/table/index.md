@@ -27,13 +27,7 @@
   }
 </style>
 # Table 表格
-用于展示多层次结构的数据，可自定义并保持高度灵活
-options:表格数据,fileds 和 datas,fileds作为整体约束,datas作为数据定义  
-size:表格尺寸大小 default / small / mini 默认default  
-showHeader:是否显示表头 默认true  
-headStyle:自定义表头样式
-rowStyle:自定义表格内容区域的样式  
-customClass:自定义表格组件整体的Class类名
+用于展示多层次结构的数据，可自定义并保持高度灵活。
 ## 基础用法
 table 表格基本使用示例,需要一个主要的 options 参数。
 
@@ -49,24 +43,24 @@ table 表格基本使用示例,需要一个主要的 options 参数。
   <tass-table :options="options"></tass-table>
 </template>
 
-<script setup>
-import { reactive } from "vue";
-const state = reactive({
-    options:{
-      fileds:[
-        {field:'id',title:'ID',align:'center'},
-        {field:'name',title:'姓名',align:'center'},
-        {field:'address',title:'地址',align:'center'},
-        {field:'telephone',title:'电话',align:'center'}
-      ],
-      datas:[
-        {id:1,name:'张三',address:'山东青岛',telephone:"13812312312"},
-        {id:2,name:'李四',address:'山东济南',telephone:"13812312312"},
-        {id:3,name:'王五',address:'北京',telephone:"13812312312"},
-        {id:4,name:'赵六',address:'上海',telephone:"13812312312"},
-      ]
-      },
-  });
+<script lang="ts" setup>
+  import { reactive } from "vue";
+  const state = reactive({
+      options:{
+        fileds:[
+          {field:'id',title:'ID',align:'center'},
+          {field:'name',title:'姓名',align:'center'},
+          {field:'address',title:'地址',align:'center'},
+          {field:'telephone',title:'电话',align:'center'}
+        ],
+        datas:[
+          {id:1,name:'张三',address:'山东青岛',telephone:"13812312312"},
+          {id:2,name:'李四',address:'山东济南',telephone:"13812312312"},
+          {id:3,name:'王五',address:'北京',telephone:"13812312312"},
+          {id:4,name:'赵六',address:'上海',telephone:"13812312312"},
+        ]
+        },
+    });
   const { options } = state;
 </script>
 ```
@@ -89,25 +83,25 @@ const state = reactive({
   <tass-table :options="options" size="mini"></tass-table>
 </template>
 
-<script setup>
-import { reactive } from "vue";
-const state = reactive({
-  options:{
-      fileds:[
-        {field:'id',title:'ID',align:'center'},
-        {field:'name',title:'姓名',align:'center'},
-        {field:'address',title:'地址',align:'center'},
-        {field:'telephone',title:'电话',align:'center'}
-      ],
-      datas:[
-        {id:1,name:'张三',address:'山东青岛',telephone:"13812312312"},
-        {id:2,name:'李四',address:'山东济南',telephone:"13812312312"},
-        {id:3,name:'王五',address:'北京',telephone:"13812312312"},
-        {id:4,name:'赵六',address:'上海',telephone:"13812312312"},
-      ]
-      },
-});
-const { options } = state;
+<script lang="ts" setup>
+  import { reactive } from "vue";
+  const state = reactive({
+    options:{
+        fileds:[
+          {field:'id',title:'ID',align:'center'},
+          {field:'name',title:'姓名',align:'center'},
+          {field:'address',title:'地址',align:'center'},
+          {field:'telephone',title:'电话',align:'center'}
+        ],
+        datas:[
+          {id:1,name:'张三',address:'山东青岛',telephone:"13812312312"},
+          {id:2,name:'李四',address:'山东济南',telephone:"13812312312"},
+          {id:3,name:'王五',address:'北京',telephone:"13812312312"},
+          {id:4,name:'赵六',address:'上海',telephone:"13812312312"},
+        ]
+    }
+  });
+  const { options } = state;
 </script>
 ```
 </details>
@@ -134,29 +128,29 @@ const { options } = state;
   </tass-table>
 </template>
 
-<script setup>
-import { reactive } from "vue";
-const state = reactive({
-  options:{
-      fileds:[
-        {field:'id',title:'ID',align:'center'},
-        {field:'name',title:'姓名',align:'center'},
-        {field:'address',title:'地址',align:'center'},
-        {field:'telephone',title:'电话',align:'center'},
-        {field:'action',title:'操作',align:'center'}
-      ],
-      datas:[
-        {id:1,name:'张三',address:'山东青岛',telephone:"13812312312"},
-        {id:2,name:'李四',address:'山东济南',telephone:"13812312312"},
-        {id:3,name:'王五',address:'北京',telephone:"13812312312"},
-        {id:4,name:'赵六',address:'上海',telephone:"13812312312"},
-      ]
-      },
-});
-const dropchange = (item, index) => {
-  console.log(item, index);
-};
-const { options, dorpoptions } = state;
+<script lang="ts" setup>
+  import { reactive } from "vue";
+  const state = reactive({
+    options:{
+        fileds:[
+          {field:'id',title:'ID',align:'center'},
+          {field:'name',title:'姓名',align:'center'},
+          {field:'address',title:'地址',align:'center'},
+          {field:'telephone',title:'电话',align:'center'},
+          {field:'action',title:'操作',align:'center'}
+        ],
+        datas:[
+          {id:1,name:'张三',address:'山东青岛',telephone:"13812312312"},
+          {id:2,name:'李四',address:'山东济南',telephone:"13812312312"},
+          {id:3,name:'王五',address:'北京',telephone:"13812312312"},
+          {id:4,name:'赵六',address:'上海',telephone:"13812312312"},
+        ]
+    }
+  });
+  const dropchange = (item, index) => {
+    console.log(item, index);
+  };
+  const { options, dorpoptions } = state;
 </script>
 
 ```
@@ -177,33 +171,33 @@ const { options, dorpoptions } = state;
   <tass-table :options="options" :headStyle="headStyle" :rowStyle="rowStyle" size="mini" ></tass-table>
 </template>
 
-<script setup>
-import { reactive, ref } from "vue";
-const state = reactive({
-  options:{
-      fileds:[
-        {field:'id',title:'ID',align:'center'},
-        {field:'name',title:'姓名',align:'center'},
-        {field:'address',title:'地址',align:'center'},
-        {field:'telephone',title:'电话',align:'center'},
-      ],
-      datas:[
-        {id:1,name:'张三',address:'山东青岛',telephone:"13812312312"},
-        {id:2,name:'李四',address:'山东济南',telephone:"13812312312"},
-        {id:3,name:'王五',address:'北京',telephone:"13812312312"},
-        {id:4,name:'赵六',address:'上海',telephone:"13812312312"},
-      ]
-  },
-  headStyle: {
-    color: "#fff",
-    borderColor: "#855E42",
-    backgroundColor: "#9090c0",
-  },
-  rowStyle: {
-    borderColor: "#855E42",
-  },
-});
-const { options, headStyle, rowStyle } = state;
+<script lang="ts" setup>
+  import { reactive, ref } from "vue";
+  const state = reactive({
+    options:{
+        fileds:[
+          {field:'id',title:'ID',align:'center'},
+          {field:'name',title:'姓名',align:'center'},
+          {field:'address',title:'地址',align:'center'},
+          {field:'telephone',title:'电话',align:'center'},
+        ],
+        datas:[
+          {id:1,name:'张三',address:'山东青岛',telephone:"13812312312"},
+          {id:2,name:'李四',address:'山东济南',telephone:"13812312312"},
+          {id:3,name:'王五',address:'北京',telephone:"13812312312"},
+          {id:4,name:'赵六',address:'上海',telephone:"13812312312"},
+        ]
+    },
+    headStyle: {
+      color: "#fff",
+      borderColor: "#855E42",
+      backgroundColor: "#9090c0",
+    },
+    rowStyle: {
+      borderColor: "#855E42",
+    },
+  });
+  const { options, headStyle, rowStyle } = state;
 </script>
 ```
 </details>

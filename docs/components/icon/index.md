@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-08 23:09:59
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-09 13:27:34
+ * @LastEditTime: 2023-02-22 22:19:15
 -->
 <script setup lang="ts">
   import AllIcon from './allIcon.vue'
@@ -26,6 +26,7 @@
   }
 </style>
 # Icon 图标
+Tass UI 提供了一套常用的图标集合。
 ## 基础用法
 
 <div class="example">

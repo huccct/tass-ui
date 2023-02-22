@@ -16,6 +16,7 @@
   }
 </style>
 # Dropdown 下拉菜单
+将动作或菜单折叠到下拉菜单中。
 ## 基本用法
 ###   **hover** 触发
 <script lang="ts" setup>
@@ -27,17 +28,17 @@ const hover = ref('hover');
 <div class="example">
     <tass-dropdown :trigger="hover">
         <button class="tas-dropdown-button">
-          <span class="tas-dropdown-link">
+            <span class="tas-dropdown-link">
                 下拉菜单
                 <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
-          </span>
+            </span>
         </button> 
-          <tass-dropdown-menu>
+            <tass-dropdown-menu>
             <tass-dropdown-item>北京市</tass-dropdown-item>
             <tass-dropdown-item>上海市</tass-dropdown-item>
             <tass-dropdown-item>杭州市</tass-dropdown-item>
             <tass-dropdown-item>厦门市</tass-dropdown-item>
-          </tass-dropdown-menu>
+            </tass-dropdown-menu>
     </tass-dropdown>
 </div>
 
@@ -49,10 +50,10 @@ const hover = ref('hover');
 <template>
     <tass-dropdown :trigger="state.hover">
         <button class="tas-dropdown-button">
-          <span class="tas-dropdown-link">
+            <span class="tas-dropdown-link">
                 下拉菜单
                 <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
-          </span>
+            </span>
         </button>
         <tass-dropdown-menu>
             <tass-dropdown-item>北京市</tass-dropdown-item>
@@ -64,11 +65,11 @@ const hover = ref('hover');
 </template>
 
 <script setup lang="ts">
-import {reactive} from "vue";
+    import { reactive } from "vue";
 
-const state = reactive({
-    hover: 'hover'
-});
+    const state = reactive({
+        hover: 'hover'
+    });
 </script>
 ```
 </details>
@@ -100,10 +101,10 @@ const state = reactive({
     <div>
         <tass-dropdown :trigger="state.click">
             <button class="tas-dropdown-button">
-              <span class="tas-dropdown-link">
+                <span class="tas-dropdown-link">
                     下拉菜单
                     <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
-              </span>
+                </span>
             </button>
             <tass-dropdown-menu-click>
                 <tass-dropdown-item>北京市</tass-dropdown-item>
@@ -116,12 +117,12 @@ const state = reactive({
 </template>
 
 <script setup lang="ts">
-import {reactive} from "vue";
+    import { reactive } from "vue";
 
-const state = reactive({
-    click: 'click',
-    hover: 'hover'
-});
+    const state = reactive({
+        click: 'click',
+        hover: 'hover'
+    });
 </script>
 ```
 
