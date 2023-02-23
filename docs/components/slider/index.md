@@ -6,6 +6,10 @@
  * @LastEditTime: 2023-02-22 22:26:52
 -->
 <style>
+  .example {
+      border: 1px solid #f5f5f5;
+      border-radius: 5px;
+  }
   .tass-button {
       margin:10px 5px;
   }
@@ -24,7 +28,7 @@
 
 ## 基础用法
 
-  <div style="padding: 30px;">
+  <div style="padding: 30px;" class="example">
     <tass-slider></tass-slider><br/><br/>
     <tass-slider disabled></tass-slider>
   </div>
@@ -45,7 +49,7 @@
 
 通过设置 min 与 mix , 来展示初末位置。
 
-<div style="padding: 30px;">
+<div style="padding: 30px;" class="example">
   <tass-slider></tass-slider>
 </div>
 
@@ -64,7 +68,7 @@
 
 通过设置 value , 来展示初始值。
 
-<div style="padding: 30px;">
+<div style="padding: 30px;" class="example">
   <tass-slider :value="30"></tass-slider>
 </div>
 

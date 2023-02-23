@@ -13,7 +13,7 @@
   .example{
       border: 1px solid #f5f5f5;
       border-radius: 5px;
-      padding:0px;
+      padding: 20px;
   }
 
   details > summary:first-of-type {
@@ -25,10 +25,13 @@
 </style>
 
 # DatePicker 日期选择器
+
 用于选择或输入日期
 
 ## 选择某一天
+
 以”日“为基本单位，基础的日期选择控件
+
 <div class=example>
   <Base/>
 </div>
@@ -44,12 +47,15 @@
   const nowDate = ref(new Date());
 </script>
 ```
+
 </details>
 
 ## 设置自定义前缀的内容
+
 前缀内容可以被自定义。
 
-当你从其他vue组件或由渲染函数生成的组件中导入组件时, 你可以设置 prefix-icon 属性来定制前缀内容
+当你从其他 vue 组件或由渲染函数生成的组件中导入组件时, 你可以设置 prefix-icon 属性来定制前缀内容
+
 <div class=example>
   <PrefixIcon/>
 </div>
@@ -65,4 +71,5 @@
   const nowDate = ref(new Date());
 </script>
 ```
+
 </details>

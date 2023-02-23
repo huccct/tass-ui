@@ -15,10 +15,15 @@
     padding-left: 0px !important;
   }
 </style>
+
 # Dropdown 下拉菜单
+
 将动作或菜单折叠到下拉菜单中。
+
 ## 基本用法
-###   **hover** 触发
+
+### **hover** 触发
+
 <script lang="ts" setup>
 import {ref} from "vue";
 
@@ -46,35 +51,36 @@ const hover = ref('hover');
 <summary>展开看看</summary>
 
 ```vue
-
 <template>
-    <tass-dropdown :trigger="state.hover">
-        <button class="tas-dropdown-button">
-            <span class="tas-dropdown-link">
-                下拉菜单
-                <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
-            </span>
-        </button>
-        <tass-dropdown-menu>
-            <tass-dropdown-item>北京市</tass-dropdown-item>
-            <tass-dropdown-item>上海市</tass-dropdown-item>
-            <tass-dropdown-item>杭州市</tass-dropdown-item>
-            <tass-dropdown-item>厦门市</tass-dropdown-item>
-        </tass-dropdown-menu>
-    </tass-dropdown>
+  <tass-dropdown :trigger="state.hover">
+    <button class="tas-dropdown-button">
+      <span class="tas-dropdown-link">
+        下拉菜单
+        <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
+      </span>
+    </button>
+    <tass-dropdown-menu>
+      <tass-dropdown-item>北京市</tass-dropdown-item>
+      <tass-dropdown-item>上海市</tass-dropdown-item>
+      <tass-dropdown-item>杭州市</tass-dropdown-item>
+      <tass-dropdown-item>厦门市</tass-dropdown-item>
+    </tass-dropdown-menu>
+  </tass-dropdown>
 </template>
 
 <script setup lang="ts">
-    import { reactive } from "vue";
+  import { reactive } from 'vue';
 
-    const state = reactive({
-        hover: 'hover'
-    });
+  const state = reactive({
+    hover: 'hover'
+  });
 </script>
 ```
+
 </details>
 
 ### **click** 触发
+
 <div class="example">
     <div>
         <tass-dropdown :trigger="click">
@@ -98,33 +104,32 @@ const hover = ref('hover');
 
 ```vue
 <template>
-    <div>
-        <tass-dropdown :trigger="state.click">
-            <button class="tas-dropdown-button">
-                <span class="tas-dropdown-link">
-                    下拉菜单
-                    <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
-                </span>
-            </button>
-            <tass-dropdown-menu-click>
-                <tass-dropdown-item>北京市</tass-dropdown-item>
-                <tass-dropdown-item>上海市</tass-dropdown-item>
-                <tass-dropdown-item>杭州市</tass-dropdown-item>
-                <tass-dropdown-item>厦门市</tass-dropdown-item>
-            </tass-dropdown-menu-click>
-        </tass-dropdown>
-    </div>
+  <div>
+    <tass-dropdown :trigger="state.click">
+      <button class="tas-dropdown-button">
+        <span class="tas-dropdown-link">
+          下拉菜单
+          <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
+        </span>
+      </button>
+      <tass-dropdown-menu-click>
+        <tass-dropdown-item>北京市</tass-dropdown-item>
+        <tass-dropdown-item>上海市</tass-dropdown-item>
+        <tass-dropdown-item>杭州市</tass-dropdown-item>
+        <tass-dropdown-item>厦门市</tass-dropdown-item>
+      </tass-dropdown-menu-click>
+    </tass-dropdown>
+  </div>
 </template>
 
 <script setup lang="ts">
-    import { reactive } from "vue";
+  import { reactive } from 'vue';
 
-    const state = reactive({
-        click: 'click',
-        hover: 'hover'
-    });
+  const state = reactive({
+    click: 'click',
+    hover: 'hover'
+  });
 </script>
 ```
-
 
 </details>
