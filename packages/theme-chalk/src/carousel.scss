@@ -83,7 +83,7 @@
     font-size: 0;
     ul {
       display: inline-block;
-      padding: 5px 5px;
+      padding: 5px !important;
       background-color: rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       -webkit-transition-duration: 0.3s;
@@ -220,7 +220,7 @@
 
 .tas-carousel[tas-anim='updown'] .tas-carousel-ind ul {
   display: inline-block;
-  padding: 5px 5px;
+  padding: 5px !important;
 }
 
 .tas-carousel[tas-anim='updown'] .tas-carousel-ind li {
