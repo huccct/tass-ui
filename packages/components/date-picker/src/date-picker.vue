@@ -59,9 +59,7 @@
             :key="n"
             :class="{
               isNotCurrentMonth: !isNotCurrentMonth(getVisibleDays[(m - 1) * 7 + (n - 1)]),
-              isToday:
-                isNotCurrentMonth(getVisibleDays[(m - 1) * 7 + (n - 1)]) &&
-                today === getVisibleDays[(m - 1) * 7 + (n - 1)].getDate()
+              isToday: isToday(getVisibleDays[(m - 1) * 7 + (n - 1)])
             }"
             class="tas-picker__items"
             @click="handlerToday(getVisibleDays[(m - 1) * 7 + (n - 1)].getDate())"
@@ -75,7 +73,7 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, ObjectDirective, reactive, computed } from 'vue';
+  import { ref, ObjectDirective, reactive, computed, onMounted } from 'vue';
   import * as utils from '../utils';
   import '../style/';
 
@@ -89,6 +87,7 @@
       default: 'calendarfull'
     }
   });
+  const selectDate = ref(new Date());
   const time = computed({
     get() {
       formatDate(props.modelValue);
@@ -123,7 +122,7 @@
     } else {
       tMonth.value = m;
     }
-    nowTime.value = `${year}-${m}-${d}`;
+    return `${year}-${m}-${d}`;
   };
   const padZero = (s: any) => {
     return String(s).padStart(2, '0');
@@ -132,6 +131,11 @@
     let { year, month } = utils.formatTime(date);
     let { year: y, month: m } = utils.formatTime(time.value);
     return year === y && month === m;
+  };
+  const isToday = (date: Date) => {
+    let { year, month, day } = utils.formatTime(date);
+    let { year: y, month: m, day: d } = utils.formatTime(selectDate.value);
+    return year === y && month === m && day === d;
   };
   const vClickOutside: ObjectDirective = {
     beforeMount(el, binding) {
@@ -185,7 +189,17 @@
     time.value = new Date(tYear.value, tMonth.value - 1);
   };
   const handlerToday = (day: number) => {
-    time.value = new Date(tYear.value, tMonth.value - 1, day);
+    const d = new Date(tYear.value, tMonth.value - 1, day);
+    time.value = d;
+    selectDate.value = d;
+    nowTime.value = formatDate(d);
   };
   const emits = defineEmits(['update:modelValue']);
+
+  onMounted(() => {
+    if (props.modelValue) {
+      selectDate.value = props.modelValue;
+      nowTime.value = formatDate(props.modelValue);
+    }
+  });
 </script>
