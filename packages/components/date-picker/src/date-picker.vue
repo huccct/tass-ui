@@ -3,7 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-02-12 10:57:19
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-22 23:25:41
+ * @LastEditTime: 2023-02-23 12:03:43
 -->
 <template>
   <div class="tas-datepicker" v-click-outside>
@@ -75,16 +75,7 @@
 </template>
 
 <script setup lang="ts">
-  import {
-    ref,
-    onBeforeMount,
-    DirectiveBinding,
-    ObjectDirective,
-    reactive,
-    computed,
-    onMounted,
-    watch
-  } from 'vue';
+  import { ref, ObjectDirective, reactive, computed } from 'vue';
   import * as utils from '../utils';
   import '../style/';
 
@@ -198,4 +189,3 @@
   };
   const emits = defineEmits(['update:modelValue']);
 </script>
-<style></style>

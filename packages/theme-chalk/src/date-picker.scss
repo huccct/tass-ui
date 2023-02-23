@@ -23,8 +23,6 @@ button {
     line-height: 30px;
     margin: 5px 0;
     z-index: 99;
-    transform: translateZ(0);
-    transition: all 0.1s;
     @include e(header) {
       cursor: pointer;
       padding: 5px;
@@ -72,16 +70,13 @@ button {
     font-weight: 700;
   }
 }
-.tas-datepicker-transition-leave-active,
-.tas-datepicker-transition-enter-active {
-  transition: opacity 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transform-origin: left top;
-}
 
-.tas-datepicker-transition-enter,
+.tas-datepicker-transition-enter-active,
 .tas-datepicker-transition-leave-active {
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+.tas-datepicker-transition-enter-from,
+.tas-datepicker-transition-leave-to {
   opacity: 0;
-  transform: scaleY(0.8);
 }
