@@ -9,6 +9,7 @@
   background: rgba(0, 0, 0, 0.3);
   user-select: none;
   z-index: 999999;
+  transition: opacity 0.3s, transform 0.4s, top 0.4s;
   @include b(dialog__body){
     display: table-cell;
     width: 100vw;
@@ -40,5 +41,9 @@
       text-align: right;
     }
   }
-  
+}
+.tas-dialog-fade-enter-from,
+.tas-dialog-fade-leave-to {
+  opacity: 0;
+  transform: translateX(0),translateY(1);
 }

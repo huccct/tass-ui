@@ -1,33 +1,35 @@
 <template>
-  <div v-show="visible" class="tas-dialog">
-    <div class="tas-dialog__body" v-show="visible">
-      <div class="tas-dialog__box" :style="`width:${width}`">
-        <div>
-          <slot name="headerContent" />
-          <div class="tas-dialog__header">
-            <h3 class="tas-dialog__title">
-              {{ title }}
-            </h3>
-            <span class="tas-dialog__close" @click="onClickCancelButton">
-              <tass-icon name="cross"></tass-icon
-            ></span>
+  <transition name="tas-dialog-fade">
+    <div v-show="visible" class="tas-dialog">
+      <div class="tas-dialog__body" v-show="visible">
+        <div class="tas-dialog__box" :style="`width:${width}`">
+          <div>
+            <slot name="headerContent" />
+            <div class="tas-dialog__header">
+              <h3 class="tas-dialog__title">
+                {{ title }}
+              </h3>
+              <span class="tas-dialog__close" @click="onClickCancelButton">
+                <tass-icon name="cross"></tass-icon
+              ></span>
+            </div>
           </div>
-        </div>
 
-        <div class="tas-dialog__box">
-          <slot />
-        </div>
+          <div class="tas-dialog__box">
+            <slot />
+          </div>
 
-        <div>
-          <slot name="footerContent" />
-          <div class="tas-dialog__footer">
-            <tass-button mode="text" @click="onClickCancelButton"> 取消 </tass-button>
-            <tass-button @click="onClickConfirmButton"> 确定 </tass-button>
+          <div>
+            <slot name="footerContent" />
+            <div class="tas-dialog__footer">
+              <tass-button mode="text" @click="onClickCancelButton"> 取消 </tass-button>
+              <tass-button @click="onClickConfirmButton"> 确定 </tass-button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script lang="ts" setup name="tassDialog">

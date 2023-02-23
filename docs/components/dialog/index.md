@@ -28,7 +28,6 @@
 ```vue
 <template>
   <tass-button type="primary" :visible="!normalVisible" @click="changeView">dialog</tass-button>
-  <transition>
     <tass-dialog
       :visible="normalVisible"
       width="500px"
@@ -36,7 +35,6 @@
       @confirm="handleConfirmButton"
     >
     </tass-dialog>
-  </transition>
 </template>
 
 <script lang="ts" setup>
@@ -53,20 +51,6 @@
     normalVisible.value = !normalVisible.value
   }
 </script>
-
-<styled lang="scss" scoped>
-.v-enter-active {
-  animation: dialog 0.1s linear;
-}
-@keyframes dialog {
-  from {
-    transform: scale(95%);
-  }
-  to {
-    transform: scale(100%);
-  }
-}
-</styled>
 ```
 </details>
 
@@ -82,7 +66,6 @@
 ```vue
 <template>
   <tass-button type="primary" :visible="!normalVisible" @click="changeView">自定义内容</tass-button>
-   <transition>
     <tass-dialog
       :visible="normalVisible"
       title="自定义内容"
@@ -91,7 +74,6 @@
       @confirm="handleConfirmButton"
     >
     </tass-dialog>
-  </transition>
 </template>
 
 <script lang="ts" setup>
@@ -108,18 +90,5 @@
     normalVisible.value = !normalVisible.value
   }
 </script>
-<style lang="scss" scoped>
-.v-enter-active {
-  animation: dialog 0.1s linear;
-}
-@keyframes dialog {
-  from {
-    transform: scale(95%);
-  }
-  to {
-    transform: scale(100%);
-  }
-}
-</style>
 ```
 </details>
