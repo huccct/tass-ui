@@ -28,12 +28,15 @@
 ```vue
 <template>
   <tass-button type="primary" :visible="!normalVisible" @click="changeView">dialog</tass-button>
-  <tass-dialog
-    :visible="normalVisible"
-    @cancel="handleClickCancelButton"
-    @confirm="handleConfirmButton"
-  >
-  </tass-dialog>
+  <transition>
+    <tass-dialog
+      :visible="normalVisible"
+      width="500px"
+      @cancel="handleClickCancelButton"
+      @confirm="handleConfirmButton"
+    >
+    </tass-dialog>
+  </transition>
 </template>
 
 <script lang="ts" setup>
@@ -51,8 +54,19 @@
   }
 </script>
 
-<style>
-</style>
+<styled lang="scss" scoped>
+.v-enter-active {
+  animation: dialog 0.1s linear;
+}
+@keyframes dialog {
+  from {
+    transform: scale(95%);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+</styled>
 ```
 </details>
 
@@ -67,15 +81,17 @@
 
 ```vue
 <template>
-  <template>
   <tass-button type="primary" :visible="!normalVisible" @click="changeView">自定义内容</tass-button>
-  <tass-dialog
-    :visible="normalVisible"
-    title="自定义内容"
-    @cancel="handleClickCancelButton"
-    @confirm="handleConfirmButton"
-  >
-  </tass-dialog>
+   <transition>
+    <tass-dialog
+      :visible="normalVisible"
+      title="自定义内容"
+      width="500px"
+      @cancel="handleClickCancelButton"
+      @confirm="handleConfirmButton"
+    >
+    </tass-dialog>
+  </transition>
 </template>
 
 <script lang="ts" setup>
@@ -92,7 +108,18 @@
     normalVisible.value = !normalVisible.value
   }
 </script>
-
-</template>
+<style lang="scss" scoped>
+.v-enter-active {
+  animation: dialog 0.1s linear;
+}
+@keyframes dialog {
+  from {
+    transform: scale(95%);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+</style>
 ```
 </details>
