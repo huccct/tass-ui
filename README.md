@@ -6,7 +6,7 @@
  * @LastEditTime: 2023-02-21 16:49:33
 -->
 <h1 align="center">
-    <img src="http://121.36.100.147:9000/test/logo-horizontal.png">
+    <img src="https://img1.imgtp.com/2023/06/02/e2evKisd.png">
 </h1>
 <p align="center">
     <a href="#">
