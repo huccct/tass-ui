@@ -14,7 +14,7 @@ hero:
       link: /guide/install
     - theme: alt
       text: View on GitHub
-      link: https://github.com/huccct/echo-ui
+      link: https://github.com/huccct/tass-ui
 
 features:
   - icon:

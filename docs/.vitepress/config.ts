@@ -1,9 +1,11 @@
+const isProd = process.env.NODE_ENV === 'production';
 export default {
+  base: isProd ? '/tass-ui/' : '',
   title: '一个Vue3 UI框架',
   titleTemplate: ':title - Tass UI',
   description: '一个Vue3 UI框架',
   lastUpdated: true,
-  head: [['link', { rel: 'icon', href: '/images/logo_icon.png' }]],
+  head: [['link', { rel: 'icon', href: './images/logo_icon.png' }]],
   themeConfig: {
     logo: '/logo-horizontal.png',
     siteTitle: false,

@@ -18,7 +18,7 @@
     "lint:staged": "lint-staged",
     "lint:css": "stylelint 'packages/theme-chalk/src/**/*.scss' --fix --custom-syntax postcss-scss",
     "postinstall": "npx husky install",
-    "commit": "git-cz",
+    "commit": "git add . && git-cz",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
