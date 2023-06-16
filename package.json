@@ -6,7 +6,7 @@
   "scripts": {
     "test": "pnpm --filter components test",
     "coverage": "pnpm --filter components coverage",
-    "dev": "pnpm -C examples dev",
+    "dev": "pnpm -C examples dev --open",
     "build:components": "pnpm --filter components build",
     "del-mod": "rimraf node_modules packages/components/node_modules",
     "build:theme": "pnpm run -C packages/theme-chalk build",

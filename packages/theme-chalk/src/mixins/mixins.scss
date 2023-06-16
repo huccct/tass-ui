@@ -1,4 +1,6 @@
 @use 'config' as *;
+@use '../common/var.scss';
+// forward mixins
 @forward 'config';
 
 /* BEM
@@ -6,7 +8,7 @@
 
 /* 拼接命名空间 */
 @mixin b($block) {
-  $B: $namespace + '-' + $block !global;
+  $B: $namespace + $common-separator + $block !global;
 
   .#{$B} {
     @content;
@@ -14,9 +16,26 @@
 }
 
 @mixin e($element) {
-  @at-root {
-    #{& + $element-separator + $element} {
-      @content;
+  $E: $element !global;
+  $selector: &;
+  $currentSelector: '';
+  @each $unit in $element {
+    $currentSelector: #{$currentSelector + '.' + $B + $element-separator + $unit + ','};
+  }
+
+  @if hitAllSpecialNestRule($selector) {
+    @at-root {
+      #{$selector} {
+        #{$currentSelector} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$currentSelector} {
+        @content;
+      }
     }
   }
 }
@@ -25,11 +44,7 @@
   $selector: &;
   $currentSelector: '';
   @each $unit in $modifier {
-    $currentSelector: #{$currentSelector +
-      & +
-      $modifier-separator +
-      $unit +
-      ','};
+    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ','};
   }
 
   /* @at-root 表示将内容渲染到根部 而不是嵌套 */

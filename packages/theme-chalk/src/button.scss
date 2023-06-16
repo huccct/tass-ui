@@ -5,6 +5,7 @@
 
 @include b(button) {
   display: inline-flex;
+  padding: 12px 24px;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -13,6 +14,7 @@
   color: $button-default-font-color;
   text-align: center;
   white-space: nowrap;
+  font-weight: bold;
   cursor: pointer;
   background: $button-default-background-color;
   border: $border-base;
@@ -20,8 +22,9 @@
   outline: none;
   vertical-align: middle;
   box-sizing: border-box;
-  transition: 0.1s;
+  transition: background-color 0.3s;
   appearance: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
   @include utils-user-select(none);
 
   & + & {

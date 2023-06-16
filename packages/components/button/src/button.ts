@@ -3,14 +3,7 @@
  * @Author: Huccct
  * @Date: 2023-01-21 11:57:34
  * @LastEditors: Huccct
- * @LastEditTime: 2023-02-03 23:05:52
- */
-/*
- * @Description: Stay hungry，Stay foolish
- * @Author: Huccct
- * @Date: 2023-01-21 11:57:34
- * @LastEditors: Huccct
- * @LastEditTime: 2023-01-21 12:05:02
+ * @LastEditTime: 2023-06-16 19:44:08
  */
 import type { ExtractPropTypes, PropType } from 'vue';
 import type { ButtonNativeType, ButtonSizeType, ButtonType } from './interface';
@@ -62,7 +55,7 @@ export const Props = {
   nativeType: {
     type: String as PropType<ButtonNativeType>,
     default: (): ButtonNativeType => 'button',
-    validator(value) {
+    validator(value: ButtonNativeType) {
       return (['button', 'submit', 'reset'] as const).includes(value);
     }
   }

@@ -20,11 +20,11 @@ $color-warning: #FAAD14 !default;
 $color-danger: #F5222D !default;
 */
 
-$color-primary: #9090c0 !default;
-$color-success: #67c23a !default;
-$color-warning: #e6a23c !default;
-$color-danger: #f56c6c !default;
-$color-info: #909399 !default;
+$color-primary: #be90d4 !default;
+$color-success: #4caf50 !default;
+$color-warning: #ff8800 !default;
+$color-danger: #ff5555 !default;
+$color-info: #999999 !default;
 $color-bginfo: #e3e5e9 !default;
 /* dark */
 
@@ -85,7 +85,7 @@ $border-width-base: 1px !default;
 $border-style-base: solid !default;
 $border-color-hover: $color-text-placeholder !default;
 $border-base: $border-width-base $border-style-base $border-color-base !default;
-$border-radius-base: 4px !default;
+$border-radius-base: 6px !default;
 $border-radius-small: 2px !default;
 $border-radius-circle: 100% !default;
 $border-radius-zero: 0 !default;

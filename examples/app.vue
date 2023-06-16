@@ -18,6 +18,14 @@
   <br />
   <br />
 
+  <tass-button-group>
+    <tass-button type="primary">Primary</tass-button>
+    <tass-button type="success">Success</tass-button>
+  </tass-button-group>
+
+  <br />
+  <br />
+
   <tass-button>按钮默认尺寸</tass-button>
   <tass-button size="medium">按钮中等尺寸</tass-button>
   <tass-button size="small">按钮小尺寸</tass-button>
@@ -207,12 +215,12 @@
   <div class="tass-dropdown-toggle">
     hover触发
     <tass-dropdown :trigger="state.hover">
-        <button class="tas-dropdown-button">
-          <span class="tas-dropdown-link">
-            下拉菜单
-            <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
-          </span>
-        </button>
+      <button class="tas-dropdown-button">
+        <span class="tas-dropdown-link">
+          下拉菜单
+          <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
+        </span>
+      </button>
       <tass-dropdownMenu>
         <tass-dropdown-item>Chelsea</tass-dropdown-item>
         <tass-dropdown-item>Liverpool</tass-dropdown-item>
@@ -225,12 +233,12 @@
   <div class="tass-dropdown-toggle1">
     click触发
     <tass-dropdown :trigger="state.click">
-        <button class="tas-dropdown-button">
-          <span class="tas-dropdown-link">
-            下拉菜单
-            <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
-          </span>
-        </button>
+      <button class="tas-dropdown-button">
+        <span class="tas-dropdown-link">
+          下拉菜单
+          <tass-icon style="margin-left: 10px" name="chevrondown"></tass-icon>
+        </span>
+      </button>
 
       <tass-dropdownMenu-click>
         <tass-dropdown-item>Chelsea</tass-dropdown-item>
