@@ -24,6 +24,7 @@ jobs:
         run: |
           pnpm install
           pnpm build
+          pnpm run docs:build
 
       - name: Deploy 🚀 # 部署
         uses: JamesIves/github-pages-deploy-action@v4.3.3
