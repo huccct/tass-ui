@@ -49,7 +49,7 @@ app.use(TassUI).mount('#app');
 
 ## 在线文档
 
-https://huccct.github.io/
+https://huccct.github.io/tass-ui
 
 ## 使用仓库相关命令
 
