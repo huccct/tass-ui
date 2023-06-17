@@ -1,49 +1,49 @@
-@use 'mixins/mixins' as *;
-@use 'common/var' as *;
-@include b(upload) {
-  width: 100%;
-  font-size: 0;
-  .drop-upload {
-    background-color: #fff;
-    border: 1px dashed #d9d9d9;
-    border-radius: 6px;
-    box-sizing: border-box;
-    width: 360px;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .drop-upload__out {
-      display: flex;
-      justify-content: center;
-      .drop-upload__out__word {
-        color: #606266;
-        margin-top: 16px;
-        font-size: 14px;
-      }
-      .drop-upload__out__uploadWord {
-        color:mediumpurple;
-        font-size: 14px;
-        cursor: pointer;
-        margin-top: 16px;
-      }
-    }
-  }
-  .file {
-    display: flex;
-    width: 100%;
-    margin-bottom: 3px;
-    align-items: center;
-    justify-content: space-between;
+// @use 'mixins/mixins' as *;
+// @use 'common/var' as *;
+// @include b(upload) {
+//   width: 100%;
+//   font-size: 0;
+//   .drop-upload {
+//     background-color: #fff;
+//     border: 1px dashed #d9d9d9;
+//     border-radius: 6px;
+//     box-sizing: border-box;
+//     width: 360px;
+//     height: 180px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     .drop-upload__out {
+//       display: flex;
+//       justify-content: center;
+//       .drop-upload__out__word {
+//         color: #606266;
+//         margin-top: 16px;
+//         font-size: 14px;
+//       }
+//       .drop-upload__out__uploadWord {
+//         color:mediumpurple;
+//         font-size: 14px;
+//         cursor: pointer;
+//         margin-top: 16px;
+//       }
+//     }
+//   }
+//   .file {
+//     display: flex;
+//     width: 100%;
+//     margin-bottom: 3px;
+//     align-items: center;
+//     justify-content: space-between;
 
-    span {
-      font-size: 14px;
-      color: #666;
-    }
-  }
+//     span {
+//       font-size: 14px;
+//       color: #666;
+//     }
+//   }
 
-  input {
-    width: 0 !important;
-    height: 0 !important;
-  }
-}
+//   input {
+//     width: 0 !important;
+//     height: 0 !important;
+//   }
+// }

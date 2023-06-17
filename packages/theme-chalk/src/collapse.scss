@@ -1,84 +1,83 @@
-@use 'sass:math';
+// @use 'sass:math';
 
-@use 'mixins/mixins' as *;
-@use 'common/var' as *;
+// @use 'mixins/mixins' as *;
+// @use 'common/var' as *;
 
-@include b(collapse) {
-    
-  width: 45em;
-  padding: 1.5em;
-  height: max-content;
-  border: 1px solid $color-primary-light-11;
-  background-color: white;
-  border-radius: $border-radius-base;
-  @include b(collapse-ul) {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+// @include b(collapse) {
 
-  }
+//   width: 45em;
+//   padding: 1.5em;
+//   height: max-content;
+//   border: 1px solid $color-primary-light-11;
+//   background-color: white;
+//   border-radius: $border-radius-base;
+//   @include b(collapse-ul) {
+//       list-style-type: none;
+//       margin: 0;
+//       padding: 0;
 
-}
+//   }
 
-[class^='#{$namespace}-collapse-title'] {
-    height: 50px;
-    line-height: 50px;
-    margin-top: 1em;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-top: 0.2px solid $color-primary-light-11;
-    border-bottom: 0.2px solid $color-primary-light-11;
-    background: white;
-    color: $color-primary-light-10;
-    cursor: pointer; 
-  }
+// }
 
-// 箭头选中后的动画
-.icon-select:before{
-  transform: rotate(90deg);
-  display: inline-block;
-  transition: all 1s;
+// [class^='#{$namespace}-collapse-title'] {
+//     height: 50px;
+//     line-height: 50px;
+//     margin-top: 1em;
+//     padding-left: 10px;
+//     padding-right: 10px;
+//     border-top: 0.2px solid $color-primary-light-11;
+//     border-bottom: 0.2px solid $color-primary-light-11;
+//     background: white;
+//     color: $color-primary-light-10;
+//     cursor: pointer;
+//   }
 
-}
+// // 箭头选中后的动画
+// .icon-select:before{
+//   transform: rotate(90deg);
+//   display: inline-block;
+//   transition: all 1s;
 
-// 箭头未选中的动画
-.icon-unselect:before{
-  transform: rotate(0deg);
-  display: inline-block;
-  transition: all 1s;
+// }
 
-}
+// // 箭头未选中的动画
+// .icon-unselect:before{
+//   transform: rotate(0deg);
+//   display: inline-block;
+//   transition: all 1s;
 
-[class^='#{$namespace}-collapse-content'] {
+// }
 
-    background: white;
-    color: $color-primary-light-10;
-    line-height: 1.769230769230769;
-    width: fit-content;
-    height: 100px;
+// [class^='#{$namespace}-collapse-content'] {
 
-}
+//     background: white;
+//     color: $color-primary-light-10;
+//     line-height: 1.769230769230769;
+//     width: fit-content;
+//     height: 100px;
 
+// }
 
-.tas-collapse-enter-active {	//定义进入过渡生效时的状态
-  height: 0px !important;
-  transition:all 1s ease;
-  overflow: hidden;
-}
-.tas-collapse-enter-to {	//定义离开过渡的结束状态
-  height: 100px !important;
-  transition:all 1s ease;
-  overflow: hidden;
-}
+// .tas-collapse-enter-active {	//定义进入过渡生效时的状态
+//   height: 0px !important;
+//   transition:all 1s ease;
+//   overflow: hidden;
+// }
+// .tas-collapse-enter-to {	//定义离开过渡的结束状态
+//   height: 100px !important;
+//   transition:all 1s ease;
+//   overflow: hidden;
+// }
 
-.tas-collapse-leave-active{	//定义离开过渡生效时的状态
-  height: 100px !important;
-  transition:all 1s ease;
-  overflow: hidden;
-}
+// .tas-collapse-leave-active{	//定义离开过渡生效时的状态
+//   height: 100px !important;
+//   transition:all 1s ease;
+//   overflow: hidden;
+// }
 
-.tas-collapse-leave-to {	//定义离开过渡的结束状态
-  height: 0px !important;
-  transition:all 1s ease;
-  overflow: hidden;
-}
+// .tas-collapse-leave-to {	//定义离开过渡的结束状态
+//   height: 0px !important;
+//   transition:all 1s ease;
+//   overflow: hidden;
+// }

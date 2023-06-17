@@ -1,57 +1,57 @@
-@use 'mixins/mixins' as *;
-@use 'common/var' as *;
+// @use 'mixins/mixins' as *;
+// @use 'common/var' as *;
 
-@include b(progress) {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 5px;
-  .line {
-    width: 90%;
-    background-color: rgb(235, 238, 245);
-    border-radius: 100px;
-    .colorLine {
-      height: 6px;
-      text-align: right;
-      border-radius: 100px;
-      line-height: 1;
-      white-space: nowrap;
-      transition: width 0.6s ease;
-    }
-  }
-  .percent {
-    min-width: 8%;
-    font-size: 14.4px;
-    color: rgb(96, 98, 102);
-    text-align: left;
-  }
+// @include b(progress) {
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   margin: 10px 5px;
+//   .line {
+//     width: 90%;
+//     background-color: rgb(235, 238, 245);
+//     border-radius: 100px;
+//     .colorLine {
+//       height: 6px;
+//       text-align: right;
+//       border-radius: 100px;
+//       line-height: 1;
+//       white-space: nowrap;
+//       transition: width 0.6s ease;
+//     }
+//   }
+//   .percent {
+//     min-width: 8%;
+//     font-size: 14.4px;
+//     color: rgb(96, 98, 102);
+//     text-align: left;
+//   }
 
-  .status {
-    width: 8%;
-    text-align: left;
-  }
-}
-@include b(circleprogress) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 100px;
-  text-align: center;
-  @include e(svgCircle) {
-    position: relative;
-    transform: rotate(-90deg);
-  }
-  .svg-progress {
-    stroke: #2196f3;
-    stroke-linecap: round;
-    transition: all 0.3s linear;
-  }
-  .mask {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
+//   .status {
+//     width: 8%;
+//     text-align: left;
+//   }
+// }
+// @include b(circleprogress) {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: relative;
+//   height: 100px;
+//   text-align: center;
+//   @include e(svgCircle) {
+//     position: relative;
+//     transform: rotate(-90deg);
+//   }
+//   .svg-progress {
+//     stroke: #2196f3;
+//     stroke-linecap: round;
+//     transition: all 0.3s linear;
+//   }
+//   .mask {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+// }

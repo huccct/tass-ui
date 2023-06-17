@@ -1,59 +1,59 @@
-@use 'mixins/mixins' as *;
-@use 'common/var' as *;
-@include b(slider) {
-  width: 50%;
-  @include b(slider__content) {
-    position: relative;
-    cursor: pointer;
-    -webkit-user-drag: none;
-    user-select: none;
-    width: calc(100%);
-  }
-  @include b(slider__track) {
-    width: 100%;
-    height: 6px;
-    border-radius: 3px;
-    background-color: #e1e1e1;
-    overflow: hidden;
-    &:hover {
-      background: #e1e1e1;
-    }
-  }
-  @include b(slider__fill) {
-    background-color: $color-primary;
-    height: 100%;
-    width: 20%;
-  }
-  @include b(slider__thumb) {
-    position: absolute;
-    height: 14px;
-    width: 14px;
-    border-radius: 50%;
-    border: 2px solid $color-primary;
-    background: white;
-    cursor: pointer;
-    z-index: 100;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  @include b(slider__other) {
-    position: absolute;
-    left: 0;
-    top: -25px;
-  }
-  @include b(slider__value) {
-    display: inline-block;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-  @include b(slider__thumb-active) {
-    height: 20px;
-    width: 20px;
-  }
+// @use 'mixins/mixins' as *;
+// @use 'common/var' as *;
+// @include b(slider) {
+//   width: 50%;
+//   @include b(slider__content) {
+//     position: relative;
+//     cursor: pointer;
+//     -webkit-user-drag: none;
+//     user-select: none;
+//     width: calc(100%);
+//   }
+//   @include b(slider__track) {
+//     width: 100%;
+//     height: 6px;
+//     border-radius: 3px;
+//     background-color: #e1e1e1;
+//     overflow: hidden;
+//     &:hover {
+//       background: #e1e1e1;
+//     }
+//   }
+//   @include b(slider__fill) {
+//     background-color: $color-primary;
+//     height: 100%;
+//     width: 20%;
+//   }
+//   @include b(slider__thumb) {
+//     position: absolute;
+//     height: 14px;
+//     width: 14px;
+//     border-radius: 50%;
+//     border: 2px solid $color-primary;
+//     background: white;
+//     cursor: pointer;
+//     z-index: 100;
+//     top: 50%;
+//     transform: translateY(-50%);
+//   }
+//   @include b(slider__other) {
+//     position: absolute;
+//     left: 0;
+//     top: -25px;
+//   }
+//   @include b(slider__value) {
+//     display: inline-block;
+//     margin-left: 50%;
+//     transform: translateX(-50%);
+//   }
+//   @include b(slider__thumb-active) {
+//     height: 20px;
+//     width: 20px;
+//   }
 
-  @include b(slider__thumb-disabled) {
-    cursor: not-allowed;
-    border: 2px solid black;
-    background: black;
-  }
-}
+//   @include b(slider__thumb-disabled) {
+//     cursor: not-allowed;
+//     border: 2px solid black;
+//     background: black;
+//   }
+// }

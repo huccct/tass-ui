@@ -1,119 +1,119 @@
-@use 'mixins/mixins' as *;
-@use 'common/var' as *;
-$switch-lg: 24px;
-$switch-md: 22px;
-$switch-sm: 20px;
-$switch-xs: 18px;
+// @use 'mixins/mixins' as *;
+// @use 'common/var' as *;
+// $switch-lg: 24px;
+// $switch-md: 22px;
+// $switch-sm: 20px;
+// $switch-xs: 18px;
 
-$switch-lg-min-width: 42px;
-$switch-md-min-width: 37px;
-$switch-sm-min-width: 32px;
-$switch-xs-min-width: 27px;
+// $switch-lg-min-width: 42px;
+// $switch-md-min-width: 37px;
+// $switch-sm-min-width: 32px;
+// $switch-xs-min-width: 27px;
 
-@mixin set-size($size, $min-width) {
-  & {
-    .tas-form-switch {
-      height: $size;
-      min-width: $min-width;
-      span {
-        width: calc($size - 4px);
-        height: calc($size - 4px);
-        transition: all 0.1s linear;
-      }
-      em {
-        margin-left: calc($size - 3px);
-      }
-    }
-    .tas-form-onswitch {
-      span {
-        left: calc(100% - calc($size - 1px));
-      }
-      em {
-        margin-right: calc($size - 3px);
-        margin-left: 0px;
-      }
-    }
-  }
-}
+// @mixin set-size($size, $min-width) {
+//   & {
+//     .tas-form-switch {
+//       height: $size;
+//       min-width: $min-width;
+//       span {
+//         width: calc($size - 4px);
+//         height: calc($size - 4px);
+//         transition: all 0.1s linear;
+//       }
+//       em {
+//         margin-left: calc($size - 3px);
+//       }
+//     }
+//     .tas-form-onswitch {
+//       span {
+//         left: calc(100% - calc($size - 1px));
+//       }
+//       em {
+//         margin-right: calc($size - 3px);
+//         margin-left: 0px;
+//       }
+//     }
+//   }
+// }
 
-.tas-switch-container {
-  &[size='lg'] {
-    @include set-size($switch-lg, $switch-lg-min-width);
-  }
-  &[size='md'] {
-    @include set-size($switch-md, $switch-md-min-width);
-  }
-  &[size='sm'] {
-    @include set-size($switch-sm, $switch-sm-min-width);
-  }
-  &[size='xs'] {
-    @include set-size($switch-xs, $switch-xs-min-width);
-  }
-}
+// .tas-switch-container {
+//   &[size='lg'] {
+//     @include set-size($switch-lg, $switch-lg-min-width);
+//   }
+//   &[size='md'] {
+//     @include set-size($switch-md, $switch-md-min-width);
+//   }
+//   &[size='sm'] {
+//     @include set-size($switch-sm, $switch-sm-min-width);
+//   }
+//   &[size='xs'] {
+//     @include set-size($switch-xs, $switch-xs-min-width);
+//   }
+// }
 
-.tas-switch-container .tas-switch-input {
-  display: none;
-}
+// .tas-switch-container .tas-switch-input {
+//   display: none;
+// }
 
-.tas-form-switch {
-  position: relative;
-  height: 22px;
-  line-height: 22px;
-  min-width: 35px;
-  padding: 0 4px;
-  border-radius: 20px;
-  cursor: pointer;
-  background-color: $color-bginfo;
-  -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
+// .tas-form-switch {
+//   position: relative;
+//   height: 22px;
+//   line-height: 22px;
+//   min-width: 35px;
+//   padding: 0 4px;
+//   border-radius: 20px;
+//   cursor: pointer;
+//   background-color: $color-bginfo;
+//   -webkit-transition: all 0.1s linear;
+//   transition: all 0.1s linear;
+// }
 
-.tas-form-switch span {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 3px;
-  top: 2px;
-  width: 18px;
-  height: 18px;
-  line-height: 18px;
-  border-radius: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px #00230b33;
-  -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
+// .tas-form-switch span {
+//   position: absolute;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   left: 3px;
+//   top: 2px;
+//   width: 18px;
+//   height: 18px;
+//   line-height: 18px;
+//   border-radius: 20px;
+//   background-color: #fff;
+//   box-shadow: 0 2px 4px #00230b33;
+//   -webkit-transition: all 0.1s linear;
+//   transition: all 0.1s linear;
+// }
 
-.tas-form-switch em {
-  position: relative;
-  padding: 0 2px;
-  text-align: center !important;
-  color: #999 !important;
-  font-style: normal !important;
-  font-size: 12px;
-  width: 25px;
-  top: 0;
-}
+// .tas-form-switch em {
+//   position: relative;
+//   padding: 0 2px;
+//   text-align: center !important;
+//   color: #999 !important;
+//   font-style: normal !important;
+//   font-size: 12px;
+//   width: 25px;
+//   top: 0;
+// }
 
-.tas-form-onswitch {
-  border-color: black;
-  background-color: $color-primary;
-}
+// .tas-form-onswitch {
+//   border-color: black;
+//   background-color: $color-primary;
+// }
 
-.tas-form-onswitch span {
-  background-color: #fff;
-}
+// .tas-form-onswitch span {
+//   background-color: #fff;
+// }
 
-.tas-form-onswitch em {
-  color: #fff !important;
-}
+// .tas-form-onswitch em {
+//   color: #fff !important;
+// }
 
-.tas-switch-disabled {
-  opacity: 0.6;
-}
+// .tas-switch-disabled {
+//   opacity: 0.6;
+// }
 
-.tas-switch-disabled,
-.tas-switch-disabled * {
-  cursor: not-allowed !important;
-}
+// .tas-switch-disabled,
+// .tas-switch-disabled * {
+//   cursor: not-allowed !important;
+// }

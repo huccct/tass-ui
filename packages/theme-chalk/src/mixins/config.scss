@@ -1,5 +1,5 @@
-$namespace: 'tas'; // 空间名称
-$element-separator: '__'; // 局部
-$modifier-separator: '--'; // 修饰
-$state-prefix: 'is-'; // 状态
+$namespace: 'tas' !default; // 空间名称
+$element-separator: '__' !default; // 局部
+$modifier-separator: '--' !default; // 修饰
+$state-prefix: 'is-' !default; // 状态
 $common-separator: '-' !default;

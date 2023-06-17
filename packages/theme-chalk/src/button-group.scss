@@ -1,66 +1,53 @@
-@use './mixins/mixins.scss' as *;
-@use './mixins/utils.scss' as *;
-@use './common/var.scss' as *;
-@use './mixins/button' as *;
+@use 'sass:map';
 
-/* button-group */
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
 @include b(button-group) {
   @include utils-clearfix;
-
   display: inline-block;
   vertical-align: middle;
 
-  & > .tas-button {
-    position: relative;
+  & > .#{$namespace}-button {
     float: left;
-
-    & + .tas-button {
-      margin-left: 2px;
+    position: relative;
+    & + .#{$namespace}-button {
+      margin-left: 0;
     }
-
-    &.is-disabled {
-      z-index: 1;
-    }
-
     &:first-child {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
-
     &:last-child {
-      border-bottom-left-radius: 0;
       border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
-
     &:first-child:last-child {
-      border-top-right-radius: $button-border-radius;
-      border-bottom-right-radius: $button-border-radius;
-      border-bottom-left-radius: $button-border-radius;
-      border-top-left-radius: $button-border-radius;
+      border-top-right-radius: map.get($button-border-radius, 'default');
+      border-bottom-right-radius: map.get($button-border-radius, 'default');
+      border-top-left-radius: map.get($button-border-radius, 'default');
+      border-bottom-left-radius: map.get($button-border-radius, 'default');
 
       &.is-round {
-        border-radius: 20px;
+        border-radius: getCssVar('border-radius', 'round');
       }
 
       &.is-circle {
         border-radius: 50%;
       }
     }
-
-    &:not(:first-child, :last-child) {
+    &:not(:first-child):not(:last-child) {
       border-radius: 0;
     }
-
     &:not(:last-child) {
       margin-right: -1px;
     }
 
-    &:not(.is-disabled) {
-      &:hover,
-      &:focus,
-      &:active {
-        z-index: 1;
-      }
+    &:hover,
+    &:focus,
+    &:active {
+      z-index: 1;
     }
 
     @include when(active) {
@@ -68,27 +55,25 @@
     }
   }
 
-  & > .tas-dropdown {
-    & > .tas-button {
-      border-left-color: rgba($color-white, 0.5);
-      border-bottom-left-radius: 0;
+  & > .#{$namespace}-dropdown {
+    & > .#{$namespace}-button {
       border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left-color: getCssVar('button', 'divide-border-color');
     }
   }
 
   @each $type in (primary, success, warning, danger, info) {
-    .tas-button--#{type} {
+    .#{$namespace}-button--#{$type} {
       &:first-child {
-        border-right-color: rgba($color-white, 0.5);
+        border-right-color: getCssVar('button', 'divide-border-color');
       }
-
       &:last-child {
-        border-left-color: rgba($color-white, 0.5);
+        border-left-color: getCssVar('button', 'divide-border-color');
       }
-
-      &:not(:first-child, :last-child) {
-        border-right-color: rgba($color-white, 0.5);
-        border-left-color: rgba($color-white, 0.5);
+      &:not(:first-child):not(:last-child) {
+        border-left-color: getCssVar('button', 'divide-border-color');
+        border-right-color: getCssVar('button', 'divide-border-color');
       }
     }
   }

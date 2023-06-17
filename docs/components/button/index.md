@@ -44,6 +44,12 @@
       <tass-button type="info" round>信息按钮</tass-button>
       <tass-button type="danger" round>危险按钮</tass-button>
       <br />
+      <br />
+      <tass-button circle icon="tas-icon-upload"></tass-button>
+      <tass-button type="primary" circle icon="tas-icon-alarm"></tass-button>
+      <tass-button type="success" circle icon="tas-icon-arrowdown"></tass-button>
+      <tass-button type="info" circle icon="tas-icon-arrowleft"></tass-button>
+      <tass-button type="danger" circle icon="tas-icon-arrowright"></tass-button>
     </div>
 </div>
 
@@ -88,6 +94,14 @@
       <tass-button type="info" disabled>信息按钮</tass-button>
       <tass-button type="warning" disabled>警告按钮</tass-button>
       <tass-button type="danger" disabled>危险按钮</tass-button>
+      <br />
+      <br />
+      <tass-button disabled plain>禁用按钮</tass-button> 
+      <tass-button type="primary" disabled plain>主要按钮</tass-button>
+      <tass-button type="success" disabled plain>成功按钮</tass-button>
+      <tass-button type="info" disabled plain>信息按钮</tass-button>
+      <tass-button type="warning" disabled plain>警告按钮</tass-button>
+      <tass-button type="danger" disabled plain>危险按钮</tass-button>
       <br />
       <br />
     </div>

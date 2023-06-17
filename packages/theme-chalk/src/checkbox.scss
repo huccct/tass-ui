@@ -1,80 +1,80 @@
-@use './mixins/mixins.scss' as *;
-@use './mixins/utils.scss' as *;
-@use './common/var.scss' as *;
+// @use './mixins/mixins.scss' as *;
+// @use './mixins/utils.scss' as *;
+// @use './common/var.scss' as *;
 
-@include b(checkbox) {
-  color: $checkbox-font-color;
-  font-weight: $checkbox-font-weight;
-  font-size: $checkbox-font-size;
-  position: relative;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  user-select: none;
-  margin-right: 30px !important;
-  height: $checkbox-input-height;
-  input[type='checkbox'] {
-    cursor: pointer;
-    position: relative;
-    border: none;
-    background-color: none;
-    appearance: none;
-    width: 18px;
-    height: 18px;
-  }
-  input[type='checkbox']::after {
-    position: absolute;
-    top: 0;
-    background-color: #fff;
-    color: #fff;
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    visibility: visible;
-    padding-left: 0px;
-    text-align: center;
-    content: ' ';
-    border-radius: 2px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-  }
-  input[type='checkbox']:checked::after {
-    content: '✓';
-    background-color: $color-primary;
-    border-color: $color-primary;
-    background-color: $color-primary;
-  }
-  @include e(input) {
-    white-space: nowrap;
-    cursor: pointer;
-    outline: none;
-    display: inline-flex;
-    position: relative;
-  }
+// @include b(checkbox) {
+//   color: $checkbox-font-color;
+//   font-weight: $checkbox-font-weight;
+//   font-size: $checkbox-font-size;
+//   position: relative;
+//   cursor: pointer;
+//   display: inline-flex;
+//   align-items: center;
+//   white-space: nowrap;
+//   user-select: none;
+//   margin-right: 30px !important;
+//   height: $checkbox-input-height;
+//   input[type='checkbox'] {
+//     cursor: pointer;
+//     position: relative;
+//     border: none;
+//     background-color: none;
+//     appearance: none;
+//     width: 18px;
+//     height: 18px;
+//   }
+//   input[type='checkbox']::after {
+//     position: absolute;
+//     top: 0;
+//     background-color: #fff;
+//     color: #fff;
+//     width: 18px;
+//     height: 18px;
+//     display: inline-block;
+//     visibility: visible;
+//     padding-left: 0px;
+//     text-align: center;
+//     content: ' ';
+//     border-radius: 2px;
+//     box-sizing: border-box;
+//     border: 1px solid #ddd;
+//   }
+//   input[type='checkbox']:checked::after {
+//     content: '✓';
+//     background-color: $color-primary;
+//     border-color: $color-primary;
+//     background-color: $color-primary;
+//   }
+//   @include e(input) {
+//     white-space: nowrap;
+//     cursor: pointer;
+//     outline: none;
+//     display: inline-flex;
+//     position: relative;
+//   }
 
-  @include when(disabled) {
-    &,
-    &:hover,
-    &:focus {
-      cursor: not-allowed;
-    }
-    input[type='checkbox']::after {
-      cursor: not-allowed;
-      position: absolute;
-      top: 0;
-      background-color: rgb(245, 247, 250);
-      color: #fff;
-      width: 18px;
-      height: 18px;
-      display: inline-block;
-      visibility: visible;
-      padding-left: 0px;
-      text-align: center;
-      content: ' ';
-      border-radius: 2px;
-      box-sizing: border-box;
-      border: 1px solid #ddd;
-    }
-  }
-}
+//   @include when(disabled) {
+//     &,
+//     &:hover,
+//     &:focus {
+//       cursor: not-allowed;
+//     }
+//     input[type='checkbox']::after {
+//       cursor: not-allowed;
+//       position: absolute;
+//       top: 0;
+//       background-color: rgb(245, 247, 250);
+//       color: #fff;
+//       width: 18px;
+//       height: 18px;
+//       display: inline-block;
+//       visibility: visible;
+//       padding-left: 0px;
+//       text-align: center;
+//       content: ' ';
+//       border-radius: 2px;
+//       box-sizing: border-box;
+//       border: 1px solid #ddd;
+//     }
+//   }
+// }
