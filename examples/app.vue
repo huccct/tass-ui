@@ -18,6 +18,10 @@
   <br />
   <br />
 
+  <tass-button icon="tas-icon-magnifier"></tass-button>
+  <br />
+  <br />
+
   <tass-button-group>
     <tass-button type="primary">Primary</tass-button>
     <tass-button type="success">Success</tass-button>
