@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: Tass
-  text: 一个Vue3组件库
-  tagline: 基于Vue3,简洁高效的组件库
+  text: Vue 3 组件库
+  tagline: 20 个组件，Composition API + TypeScript 编写
   image:
     src: /images/logo.png
     alt: tass-ui
@@ -19,14 +19,14 @@ hero:
 features:
   - icon:
       src: /vue.png
-    title: Vue3
-    details: 渐进式JavaScript 框架
+    title: Vue 3
+    details: 20 个组件，全部基于 Composition API 编写
   - icon:
       src: /typescript.png
     title: TypeScript
-    details: 带有类型语法的JavaScript
+    details: 源码即类型，属性与事件在编辑器里直接提示
   - icon:
       src: /vite.png
     title: Vite
-    details: 下一代的前端工具链
+    details: 开发与构建都走 Vite，改完即时生效
 ---

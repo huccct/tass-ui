@@ -1,33 +1,45 @@
-# ci.yml
-name: Tass UI
+name: Deploy Docs
+
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+# 部署 action 要往 gh-pages 分支写提交，默认的 token 只有读权限
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️ # 将代码拉取到虚拟机
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Install pnpm
-        run: npm i pnpm@7 -g
-
-      - uses: actions/setup-node@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: '16'
-          cache: 'pnpm'
+          version: 7
 
-      - name: Install and Build 🔧 # 安装依赖、打包，如果提前已打包好无需这一步
-        run: |
-          pnpm install
-          pnpm run build:components
-          pnpm run docs:build
-
-      - name: Deploy 🚀 # 部署
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          branch: gh-pages # 部署后提交到那个分支
-          folder: docs/.vitepress/dist # 这里填打包好的目录名称
+          node-version: 18
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build docs
+        # config.ts 里 base 靠 NODE_ENV 判断，不设的话会构建出 base: '' 的错误产物
+        env:
+          NODE_ENV: production
+        run: pnpm run docs:build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: docs/.vitepress/dist

@@ -78,7 +78,7 @@ export default {
     lastUpdatedText: '最近更新时间',
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2023 Components Team'
+      copyright: 'Copyright © 2023-present Huccct'
     },
     algolia: {
       appId: '883U6KEOAU',
