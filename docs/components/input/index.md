@@ -9,7 +9,7 @@
   import Basic from './basic.vue';
   import Disabled from './disabled.vue';
   import ClearAble from './clearable.vue';
-  import ShowPassword from './showpassword.vue';
+  import ShowPassword from './showPassword.vue';
   import SuffixIcon from './suffixIcon.vue';
   import Size from './size.vue';
 </script>
