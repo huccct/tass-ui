@@ -17,6 +17,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # lastUpdated 要读每个文件的 git 提交时间，默认的浅克隆拿不到
+          fetch-depth: 0
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
